@@ -1,0 +1,2369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Mar 2014 00:00:00 -0700</lastBuildDate><item><title>About This Site</title><link>http://guizishanren.com/posts/2014/03/about-this-site/</link><description>&lt;p&gt;I'm in the process of migrating this site from the previous &lt;a href="http://wordpress.org/"&gt;wordpress&lt;/a&gt; structure to &lt;a href="http://pages.github.com/"&gt;Github Page&lt;/a&gt; using &lt;a href="http://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;, a &lt;a href="https://www.python.org/"&gt;Python&lt;/a&gt; static website generator. You might see some missing files, broken links, or just out-of-alignment here and there. That's because I'm still cleaning up the files from their xml format to streamline everything into strictly &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt; format. If you have been a reader of my site before, there is no new content created after Mar 21, 2014. What gives then? Not a lot for you, but a great deal to me. I will write an article about this transformation later.&lt;/p&gt;
+&lt;p&gt;If you find any error or any format that you think is less than perfect in any page, please feel free to leave a comment on that page or this page so that I can fix it right away. Thank you in advance.&lt;/p&gt;
+&lt;p&gt;This website is the publishing platform for all contents created by &lt;a href="www.linkedin.com/in/herbertyang‎"&gt;me&lt;/a&gt;, which includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;blog articles&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;photo galleries&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;performance videos&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;slide presentations &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The domain name "guizishanren" is "&lt;em&gt;桂子山人&lt;/em&gt;" in Chinese, of which the literal translation will be "The Person from Mt. Sweet Olive". Mt. Sweet Olive in Wuhan, China is where I grew up in China. Wuhan is about 1.5 hour by flight to both Beijing and Shanghai, and is the largest city in Central China who almost became and definitely should have become the capital city of China in 1949. It was a tragedy afterwards.&lt;/p&gt;
+&lt;p&gt;The name of this site pays tribute to movie "&lt;a href="http://www.imdb.com/title/tt0060196/?ref_=nv_sr_2"&gt;The Good, the Bad, and the Ugly&lt;/a&gt;" by great &lt;a href="http://www.imdb.com/name/nm0001466/?ref_=tt_ov_dr"&gt;Sergio Leone&lt;/a&gt;, one of the greatest movies of all time. The soundtrack is just as epic and has become a frequent rip-off target by Quentin Tarantino ever since. Here's Metallica cover of the most famous song from the soundtrack, "&lt;em&gt;The Ecstasy of Gold&lt;/em&gt;"&lt;/p&gt;
+&lt;iframe width="640" height="480" src="//www.youtube.com/embed/JG62B_dHfDQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Reading this site takes a lot of patience and probably not a walk in the park. Thank you for stopping by.&lt;/p&gt;
+&lt;p&gt;Herbert&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 25 Mar 2014 00:00:00 -0700</pubDate><guid>tag:guizishanren.com,2014-03-25:posts/2014/03/about-this-site/</guid></item><item><title>Buzz Words from Stanford GSB BLAST Mail</title><link>http://guizishanren.com/posts/2014/03/buzz-words-stanford-gsb-blast-mail/</link><description>&lt;p&gt;This program aims to analyze the most common buzz words from Stanford
+Graduate School of Business (GSB)'s BLAST mailing list, which is
+subscribed by all GSB students (MBA, MSx and PhD) and used heavily by
+the student community to broadcast news, seeking help, etc. The idea is
+similar to Google Keyword Trend, except that it's applied to a very
+specific environment and audience.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/buzzGSB.png" alt="Buzz Word from Stanford GSB" width="800px"&gt;&lt;/p&gt;
+&lt;p&gt;The program is written in Python 2.7.5 and &lt;a href="https://github.com/zire/buzzInStanfordGSB"&gt;the source code is on Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Download all the BLAST emails&lt;/p&gt;
+&lt;p&gt;Fortunately Google provides a very handy Datatool to download emails
+with specific labels. It's available from the Account Settings page.
+This archive has emails from 2012 (I recovered them from Trash), 2013,
+and 2014. Emails in 2012 and 2013 were not preserved universally and
+consistently so they will not be part of this analysis. Emails in 2014
+are of better quality though I'm sure I've missed/deleted some BLAST
+messages already. Going forward I will keep all the BLAST emails and the
+data quality will be considerably better in more recent update&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Extract emails and dates from the email archive&lt;/p&gt;
+&lt;p&gt;Google archives Gmail messages in mbox format - one single large file.
+Python's mailbox.mbox library provides an effective way to extract
+contents from it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_mbox2csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There are three steps that need to be performed here:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;figure out where is the email body with get_payload()&lt;/p&gt;
+&lt;p&gt;It turns out that all the BLAST emails are of multipart (so get_payload() will return a list, not a string). The email body is hidden in the first part of the first part in a message from mbox (quite nested).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;clean up the date field&lt;/p&gt;
+&lt;p&gt;The raw date field needs clean-up. It's not in the standard ISO format
+and the day field is not zero-paddled. Datetime.strptime is used to deal
+with it. Eventually a raw date like "5 Nov 2013" is converted into
+"20131105" (YYYYMMDD) for easy sorting in the next step.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sort data by date&lt;/p&gt;
+&lt;p&gt;Self-explanatory. After this program is run, a cleaned up email archive
+will be created in csv format with only date and email body information,
+and is sorted by date.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the word frequency analysis&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;_wordcount&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After all the maneuvers to get the data into the right format, the real
+crunching on word frequency is quite easy relatively speaking. The true
+magic that embodies both science and art is the exception list of words
+to ignore (words_to_ignore). A lot of time was spent to grow this list
+so that all the un-informational words are filtered out such as "when",
+"where", "to".. etc. There are A LOT of those.&lt;/p&gt;
+&lt;p&gt;It's only after filtering out those exception words, the real buzzwords
+for Stanford GSB will float to the surface, as you can see from above.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Do they reveal something useful? Maybe, but I'm not sure. Maybe I just
+need to continue to tinker with the exception word list to make more
+sense out of it.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Fri, 21 Mar 2014 12:52:00 -0700</pubDate><guid>tag:guizishanren.com,2014-03-21:posts/2014/03/buzz-words-stanford-gsb-blast-mail/</guid><category></category></item><item><title>Hiking at Joseph D. Grant County Park in East Bay</title><link>http://guizishanren.com/posts/2014/03/hiking-joseph-d-grant-county-park-east-bay/</link><description>&lt;p&gt;Joseph D. Grant County Park is located toward the end end of the Bay Area in San Jose, about 40-minute drive from Palo Alto. We came here in early spring trying to catch some wild flowers. Didn't see much blossom yet but the scenery on the hill was quite a treat.&lt;/p&gt;
+&lt;p&gt;There were not too many people in the park. Nearby the park there are numerous biking routes. Right off the parking lot there is a small lake.&lt;/p&gt;
+&lt;p&gt;We shall come back later for more flowers.&lt;/p&gt;
+&lt;p&gt;&lt;object style="font-size: 14px; line-height: 1.5em;" width="800" height="600" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"&gt;
+&lt;embed style="font-size: 14px; line-height: 1.5em;" width="800" height="600" type="application/x-shockwave-flash" src="http://www.everytrail.com/swf/widget.swf" flashvars="units=english&amp;amp;mode=0&amp;amp;key=ABQIAAAA_7wvFEi7gGngCZrOfos63hSN1xyBy-BzBD--25ZLXpVi3GfbehTQlZCXdpUFII2A5CGeExVTCyX1ow&amp;amp;tripId=2691858&amp;amp;startLat=37.34303121&amp;amp;startLon=-121.71569827&amp;amp;mapType=Map&amp;amp;" quality="high" flashvars="units=english&amp;amp;mode=0&amp;amp;key=ABQIAAAA_7wvFEi7gGngCZrOfos63hSN1xyBy-BzBD--25ZLXpVi3GfbehTQlZCXdpUFII2A5CGeExVTCyX1ow&amp;amp;tripId=2691858&amp;amp;startLat=37.34303121&amp;amp;startLon=-121.71569827&amp;amp;mapType=Map&amp;amp;" play="true" pluginspage="http://www.adobe.com/go/getflashplayer"&gt;
+&lt;/embed&gt;
+&lt;/object&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 10 Mar 2014 10:19:00 -0700</pubDate><guid>tag:guizishanren.com,2014-03-10:posts/2014/03/hiking-joseph-d-grant-county-park-east-bay/</guid><category></category></item><item><title>Photo#10 East Lake / 东湖</title><link>http://guizishanren.com/posts/2013/11/photo-series10-east-lake/</link><description>&lt;p&gt;East Lake is where my family usually went for sightseeing, picnic and hiking on weekends when I grew up in Wuhan, China. It's not as well-known as the world-famous "West Lake" in Hangzhou, China, but it's charming in its own right.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/east_lake_01.jpg" width="600px" alt="East Lake 1"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/east_lake_02.jpg" width="600px" alt="East Lake 2"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/east_lake_03.jpg" width="600px" alt="East Lake 3"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/east_lake_04.jpg" width="600px" alt="East Lake 4"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 21 Nov 2013 20:00:00 -0800</pubDate><guid>tag:guizishanren.com,2013-11-21:posts/2013/11/photo-series10-east-lake/</guid><category></category></item><item><title>Photo#3 Tribute to Masters / 向大师们的致敬</title><link>http://guizishanren.com/posts/2013/10/photo-series03-tribute-to-masters/</link><description>&lt;p&gt;Tribute to &lt;a href="https://www.google.com/search?q=Water+Lilies%22+by+Claude+Monet&amp;amp;newwindow=1&amp;amp;espv=210&amp;amp;es_sm=119&amp;amp;tbm=isch&amp;amp;tbo=u&amp;amp;source=univ&amp;amp;sa=X&amp;amp;ei=TfoxU9ucH8LkoATGn4LwDQ&amp;amp;ved=0CDwQsAQ&amp;amp;biw=1443&amp;amp;bih=952#facrc=_&amp;amp;imgdii=_&amp;amp;imgrc=rYl_OasW_wqHrM%253A%3BCKELpU0LUjUdOM%3Bhttp%253A%252F%252Fglobal.fncstatic.com%252Fstatic%252FMonetauction.jpg%3Bhttp%253A%252F%252Fwww.foxnews.com%252Fus%252F2012%252F11%252F09%252Fwork-from-monet-water-lilies-fetches-over-43m-at-nyc-auction%252F%3B660%3B371"&gt;"Water Lilies" by Claude Monet&lt;/a&gt;, shot in 2007, Acadia National Park, Maine, USA&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/tribute-1.jpg" alt="Water Lilies by Claude
+Monet" width="600px"&gt;&lt;/p&gt;
+&lt;p&gt;Tribute to &lt;a href="http://cn.bing.com/images/search?q=%E5%88%98%E6%B5%B7%E7%B2%9F+%E9%BB%84%E5%B1%B1&amp;amp;go=&amp;amp;qs=n&amp;amp;form=QBIR&amp;amp;pq=%E5%88%98%E6%B5%B7%E7%B2%9F+%E9%BB%84%E5%B1%B1&amp;amp;sc=2-6&amp;amp;sp=-1&amp;amp;sk="&gt;Mt Yellow by Liu Hai Su
+(刘海粟)&lt;/a&gt;, shot in 2011-4, Mt. Yellow, Anhui, China&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/tribute-2.jpg" alt="Mt. Yellow by Liu Hai Su" width="600px"&gt;&lt;/p&gt;
+&lt;p&gt;Tribute to &lt;a href="http://cn.bing.com/images/search?q=Almond+Blossom+by+Vincent+van+Gogh&amp;amp;go=&amp;amp;qs=n&amp;amp;form=QBIR&amp;amp;pq=almond+blossom+by+vincent+van+gogh&amp;amp;sc=0-0&amp;amp;sp=-1&amp;amp;sk="&gt;Almond Blossom by Vincent van
+Gogh&lt;/a&gt;, shot in 2011, Beijing, China&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/tribute-3.jpg" alt="Amond Blossom by Vincent van Gogh" width="600px"&gt;&lt;/p&gt;
+&lt;p&gt;Tribute to &lt;a href="http://cn.bing.com/images/search?q=%E6%98%A5%E9%A3%8E%E6%A1%83%E6%9F%B3+%E5%90%B4%E5%86%A0%E4%B8%AD&amp;amp;qs=AS&amp;amp;sk=&amp;amp;FORM=QBIR&amp;amp;pq=%E6%98%A5%E9%A3%8E%E6%A1%83%E6%9F%B3%20&amp;amp;sc=1-5&amp;amp;sp=1&amp;amp;qs=AS&amp;amp;sk="&gt;Spring Wind, Peach &amp;amp; Willow (春风桃柳) by Wu Guanzhong
+(吴冠中)&lt;/a&gt;, shot in 2010, Summer Palace, Beijing, China&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/tribute-4.jpg" alt="Spring Wind, Peach &amp; Willow (春风桃柳) by Wu Guanzhong (吴冠中)" width="600px"&gt;&lt;/p&gt;
+&lt;p&gt;Tribute to &lt;a href="http://cn.bing.com/images/search?q=Rhein+II++by+Andreas+Gursky&amp;amp;go=&amp;amp;qs=n&amp;amp;form=QBIR&amp;amp;pq=rhein+ii+by+andreas+gursky&amp;amp;sc=0-0&amp;amp;sp=-1&amp;amp;sk="&gt;Rhein II  by Andreas Gursky&lt;/a&gt;, shot in 2009, Qinghua University, Beijing, China&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/tribute-5.jpg" alt="Rhein II  by Andreas Gursky" width="600px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Fri, 11 Oct 2013 12:34:00 -0700</pubDate><guid>tag:guizishanren.com,2013-10-11:posts/2013/10/photo-series03-tribute-to-masters/</guid><category></category></item><item><title>GCBC Talk - Herbert's Introduction</title><link>http://guizishanren.com/posts/2013/07/Herbert-GCBC-Talk/</link><description>&lt;p&gt;This was a organized by Stanford GSB's Greater China Business Student Club (thanks
+to Xinkai and Rainey). The talk was scheduled during the final exam week
+of the Spring Quarter between some terrifying exams. Thank you my
+friends who showed up for this event and engaged me in a spirited
+conversation about movies, rock band, flash mob, China, and leadership.&lt;/p&gt;
+&lt;iframe src="//player.vimeo.com/video/70445933?color=252525" width="800" height="534" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="http://vimeo.com/70445933"&gt;GCBC Talk Herbert Introduction&lt;/a&gt; from &lt;a href="http://vimeo.com/herbertyang"&gt;Herbert Yang&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;Thanks to Weining who recorded the clip faithfully. This truncated
+footage actually works out to be a reasonable self-introduction that I
+can probably recycle for other occasions. It helps me to stay concise,
+one of the qualities I'm still aspiring to work on.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 16 Jul 2013 17:27:00 -0700</pubDate><guid>tag:guizishanren.com,2013-07-16:posts/2013/07/Herbert-GCBC-Talk/</guid><category>video</category></item><item><title>COASSF#61 - What Do You Want to Get in Stanford - PFIKER Model</title><link>http://guizishanren.com/posts/2013/07/goals-in-stanford/</link><description>&lt;p&gt;When I look back at the past year in Stanford/GSB/Sloan Fellow Program
+and reflect what was it that we tried to get out of this incredible
+experience, I think our goals fall into six mutually exclusive and
+collective exhaustive categories, namely, &lt;strong&gt;PFIKER&lt;/strong&gt;. It is important
+for us to know what our goals are, from Day One into the community, so
+that we can strategize priorities, plan our academic and social life
+accordingly, to get the most out of our time in Stanford. 12 months go
+by really, really fast. Without clear goals in mind, it's easy to let
+the time and opportunities slip through our fingers before we know it.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/Goals.png", width="800px" alt="Goals in Stanford"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;P&lt;/em&gt;artner&lt;/p&gt;
+&lt;p&gt;Some of us are looking for partners, in business or in life. For
+business partners, spend more time with alumni, in study groups, social
+gatherings and pay attention to those who tend to take initiatives/run
+for class officers. Take one of the four major startup-themed classes to
+interact with students from Computer Science (CS) and Engineering, who
+are the real movers and shakers of the Silicon Valley. For life
+partners, spend more time with MBAs starting from the Autumn Quarter.
+It's ok to date another Sloan, but it might get tricky.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;F&lt;/em&gt;riend&lt;/p&gt;
+&lt;p&gt;Some of us are looking for new friends, from new cultures, from new
+industries, from new interest areas. Regularly hang out in the Sloan
+Study Rooms ("Slounge") and make sure leave the door open, attend all
+the TGIFs, join all the study trips (the Seatle one, the East Coast one,
+and the self-organized international one), and take the initiatives to
+organize small-party dinners (six person is the ideal size). Running for
+social chairs will also help you make friends quickly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;I&lt;/em&gt;nspiration&lt;/p&gt;
+&lt;p&gt;Some of us are looking for inspirations that connect dots, bridge
+isolated domains of knowledge, expand our horizon, or provide that
+"eureka" moments. Attend &lt;a href="http://etl.stanford.edu/"&gt;Wednesday's ETL&lt;/a&gt; in
+Engineering School religiously, attend as many seminars, talks, BBLs in
+and around GSB as possible. Take some classes outside of GSB. Attend
+industry conferences around Silicon Valley by taking advantages of
+student discounts. Read the blog by &lt;a href="http://sten.tamkivi.com/"&gt;Sten&lt;/a&gt; and
+&lt;a href="http://guizishanren.com/"&gt;me&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;K&lt;/em&gt;nowledge&lt;/p&gt;
+&lt;p&gt;Some of us are looking for knowledge, things that we have never been
+exposed to in prior jobs. Max out the cap level of 22 credits
+Autumn/Winter/Spring and audit as many classes as schedule allows. If
+your Sloan classmates can still remember your name by Spring Quarter,
+you should consider yourself a big failure in this regard - OK.. that's
+a bad joke. The point is that if you're so academically inclined, you
+can never study hard enough and Stanford has enough interesting courses
+to keep you intellectually stimulated.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;E&lt;/em&gt;xperience&lt;/p&gt;
+&lt;p&gt;Some of us are looking for the quintessential "Stanford" experience and
+try to experience as many actions as possible that Stanford can offer.
+Run for a class officer role - whatever it is, as long as it helps to
+serve the Sloan class and GSB community. Attend all the sports events in
+the summer and the autumn (the football season is only in the
+summer-autumn quarter I think). Take some physical exercise classes in
+Winter and Spring Quarter, like golfing, horse-riding, yoga, or
+swimming. Join some student's clubs. Participate in a flash mob if
+someone in your class has the balls and guts to actually organize that.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;R&lt;/em&gt;eputation&lt;/p&gt;
+&lt;p&gt;Some of us are looking to establish a personal brand that people can
+remember us by. I think the importance of reputation cannot be
+overstated. However it seems to have been ignored by many. GSB
+(including 80+ Sloans and around 800 MBAs) is a very competitive
+environment (duh....) and Sloans have only one year to leave our marks.
+If you don't do something to put your name out there, people will not
+remember you - plain and simple, and you don't want people at the end of
+day to comment you along the lines of "yeah, he's a really nice guy...".
+There are just too many overachievers around the campus in all
+disciplines. Since you've already made it all the way up here, you might
+as well just try a bit harder to get more mileage out of this journey.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For me, the top 3 priorities are Inspiration, Reputation, and Partner.
+That pretty much explains why and why not I did certain things when in
+Stanford, for whoever is curious about it. I come from a very heavy
+business/finance background with extensive global trails and mix of
+corporate/startup experience. Not too many courses in GSB are completely
+new to me, nor do I really want to refresh my memory in Accounting,
+Economics, or Statistics. So I tried to minimize my study load and free
+up myself to do other things. I've lived in too many countries before to
+care about checking all the boxes to make sure I've "been there, done
+that", not to mention I&lt;a href="http://guizishanren.com/why-here-why-now-why-again/"&gt;was planning to settle down in the Bay
+area&lt;/a&gt; even before I
+came to Stanford.  Why Inspiration, Reputation, and Partner? &lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_35_my-bbl/"&gt;My
+BBL&lt;/a&gt;
+has explained it all. Now it feels like a full circle is completed.&lt;/p&gt;
+&lt;p&gt;Carpe diem!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Fri, 05 Jul 2013 08:00:00 -0700</pubDate><guid>tag:guizishanren.com,2013-07-05:posts/2013/07/goals-in-stanford/</guid><category>Theory</category></item><item><title>COASSF#60 - April Orientation Performance at CEMEX Auditorium</title><link>http://guizishanren.com/posts/2013/07/april-orientation-performance-at-cemex-auditorium/</link><description>&lt;p&gt;Date:            April 14, Sunday
+Venue:          CEMEX Auditorium, Graduate School of Business, Stanford University
+Headliner:          The Spillovers&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Hotel California&lt;/em&gt; (originally by The Eagles)&lt;/p&gt;
+&lt;p&gt;Vocal:              Jun&lt;/p&gt;
+&lt;p&gt;Backup:             Ryan, Sumit&lt;/p&gt;
+&lt;p&gt;Drum:               John B.&lt;/p&gt;
+&lt;p&gt;Keyboard:               Su&lt;/p&gt;
+&lt;p&gt;Guitar/Bass:        Yuki, Ryan, Jun&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;It's My Life&lt;/em&gt; (originally by Bon Jovi)&lt;/p&gt;
+&lt;p&gt;Vocal:              Colin, Osamu&lt;/p&gt;
+&lt;p&gt;Backup:           Ryan, Yuki&lt;/p&gt;
+&lt;p&gt;Drum:               Alex&lt;/p&gt;
+&lt;p&gt;Keyboard:               Su&lt;/p&gt;
+&lt;p&gt;Guitar/Bass:        Yuki, Ryan, Jun&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 04 Jul 2013 12:34:00 -0700</pubDate><guid>tag:guizishanren.com,2013-07-04:posts/2013/07/april-orientation-performance-at-cemex-auditorium/</guid><category>thats</category><category>awesome</category></item><item><title>COASSF#59 - Course Evaluation\_Spring Q</title><link>http://guizishanren.com/posts/2013/07/course-evaluation-spring-Q/</link><description>&lt;p&gt;....continued from &lt;a href="http://guizishanren.com/?p=2433"&gt;Course Evaluation_Winter
+Q&lt;/a&gt; ...&lt;/p&gt;
+&lt;p&gt;This is the last one in this CIDRAE Evaluation Series.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/CIDRAE_Spring.png" width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 03 Jul 2013 12:34:00 -0700</pubDate><guid>tag:guizishanren.com,2013-07-03:posts/2013/07/course-evaluation-spring-Q/</guid><category></category></item><item><title>COASSF#58 - Course Evaluation_Winter Q</title><link>http://guizishanren.com/posts/2013/07/course-evaluation-winter-q/</link><description>&lt;p&gt;... continued from &lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_37_fall-qtr-course-final-evaluation/"&gt;Course Evaluation_Fall
+Q&lt;/a&gt;
+...&lt;/p&gt;
+&lt;p&gt;A bit overdue, from Winter Q, which seems like a distant past.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/CIDRAE_Winter.png", width="800px", alt="Winter Qtr Course Evaluation"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 01 Jul 2013 12:34:00 -0700</pubDate><guid>tag:guizishanren.com,2013-07-01:posts/2013/07/course-evaluation-winter-q/</guid><category></category></item><item><title>COASSF#57 - Swan Song by The Spillovers</title><link>http://guizishanren.com/posts/2013/06/swan-song-by-the-spillovers/</link><description>&lt;p&gt;The swan song performance by our beloved rock band The Spillovers on the
+Last Sloan Dinner on Thursday, June 13, 2013 at Vidalakis Dining Room in
+Schwab. Great songs to close out our amazing rock band run in the Sloan
+year!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Don't Stop Believin'&lt;/em&gt; (originally by Journey)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                  &lt;span class="n"&gt;Cherie&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;JC&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                   &lt;span class="n"&gt;Alex&lt;/span&gt;
+
+&lt;span class="n"&gt;Keyboard&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;               &lt;span class="n"&gt;Su&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;            &lt;span class="n"&gt;Ryan&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jun&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Band Introduction&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;We Will Rock You / We Are The Champions&lt;/em&gt; (originally by Queen)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                  &lt;span class="n"&gt;Osamu&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Sky&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Cherie&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                   &lt;span class="n"&gt;John&lt;/span&gt;
+
+&lt;span class="n"&gt;Keyboard&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;               &lt;span class="n"&gt;Su&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;            &lt;span class="n"&gt;Ryan&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jun&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 27 Jun 2013 10:33:00 -0700</pubDate><guid>tag:guizishanren.com,2013-06-27:posts/2013/06/swan-song-by-the-spillovers/</guid><category></category></item><item><title>COASSF#56 - How To Make A Star</title><link>http://guizishanren.com/posts/2013/06/how-to-make-a-star/</link><description>&lt;p&gt;From a recent project in my favorite course of the quarter: OB388
+Leadership in Entertainment Business, my group researched and analyzed
+the success of K-Pop. During this exhilarating intellectual process, I
+came up with this graph that illustrates how to find the optimal path of
+nurturing a star from scratch. The horizontal dimension, from low to
+high, represents the technical difficulty of acquiring certain skills
+(which are also the cultural products those stars will eventually
+produce) for a star in an entertainment business. The vertical
+dimension, from low to high, represents  the cultural barrier those
+cultural products will encounter when they are delivered to a foreign
+culture (like from South Korea to America).&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/Star-Making.png" width="800px" alt="How to make a star"&gt;&lt;/p&gt;
+&lt;p&gt;That's why for K-Pop stars, they all start with dancing and singing.
+It's called Audiovisuality. It gets more difficult after that.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 05 Jun 2013 17:01:00 -0700</pubDate><guid>tag:guizishanren.com,2013-06-05:posts/2013/06/how-to-make-a-star/</guid><category></category></item><item><title>COASSF#55 - GCBC Talk - Stay Full Stay Smart</title><link>http://guizishanren.com/posts/2013/05/stay-full-stay-smart/</link><description>&lt;p&gt;GCBC Talk Series: &lt;em&gt;Stay Full, Stay Smart&lt;/em&gt;, by Herbert Yang&lt;/p&gt;
+&lt;p&gt;Date:       May 29, Wednesday&lt;/p&gt;
+&lt;p&gt;Time:           9-10pm&lt;/p&gt;
+&lt;p&gt;Venue:          Schwab Ferguson Lounge&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Crunching Tiger, Hidden Dragon&lt;/em&gt; - how was the Gangnam Style Flash
+Mob born into GSB on Oct 12, 2012?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The Wedding Banquet&lt;/em&gt; - how to manage a rock band?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hulk&lt;/em&gt; - a career from CFO to movie producer&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sense and Sensibility&lt;/em&gt; - how to tell stories with your pictures?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Eat Drink Man Woman&lt;/em&gt; - what are the drivers of your life&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pushing Hands&lt;/em&gt; - How to manage career transition?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Ride with the Devil&lt;/em&gt; - What do you bring to the table, as a
+leader?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Brokeback Mountain&lt;/em&gt; - What are the different goals in GSB, in
+Stanford, in any community&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Lust, Caution&lt;/em&gt; - What exactly does a CFO do?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Life of Pi&lt;/em&gt; - Reflections of a sea turtle&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The Days of Being Wild&lt;/em&gt; - The good, the Bad, the Ugly of running
+startups in Beijing&lt;/p&gt;
+&lt;p&gt;It'll be a casual talk. Given the crazy academic schedule this week, I
+don't expect more than 10-15 people to show up. I'll pick up some topics
+that the audience are most interested in, during this prolonged late
+coffee break. I'll have Ang Lee to take care of the business part, and
+maybe save Wong Kar Wai for the non-business part, for later.&lt;/p&gt;
+&lt;p&gt;Evidently, I was too bored.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 28 May 2013 00:19:00 -0700</pubDate><guid>tag:guizishanren.com,2013-05-28:posts/2013/05/stay-full-stay-smart/</guid><category></category></item><item><title>COASSF#54 - The Spillovers Live! at Stanford Coho Cafe</title><link>http://guizishanren.com/posts/2013/05/rock-out-stanford-coho/</link><description>&lt;p&gt;When you see Sloans dancing on the table in usually low-key Stanford
+Coho cafe, you know this party is a riot. This is the TGIF that ends all
+other TGIFs. This is The-Moment-Of-The-Year for Sloan Fellow Class of
+2013 of Stanford Graduate Business School. Thank you, my bandmates of
+Sloan's house band The Spillovers, we did it!&lt;/p&gt;
+&lt;p&gt;(in sequence of performance)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Song 2&lt;/em&gt; (originally by Blur)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Colin&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Osamu&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;Alex&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;You Give Love A Bad Name&lt;/em&gt; (originally by Bon Jovi)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Osamu&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Herbert&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;Alex&lt;/span&gt;
+
+&lt;span class="n"&gt;Keyboard&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                       &lt;span class="n"&gt;Su&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jun&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Every Breath You Take&lt;/em&gt;* (originally by The Police)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Sky&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Cherie&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;Alex&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;I Don't Wanna Miss A Thing&lt;/em&gt; (originally by Aerosmith)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Sky&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Cherie&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;John&lt;/span&gt;
+
+&lt;span class="n"&gt;Keyboard&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                       &lt;span class="n"&gt;Su&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Wish You Were Here&lt;/em&gt; (originally by Pink Floyd)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Herbert&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;John&lt;/span&gt;
+
+&lt;span class="n"&gt;Keyboard&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                       &lt;span class="n"&gt;Su&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Smells Like Teen Spirit&lt;/em&gt;* (originally by Nirvana)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Colin&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;John&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jun&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Twist and Shout&lt;/em&gt;* (originally by The Beatles)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Osamu&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Herbert&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;John&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jun&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;I Hate Myself for Loving You&lt;/em&gt;* (originally by Joan Jett)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Cherie&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Osamu&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;John&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;It's My Life&lt;/em&gt;* (originally by Bon Jovi)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Osamu&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Colin&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Yuki&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;Alex&lt;/span&gt;
+
+&lt;span class="n"&gt;Keyboard&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                       &lt;span class="n"&gt;Su&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jun&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Creep** (originally by Radiohead)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Colin&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;Alex&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jun&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Sweet Child O' Mine&lt;/em&gt;* (originally by Guns N' Roses)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Vocal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                          &lt;span class="n"&gt;Cherie&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Osamu&lt;/span&gt;
+
+&lt;span class="n"&gt;Drum&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                           &lt;span class="n"&gt;Alex&lt;/span&gt;
+
+&lt;span class="n"&gt;Guitar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Bass&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;                    &lt;span class="n"&gt;Yuki&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ryan&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;What a beautiful night!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sat, 25 May 2013 10:22:00 -0700</pubDate><guid>tag:guizishanren.com,2013-05-25:posts/2013/05/rock-out-stanford-coho/</guid><category></category></item><item><title>Drivers of Your Life - SIMPLERK</title><link>http://guizishanren.com/posts/2013/05/drivers-of-your-life/</link><description>&lt;p&gt;The honor of the soundtrack for this article goes to the iconic and haunting monologue by Ewan McGregor in "Trainspotting"(1996) that defined the 90s, together with that "You Never Can Tell" dance in "Pulp Fiction"(1994). The full "choose life ... " monologue starts at 02:38.&lt;/p&gt;
+&lt;iframe src="http://www.xiami.com/widget/0_2547984/singlePlayer.swf" type="application/x-shockwave-flash" width="257" height="33" wmode="transparent"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;By 2007 I had tried out every career assessment tool or personality test
+there was in the market.   Those tests were helpful to some extent, but
+the overall value was limited, at least for me. Unsatisfied with what
+was available, I started developing a more effective
+framework/methodology to find out the key drivers that may explain why I
+like doing certain things more than others and figure out what would be
+my best career choice given what I want.&lt;/p&gt;
+&lt;p&gt;At that time I was &lt;a href="../../../2007/08/leaving-GE/"&gt;on my way out of General Electric
+(GE)&lt;/a&gt;. GE taught
+me everything I knew and I was eternally grateful for an exceptionally
+enriching professional experience it had bestowed me with. However I
+found myself gradually leaning toward a direction that would obviously
+deviate from the trajectory that GE had always designed for me. I was
+looking for my true self and didn't want to just fall into a pre-defined
+category that others presumed I belonged to.&lt;/p&gt;
+&lt;p&gt;The quest for the ultimate answer to this ultimate question seems like a
+universal one (unfortunately, the answer is not as easy as ... 42).
+ Many of my friends all over the world are searching for it, and many of
+my classmates in &lt;a href="http://www.gsb.stanford.edu/programs/msx/"&gt;Stanford Sloan
+Fellow&lt;/a&gt; master program are also
+searching for it. As we walk through 30s, the most productive years of
+our life, having bounced around several career tracks in the past, many
+of us were taking a pulse asking:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Do I really enjoy my current job?&lt;/li&gt;
+&lt;li&gt;Is this the right career for me?&lt;/li&gt;
+&lt;li&gt;What should I really pursue in my life?&lt;/li&gt;
+&lt;li&gt;Why?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It would not be respectful to address these questions without mentioning
+the monumental theoretical work by Maslow, who proposed his landmark
+paper in 1943 "A Theory of Human Motivation". The famous "&lt;a href="http://en.wikipedia.org/wiki/Maslow's_hierarchy_of_needs"&gt;Maslow's
+Pyramid&lt;/a&gt;",
+which depicts hierarchy of needs, is well known. I got a taste of that
+from the Social-Psychology class in my undergraduate days in &lt;a href="http://nus.edu.sg/"&gt;National
+University of Singapore&lt;/a&gt;. The five layers of human
+motivations, Physiological-Safety-Love/Belonging-Esteem-Self
+Actualization, are probably the most widely quoted framework on this
+subject.&lt;/p&gt;
+&lt;p&gt;With all due respect to Maslow, I didn't feel his pyramid was sufficient
+to explain drivers at deeper levels. His five layers are perfectly
+correct, and do a good job explaining social behaviors by different
+social classes in the same country or across different countries, but
+that's not the area where most of my peers are struggling. Most people
+who actually can afford the luxury to contemplate this question, are
+struggling with drivers/motivations embedded in the top
+"Self-Actualization" layer, which warrants a much more in-depth
+analysis. We have to peel the onion even further.&lt;/p&gt;
+&lt;p&gt;Another often-mentioned deep question is &lt;em&gt;What Gives You Happiness&lt;/em&gt;.
+ Harvard's insanely popular course Psychology 1504 "Positive Psychology"
+(aka, the "Happiness Course") has made a name for itself since 2006.
+However I feel it's still left much to be answered. The question on
+Happiness is not the same as the question on What Drives You to Do
+Certain Things. Health, family time, California sunshine, these are the
+obvious answers to Happiness and no one can dispute them - which means
+they are not really particularly useful in solving our puzzle. In a very
+tacky sense, we need to find out the fundamental drivers that make us
+choose certain careers over others.&lt;/p&gt;
+&lt;p&gt;By the way, while I’m at it, I would define happiness as a kind of
+sensation that you can derive totally independent from any
+externalities. This simple and beautiful definition leads to many
+implications, such as that money does not give you happiness (because
+money is an externality), or that only spiritual enlightenment can bring
+out true happiness, etc. Another definition I sometimes use, in a joking
+fashion, is Happiness = Capability / Desire, which is pretty neat and
+conveniently incorporates psychological expectation. Anyway, the
+question of happiness is a different discussion all together. Let’s move
+on.&lt;/p&gt;
+&lt;p&gt;Also I don't think discussing &lt;em&gt;How To Be Successful&lt;/em&gt; is of much help.
+Success is an over-rated and excessively discussed topic. Most people
+tend to associate success with money, fame, achievement and getting up
+on social ladder. People from different classes and cultures have vastly
+different views on success and thus most discussions on success have
+very limited mileage. To me success is to have the freedom to do what
+one wants to without feeling constrained.&lt;/p&gt;
+&lt;p&gt;By the same token, I don't think this topic should be mixed with &lt;em&gt;What
+Is Your Passion&lt;/em&gt;. Passion is closest to Driver, but not quite the same.
+Passion sometimes borderlines with interests and interests are not
+necessarily the fundamental drivers at our deepest psychological level.
+Passion implies that people have a strong urge to do certain things, and
+I feel many people don't really have that in them. But everyone has some
+drivers, even for those with no noticeable passion in anything. Passion
+is an often over-rated concept, especially in b-schools. In those
+successful entrepreneurs I’ve known or heard about, &lt;a href="../../../2013/03/key-to-startup-success/"&gt;patience,
+perseverance, and
+tenacity&lt;/a&gt;are
+the three most important attributes. Having passion definitely helps,
+but I don’t feel it’s a necessary condition of success.&lt;/p&gt;
+&lt;p&gt;So in 2007 I developed a &lt;strong&gt;SIMPLERK&lt;/strong&gt; method to help myself address
+these questions. I found it useful in providing me with a consistent
+guiding principle when making major career decisions. The assessment on
+myself in 2007 has since withheld the test of time and is still valid
+today. Over the years I've applied the same method on many friends. I
+think most if not all my friends have found it useful to some extent as
+well. For some of them, &lt;strong&gt;SIMPLERK&lt;/strong&gt; also revealed something in them
+that they did not realize before, which came as a surprise with mixed
+feelings.&lt;/p&gt;
+&lt;p&gt;Here's how I use my SIMPLERK method to solve the puzzle, once and for
+all:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.  Assumptions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When we are doing this evaluation, we can no longer change what we are, because we have already passed the formation years of our lives. What this analysis reveals, is what you are. Whether you like it or not, you'll have to live with it. There is no "right" or "wrong" driver. No driver is superior to others. Every driver is reasonable and legitimate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The result of this evaluation is probably valid for approximately
+    10-15 years, after which your priorities may change, depending on
+    individual circumstance or life-changing events (like, winning a
+    lottery or marrying up).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The below drivers are collectively exhaustive and mutually
+    exclusive, as you may have noticed in every other framework I've
+    developed. In my opinion, a list is of little value unless it tries
+    to be collectively exhaustive and mutually exclusive.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;These drivers are at the most fundamental psychological level. For
+    example, some people may say, I want to be creative. Being creative
+    is not a fundamental driver. Why you want to be creative? Because
+    you want to be recognized (R) as being a creative person, or you
+    want to influence (I) people's lives in unique way, or you want to
+    leave behind a legacy (L) that distinctively has your mark?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sexual dominance is excluded from this evaluation for the sake of
+    analysis. Many social psychologists would probably argue that this
+    particular driver overshadows everything else single-handedly, as
+    the mission for any civilization ultimately is to reproduce itself,
+    preserve the best genes and allocate limited resources to ensure the
+    survival of the fittest. Let’s just leave that aside and for a
+    second focus on something more platonic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2.  Drivers: (SIMPLERK)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;tability &lt;/p&gt;
+&lt;p&gt;Stability is a desire to maintain a state of stability, avoid
+unpredictable, reduce variability in life, seek for a kind of serenity
+or tranquility. Some people are excited by a bustling life with constant
+changes and new ventures, but some other people would prefer to have
+greater control of his/her life and deal with things with well-defined
+protocols/methods. &lt;/p&gt;
+&lt;p&gt;Many careers are good venues for Stability, such as government jobs,
+large corporate jobs, doctors, administrative/staff function jobs,
+school jobs, etc. They are by no means easier, but usually are fairly
+stable and you can figure out the rope quickly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;I&lt;/strong&gt;nfluence&lt;/p&gt;
+&lt;p&gt;Influence is a desire to influence others’ behaviors and thoughts, to
+change how people view or perceive certain things, to create a belief or
+vision that people would follow, to make people do things they would not
+do otherwise in the absence of absolute power, to will an action that
+would not take place otherwise, to call to an action that people would
+respond to. Influence is different from Power (which will be explained
+later).&lt;/p&gt;
+&lt;p&gt;Influence can be found in many career choices, such as entrepreneurship
+(change the world for a better place/make a dent in the universe),
+designing (architecture, fashion, industrial design), religion founder
+(Buddha , Christian Rosenkreuz), rebel (Gandhi, Che) bearer of hope
+(Gandalf, Lawrence of the Arabia), teaching, writing, journalism, media,
+activist, and Dr. Phil.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;M&lt;/strong&gt;oney&lt;/p&gt;
+&lt;p&gt;Money is a desire for … for lack of a better word, money. I understand
+the mere appearance of this word in such a context will stir endless
+debate and controversy, because people tend to believe that Money should
+never be the end goal, rather it should be a means to the end, or a
+derivative of the end. Most lecturers teaching startup/entrepreneurship
+in B-schools would say you should never work for Money but your true
+passion.&lt;/p&gt;
+&lt;p&gt;It is not my intention to get into any fruitless and pointless debate
+about Money’s relationship to other more gloried goals/drivers in life. It is just pretty obvious that Money is a significant factor in making
+career decisions. Some people care more, and some people care less, but
+either way it is there. Why young people go to investment banking or
+strategy consulting? Among other things that may be spiritually or
+intellectually elevating, let’s face it - it’s Money. So Money has a
+rightful place in my SIMPLERK framework. I have seen people whose
+singular goal is to make as much money as they can, regardless of which
+venture they choose. Having Money in the discussion makes the discussion
+much easier.&lt;/p&gt;
+&lt;p&gt;Careers that provide loads of money include investment banking, strategy
+consulting, law firms, big-four accounting firms, medical doctors,
+investment (highly dependent on how long you can stay in the game and
+when do you leave the game), gangster, and pirate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;P&lt;/strong&gt;ower&lt;/p&gt;
+&lt;p&gt;Power is a desire to make others bent to your will, by leveraging either
+your social position or organizational position. It is much stronger
+than Influence. Influence can be achieved forcefully or indirectly, in
+an amicable manner, and Power is usually achieved in a much more
+confrontational, direct manner. While both Influence and Power will lead
+to altered behaviors of the recipients, Power has the additional benefit
+of feeling unconstrained. Power as a desire probably has the greatest
+impact to mankind’s history. Dynasties fall, nations rise, civilizations
+sustain, all these can be attributed to some extraordinary individuals
+who have insatiable appetite for power.&lt;/p&gt;
+&lt;p&gt;Careers that lead to Power are government officials
+(senators/congressmen, President, Speaker of the House, mayors,
+ministers), founding fathers, military officers, big-corporate jobs,
+movie directors, spies, super heroes (Batman, Spider Man, X-Men), any
+senior job in a highly hierarchical organization where people pay more
+attention to title/ranking than the person him/herself.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;egacy&lt;/p&gt;
+&lt;p&gt;Legacy is a desire to leave something behind to the world, to build
+something that will stand on its own beyond our physical life, to create
+something that can be carried forward generation after generation.&lt;/p&gt;
+&lt;p&gt;People who desire for Legacy often donate money to build schools
+(Stanford), build NPO foundations to tackle issues that no government or
+corporate can handle (Gates Foundation), create art museums/galleries
+that provide enlightenment (Getty, Guggenheim), write novels (Romance of
+Three Kingdoms), develop real-estates, build bridges/dams, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;E&lt;/strong&gt;xperience&lt;/p&gt;
+&lt;p&gt;Experience is a desire to experience as many things/adventures in life
+as possible, to carpe diem, to live one’s life to the fullest, to leave
+no regret before leaving this world, to be able to claim “I’ve been there, done that”. A lot of people travel around the world, try out different jobs, make new girlfriends/boyfriends in each new country, always appreciate new thrills that come his/her way and never get tired of them. They seem to be drifters, moving from one thing to another, sometimes without apparent logical rationale. I find this desire much more common in the western cultures than in the eastern cultures (which are usually more utilitarian-driven).&lt;/p&gt;
+&lt;p&gt;Jobs that provide rich experience (can be in terms of physical
+environment, people interact with, or the contents itself) include
+corporate auditors, corporate road warriors (who get rotated to a new
+assignment every few years), certain government officials on rotation
+assignment (elite squad or diplomat), missionary workers, event
+management (wedding planner, travel agencies), restaurant critics,
+sailors, bar owners/tenders, performance acts, groupies, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;R&lt;/strong&gt;ecognition&lt;/p&gt;
+&lt;p&gt;Recognition is a desire to be recognized by either peers/family members,
+or people you know, or even people you don’t know. There are three
+layers of recognition: 1) being appreciated as in possession of certain
+skills; 2) being recognizable by having a personal brand that is
+associated with certain positive image/perception; 3) being recognized
+as better than many peers who are in the same business/profession, or as
+simply the best, the most awesome one, the one. Recognition is in some
+way connected to vanity, though vanity conveys much more negativity.
+Recognition is also related to a strong desire to express one’s self.
+(Though I think there might exist one category of special individuals
+whose sole desire is just to express him/herself, regardless how that is
+perceived/recognized by others. Gao Xingjian made that point in his
+acceptance speech for 2000 Nobel Prize in Literature, echoing the voice
+of George Orwell in his 1946 essay "Why I Write").&lt;/p&gt;
+&lt;p&gt;Careers that provide Recognition include sales, traders, investment
+professionals (Buffett, Schwartzman), artists (Van Gogh, Pollock), poets
+(Pink Floyd, Dylan), rock n’ roll stars (Led Zeppelin), writers
+(Murakami), directors (Kubrick), movie stars/actors (Tom Cruise),
+super-models (Adriana Lima), professional athletes (Jordan, Bryant,
+Maradona), talk-show hosts (Fallon, O’Brien), and Kardashian sisters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;K&lt;/strong&gt;nowledge&lt;/p&gt;
+&lt;p&gt;Knowledge is a desire to explore the unknown world, to advance mankind’s
+frontier of intellect and knowledge, to figure out the answer to the
+ultimate question in the universe, to look for perfection and harmony
+that usually bear no meaning to day-to-day life.&lt;/p&gt;
+&lt;p&gt;People with such desire and derive happiness from such accomplishment,
+can be found in SETI scientists, researchers, professors, astronauts,
+code-breakers, inventors (Tesla), theoretical mathematicians, string
+theorists, and Stephen Wolfram.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3.  Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The use of SIMPLERK is very simple. After fully understanding the
+    definition of the eight drivers, identify a few that resonate with
+    you most. &lt;em&gt;Choose a career that does the best job in fulfilling all
+    your identified drivers at the same time&lt;/em&gt;. Such a career may not be
+    within reach to you right away and it might take a few stepping
+    stones to get to it, but at least you know what it is. Sometimes
+    such career may not even exist. Then you will need to invent it and
+    find a platform that can carry it. The best jobs that the ones you
+    create for yourself anyway.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I’ve tried SIMPLERK on many friends who are also on the quest
+    looking for their meaning of life. The exercise has produced a
+    surprisingly large variety in answers, which is pretty intriguing
+    (to find out what my friends truly want and see that they all have
+    different drivers) and at the same time demonstrates the robustness
+    of this framework.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Empirically most people identify 2 – 4 drivers from the above list
+    of 8. It suffices to say if there is only one driver the person is not
+    thinking wide open enough; if there are more than 4 drivers then the
+    person has not quite figured out what he/she really wants.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It seems that what drives us has a lot to do with our family
+    background, the environment in which we’re brought up, and the way
+    our parents educate us when we are young.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There is actually one more step to facilitate the finding of the
+    drivers. In 2007 I quitted GE to work on a website full-time on my
+    own to develop an ajax-based interactive tool. The tool provided
+    much-needed scientific rigor into this framework and sort of helped
+    testers figure out the drivers subconsciously (borrowing some ideas
+    from Myers-Briggs Test). In late 2007 I went back to Beijing to join
+    a VC-funded company as its CFO and discontinued the development of
+    the website. Not sure where the codes are now, nor do I really care.
+    I’ve found having beer in a noisy dive bar turns out to be quite
+    effective, as well. The best part of SIMPLERK, and the most fun
+    part, lies in its delivery, discussion and comparing notes. This
+    writing cannot do its justice in that regard, but it’s a start.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4.  Synthesis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For your reference, my main drivers, in descending order of
+    significance, are: &lt;em&gt;Influence&lt;/em&gt;, &lt;em&gt;Recognition&lt;/em&gt;, and &lt;em&gt;Money&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Since 2007, I have been using this SIMPLERK framework as a compass
+    to guide me through &lt;a href="../../../2013/03/an-entrepreneurs-manifesto-POOOUA-model/"&gt;every career
+    transition&lt;/a&gt;,
+    from a corporate career in GE to CFO in China, then to an
+    entrepreneur in the Bay area after Stanford. It’s done a very
+    effective and adequate job explaining my every move, and it also
+    explains why I would not fancy a career in VC just yet. I’ll be
+    happy to share some personal thoughts on this in person.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I’ve always wanted to complete this article.  The end of my Sloan
+    days feels like a right moment to synthesize everything. Hopefully
+    my friends feel the same and find some value in SIMPLERK as well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Everything written so far is just a prelude. The fun part of the
+conversation only comes when we start applying &lt;strong&gt;SIMPLERK&lt;/strong&gt; on ourselves
+and people around us, or figures we've heard about (say, Bill Gates or
+Mayor Bloomberg). You know where to find me.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 09 May 2013 02:59:00 -0700</pubDate><guid>tag:guizishanren.com,2013-05-09:posts/2013/05/drivers-of-your-life/</guid><category>career</category></item><item><title>A Day In A Sloan's Life</title><link>http://guizishanren.com/posts/2013/04/a-day-in-a-sloans-life/</link><description>&lt;p&gt;I have done a lot of presentations in my life, from participating in an
+English speech contest for high-school students broadcast live on
+China's national television (CCTV) at age 15, to delivering a company
+presentation on China's largest VC/PE firm - CDH's annual LP conference
+in Venetian, Macau. This "A Day In A Sloan's Life" presentation, as a
+"ramp" speech delivered to the Sloan Fellows of 2014 and Sloan Fellows
+of 2013 in CEMEX Auditorium in Stanford Graduate Business School on
+April 14, 2013, during Sloan's April Orientation, left everything before
+it in dust. It was finished right at the very last second before class
+president John Barton finished his introduction of me.&lt;/p&gt;
+&lt;iframe width="800" height="600" src="//www.youtube.com/embed/z9NjT3rmnsQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The music is &lt;em&gt;Robert Miles' Children (Dream Version)&lt;/em&gt;. The pictures came
+from a variety of sources, including Her Extraordinaire Ede Tamkivi and
+Jacqueline Wu, two best photographers of our class.&lt;/p&gt;
+&lt;p&gt;This is the way I've always imagined our story should be told.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 28 Apr 2013 12:36:00 -0700</pubDate><guid>tag:guizishanren.com,2013-04-28:posts/2013/04/a-day-in-a-sloans-life/</guid><category></category></item><item><title>COASSF#52 - Stanford Business Magazine Quote</title><link>http://guizishanren.com/posts/2013/03/stanford-business-magazine-quote/</link><description>&lt;p&gt;It was a very pleasant surprise when I read the back page of 2013 Spring
+Issue of &lt;a href="http://www.gsb.stanford.edu/news/bmag"&gt;Stanford Business
+Magazine&lt;/a&gt;. Surprise #1, this was
+actually a very accurate quote from me, though I have no idea how the
+magazine got it. Surprise #2, the editor thoughtfully used my previous
+Facebook profile photo instead of the current Jack Sparrow one ... nice
+touch there.&lt;/p&gt;
+&lt;p&gt;To the mysterious friend out there who tipped this off to the magazine
+staff, thank you!&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/Stanford-Magazine-01.jpg", width="800px"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/Stanford-Magazine-02.jpg", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 17 Mar 2013 14:03:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-17:posts/2013/03/stanford-business-magazine-quote/</guid><category></category></item><item><title>COASSF#51 - An Entrepreneur's Manifesto</title><link>http://guizishanren.com/posts/2013/03/an-entrepreneurs-manifesto-POOOUA-model/</link><description>&lt;p&gt;As I was burning midnight oil on my final assignment/personal essay for
+S353, I finally could not help but laying out my entire career
+transitions, in the past, present, and future, on a diagram - something
+I've been thinking about doing for a long time but never got the chance
+to complete. This diagram is built on a framework I developed a while
+ago &lt;a href="../../../2011/10/career-choice-consideration/"&gt;《Consideration in Career
+Transition》&lt;/a&gt;,
+which was written in Chinese and I haven't got the chance to translate
+into English (if you know of any free secretary service, please let me
+know. I can certainly use one or two.)&lt;/p&gt;
+&lt;p&gt;In short, there are six dimensions for any career transition (obviously,
+any list I have, is by definition collectively exhaustive and mutually
+exclusive, otherwise what's the point of developing a
+framework/theory?). They are, in descending order of importance:
+sponsor, location, domain, company, function, and rank. In short, they
+are "&lt;strong&gt;POOOUA&lt;/strong&gt;”. In different career stages we all try to move toward
+our ideal career, but it usually takes multiple steps to complete the
+transition along all six dimensions and rarely do we get to the dream
+job at one go. Below diagram illustrates what kind of transition I
+completed at each turn of my career. It almost reads like a manifesto.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/Career-Transition.png" alt="Career Transition" width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 14 Mar 2013 14:48:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-14:posts/2013/03/an-entrepreneurs-manifesto-POOOUA-model/</guid><category>Career</category><category>COASSF</category><category>Theory</category></item><item><title>COASSF#50 - Key To Startup Success\_Reflection from S353</title><link>http://guizishanren.com/posts/2013/03/key-to-startup-success/</link><description>&lt;p&gt;In my last post on this subject, I compared some &lt;a href="../../../2013/02/comparison-S353-and-G566-in-GSB/"&gt;similarities and
+differences between S353 (Entrepreneurship: Formation of New
+Business)  and G566 (Real-Life
+Ethics)&lt;/a&gt;,
+two of my favorite GSB courses. Today's S353 class presented the last
+case in this series of 18 very different and interesting startup
+stories. So after all the discussions, what kind of lessons can we draw
+from them?&lt;/p&gt;
+&lt;p&gt;Before George and Jim give us a summary on Thursday, I just want to
+share my own takeaways. I call them "&lt;strong&gt;PPT&lt;/strong&gt;".&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/keytostartupsuccess.png", alt="key to Startup Success", width="800px"&gt;&lt;/p&gt;
+&lt;p&gt;I find these three qualities are not only exemplified throughout all the
+18 S353 cases we have reviewed, but also demonstrated in all the startup
+success stories that I personally know of, whether in US, Europe or
+China. There are many other situational factors or circumstantial
+strategies that were also instrumental to the success for those
+founders, but in the grand scheme of all things those more "operational"
+factors tend to wash out and become no more than a white noise in the
+distribution of a seemingly random walk. What stand out in the end as
+the true significant drivers and the common denominators of all, are
+&lt;em&gt;Patience&lt;/em&gt;, &lt;em&gt;Perseverance&lt;/em&gt;, and &lt;em&gt;Tenacity&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;It's worth noting that Passion is not part of this by my account, which
+might surprise some people. I think passion is definitely and obviously
+a common attribute to many successful founders, and the value of passion
+is that it brings tenacity. Many people have enough passion, but if that
+cannot be translated into &lt;strong&gt;PPT&lt;/strong&gt;, the venture would still fail. On the
+contrary, we've seen enough successful founders in S353 that don't
+appear to have built their businesses with a particular passion for the
+product/service/business model, but they got sufficient PPT to live
+through the peaks and valleys and that's what gives their stories to an
+eventual happy ending.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 12 Mar 2013 15:59:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-12:posts/2013/03/key-to-startup-success/</guid><category>Career</category></item><item><title>COASSF#49 - Chinese New Year Party</title><link>http://guizishanren.com/posts/2013/03/chinese-new-year-party/</link><description>&lt;p&gt;On February 8, 2013, I emceed Sloan's Chinese New Year Party, which made
+history by becoming the most attended self-organized Sloan event with
+roughly 180 people (120 adults + 60 kids), in true Chinese fashion. We
+squeezed out every inch in Havana Room but still could not find enough
+chairs/tables for all the Sloans and the partners. The party followed a
+format that was familiar to every Mainland Chinese - a gala filled with
+delicious food, baijiu (Chinese white wine, very hard-core liquor) ,
+stage performances, and variety shows. Not only it was a banquet of food
+and drink, but also it was a total cultural immersion of three hours in
+which I walked through five parts of some interesting elements of
+Chinese culture.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Part I - The Opening Teaser&lt;/em&gt; (you are supposed to be scared)&lt;/p&gt;
+&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/17109638?rel=0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;
+
+&lt;p&gt;&lt;em&gt;Part II - Story of Chinese Food&lt;/em&gt;&lt;/p&gt;
+&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/17109774?rel=0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;
+
+&lt;p&gt;&lt;div style="margin-bottom:5px"&gt; &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Part III - Story of Chinese New Year&lt;/em&gt;&lt;/p&gt;
+&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/17109845" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;
+
+&lt;p&gt;&lt;div style="margin-bottom:5px"&gt; &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Party IV - Story of Year of Snake&lt;/em&gt;&lt;/p&gt;
+&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/17109883" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;
+
+&lt;p&gt;&lt;div style="margin-bottom:5px"&gt; &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Part V - Story of Chinese Characters&lt;/em&gt;&lt;/p&gt;
+&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/17110001" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;
+
+&lt;p&gt;&lt;div style="margin-bottom:5px"&gt; &lt;/p&gt;
+&lt;p&gt;Finally, you know you are on a Chinese New Year party when:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;You're drowned in an ocean of people&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Food keeps flowing&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;People are getting high on baijiu&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The dumplings are delicious!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It's very noisy&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Extremely chaotic all around - always something breaking somewhere&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Most people dressed in red&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Continuous on-stage shows and performances&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Some MC is speaking tirelessly on stage, while most people tune in
+    half-heartedly and focus on eating dumplings&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The party ends with a heartwarming song (either Unforgettable
+    Tonight, or The Moon Speaks For My Heart)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 11 Mar 2013 11:32:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-11:posts/2013/03/chinese-new-year-party/</guid><category></category></item><item><title>COASSF#48 My Yearbook Message</title><link>http://guizishanren.com/posts/2013/03/my-yearbook-message-for-Stanford-Sloan/</link><description>&lt;p&gt;One of the benefits of sitting right next to my Sloan-mate Nicki Carter, who is co-leading an admirable and spirited effort of publishing Yearbook of Sloan Class of 2013,  is that I can rest assured to receive regular reminder about my yearbook message status for no less than ... four times a week. After leading Nicki's "Hall of Shame" for many weeks in a row, I decided to redeem  myself in front of Nicki and get it over with. For someone with a petty education background prior to Stanford, I actually don't think I've ever written a yearbook message before. So I did a bit of research to see what this whole yearbook message thing is about in US, and I've arrived at the following takeaways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;writing the yearbook message could be quite an effort, especially if&lt;/li&gt;
+&lt;li&gt;you want to stand out and leave something others can remember you by&lt;/li&gt;
+&lt;li&gt;the message should be original, creative, witty, and memorable, to say the least; being inspirational or cruel will be a plus&lt;/li&gt;
+&lt;li&gt;use quotes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After spending a few hours to dig out some old emails and blogs, I came up with my yearbook message, finally. &lt;/p&gt;
+&lt;p&gt;"At first, I was afraid, I was petrified. Kept thinking, I could never do this well with all of you shining by my side. But then I spent so many minutes thinking, how I came here. And I grew strong and I learned how to introduce myself." - &lt;em&gt;first meeting&lt;/em&gt;, July 1, 2012&lt;/p&gt;
+&lt;p&gt;"Social is the path to the bright side. Social leads to fun. Fun leads to happiness. Happiness leads to friends" - &lt;em&gt;Social Chair Report on Class Meeting&lt;/em&gt;, July 25, 2012&lt;/p&gt;
+&lt;p&gt;"I engage, I entertain, I enthrall” – &lt;em&gt;CMC Linkedin workshop&lt;/em&gt;, Aug 10, 2012&lt;/p&gt;
+&lt;p&gt;"Study Hard, Social Harder" - &lt;em&gt;Class Meeting&lt;/em&gt;, Aug 22, 2012&lt;/p&gt;
+&lt;p&gt;"I'm S-ettling down in CA + S-tarting a new business + S-eeking friends &amp;amp; partners" - &lt;em&gt;BBL&lt;/em&gt;, Oct 1, 2012&lt;/p&gt;
+&lt;p&gt;"At times of uncertainties or Act of God, do not panic, do not question, do not hesitate, just follow my command" - &lt;em&gt;Gangnam Style flash mob&lt;/em&gt;, Oct 12, 2012&lt;/p&gt;
+&lt;p&gt;"This would triumph all other accomplishments we could possibly amass in the Sloan program" - &lt;em&gt;Stanford NCAA Men's Basketball Game half-time show&lt;/em&gt;, Nov 12, 2012&lt;/p&gt;
+&lt;p&gt;"Our distinguished project team consists of trendy investment bankers, experienced corporate executives, swashbuckling management consultants, illuminary government dignitaries, and Simon" - &lt;em&gt;Generative Leadership group presentation by Lost Child&lt;/em&gt;, Nov 30, 2012&lt;/p&gt;
+&lt;p&gt;"And so Sally can't wait, she knows we're too brave as we're dancing on by. Her mind blown away, and don't look back in sadness. We're here to stay. " - &lt;em&gt;The Spillovers Debut&lt;/em&gt;, Dec 12, 2012&lt;/p&gt;
+&lt;p&gt;"Whatever happens in Seatle, stays in Seatle" - &lt;em&gt;Seatle study trip&lt;/em&gt;, Dec 15, 2012&lt;/p&gt;
+&lt;p&gt;"Estonia and Sweden, Join hands, join hands together, We're friends forever' - &lt;em&gt;Lake Tahoe Ski Trip #1&lt;/em&gt;, Jan 19, 2013&lt;/p&gt;
+&lt;p&gt;"Story leads to discovery; discovery leads to enlightenment; enlightenment leads to happiness" - &lt;em&gt;Chinese New Year Party&lt;/em&gt;, Feb 08, 2013&lt;/p&gt;
+&lt;p&gt;"Is this the real life? Is this just fantasy? Caught in a landslide. No escape from reality. Open your eyes. Look up to the skies and see." - &lt;em&gt;Lake Tahoe Ski Trip #2&lt;/em&gt;, Feb 16, 2013&lt;/p&gt;
+&lt;p&gt;“Though you might be hiding away from the madding crowd in Hotel California listening to the Wind of Change, The Spillovers will Twist and Shout, and play With or Without You. After all, It's My Life and I Hate Myself For Loving You. As long as you Smell Like a Teen Spirit, I Wish You Were Here and I Don't Want To Miss A Thing by letting go the last chance of amusing you before you go on the epic East Coast Trip. Don't Cry... this is not Touchy Feely. This is from The Spillovers. Out.”  &lt;em&gt;The Spillovers Curtain Call&lt;/em&gt;, Mar 21, 2013&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 10 Mar 2013 17:29:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-10:posts/2013/03/my-yearbook-message-for-Stanford-Sloan/</guid><category>COASSF</category></item><item><title>COASSF#47 - Sloan Fellow Life Cycle &amp; How To Make The Most Out Of It</title><link>http://guizishanren.com/posts/2013/03/sloan-fellow-life-cycle-how-to-make-the-most-out-of-it/</link><description>&lt;p&gt;Before we know, 8 months have flown by and now we're 4 months away from
+graduation. All good things will come to an end, and our wonderful
+journey at Sloan Fellow Program in Stanford GSB is of no exception. The
+question is: how can we make the most out of this 12-month period?&lt;/p&gt;
+&lt;p&gt;I think the Fall Quarter from October to December is the "sweet spot"
+that we should take the most advantage of.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/Sloan-Life-Cycle.png", width="800px"&gt;&lt;/p&gt;
+&lt;p&gt;When it comes to forming relationship and bonding with our fellow
+Sloans, there are two dominant factors that will influence how much we
+can put in and how much we can get out. One is &lt;em&gt;time available for
+socializing&lt;/em&gt; with the classmates, and the other one is our &lt;em&gt;desire to bond&lt;/em&gt;
+with others in the class.&lt;/p&gt;
+&lt;p&gt;By my observation and analysis, our desire to bond with other Sloans
+roughly follows a curve (red one in the diagram) where: 1) overall it's
+always increasing (of course); 2) it's accelerating in the first half
+and decelerating in the second half. That convection point occurs
+somewhere in Fall Quarter or Winter Quarter.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;Summer Quarter&lt;/em&gt;, we take all the classes together and we're the only
+one on campus (MBAs are out doing internships). So the classic grouping
+dynamic plays out - we're curious to find out everyone's background and
+try to stack ourselves against the group to find out where we stand.
+This is the period where personal reputation is built from the classroom
+discussions and group projects. On average a Sloan may not be able to
+call out everyone else's name yet in the class, but we're getting there.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;Fall Quarter&lt;/em&gt;, the accumulative social activities have gradually been
+adding up to a critical mass to enable most Sloans to remember everyone
+else's name in the class. The most aggressive alpha males (or females)
+have already identified themselves and stepped up to take some class
+officer roles to serve the class and make their presence felt. Sloans
+still take most of the classes together. A variety of personality types
+are flashing out and bumping with each other. We still take study groups
+pretty seriously and try to get decent scores. The MBAs have arrived in
+Knight Management Center but they are preoccupied with orientation and
+neither camp has the bandwidth to reach out to the other side yet.
+Dinners with Sloans are still possible.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;Winter Quarter&lt;/em&gt;, things are getting really hectic as
+academic curriculum is taking a hefty toll and the daunting prospect of
+finding that dream job is looming on the horizon. Sloans on average are
+in 3 - 4 study groups working on different projects. Most people seem to
+be taking around 20 units. Two streams of classes are killing people
+left and right: 1) hard-core investment/finance classes; 2) startup
+classes. We are only taking Marketing and Finance together and it feels
+like we never get to see certain classmates in this quarter. This is
+also when we start taking many classes with MBAs. Stanford MBAs are
+pretty solid and sometimes more fun. Some Sloans start hanging out with
+MBAs and spending even less time with each other. At the same time, many
+Sloans begin their job search and cut down the time in holding hands
+with other Sloans singing jambalaya.&lt;/p&gt;
+&lt;p&gt;This is where we stand now. Looking forward at &lt;em&gt;Spring Quarter&lt;/em&gt;, I can see
+Sloans will be struggling to strike a balance between two competing
+forces: 1) the singular goal of finding a job and stay in the Bay area;
+2) the desire to solidify friendship and spend more time with Sloans as
+every day that goes by reminds us that the clock is ticking and we're
+walking out of a beautiful fantasy dreamland.&lt;/p&gt;
+&lt;p&gt;Besides the desire for bonding, time available for social activities is
+another important factor that will shape the group dynamics. Summer
+Quarter looks like a walk in the park now - we even had regular weekly
+basketball games! It's hard to believe we had so much free time then! It
+certainly didn't feel that way when we were in it - maybe because we
+were still taking the courses pretty seriously and reading every case
+assigned. Fall Quarter's Accounting class alone will usher many people
+into recurring nightmares and reduce their social drive, but it is still
+not too bad as we still have a sizable group that goes to Wednesday's
+ETL regularly. In Winter Quarter people start disappearing all together,
+or simply just go different ways into various BBLs, seminars,
+conferences, across-the-street classes, endless market-research
+interviews for startup projects, etc. People are worrying less about the
+qualify of academic work and just want to finish the work and move on.
+People are exploring Stanford/Bay area at large and paying much less
+attention to Knight Management Center. Very few people can afford to
+attend the ETL series. Dinner time with Sloans becomes a luxury. In
+Spring Quarter, the key focus for the self-sponsored Sloans will be job
+search and job search. We might see a slight rebound in time put aside
+for social activities, but I doubt it's going to be anything
+substantial.&lt;/p&gt;
+&lt;p&gt;So, given all the forces in the universe that are pushing us into
+various directions, it seems that Fall Quarter is the "&lt;em&gt;sweet spot&lt;/em&gt;" where
+Sloans still have considerable desire to social and are able to afford
+the time. Carpe diem!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 04 Mar 2013 20:36:00 -0800</pubDate><guid>tag:guizishanren.com,2013-03-04:posts/2013/03/sloan-fellow-life-cycle-how-to-make-the-most-out-of-it/</guid><category></category></item><item><title>COASSF#46 - Comparison of S353 (Formation of New Venture) and G566 (Real-Life Ethics)</title><link>http://guizishanren.com/posts/2013/02/comparison-S353-and-G566-in-GSB/</link><description>&lt;p&gt;G566 Real-Life Ethics was my &lt;a href="../../../2013/01/fall-qtr-course-evaluation/"&gt;most favorite class in the Fall
+Quarter&lt;/a&gt;
+and S353 is my most favorite class in the current Winter Quarter. They
+share a lot of similarities, but resonate with me at very different
+levels. Here's a detailed breakdown of comparison between them:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/G566vsS353_All.png", alt="Compare S353 and G566", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 28 Feb 2013 15:20:00 -0800</pubDate><guid>tag:guizishanren.com,2013-02-28:posts/2013/02/comparison-S353-and-G566-in-GSB/</guid><category></category></item><item><title>COASSF#45 - Should You Do Stanford's Famous Startup Courses?</title><link>http://guizishanren.com/posts/2013/02/should-you-do-stanfords-famous-startup-courses/</link><description>&lt;p&gt;As my prior article "&lt;a href="http://guizishanren.com/coassf_42_15-things-to-know-in-strategizing-your-course-portfolio/"&gt;15 Things to Know in Strategizing Your Stanford
+Courses&lt;/a&gt;"
+mentioned, doing one of those startup-themed courses (E245, S321) feels
+almost like a rite of passage for many Stanford MBA/Sloans. So, should
+you just go and do it?&lt;/p&gt;
+&lt;p&gt;It depends. Here's the decision tree I'd recommend. If you need more
+insight, contact me in private. I don't pass isolated judgement on any
+GSB course in public.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/Startup-Course-Enrollment.png", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 19 Feb 2013 16:48:00 -0800</pubDate><guid>tag:guizishanren.com,2013-02-19:posts/2013/02/should-you-do-stanfords-famous-startup-courses/</guid><category></category></item><item><title>COASSF#44 - Music Play List for Chinese New Year Party</title><link>http://guizishanren.com/posts/2013/02/must-play-list-for-chinese-new-year-party/</link><description>&lt;p&gt;制作人：&lt;em&gt;&lt;a href="http://www.xiami.com/u/1301213"&gt;桂子山人&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For the Stanford GSB Sloan Fellow Chinese New Year Party on this Friday,
+Feb 08，2013. The songs are picked for:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Their festive and party spirit;&lt;/li&gt;
+&lt;li&gt;Their iconic （many of them legendary） status in the Chinese music industry;&lt;/li&gt;
+&lt;li&gt;Their ability to represent certain distinctive genres of Chinese music;&lt;/li&gt;
+&lt;li&gt;Their coverage of the key Chinese regions such as Hong Kong, Taiwan,
+    Southeast Asia, and Mainland. The audience for this party consists
+    of 80 Sloan Fellows with their partners/children that come from 30+
+    countries all over the world with age ranging from 30 - 45
+    （roughly）.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Does it represent my taste? Of course not, but it's a great list for a
+party like Chinese New Year.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/play?ids=/song/playlist/id/15880731/type/3"&gt;去虾米试听 (Play It) &lt;img alt="试听" src="http://img.xiami.com/res/img/default/c_play.gif" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;曲目列表&lt;/em&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1770003549"&gt;同步过冬&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/7169"&gt;张柏芝;谭咏麟;张国荣;李克勤;黄贯中;黄伊汶;张燊悦;临记;陈晓东;恭硕良;丁...&lt;/a&gt;“印象中这是谭咏麟张国荣领衔的香港群星的诸多合唱曲目的最后一只名曲”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/169270"&gt;眉飞色舞&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/2527"&gt;郑秀文&lt;/a&gt;“卡拉OK的最佳热场曲目”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/399416"&gt;恭喜恭喜&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/2275"&gt;香香&lt;/a&gt;“好歹也是新年，总得拜个年，未能免俗”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1768925136"&gt;最炫民族风&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/2754"&gt;凤凰传奇&lt;/a&gt;“过去国内最火的神曲，中国乡村摇滚的代表作，太有民族风范了”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/398363"&gt;你是我的花朵&lt;/a&gt; -- &lt;a href="http://www.xiami.com/artist/978"&gt;伍佰&amp;amp;China
+    Blue&lt;/a&gt;“伍佰到了这个年纪，也成一骚男了”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/177699"&gt;今夜星光灿烂&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/2698"&gt;达明一派&lt;/a&gt;“在各个音乐类型领域都游刃有余的达明一派的这首歌总是让我想起香港的夜景”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/386393"&gt;夜色&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/7169"&gt;AGAIN;郑钧;1989;黑豹;臧天朔;唐朝&lt;/a&gt;“北京一众摇滚群星向不朽的邓丽君的致敬之作”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/17286"&gt;红日&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/532"&gt;李克勤&lt;/a&gt;“香港区歌2.0（1.0版本是罗文的狮子山下）”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/390870"&gt;明天会更好&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/7169"&gt;六十位歌手大合唱&lt;/a&gt;“前无古人，后无来者的港台一线歌手超级合唱”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/381674"&gt;皇后大道东&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/709"&gt;罗大佑;蒋志光&lt;/a&gt;“昙花一现的蒋志光和罗大佑少见的pop
+    rock之作”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/26582"&gt;劲歌金曲(Medley)&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/262"&gt;古巨基&lt;/a&gt;“我如果想秒杀K厅其他人的选择曲目之一，二十多分钟，超越了当年林子祥的十分十二寸和街头霸王榜”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/18797"&gt;妈&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/557"&gt;李小龙&lt;/a&gt;“大陆的说唱也可以很抒情，十年前大陆说唱的第一人李小龙”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/386389"&gt;路边的野花不要采&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/7169"&gt;1989;臧天朔&lt;/a&gt;“这首向邓丽君致敬之作特别搞笑”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/64454"&gt;火热动感La La La&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/1048"&gt;许志安;梁汉文;郑秀文;郭富城&lt;/a&gt;“那个时候，他们都还很年轻，还没有天王一说”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1769213851"&gt;新不了情&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/23748"&gt;萧敬腾&lt;/a&gt;“眼下台湾的第一唱将的最佳翻唱曲目”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1769638209"&gt;归&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/67969"&gt;龙井说唱&lt;/a&gt;“过年了，聊完了妈妈，再聊聊兄弟们”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1770473579"&gt;爱情的枪&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/1290"&gt;左小祖咒;陈升&lt;/a&gt;“台湾和大陆阿叔级摇滚大师历史性的合作”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/180871"&gt;康定情歌&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/2794"&gt;黑鸭子&lt;/a&gt;“中国经典名歌，万人传唱的街歌”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/389728"&gt;十年&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/135"&gt;陈奕迅&lt;/a&gt;“re-union的必唱曲目”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1770515726"&gt;你被写在我的歌里&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/3048"&gt;苏打绿;Ella&lt;/a&gt;“轻快而又浪漫的苏打绿，台湾小清新的标杆性人物”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/180874"&gt;掀起你的盖头来&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/2794"&gt;黑鸭子&lt;/a&gt;“王洛宾的另一名曲”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/376826"&gt;当我离开你的时候&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/1290"&gt;左小祖咒;陈珊妮&lt;/a&gt;“台湾大陆文艺青年心目中的女神和大神的天作之合”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/180869"&gt;南泥湾&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/2794"&gt;黑鸭子&lt;/a&gt;“名曲，就是名曲”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/176980"&gt;失恋阵线联盟&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/2673"&gt;草蜢&lt;/a&gt;“我们都是听草蜢长大的，虽然他们歌坛地位不高，但我们还是很喜欢蹦蹦跳跳的草蜢”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1770625193"&gt;青藏高原&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/1590"&gt;韩红&lt;/a&gt;“中国歌手的高音天生弱于西方，矮子里拔篙子，把韩红派出去晒一晒”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1564281"&gt;The Final Countdown&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/16162"&gt;Europe&lt;/a&gt;“这是lucky
+    draw时用的曲目，热血奔腾”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1769629256"&gt;Can You Feel It&lt;/a&gt; -- &lt;a href="http://www.xiami.com/artist/71335"&gt;Jean
+    Roch&lt;/a&gt;“非诚勿扰的主题曲，很有现场气氛，我已经用过多次了”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1769060745"&gt;氧气&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/67260"&gt;郝蕾&lt;/a&gt;“《恋爱的犀牛》的主题曲”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/52728"&gt;爱，很简单&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/870"&gt;陶喆&lt;/a&gt;“陶吉吉的歌不错，不知道为什么后来就没声音了”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/180175"&gt;自由飞翔&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/2754"&gt;凤凰传奇&lt;/a&gt;“这是凤凰传奇在K厅里更加受欢迎的一首歌”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/691"&gt;子曰&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/21"&gt;卜学亮;曾宝仪&lt;/a&gt;“可爱的阿亮和阿宝的说唱”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/3433576"&gt;为爱痴狂&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/119"&gt;陈升;刘若英&lt;/a&gt;“很经典的一首当事人男女对唱。。。只是当时已惘然”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/2103899"&gt;永远不回头&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/7158"&gt;张雨生;王杰;姚可杰;邰正宵&lt;/a&gt;“七匹狼的主题曲，另外一首让人热血奔腾的歌，他们那个时候好年轻”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/5411"&gt;北京一夜&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/119"&gt;陈升;刘佳慧&lt;/a&gt;“K厅里对这首歌的传统，男唱刘佳慧，女唱陈升”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/73668"&gt;有一点动心&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/1195"&gt;刘嘉玲;张信哲&lt;/a&gt;“张信哲的情歌还是很经得起时间考验的，这首歌Key不高，适合男女合唱”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/45137"&gt;不得不爱&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/768"&gt;潘玮柏;弦子&lt;/a&gt;“很可爱的一首男女对唱+rap，最早我是从后舍男孩在youtube上的video知道这首歌的”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/378046"&gt;大海&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/1206"&gt;张雨生&lt;/a&gt;“公认的华人高音第一人的最广为传唱的一首歌”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/379899"&gt;花房姑娘&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/638"&gt;林志炫&lt;/a&gt;“崔健的经典名曲，林志炫演绎的很有自己的风味”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1769802107"&gt;太匆匆(国)&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/859"&gt;谭咏麟;Mr.&lt;/a&gt;“如果过去二十年谭咏麟都能这么唱歌就好了。Mr.的出现，让谭咏麟原先过于商业化的歌曲里注入了更多的texture和layer。”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1770088380"&gt;热力节拍&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/7169"&gt;群星&lt;/a&gt;“热场歌曲”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/71640"&gt;但愿人长久&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/1166"&gt;张国荣&lt;/a&gt;“哥哥的歌，适合在这个场合听”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/71648"&gt;似水流年&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/1166"&gt;张国荣&lt;/a&gt;“但愿年年有今日”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/381546"&gt;光阴的故事&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/709"&gt;罗大佑&lt;/a&gt;“人生感慨，罗大佑，必须的”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/153395"&gt;明月千里寄相思&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/2322"&gt;徐小凤&lt;/a&gt;“每逢佳节倍思亲，这是最应景的歌了”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1769635402"&gt;偶然&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/783"&gt;齐秦;陈秋霞&lt;/a&gt;“在所有的《偶然》的版本中，齐秦的翻唱最佳”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/1769591619"&gt;I Will Survive&lt;/a&gt; -- &lt;a href="http://www.xiami.com/artist/60766"&gt;Hermes
+    House Band&lt;/a&gt;“我在Sloan
+    Program首次会议上向大家做自我介绍时，I Will
+    Survive的歌词脱口而出，从此这首歌就跟我密切联系在一起了。这个夜店版本常见于北京各大club，我极喜欢。”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/3376725"&gt;画心&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/2452"&gt;张靓颖&lt;/a&gt;“超女闹哄哄了这么久，好歹还出了一个张靓颖”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/181330"&gt;莫斯科郊外的晚上&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/2794"&gt;黑鸭子&lt;/a&gt;“爸爸妈妈那个时代人人会唱的曲目”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/388803"&gt;在那遥远的地方&lt;/a&gt;
+    --&lt;a href="http://www.xiami.com/artist/709"&gt;黄耀明&lt;/a&gt;“黄耀明和朱哲琴的合唱版本，彻底地把我惊艳了，明哥太牛了”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.xiami.com/song/121477"&gt;难忘今宵&lt;/a&gt; --
+    &lt;a href="http://www.xiami.com/artist/1780"&gt;李谷一&lt;/a&gt;“所有的春晚，最后必须以此歌结尾。”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 10 Feb 2013 00:24:00 -0800</pubDate><guid>tag:guizishanren.com,2013-02-10:posts/2013/02/must-play-list-for-chinese-new-year-party/</guid><category></category></item><item><title>COASSF#43 - Where Is Stanford Sloan Fellow?</title><link>http://guizishanren.com/posts/2013/01/where-is-stanford-sloan-fellow/</link><description>&lt;p&gt;At this historical moment, as we are turning the page for a new chapter
+for the Stanford Sloan Fellow program, it's important to remind
+ourselves where we stand in the universe. For people in similar career
+stage as me, this is the best program in the world, bar none.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/Where-is-Sloan.png", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 31 Jan 2013 09:31:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-31:posts/2013/01/where-is-stanford-sloan-fellow/</guid><category></category></item><item><title>COASSF#42 - 15 Things to Know in Strategizing Your Sloan Courses</title><link>http://guizishanren.com/posts/2013/01/15-things-to-know-in-strategizing-your-course-portfolio/</link><description>&lt;p&gt;In the first week of the third quarter of my 12-month Sloan academic
+year, I find myself spending at least 2-3 hours every day this week in a
+perpetual (often futile ) attempt to optimize my courses for this
+quarter. The exhaustive and reiterative process has been very tiring,
+but much needed. Because the course selection of Winter Quarter is
+critical, unique and sets the course for half of my Sloan year. In
+Summer and Fall Quarter, our curriculum was largely the same with
+limited variations - there was not much we can do to adjust the
+curriculum. Things start getting interesting in Winter Quarter, when we
+only have two classes together (Finance and Marketing) and need to fill
+up more than 50% of our academic calendar with self-selected coures from
+GSB and other school. The below 15 factors, in descending order of
+importance, might be helpful in strategizing your most optimal course
+portfolio, from the perspective of a GSB Sloan.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Iconic Courses&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;These are the signature courses that have achieved immortal status in
+Stanford lore. Most Stanford alumni have taken them or at least
+auditioned them just so that they can proudly claim they have been to
+Stanford. Even non-Stanford people from around the world follow those
+courses religiously online from many open-course platforms.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://etl.stanford.edu/"&gt;MS&amp;amp;E 472: Entrepreneurial Thought Leader's Seminar
+("ETL")&lt;/a&gt;  You should make it a ritual to
+attend this star-stubbed seminar at 430pm on every Wednesday. This is
+the one seminar that rules them all, that bonds all Stanford students
+from all the disciplines together. You can also easily get one credit if
+you care to. Enrollment is easy as long as you have no scheduling
+conflict.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.stanford.edu/class/cs106a/"&gt;CS 106A: Programming
+Methodology&lt;/a&gt;. Legend has it that
+90% of Stanford students have taken this introductory programming
+course, which does not require any prior programming experience. We're
+in Silicon Valley and Stanford. It just feels wrong not to take this
+course to at least understand how coders work and think. Anyone with any
+significance in Silicon Valley is most likely linked to Stanford in some
+way, and most people have taken CS106A. So you're truly in the company
+of some future movers and shakers of our time. While enrolling into this
+course for credit with the undergraduates 3 times a week is probably a
+bit of a stretch, you can always audition it or watch the online video.
+Enrollment is easy as it's a huge lecture class with a roaster of a few
+hundred.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://explorecourses.stanford.edu/search?view=catalog&amp;amp;filter-coursestatus-Active=on&amp;amp;page=0&amp;amp;catalog=&amp;amp;q=STRAMGT+354%3A+Entrepreneurship+and+Venture+Capital&amp;amp;collapse="&gt;STRAMGT 354: Entrepreneurship and Venture
+Capital&lt;/a&gt;.
+The most sought-after Stanford GSB course, and the most difficult one to
+get into. People weep in tears upon the news of enrollment. Valley
+extraordinaires Peter Wendell, Andy Rachleff, and Eric Schmidt co-teach
+this class. They have enormous pull from Sand Hill Road and Silicon
+Valley, and thus regularly invite first-class entrepreneurs and VCs to
+the classroom to share their insights. Wendell brought in &lt;a href="http://www.khoslaventures.com/people_vk.html"&gt;Vinod
+Khosla&lt;/a&gt; in the first class
+of the quarter last week, as if just to make a statement. You have to
+super-round this one to have the chance to get in as every GSBer is
+throwing his/her super-round option on this.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://explorecourses.stanford.edu/search?view=catalog&amp;amp;filter-coursestatus-Active=on&amp;amp;page=0&amp;amp;catalog=&amp;amp;q=FINANCE+321%3A+Investment+Management+and+Entrepreneurial+Finance&amp;amp;collapse="&gt;Finance 321: Investment Management
+and Entrepreneurial Finance&lt;/a&gt;.
+The legendary 7-unit course taught by celebrated value investor Jack
+McDonald (to give an idea, most courses are 2-3 units; 4 units is
+considered pretty heavy; 5 units is very rare; 7 units is out of this
+world). If you're going to do investment of any kind, you should try to
+enroll into this class. Auditioning attempt will be futile. McDonald has
+a photographic memory even at his current age.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://explorecourses.stanford.edu/search?page=1&amp;amp;q=interpersonal+dynamics&amp;amp;catalog=&amp;amp;filter-coursestatus-Active=on&amp;amp;view=catalog&amp;amp;collapse="&gt;OB374: Interpersonal
+Dynamics&lt;/a&gt;.
+The famous "touchy feely" course in GSB that everyone is talking about.
+All my Sloan classmates who are taking this course are raving about it
+and many GSBers think this is the single best course in all their GSB
+years. As someone who has watched David Finch's Fight Club (1999) many
+times, the mere thought of "touch feely” brings up vivid pictures of a
+support group therapy session, where everyone is crying over the
+shoulders of someone else, and occasionally Edward Norton buries his
+head in Meat Loaf's man-boobs...&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Celebrity Professors&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Many illuminaries, Sillicon legends, Nobel laureates, and billionnaires
+walked the corridors of Knight Management Center. There are so many of
+them in this pantheon of gods that it'll be almost an insult to them to
+single-out any individual ones. There are some larger-than-life
+personalities whose mere presence will enthrall people in awe such
+as: &lt;a href="http://www.gsb.stanford.edu/users/jmcdonal"&gt;Jack McDonald&lt;/a&gt; (GSB's
+franchise professor), &lt;a href="http://www.gsb.stanford.edu/users/agrove"&gt;Andrew
+Grove&lt;/a&gt; (Intel),
+and &lt;a href="http://www.gsb.stanford.edu/users/condi"&gt;Condoleezza
+Rice&lt;/a&gt; (Secretary of State);
+there are some glittering entrepreneurs/VCs whose names have been heard
+by every GSBer such as &lt;a href="http://www.gsb.stanford.edu/users/pwendell"&gt;Peter
+Wendell&lt;/a&gt;, &lt;a href="http://engineering.stanford.edu/profile/sblank"&gt;Steve
+Blank&lt;/a&gt;, &lt;a href="http://www.gsb.stanford.edu/users/rachleff"&gt;Andy
+Rachleff&lt;/a&gt;, &lt;a href="http://www.gsb.stanford.edu/users/mleslie1"&gt;Mark
+Leslie&lt;/a&gt;, and &lt;a href="http://ecorner.stanford.edu/author/heidi_roizen"&gt;Heidi
+Roizen&lt;/a&gt;; there are many
+Nobel winners in GSB, such as &lt;a href="http://www.gsb.stanford.edu/users/mscholes"&gt;Myron
+Scholes&lt;/a&gt; and &lt;a href="http://www.gsb.stanford.edu/users/mspence"&gt;A. Michael
+Spence&lt;/a&gt;; there are also
+some filthily rich professor billionaire such as  &lt;a href="http://www.stanford.edu/~cheriton/"&gt;David
+Cheriton&lt;/a&gt; (who famously wrote
+Google's first check). There are many, many more. You're in Stanford.
+Nobody gets to teach here by being less than a superstar in his/her own
+right. Even for the professors who classes we don't quite enjoy, I can
+see why they can stand here on a solid ground.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Juicy Startup Courses&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://startup.gsb.stanford.edu/"&gt;S356: Startup Garage&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.stanford.edu/class/msande273/"&gt;M273: Technology Venture
+Formation&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://e245.stanford.edu/"&gt;E245: The Lean Launchpad&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://explorecourses.stanford.edu/search?view=catalog&amp;amp;filter-coursestatus-Active=on&amp;amp;page=0&amp;amp;catalog=&amp;amp;q=STRAMGT+321%3A+Create+a+New+Venture%3A+From+Idea+to+Launch+I&amp;amp;collapse="&gt;S321: Create a New Venture, From Idea to
+Launch&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Many think it's a rite of passage to do a startup-themed course in
+Stanford - which is probably true, especially for those who haven't done
+startup before. The above four are your choices, among which two are
+from School of Engineering. Choose them carefully because it's a
+significant undertaking. You should expect to spend 15-30 hours a week,
+which include class time, many hours of team meetings, and regular
+review sessions with assigned mentors. All of them require application
+as a team. S356 and S321 are heavy two-quarter commitments (you can
+still get out after one quarter but it might create bad will with your
+team), while M273 and E245 are one-quarter only. I will try to do a more
+in-depth analysis and comparison among these courses in a separate
+article. Make sure you choose the right team  (3-4) for these coures
+because you'll spend significant hours together, much more than a
+typical study group format requires. Grouping with the wrong person for
+3 months is much worse than sitting in the wrong class. You sort of
+place a big bet of your social capital (ie. time) on 3 people
+(Sloan/MBA/engineer) at the expense of the other 70-80 Sloans. Good
+luck. Another great benefit of these courses is the mentor the
+instructor will assign to you, and the opportunity to pitch to real VCs
+for your project. For people who are new to this process, this will be a
+great experience to get hands dirty and get a taste of how it's like
+working in startups and with VCs. For people who have gone through this
+process before, don't get too dizzy with all the shining names from Sand
+Hill. It takes several reciprocal transactions to start building a real
+business relationship. MBAs have more means at their disposal such as
+independent studies, case-writing, teaching assistant etc. As Sloans,
+we're in general a bit handicapped.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Reasonable Course Portfolio Strategy&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It's helpful to have a rough roadmap before coming to Stanford Sloan in
+terms of what you want to get out of it, then allocate your courses (or,
+your tuition) strategically. I suggest strategizing your portfolio of
+courses around the below major categories: A) Startup track; B)
+Corporate Track; C) Investment Track; D) Social Innovation ; E)
+International Politics &amp;amp; Economies;  F) Leadership. G) Communication
+(this is for Sloans only. Few Sloans would go Consulting after
+graduation). It's advisable to major in only one stream from A to E,
+maybe minor in another stream from F to G, then taste the rest with a
+surveyor mentality. &lt;em&gt;Do not major in two streams&lt;/em&gt;. It will kill your
+social calendar and cost you the most valuable asset you can get out of
+Sloan program - bonding with other Sloans.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A&lt;/em&gt; is self-explanatory - you do whatever you want to do in the
+wilderness, do 1-2 above mentioned startup course; sign up for every
+course that has "entrepreneurship" in its title from every school;
+attend weekly ETL religiously; hack your way into Wendell's class; watch
+every video from &lt;a href="http://ecorner.stanford.edu/"&gt;Stanford's e-Corner&lt;/a&gt;;
+attend as many Silicon Valley TMT conferences as your budget allows;
+enroll into CS106A just to show you're hard-core; and make some young
+friends in School of Computer Science or Engineering who only enjoy
+coding for the pure pleasure of coding regardless of how lousy the
+actual product/service is - which inevitably is designed by you.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;B&lt;/em&gt; is for people with corporate sponsorship or willing to go back to the
+corporate environment. Sign up for some bad-ass named courses such as
+&lt;a href="http://csi.gsb.stanford.edu/the-paths-to-power"&gt;Paths to Power&lt;/a&gt;,
+Decision for the Future, etc. Minoring in either leadership or
+communication goes well with this one.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;C&lt;/em&gt; has three sub-streams: angel/VC investment, private equity investment,
+and public investment (hedge fund and portfolio management). They all
+lead to very different industry dynamics, practices, and locations so
+you want to think carefully before stepping into any stream. Get into
+the class of Jack McDonald, Peter Wendell, and Charles Lee. Run for
+Sloan Class' Investment Committee officer position. Show up at every
+event whenever any member of Stanford Management Company (Stanford's
+endowment fund) is present.&lt;/p&gt;
+&lt;p&gt;D is D. E is a common choice for Sloans sponsored by governments or
+coming from family business background.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Flashy One-Timers&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It's important to take note of some highly desired courses that are only
+offered in a particular quarter (due to the availability of the
+instructor, who might be attending multiple board meetings or making
+movies, or advising US President in the other three quarters). For
+example, Jack McDonald's legendary 7-unit course on investment and
+entrepreneur finance (Fall Quarter), Leadership in Entertainment
+Business (Spring Quarter), and Real-Life Ethics (Fall Quarter). Take
+them before they vanish from your academic year's calendar, which is
+only one-year.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Heavy Two-Quarter Commitments&lt;/em&gt;  &lt;/p&gt;
+&lt;p&gt;Many courses run across two continuous quarters because they use team
+projects as the teaching vehicle. Make sure you sign up for the first
+leg at the right quarter, otherwise it'll be very difficult to join them
+at the second leg. That being said, there are still ways to join the
+second leg of some of those courses. For example, when some people drop
+from a team after the first leg, a position may become available and the
+instructor may want to fill that with someone new just to keep the
+group/project/class going.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Confusing Application-Required Courses&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;MyGSB and Axess are the main portals to register for our courses, but
+not always. Some courses require application and may not even been
+available to register from Axess. There are three types:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Registration available on Axess + No application needed. This is easy. Just register on Axess and you're set.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Registration available on Axess + Application needed. Very confusing. You have registered the course on Axess, but you still
+have to go through a separate application process outside of Axess to
+get enrolled, which means your precious calendar will be taken up by a
+course that is not guaranteed to you yet and at the same time might get
+in your way for other courses. The Spirit of Entrepreneurship and Lean
+Launchpad come to mind.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Registration not available on Axess + Application needed Less confusing but more mysterious. They are not on Axess, you have to
+go to their own idiosyncratic websites to apply or even go through the
+draconian means of ... email. Sloan's staff does a pretty good job on
+this and will organize talks before the registration period to highlight
+all such courses that need special attention.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Evil Exams&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It helps to go for the electives that have no exams - so that you will
+be free in the last exam-week and start your vacation earlier while
+others are still sweating on exams. It seems that most electives do not
+have exams, but some of them do have, such as Decision for the Future.
+Be aware and stay away from those courses, unless you really love them
+dearly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Shining Guest Speakers&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;When you evaluate the attractiveness of a course, the quantity and the
+quality of its guest speakers are very important. They can make a huge
+difference and bring life to an otherwise dreadful classroom session.
+They also reflect how influential the professor is and how much pull
+he/she's got in the industry and around the Silicon Valley. For many
+classes guest speakers are integral part of the teaching, such as Real
+Estate Investment, Real-Life Ethics, Entrepreneurship: Formation of New
+Ventures, The Spirit of Entrepreneurship, Election 2012, and many more.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Bright MBAs&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;All the core courses are Sloan-only. Some electives are set up to be
+Sloan-only (such as Executive Communications). Most electives have mix
+of MBAs and Sloans. Personally it's been an enlightening experience for
+me to take many clases with MBAs, who are smart, respectful and mature
+(despite of their much younger average age).  I wish I could have spent
+more time with them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Geeky Coders and Engineers&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Attend some classes "across the street" from School of Engineering or
+School of Computer Science. Stanford GSB students can rival the best
+MBAs from any school, including Harvard and Wharton, but still they are
+not the prince of the universe here. Don't lose the sight of the fact
+that Silicon Valley's culture, wealth, and social pecking order are
+defined and ruled by engineers and coders from Stanford. It will pay
+long-term dividend to make some friends there and at least understand
+how they work and think. Besides attending ETL and CS106A, go to some
+seminars/talks organized by Engineering and Computer Science. Don't get
+too caught up in Knight Management Center.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Personalized Seasonality&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;With many Sloans regularly taking around 20 credits a quarter, it's
+fairly easy to satisfy the academic requirements for graduation, which
+ask for 56 credits, out of which at least 50 come from GSB. Summer
+Quarter is pretty light with only 12 credits (we played many basketball
+games then - utterly unthinkable now);  Fall Quarter and Winter Quarter
+are the heaviest. You do have some level of discretion about Spring
+Quarter. You can either load yourself up to attend as many classes as
+you can to make good on your \$108,000 tuition investment, or go by with
+only 11 credits - the lowest credits you have to maintain to qualify as
+a full-time student.  You can free up yourself to pursue other things in
+life, such as landing a job, finding a significant other, starting a
+business, or making some babies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Manageable Team Relationships&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Almost every class requires some sort of grouping. So we always end up
+in 4-6 different groups in Fall/Winter/Spring Quarter. Most of them are
+only called for on as-needed basis when group project deliverables are
+approaching. However, be aware that some groups are quite heavy-lifting
+and require significant investment in time and emotion (like "Touchy
+Feely") due to the nature of the group projects. All the startup-themed
+classes, as well as the assigned study group for Finance and Marketing,
+fall into this category. Depending what kind of people you end up with
+in your groups, some groups choose to meet as little as possible and
+some groups prefer to do everything together. Welcome to B-school, where
+drama never ends.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Forgotten Audition&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Do not forget to audit. Many a time you're not able to enroll into a
+particular class for reasons such as, you max out your 22 credits for
+the quarter, the class is full, it conflicts with other classes on your
+calendar, etc. You can still sit in for those classes as long as the
+instructor permits. You sit in the back row; do not raise your hand; no
+participation, no homework, no grade; you're just a spectator - this is
+auditing. I would always audit for Wendell's class as long as I'm not
+completely burned out. With so many intellectually stimulating classes
+opening their doors to you left and right, it'll be a crime and waste of
+your tuition money if you don't do any auditing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Precious Wednesday&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Last and the least, try to keep your Wednesday free of any class except
+ETL, which is always on Wednesday afternoon. Sloan staff usually
+schedules program-related activities on Wednesday, such as important
+announcements or class meetings. Many study groups schedule their weekly
+session on Wednesday.  You should also leave some room for yourself for
+interviews, out-of-town trips. An inconveniently timed class on
+Wednesday might screw up all such schedules and make you very unpopular
+in general.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Voila!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sat, 26 Jan 2013 21:22:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-26:posts/2013/01/15-things-to-know-in-strategizing-your-course-portfolio/</guid><category>thats</category><category>awesome</category></item><item><title>COASSF#41 - Why Search Funds Might Make Sense</title><link>http://guizishanren.com/posts/2013/01/why-search-funds-make-sense/</link><description>&lt;p&gt;Some Stanford lecturers and alumni are involved in the business of
+search fund, but this is one type of investment vehicle that is often
+not well understood by people from outside. The model makes sense to the
+three parties involved in the following ways ... I think:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;For the searchers&lt;/em&gt; (MBAs in pair, who go raising capital to fund the
+search, identify an acquisition target company, raise more capital to
+buy it, run it for several years, and sell it for profit at the right
+EBIDTA),&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This model is almost exclusively for MBAs (mostly young) with little
+    to no operating/management experience but have some entrepreneurial
+    spirit to be a change agent and live their lives on their own terms.&lt;/li&gt;
+&lt;li&gt;It fits with newly minted MBAs' desire of running businesses,
+    improving operation and managing processes.&lt;/li&gt;
+&lt;li&gt;Many MBAs (especially those with consulting or banking background)
+    have no particular desire for product creation/development, nor
+    strong passion for any particular domains, but want to run a
+    business by applying business school tactics and skills. Search
+    fund's model suits such desire.&lt;/li&gt;
+&lt;li&gt;It provides to the searchers the opportunity to become CEO of a
+    small to medium-sized company (right away after the search is
+    completed and the deal is closed), which is not available to most
+    MBA graduates.&lt;/li&gt;
+&lt;li&gt;The searchers have the luxury of learning the business at reasonable
+    pace and groom themselves into effective CEOs because search fund
+    targets are usually cash flow positive business with stable business
+    models.&lt;/li&gt;
+&lt;li&gt;The searchers don't have to deal with the nuances faced by the CEO
+    of a typical startup, like handling all the back room matters.&lt;/li&gt;
+&lt;li&gt;There is a possibility that it could be relatively easy to turn
+    around a small-sized traditional type of business that doesn't
+    typically embrace modern management practice such as regular team
+    meetings or neat financial analysis from Excel. There might be many
+    low-hanging fruits there.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;For the investors&lt;/em&gt; (individuals who give capital to the searchers)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lower risk (lower return as well) because the target companies
+    already have EBIDTA and a stable operating structure and
+    environment.&lt;/li&gt;
+&lt;li&gt;Lower entry of investment compared to VC and PE funds.&lt;/li&gt;
+&lt;li&gt;Contrarian play because most of the target companies are in
+    traditional, less sexy industries (but with potential to unlock
+    value from simple process improvement) that are often overlooked by
+    the VC/PE firms.&lt;/li&gt;
+&lt;li&gt;Lower risk from more flexibility in capital commitment due to the
+    two-staged funding process and the usual right-of-the-first-refusal
+    clause.&lt;/li&gt;
+&lt;li&gt;Ability to get much more involvement and utilize his/her own domain
+    expertise, unlike being a LP in a typical VC/PE fund.&lt;/li&gt;
+&lt;li&gt;Better access to the invested target companies because GP =
+    Management team, which provides a higher level of comfort and lowers
+    the perceived risk.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;For the sellers&lt;/em&gt; (current owners of the target company who sell the
+company to the search fund)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Search funds might be the only buyers available as their companies
+    are usually fairly small, under the radar screen of the big VC/PE
+    firms.&lt;/li&gt;
+&lt;li&gt;Suits the needs for the owners/founders who want to retire but want
+    to make sure the business is in good hands as search fund GPs are
+    much more committed than typical VC professionals, who are pure
+    financial investors.&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 24 Jan 2013 16:07:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-24:posts/2013/01/why-search-funds-make-sense/</guid><category></category></item><item><title>COASSF#40 - Reflection Notes from S353 Jan 17 Fitness Anywhere Case</title><link>http://guizishanren.com/posts/2013/01/reflection-notes-from-s353-fitness-anywhere-case/</link><description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Typical equity split after 1st round in the Valley:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;VC&lt;/span&gt;                          &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;span class="n"&gt;Options&lt;/span&gt;                     &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;span class="n"&gt;Founders&lt;/span&gt;                    &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;span class="n"&gt;Total&lt;/span&gt;                       &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Honestly, the VC numbers are shockingly high to me. In China I've
+    never seen any startup after 1st round with such an equity split
+    that favors VCs so much.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Typical equity split among founding team after 1st round in the Valley
+on average:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;CEO&lt;/span&gt;                         &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;span class="n"&gt;VP&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Engineering&lt;/span&gt;           &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;span class="n"&gt;VP&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Marketing&lt;/span&gt;             &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;span class="n"&gt;VP&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Sale&lt;/span&gt;                  &lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;span class="n"&gt;Controller&lt;/span&gt;                  &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;Engineer&lt;/span&gt;              &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;each&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;Engineer&lt;/span&gt;             &lt;span class="mf"&gt;0.3&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;each&lt;/span&gt;
+&lt;span class="n"&gt;Director&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Marketing&lt;/span&gt;       &lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;span class="n"&gt;Product&lt;/span&gt; &lt;span class="n"&gt;Manager&lt;/span&gt;             &lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Michael asked a question about CFO. Lecturer's answer was straight:
+    don't include CFO in your founding team, unless it's a hard-core
+    financing business. Well, that's some encouraging news there.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do not recruit close friends into your startup, especially the best-man
+on your wedding&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vest the stocks for new members you invite to join the founding team. Do
+not vest your own stocks (obviously).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do not give part-timers more than 1.0% stock. Do not partner with
+someone that can only work part-time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get the free interns from business schools. Make them hot.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use convertible bond (CB) for fund-raising. It's more effective and
+efficient than the traditional equity fund-raising.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fill out Schedule C  (roles, responsibilities, deliverables, and
+timeline) of LLC's legal document in details to minimize founder's
+risks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Why some founders appear to be very generous with distributing their
+stocks? - because when the company is small, they feel they have little
+to lose, so they don't really care. When the company gets bigger and its
+valuation gets higher, founder's mentality will change.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 17 Jan 2013 23:41:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-17:posts/2013/01/reflection-notes-from-s353-fitness-anywhere-case/</guid><category></category></item><item><title>COASSF#39 - Reflection Notes from S353 Jan 15</title><link>http://guizishanren.com/posts/2013/01/reflection-notes-from-s353-jan-15/</link><description>&lt;p&gt;Reflected from today's S353 Entrepreneurship: Formation of New Business,
+Case SHED:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;3 is the best number for the size of a startup team (even Google's
+    Brin and Page had to bring Schmidt to balance out). 4 is usually not
+    very stable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do not split equity equally. It rarely works out. In the case of 3
+    founders, make sure:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;There is a single largest shareholder&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The equity stake of any two founders is greater than the third
+    one's&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do not discuss equity split until there is a tangible idea to work
+    on and everyone knows what his/her role is. Discussion on equity
+    split, once occurred, is very difficult to roll back.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do not form a partnership only based on common interests, or purely
+    based on friendship. Every condition below has to be met before
+    forming a startup partnership:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;same value system&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;common interest areas (entertainment, mobile Internet,
+    healthcare, agriculture... something)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a business idea that all parties agree to commit to (could be a
+    vague one.. but there has to be one)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;complementary skill set&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vetting on team members during GSB days is essential, but may not be
+    sufficient. A man's true character and personality are only revealed
+    when there is significant money at stake. TGIFs, study group
+    discussions, coffee breaks at Coupa, study trips, all these
+    interactions certainly help to understand someone's value system and
+    integrity, but founders should not get too carried away on those
+    findings. When there is no real money at play, it's not hard to get
+    along with most people in GSB. GSB's environment, compared to
+    real-life startup situations, is not stressful enough to put a man
+    in a corner.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The concept of defensible and sustainable business model is
+    over-rated (Monitor Group did go bankrupt). A startup play is to
+    arbitrage on the constraint optimization. When other players in the
+    market see the same potential, that arbitrage opportunity will
+    diminish unless the company reinvents itself. Everything is in
+    relative sense - a startup is only as successful as the founders are
+    able to exit with respectable return before it's lost its edge.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Attending trade shows to get business ideas? This might work in the
+    case of SHED, but I won't use that as the main source of idea
+    generation. My problem, and my partners' problem, has always been
+    that we have way too many ideas we want to work on, and we only have
+    limited resources. I've never been in a situation like, oh my god, I
+    have no idea what to start up with. Let me go attend a trade show to
+    get some ideas. I get hit by ideas all the time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How do founders know an idea is new? In our case, it's very simple.
+    All three of us are very well informed and plugged in our own
+    networks. If an idea pops up and none of us has heard about it
+    before, almost by definition it has to be a new idea (otherwise we
+    would have known).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The success of SHED case brings out a very interesting business
+    strategy that is pretty rare but could be highly effective.
+    Occasionally, a small player can leverage existing competition and
+    play off against big players. For details, read Isaac Asimov's
+    Foundation series.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Starting a new business without domain expertise is very possible,
+    as Sarah Blakely of Spanx, Tory Burch of Tory Burch, and Scott and
+    Eric from SHED have demonstrated. With enough passion and
+    dedication, it's not that hard to catch up on the knowledge and
+    experience. It's not easy, but can be done.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 16 Jan 2013 00:48:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-16:posts/2013/01/reflection-notes-from-s353-jan-15/</guid><category></category></item><item><title>COASSF#37 - Fall Quarter Course Final Evaluation</title><link>http://guizishanren.com/posts/2013/01/fall-qtr-course-evaluation/</link><description>&lt;p&gt;My final evaluation for the Fall Quarter courses, following the CIDRAE
+framework I developed in the summer. It's a somewhat scientific approach
+to validate my favorite courses: Real-life Ethics, Election 2012,
+Political Communication, Organization Behavior, and Generative
+Leadership.&lt;/p&gt;
+&lt;p&gt;My final group presentation in Executive Communication was critiqued by
+several judges of local Sloan alumni. We had a pleasant chat with one of
+the judges after the team presentation, a young Sloan alumni with curly
+hair, who gave us some thoughtful feedback. After getting through the
+business stuff our conversation went casual and off the path. Seemingly
+randomly he asked who had taken Real-Life Ethics. I identified myself
+and went on a lengthy and passionate speech of flowery praise about how
+much I enjoyed that class thoroughly and loved the instructor Mark
+Leslie.&lt;/p&gt;
+&lt;p&gt;At the end of my speech, he smiled at me, I'm glad to hear that, Mark is
+my father.&lt;/p&gt;
+&lt;p&gt;.....o....k.&lt;/p&gt;
+&lt;p&gt;for an overview and introduction of CIDRAE, please read
+&lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_24_evaluate-stanford-courses-with-cidrae/"&gt;here&lt;/a&gt;:
+| - to compare to the similar evaluation of my Summer Quarter courses,
+please
+read &lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_25_summer-quarter-course-evaluation/"&gt;here&lt;/a&gt;:
+| - to compare to the interim evaluation of my Fall Quarter courses,
+please read
+&lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_26_fall-quarter-course-evaluation-interim/"&gt;here&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="CIDRAE Score for Fall Qtr" src="../../../../images/CIDRAE_Fall-Qtr.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 03 Jan 2013 23:45:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-03:posts/2013/01/fall-qtr-course-evaluation/</guid><category></category></item><item><title>COASSF#34 - Application to dMedia</title><link>http://guizishanren.com/posts/2012/12/application-to-dmedia/</link><description>&lt;p&gt;&lt;a href="http://dschool.stanford.edu/dmedia/"&gt;dMedia&lt;/a&gt; is a course from d.school
+of Stanford in the coming Winter Quarter. As most other design-themed
+courses from Stanford's trendy Design School, it has a
+somewhat idiosyncratic application, in which I need to do this:&lt;/p&gt;
+&lt;p&gt;"Share a single url that describes how your past experience has prepared
+you to contribute to the dmedia class- a portfolio, a pdf, a flickr
+page, a twitter feed, a video, an example of your work online-preferably
+something we haven't thought of... it's up to you. Please make sure your
+name &amp;amp; a title / description on the url is visible so we know it's you."&lt;/p&gt;
+&lt;p&gt;So I've laid out my answer in this page - why I think I can make a
+meaningful contribution to the dmedia class.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;I'm familiar with developing mobile applications on
+    smartphones.&lt;/em&gt; I've co-founded a startup that develops mobile
+    applications (iOS &amp;amp; Android) leveraging the largest social network
+    in China.Our app &lt;a href="http://www.zheli.com"&gt;zheli&lt;/a&gt;.com once made it into
+    Top 10 in the Local Life Category in Apps Store
+    China.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/zheli.com.png", width="800px"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;I have always been a visionary and evangelist&lt;/em&gt; when it comes to
+    the smartphone revolution. I drew this chart in 2007, right after
+    buying my first iPhone (Generation 1), and &lt;a href="http://guizishanren.com/apples-entire-consumer-strategy-and-vision-on-one-page/"&gt;made bold predictions
+    about Apple's entire consumer
+    strategy&lt;/a&gt;
+    in the future. Most of my predictions have come into reality five
+    years
+    after.&lt;/p&gt;
+&lt;p&gt;&lt;img src ="../../../../images/apple-strategy.jpg", width="800px"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;I'm very experienced in creating enthralling entertainment
+    contents&lt;/em&gt; for mass distribution. On Oct 12, 2012, I directed and
+    produced the &lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_20_dance-of-my-life/"&gt;wildly successful Stanford GSB Flash
+    Mob&lt;/a&gt;
+    that took place in Stanford Knight Management Center on Oct 12, and
+    made it into a viral hit on Youtube. On Nov 12, I led a team of 26
+    Sloans to perform &lt;a href="http://guizishanren.com/gangnam-style-goes-to-stanford-ncaa-half-time-show/"&gt;Gangnam Style during the half-time show of
+    Stanford Men's Basketball
+    Game&lt;/a&gt;
+    in Maples Pavilion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;I'm a hard-core user on most of the prevailing SNS platforms&lt;/em&gt;,
+    such as Facebook, Linkedin, Instagram, Weibo (China). I have &lt;a href="http://www.weibo.com/zire"&gt;12,892
+    followers on Weibo&lt;/a&gt;, China's largest
+    social network (similar to Twitter), and &lt;a href="http://instagram.com/zire"&gt;2,400 followers on
+    Instagram&lt;/a&gt;. I know very well how SNS have
+    evolved over the last few years. My guides/walkthroughs on using
+    &lt;a href="http://guizishanren.com/how-i-learned-to-stop-worrying-and-love-the-weibo/"&gt;Weibo&lt;/a&gt;
+    and
+    &lt;a href="http://guizishanren.com/instagram%EF%BC%8C%E6%91%84%E5%BD%B1%EF%BC%8C%E5%92%8C%E5%88%86%E4%BA%AB/"&gt;Instagram&lt;/a&gt;
+    have been widely quoted in China.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With that, I hope I have convinced you that I will be a valuable
+addition to your class. Thank you.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 20 Dec 2012 02:48:00 -0800</pubDate><guid>tag:guizishanren.com,2012-12-20:posts/2012/12/application-to-dmedia/</guid><category></category></item><item><title>A New Business Card</title><link>http://guizishanren.com/posts/2012/12/a-new-business-card/</link><description>&lt;p&gt;Usually when I procrastinate on something, I'll try to find ways to
+amuse myself and keep myself motivated. As I was procrastinating on the
+preparation for the upcoming Accounting and Global Strategy final exams
+over the weekend, I thought it would be fun to design my own business
+cards for the Seattle trip next week. The staff at Palo Alto Fedex
+office on California Ave was extremely helpful and gave me all the
+necessary instructions. So I came up with this design using good old
+PowerPoint. It worked well. The proof sample looked pretty sleek. I
+shall receive the actual cards by Monday.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/bizcard_cover.png", width="800px"&gt;&lt;/p&gt;
+&lt;p&gt;When I first came to Stanford GSB Sloan Program, I did not feel business
+card was going to be of much use here in Stanford/the Bay area. The use
+of business cards is not as prevalent as in China. Most people seem to
+be content with getting a phone number/email by the end of a pleasant
+conversation. It's not common to see people give out business cards
+hard-selling themselves, at least not on Stanford campus.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/bizcard_back.png", width="800px"&gt;&lt;/p&gt;
+&lt;p&gt;Having said that, many Sloans still ordered the standard business cards
+from Stanford Sloan Program, which has a nice Stanford logo.
+Occasionally it's still useful, during info sessions or networking
+events like Tailgate parties.&lt;/p&gt;
+&lt;p&gt;During our Seattle company visit trip next week, more than 60 Sloans
+will be meeting with alumni and executives from various companies. The
+thought of so many of us giving out almost identical business cards to
+the same VIP made me wonder, maybe this is the time to get creative. I
+need to figure out a way to distinguish myself from others, and I should
+use my business card as the most potent vehicle for my personal branding
+- a subject that has been the center of attention among me, my brother
+&lt;a href="http://www.steve-qing-yang.com/"&gt;Steve&lt;/a&gt;, and some old and new friends.&lt;/p&gt;
+&lt;p&gt;So here it is. The font is primarily Helvetica. The color for the cover
+is tangerine. The "cloud" on the back took some painstaking effort to
+complete - it was done manually by aligning every textbox into the right
+position with the right color and font size, all in PowerPoint.
+PowerPoint does a rather appalling job in rendering fonts. Some fonts
+looked pretty goofy when the size was below 8. Fortunately PDF saved the
+day. When I saved the PPT file as a PDF (on my Macbook Air), magically
+PDF rendered all the fonts in their 100% glory and accuracy. Voila!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 10 Dec 2012 01:13:00 -0800</pubDate><guid>tag:guizishanren.com,2012-12-10:posts/2012/12/a-new-business-card/</guid><category></category></item><item><title>COASSF#25 - Summer Quarter Course Evaluation</title><link>http://guizishanren.com/posts/2012/10/summer-quarter-course-evaluation/</link><description>&lt;p&gt;... continued from the explanation of &lt;a href="../../../2012/10/evaluate-course-with-CIDRAE/"&gt;CIDRAE Framework&lt;/a&gt;, here is the evaluation for the courses I took in the summer quarter of Stanford 2012-2013 in the Sloan Program.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/summer-Q.png" width="800px" alt="Summer Quarter Score"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 18 Oct 2012 22:14:00 -0700</pubDate><guid>tag:guizishanren.com,2012-10-18:posts/2012/10/summer-quarter-course-evaluation/</guid><category></category></item><item><title>COASSF#24 - Evaluate Courses with CIDRAE</title><link>http://guizishanren.com/posts/2012/10/evaluate-course-with-CIDRAE/</link><description>&lt;p&gt;I've been thinking about evaluating each course I've taken in &lt;a href="http://www.gsb.stanford.edu/sloan"&gt;Stanford
+Sloan Program&lt;/a&gt; individually, but I'm
+afraid that my often highly opinionated remarks would hurt some feelings
+and doom my future career in the Silicon Valley. So I developed a
+framework during today's less-than-eventful class, called &lt;strong&gt;CIDRAE,&lt;/strong&gt; to
+express a more balanced and comprehensive critique for each course. My
+idea was inspired from the group exercise project (the U Penn PhD
+curriculum one) for a course in the Fall Quarter &lt;a href="http://explorecourses.stanford.edu/search?view=catalog&amp;amp;filter-coursestatus-Active=on&amp;amp;page=0&amp;amp;catalog=&amp;amp;q=GSBGEN+239%3A+Sloan%3A+Executive+Communication+Strategies&amp;amp;collapse="&gt;GSBGEN239 Executive
+Communication
+Strategies&lt;/a&gt;. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;C&lt;/em&gt;ontents Usefulness&lt;/p&gt;
+&lt;p&gt;How useful are the contents? How relevant are
+they to me? Are they what I want to learn?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;I&lt;/em&gt;nstructor's Presentation&lt;/p&gt;
+&lt;p&gt;Is the instructor inspiring? Is his
+presentation creative, engaging, or conducive for learning?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;D&lt;/em&gt;ynamics in Classroom&lt;/p&gt;
+&lt;p&gt;Is there usually a spirited discussion or debate among students in the class? Are students proactively sharing their views and experiences to enhance the overall learning for the class?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;R&lt;/em&gt;eading Load&lt;/p&gt;
+&lt;p&gt;How heavy is the reading material? Are they compulsory
+or optional?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;A&lt;/em&gt;ssignment/Project Load&lt;/p&gt;
+&lt;p&gt;How heavy is the work load from assignments
+and projects (individual and group)?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;E&lt;/em&gt;xam Pressure&lt;/p&gt;
+&lt;p&gt;How stressful is it to prepare for the exam? How
+menacing does the exam look like? How much psychological pressure does
+it impose on me?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;C, I, D more or less measure how much I get out of the course, and R, A,
+E measure how much effort I need to put into the course. For every
+course, I'll measure it under these six dimensions and assign a value
+from 1 to 5. 5 is the highest extend, and 1 is the lowest extend. Also
+it's worth noting that RAE reflects how I treat the course requirement,
+rather than what is officially required by the syllabus. The entire
+CIDRAE score is, therefore, highly idiosyncratic.&lt;/p&gt;
+&lt;p&gt;Denote:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;CID&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Sum&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+
+&lt;span class="n"&gt;RAE&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Sum&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+
+&lt;span class="n"&gt;CIDRAE&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CID&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;RAE&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;...... to be continued in &lt;a href="../../../2012/10/summer-quarter-course-evaluation/"&gt;Summer Qtr Course Evaluation&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 18 Oct 2012 16:14:00 -0700</pubDate><guid>tag:guizishanren.com,2012-10-18:posts/2012/10/evaluate-course-with-CIDRAE/</guid><category></category></item><item><title>Why Here, Why Now, Why Again?</title><link>http://guizishanren.com/posts/2012/09/why-here-why-now-why-again/</link><description>&lt;p&gt;I guess I owe an explanation to many of my friends who have watched and
+followed me with curiosity through all these years and numerous avant
+garden social networks.  I've moved back to the States since June and I
+haven't got the chance to call up many friends (actually, most) in the
+States yet to let them know of this news, which is very uncharacteristic
+of me. On the other side of the ocean, many of my friends in China are
+wondering why I suddenly disappeared in Beijing's social scene. The
+questions I've got a lot lately are: &lt;em&gt;Why are you here in Stanford? Why
+are you back to the States? Why are you moving your home base again?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Admittedly I was a bit jaded explaining my recent endeavor to my
+friends, who constitute a fairly substantial group across the Pacific.
+Our annual newsletter at the end of the year still serves as an
+effective way to keep all our cared ones updated - a tradition we have
+been practicing since 2004 when living in Boston. However I stopped
+writing the English version of the newsletter two years ago because a
+Chinese version alone already exhausted all my creativity and
+inspiration (I don't think any English newsletter can beat my Chinese
+&lt;a href="http://www.guizishanren.com/?p=549"&gt;newsletter of 2010&lt;/a&gt; and 2011.
+They're not as good as Umberto Eco's, but they are decent and pride
+attempts in that direction). The problem with the newsletter is that
+we've moving our lives too fast for the newsletter to catch up.&lt;/p&gt;
+&lt;p&gt;My feeble attempt on Sina Weibo also got buried in the sea of tweets
+quickly. I wrote
+this&lt;a href="http://weibo.com/1270520763/ykmem37YZ"&gt;《出师表·2012》&lt;/a&gt;in May 22,
+but Sina Weibo already started its irreversible decline and much fewer
+users are still active. Nothing of much substance can really leave a
+trail on twitter-esque Sina Weibo.&lt;/p&gt;
+&lt;p&gt;So here's my latest update and why everything leads to right here, right
+now.&lt;/p&gt;
+&lt;p&gt;I've had US greencard since 2006. My wife and I actually gave up
+Singapore PR (permanent residence) after we got greencards (looking back
+that was probably not a smart idea, from a personal tax standpoint)
+thinking that US Greencard was all that we needed. When I left Boston to
+join a tech startup in Beijing in 2008, I sort of gave up Greencard
+mentally, expecting to settle down in Beijing in years to come. We did
+settle down in Beijing and lived there for more than four years, during
+which I joined two ambitious startup companies working with some of the
+most influential VC firms. For a variety of reasons that can easily fill
+up my first novel and two long and exciting TV drama series, these two
+companies couldn't complete its IPO. So at the end of 2011 I was
+weighing other options going forward.&lt;/p&gt;
+&lt;p&gt;Then as we were trying to enter US for our West Coast Highway 101 road
+trip, we found that our greencard status faced serious challenge because
+we did not stay physically inside US long enough. Long story short,
+after consulting multiple immigration lawyers in the Bay area, we saw
+two options in front of us with no middle-ground: either we move our
+home base here, or we run the risk of giving up greencard on our next
+trip back to US.&lt;/p&gt;
+&lt;p&gt;We didn't want to give up greencard, so we decided to move back to US.&lt;/p&gt;
+&lt;p&gt;Moving back to US seems to be against the current trend, as many Chinese
+have flocked to Beijing, Shanghai and Hong Kong in recent years to
+pursue their wild wild east dreams. US was still recovering slowly from
+the painful sub-prime crisis since 2008 and China has been rising fast
+into a superpower, at least economically. Colorful and exciting
+rugs-to-riches stories roll off tongues in the bars and Starbucks in
+Beijing and Shanghai while young people fantasize being the next Jack
+Ma, Pony Ma, Robin Li, or Neil Shen.&lt;/p&gt;
+&lt;p&gt;However there are certain things that we value very much and we find
+very hard to come by in the environment where we became so intimate with
+in the last few years. I won't go into details here though. Come to
+Stanford and we can exchange some thoughts over a few glasses of
+Zinfandel. The only thing I wouldn't mind sharing here is tax, because
+it seems to be the first thing that comes to mind for many friends.&lt;/p&gt;
+&lt;p&gt;US is perceived to be a very high-taxed country, which is largely true.
+Nonetheless:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;China's tax rate is just as high as US&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;China's tax laws' development in recent years is clearly on a
+    trajectory to becoming more and more like US tax laws&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Technically China also taxes its residents on a global basis, just
+    like US does. It's obviously very hard to enforce, but its
+    principles are very similar to those of US tax laws&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;US' tax rate is indeed very high for salaried workers, but if you
+    work for yourself as an entrepreneur, you can maintain a fairly low
+    effective tax rate. Romney famously has a tax rate of only 14%.
+    Buffett keeps complaining his tax rate is too low.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the very least, US' tax laws are well developed and there are
+    many vehicles you can explore to bring down your effective tax laws.
+    China's tax laws are far behind in sophistication. Some people might
+    roll their eyes now and say I can get a lot of "gray" income in
+    China through cash. Yes that's true. If that's your cup of tea or if
+    you work in government departments/agencies, by all means stay where
+    you are. Good for you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There are actually benefits associated with paying high tax rate in
+    US - you get the best protection of your personal assets. At a
+    certain point in our lives,  tax rate is really not the top concern.
+    Easy come, easy go.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After making up our mind to move over, we thought West Coast would be a
+better choice as it's closer to Beijing/Shanghai with non-stop flight.
+The weather is also much nicer on the west. Most importantly Silicon
+Valley is here, where I can start from scratch to continue/pursue my
+entrepreneurial ideas.&lt;/p&gt;
+&lt;p&gt;As I talked to friends in the Bay area to find out the startup scene in
+the valley, I asked them what would be a necessary factor to startup
+success. Invariably the answer was college network (company network has
+little use, unless you've made a lot of money together with a
+single-digit employ ID number). This sounds like a sad sad reality for
+me since my alma mater is National University of Singapore (NUS). NUS is
+an excellent university and it had huge influence over me in my
+formative years, however its network in the US is fairly limited.&lt;/p&gt;
+&lt;p&gt;On the last day in Palo Alto during our Jan 2012 California trip, we
+drove to Sand Hill Road on a pilgrimage to take a look at some of the
+legendary venture capital firms here. Standing outside Andreessen
+Horowitz's office looking at the sunset, I thought about that afternoon
+of 12 years ago when &lt;a href="http://www.steve-qing-yang.com"&gt;Steve&lt;/a&gt; brought me
+here for the first time and showed me around. KPCB was there, so
+unassuming and low-profiled. I had no idea what KPCB was yet at that
+time, but I remembered Steve told me the day would come when I shall
+come back here to raise capital from those most prestigious and powerful
+investment firms in the world.&lt;/p&gt;
+&lt;p&gt;So...just like that, an idea naturally stroke us, why not go to
+Stanford, which is right here in the heart of Silicon Valley with the
+best alumni network there is?&lt;/p&gt;
+&lt;p&gt;I already knew about &lt;a href="http://www.gsb.stanford.edu/sloan"&gt;Stanford's Sloan
+Fellow&lt;/a&gt; program from a good friend
+who graduated there in 2010. I  just never pictured myself in this
+program because until very recently  I was very much immersed in the
+crazy and non-stop business and social life in Beijing. Now all of a
+sudden, coming to Stanford seems to make all the senses of the world. I
+would not want to be anywhere but Silicon Valley and which university
+would serve as a better platform to usher me into the startup and
+investment circles of the valley?&lt;/p&gt;
+&lt;p&gt;Once this seed had been planted, the rest of the execution was fairly
+easy. The past four years in Beijing saw tremendous professional and
+personal growth for me. I've been through a lot. Maybe I'm yet to figure
+out what works best, but at least I've known enough what does not work.&lt;/p&gt;
+&lt;p&gt;So here I am, in Stanford Graduate Business School's Sloan Fellow
+program. My decision on Stanford was straightforward because it was
+significantly &lt;a href="http://www.guizishanren.com/?p=871"&gt;location-based&lt;/a&gt;,
+which was by the way in sharp contrast to my friend &lt;a href="http://sten.tamkivi.com/2012/02/why-and-how-i-became-a-stanford-student/"&gt;Sten's highly
+methodological and scientific
+approach&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Many friends would ask me, so... is this move going to be permanent?&lt;/p&gt;
+&lt;p&gt;I don't know, my friend. I really don't know. When we lived in
+Cambridge, MA, we loved Charles River, Cambridge and Boston, and never
+thought about leaving there. When we moved to Beijing and bought a house
+there, we thought Beijing was the best place for us. We seem to have a
+blast everywhere and tend to live our lives to the fullest in general,
+regardless of where we are.  When we moved here... I no longer want to
+make any speculation and I no longer have any concept of "permanent" or
+"temporary". We live our lives, day by day. Carpe diem in Stanford!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 27 Sep 2012 23:33:00 -0700</pubDate><guid>tag:guizishanren.com,2012-09-27:posts/2012/09/why-here-why-now-why-again/</guid><category></category></item><item><title>Can You as a CFO survive the journey of leading a pre-IPO company to IPO?</title><link>http://guizishanren.com/posts/2012/02/can-you-as-a-cfo-survive-the-journey-of-leading-a-pre-ipo-company-to-ipo/</link><description>&lt;p&gt;When you join a pre-IPO company as its CFO, the holy grail (well, for most) is to get this baby to IPO. It brings fame, exit money, and an enviable career achievement that will always give you a boardroom directorship for post-exit retirement life. &lt;/p&gt;
+&lt;p&gt;This decision tree illustrates potential roadblocks along this journey and helps you figure if your set-up has all the right elements for your goal.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/IPO-tree.jpg" alt="IPO Survival Tree", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Fri, 24 Feb 2012 14:29:00 -0800</pubDate><guid>tag:guizishanren.com,2012-02-24:posts/2012/02/can-you-as-a-cfo-survive-the-journey-of-leading-a-pre-ipo-company-to-ipo/</guid><category></category></item><item><title>职业选择的考虑</title><link>http://guizishanren.com/posts/2011/10/career-choice-consideration/</link><description>&lt;p&gt;&lt;iframe width="257" height="33" type="application/x-shockwave-flash" src="http://www.xiami.com/widget/0_2960195/singlePlayer.swf" wmode="transparent"&gt;
+&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;以为自己N年前就写过这篇文章了，在网站上遍寻不获，为方便转发，只好重新码字。&lt;/p&gt;
+&lt;p&gt;在考虑换工作或者职业发展的下一步时，通常有这么几大因素需要考虑：老板，行业，地点，公司，职位，工作（工作环境，同事，交通，薪水，新技能。。。这些技术细节不是本文关注的焦点），按照重要性从高到低的排序如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;老板&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;这是最关键的因素，其重要性超过其他五项总和。跟对了人，其他所有问题都只是暂时的问题，都可以最终解决；跟错了人，则会陷入万丈深渊无法自拔。老板招人，但我们也在寻找最欣赏自己的伯乐，这个选择是双向的。人跟人之间的沟通很微妙，跟一个知己之间产生的化学作用可遇而不可求。遇上一个了解自己潜能，欣赏自己个性的老板，是万金难买的RP大爆发事件，要好好珍惜。在中国，这个因素尤其至关重要。一个好的老板，Ta的资源是跨行业跨地域的，可以带来无尽的新机会。在美国，这个因素的重要性稍微降低一些，因为美国地域太广阔（不像中国，大部分资源都集中在北京和上海），行业分化程度高，会削弱一个超级老板的影响力（但仍然是六项之首）。当目前的工作出现迷雾和不确定因素时，先看看老板的意向，看看你的下一步会对Ta产生什么样的影响，会帮助Ta解决什么样的问题，不要天真地一味从自己的利益角度出发考虑问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;行业&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;女怕嫁错郎，男怕入错行，这句话是公理。一个人的履历价值主要体现在两方面：行业经验/domain
+expertise和功能技术/functional skills. 要达到行业顶端，domain
+expertise是必要条件；到达了一个垂直行业的顶端后，可以凭借functional
+skill进行跨行业的移动。Domain
+expertise是靠一个工作一个工作积累起来的，频繁转行是大忌，青春时光只有二十年，也就经得起折腾个四五次，龟兔赛跑的道理浅显但常常被人遗忘。只有很少数的幸运儿在大学一毕业就能找到自己终身喜欢从事的事情，大多数人都需要经历几次行业的转变才会发现真爱。寻找自己热爱的事业，是一个更加宏大的终极命题，改日另行详述。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;地点&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;一个人三十岁以后的走势，社会关系是其主要推动力，而社会关系有极强的地域性。每次更换生活城市，所有的社会关系都得更新一遍，代价太大了。生活地点一旦定下来，买房，买车，都是迟早的规定动作，否则周围的人知道你是个浮萍，是个匆匆过客，不会在你身上投资过多的时间成本。对于想要回国的海外游子们，如果最终目的地是国内，则晚回不如早回。早一天回来，早一天开始积累人脉资源，没有其他捷径。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;公司&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;。。。没什么好说的，除了：行业比公司重要，公司跟职位之间的排序可以更换，但大多数时候公司比职位更重要，因为，公司比职位实在。很多时候，不同行业，不同公司里的看起来貌似相同的职业难以作比较，但公司之间是可以在品牌，美誉，规模上产生直接对比关系的。公司的存在感要比职位强烈得多。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;职位&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;职位的描述比较虚，表面上看不出来有什么不一样的地方，只有做了才知道，所以它的重要性也比较靠后。在很多行业里，有一些大家都公认的职位，这些职位的虚名可能比实际的工作性质更加重要。你要么做过，要么没做过，很多人就是凭照你的职位来定义你的能力。这虽然不是一个很公平的判断方法，但实际情况往往就是如此。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;工作&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;排名最后的，是你实际在做什么。这个因素调整起来相对比较容易，属于转变成本最低的。很多人的眼睛里就只盯着这个最浅显表象的因素，实在是本末倒置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Fri, 21 Oct 2011 15:47:00 -0700</pubDate><guid>tag:guizishanren.com,2011-10-21:posts/2011/10/career-choice-consideration/</guid><category>中文</category><category>Theory</category></item><item><title>Disable Spotlight</title><link>http://guizishanren.com/posts/2011/07/How-to-disable-Spotlight-on-Mac/</link><description>&lt;p&gt;在Terminal窗口，用这个指令来disable有害无益的spotlight:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mdutil&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;off&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果要重新打开：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mdutil&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 31 Jul 2011 13:41:00 -0700</pubDate><guid>tag:guizishanren.com,2011-07-31:posts/2011/07/How-to-disable-Spotlight-on-Mac/</guid><category>Apple</category><category></category></item><item><title>Good Bye......Until We Meet Again</title><link>http://guizishanren.com/posts/2007/08/leaving-GE/</link><description>&lt;p&gt;to be a trained Jedi Knight wielding a light saber to save the day every
+8.0 months and I'm supposed to be pretty cool about all these moving-around. Guess I've gone soft over the years.&lt;/p&gt;
+&lt;p&gt;Today is my last day in GE. I've decided to veer away from the beaten
+path and indulge myself in some of my long-term passion and interests.
+GE has given me every professional skill I have and its affiliation
+accounts for 62.78% of all my friends. So, it means a lot to me. What
+makes my eight years of GE experience such a joy ride is you,
+unmistakably you. Thank you for being there with me. Thank you for the
+good times and I hope to continue them in the future. Well, I'm supposed
+to be a trained Jedi Knight wielding a light saber to save the day every
+8.0 months and I'm supposed to be pretty cool about all these
+moving-around. Guess I've gone soft over the years.&lt;/p&gt;
+&lt;p&gt;Feel free to give me a buzz at 1-617-852-6594(cell), if you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;stop by Republic of Cambridge - I mean, Boston&lt;/li&gt;
+&lt;li&gt;struggling with some monumental Mac-vs-PC decision - Steve Jobs really owes me, like, a lo&lt;/li&gt;
+&lt;li&gt;not sure what movies to watch for the weekend&lt;/li&gt;
+&lt;li&gt;can't decide between a Stevie Wonder concert and a Smashing Pumpkins one - fantasize about going to Alaska, Tibet, Santorini, Paris, Provence or
+Italy but need convincing photo evidence&lt;/li&gt;
+&lt;li&gt;ponder over some really stupid and absurd ideas about technology, media and entertainment&lt;/li&gt;
+&lt;li&gt;wondering OMG what is going on in China and want to get a train ride,
+literally and figuratively&lt;/li&gt;
+&lt;li&gt;or just anything else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lastly, I believe a non-company email address lays down a solid
+foundation for long-term relationship. Please send me your personal one
+(if you don't have one yet then get one). If you prefer any other means
+(skype, gtalk, MSN, yahoo, linkedin, facebook, lunch...), just let me
+know. I do all communication methods known to man from 19th to 22nd
+century.&lt;/p&gt;
+&lt;p&gt;Inescapably, it's time for me to go. Good bye!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 15 Aug 2007 18:00:00 -0700</pubDate><guid>tag:guizishanren.com,2007-08-15:posts/2007/08/leaving-GE/</guid><category></category></item><item><title>Break Up GE To Unlock Its Value</title><link>http://guizishanren.com/posts/2006/05/break-up-GE-to-unlock-its-value/</link><description>&lt;p&gt;GE’s stock has been in a &lt;em&gt;5-year slump&lt;/em&gt; since 2001. Immelt’s got a tough job. He’s been relentlessly doing everything humanely possible to make the same GE sales pitch to analysts, major shareholders, the board, customers, employees, Dave Calhoun and himself. Fortune’s November issue runs a cover story on him and the photo displays his now completely-turned-silver hair. I recall his hair was mostly black when I saw him in Tokyo in mid–2001. Despite the best efforts from one of the best CEOs working today, investors are through buying it. GE stock is still going nowhere.&lt;/p&gt;
+&lt;p&gt;In the mean while a noticeable &lt;em&gt;exodus&lt;/em&gt; is taking place with some of GE’s brightest executives. Cerberus Capital Management, the all-mighty hedge fund that trumped KKR in the then-landmark GMAC deal, has become a hub for GE alumni. GE managers, some of who report directly to Immelt’s staff (which means they have a legitimate shot at being CEO/CFO for many Fortune 500 companies, except for the top 20) , are quickly populating the ranks of various private equity and hedge fund firms. The exodus
+reached alarming level when Dave Calhoun, a 27-year GE lifer who was once a front-runner in the horse race to succeed Jack Welch and now a vice chairman of the company, quitted in Aug 2006 to run a far smaller private media company VNU (backed by KKR, Blackstone and Carlyle), with a rumored $100MM potential incentive.&lt;/p&gt;
+&lt;p&gt;Much has been talked about the benefits of turning a company into a &lt;em&gt;private&lt;/em&gt; one. The advantages are especially pronounced given today’s corporate governance activism (whether an ordinary man in the street agrees or not, some managers ARE worth hundreds of million dollars in
+pay, not to mention private jet or Manhattan apartments) and Sarbanes Oxley Act. So my initial thought on how to salvage GE was on this path - what if we can LBO GE…? Well I quickly dismissed that myself. Indeed PE and Hedge Funds (the line to distinguish the two is fairly blur right now) are calling the shots all around, evidenced by the fact that the record for highest LBO deal has been set TWICE already in 2006, eclipsing the heyday of the greedy 80’s (on a side note, Lous Gestner - then in RJR Nabisco, is now back in the game with Carlyle, completing a full circle). Now they’re setting their eyes on Dell ($60BN) and Ford ($35BN). Only sky is the limit for those cowboys.&lt;/p&gt;
+&lt;p&gt;However GE with $362BN market cap is clearly too much for &lt;em&gt;PE firms&lt;/em&gt; to make a run at. Besides the obvious financial hurdle, the current LBO model doesn’t fit for companies like GE or Apple. Among all others, the biggest change LBO brings to a public firm is that it puts a time stamp on the life of the company, which is otherwise presumed to exist in perpetuity. Live if you can make a change within the next five years; die if you can’t. That new corporate goal changes the entire mentality and easily solves the century-old agency problem. It makes a lot of sense if the company in its past life as a public entity is just an also-run. What if you’re already the market leader? What if your existence serves a higher purpose for the society at large, and for the sake for preserving mankind dignity your existence should be expected and allowed to last in perpetuity (Apple is an example; GE, hmm...arguably so)? Businesses of that nature probably won’t appreciate the short-term focus of PE firms, but ironically the structural advantages that PE firms can bring about are exactly what such businesses need so that they can: 1) focus on actually delivering the best products and services instead of utilizing management’s intellectual prowess in strategizing how to hit the EPS; 2) stop trying to figure out how to allocate income “stretch” targets; 3) leave the explanation of options backdating to accountants only; 4) forget about balancing double-digit growth in revenue, income, cash simultaneously while maintaining 20% ROE, which is a more formidable feat than proving Poincare Conjecture (go Perelman!); 5) sit down, have a cigar, and think about what is the next big thing that will reshape the planet and mankind.&lt;/p&gt;
+&lt;p&gt;Enough said. So which model would fit GE? &lt;em&gt;Berkshire Hathaway&lt;/em&gt;’s is pretty close. Buffett essentially runs that as a private company - no meeting with street analysts, no earning forecast (if you don’t manage net income, how can you forecast? And then everyone says managing income is evil…duh?), no excessive sales pitch other than Buffett’s legendary annual letters. That culture is what GE needs to liberate its highly competent management team from numerous mundane short-term tasks and allow them to develop truly long-term vision and strategy for the company. Nonetheless, GE has another unique, insurmountable challenge - its size. Berkshire Hathaway has  $160BN market cap and GE’s more than twice of that. GE’s market cap has become so large and its business is
+so diversified (the bite for being the all-time champion for diversification), it’ll just take too much market movement to nudge itsstock price. Unless GE has a true blockbuster product (like the light
+bulb a century ago), investors can hardly get excited about its
+performance (some washing machine and x-ray machines every now and then
+ain’t enough). Over the years the giant company has turned into a
+process-driven business rather than product/service-driven one.
+Everybody knows GE will methodically meet its every target and continue
+to churn out excellent managers, but few know GE Capital alone can rival
+Citi Group, Bank of America and J.P. Morgan Chase in size and product
+offering. GE is paying the price for its own size - its far-ranging
+products and services are all excellent in their own right and market
+segments, but they are trivialized when everything is added up to form
+the sum of GE. There is a ton of value within each GE division it almost
+seems that the entropy is lost or just cancelled out with each other.&lt;/p&gt;
+&lt;p&gt;Therefore IMHO the best way to unlock GE’s value is to &lt;em&gt;break it up&lt;/em&gt;. It
+can be split into six businesses - Commercial Finance, Consumer Finance,
+Infrastructure, Healthcare, Industrial and transportation. It’s not
+exactly a clean-cut but it’s doable. Some of those P&amp;amp;Ls will be innerly
+harmonized enough to form their own identity, culture and mission to go
+to greatness on their own. Some of them may be more challenged with an
+identity crisis, but they will survive. GE’s portfolio model (used to be
+callled SBU.. Anyone still remember?) has been extremely successful in
+the past, and to this date is still the envy for many other companies.
+It has four major advantages, but I’ll argue none of them should be a
+show-stopper to break up GE. GE’s old model has four distinctive
+features. In today’s world, either they’re no longer valid, or they’re
+no longer part of cost of living to stay in the game.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Human Resource Training&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;People is the best product coming out of GE. Millions of young, ambitious professionals flock to GE’s leadership training programs for their assortment of business and management training that is unparalleled in the world, both in breadth and depth. Once you’re marked as an “A” player, you’re expected to move to a new location, join another division, take new role and responsibilities every 18 to 24 months (yeah your kids will be multi-lingual, cross-culturally attuned
+by birth right). However, given GE’s siiiiiiiize, even after break-up,
+the new baby-GEs will still have enough critical mass to provide
+training opportunities in almost the same magnitude. All of them are
+already bona fide global platforms. In addition, people start domain
+specialization fairly soon within 2–3 years after they join the company.
+If I started out with NBC at Rockefeller Center, would I really want to
+accelerate my career in Cincinnati in GE Transportation (big plant
+there)? Well, I’m sure I can find equally appealing placement elsewhere
+in NBC Universal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Capital Allocation / the science of levering&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The magic mojo for GE that once dazzled many competitors.Some businesses like GE Industrial are cash cows that don’t make too much net income but generate cash consistently. GE consolidates that cash (the treasury operation is a wonder to behold) and throw that around in high-growth businesses to make acquisitions. It’s a very efficient use of capital and only possible when you have a mix of industrial/capital and “cash cow”/“star” businesses. I would very much like to indulge in a more detailed discussion of “levering” for people who still recall the basic corporate finance principles from Brealey and Myers, but I should probably stop right here since I’m not entirely sure such levering mechanism is public knowledge. Mr. Bill Gross from Pimco almost stepped on this in his 2002 crusade on GE. Long story short, GE recapitalized quickly in response to Gross’ assault, and that discretion on capital allocation among its myriad of businesses is now gone (there are other benefits of NOT doing that though). Also, there is so much liquidity in the market now - GE is no longer the privileged few who can amass large sum of capital on a minute’s notice (just think about Blackstone’s $20BN fund). This paragraph may have unintended gaps in logical reasoning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Portfolio Diversification&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Old topic with a new twist in the age of ultra rapid value creation.
+Business 101 says that diversification is useless (“home-made” effect),
+and in fine print below it also says that “… except for GE”. GE has been
+the consummate poster-boy defending the value of diversification. It’s a
+simple premise: its 1,000+ businesses are all in different industry
+cycles; at any given point, some will do well and some will not. The
+good and bad cancel out each other and usually what is left is gravy. It
+is a good, almost risk-free strategy, but not a particularly exciting
+one. Andy Grove says “Only the Paranoid Survive” (btw, that book doesn’t
+offer that much insight really. The old man is repeating himself too
+much), I say " Only the Double-Down Survive“. GE’s diversification has
+created a false sense of safety. 10% year-over-year steady growth may
+suffice in the past 100 years, but it’s not going to cut it in the new
+century when a garage business of 40 people can create  $1.6BN over 18
+months. On the other hand, GE Capital raised many eyebrows when it
+quietly started dominating GE’s balance sheet and profit and loss
+statement left and right. Indeed, if every soul on the street looks at
+GE as a finance company, GE will have to carry the same inspiring PE
+ratio as those financial firms - not a pretty outlook (but in a way it’s
+already happening). Therefore GE has to”balance" its Capital business
+growth with that of its Industrial business. I say, if GE Capital can
+grow 30% a year, let it roll and maybe that’ll be more than enough to
+make up for a lower PE.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;One Corporate Brand Image&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Another argument for one GE lies in the brand name of GE. This is a
+touchy subject and I hold tremendous pride for this name. However I
+would tentatively toy around some timid thoughts that may suggest GE’s
+size is approaching to a level that could diminish its image and brand
+recognition. If one think about “What is GE?”, an old tag line emerges
+“Bring Good Things to Life”. True, GE used to exist for betterment of
+mankind in general, and it actually carried out that mission fairly
+well. What does it mean today? With all the breakthroughs in consumer
+technology and unprecedented business models, it doesn’t mean a whole
+lot. GE has way too many products and services for average consumer to
+make out a sketch of what it really is. It’s not like
+Apple=Innovation+Cool, or Walmart=Evil Empire/The Only Mall That Matters
+For Your Neighbourhood, or Google=Wonder Boy Wandering in Wonderland.
+Regardless of whether those images are good or bad, they are engraved in
+people’s minds and investors can easily relate to them. Immelt saw the
+statement become a bit staled and hollow. He made a sweeping change in
+2005, opting for “Imagination at Work”. Immelt is smart. He certainly
+felt the coming of an identity crisis. Do people really buy that? Only
+time will tell but I can at least argue that the inclusion of certain
+businesses do not necessarily inspire aura of “imagination” for average
+Joe. If GE were broken up into a few pieces, the new baby-GEs will be
+more recognizable with potentially more coherent messages to convey to
+their respective targeted customer segments.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To round up my 20 cents, going private will give GE much needed
+structural and process advantages to let it focus on running the
+business. Today’s PE models and Buffett’s Berkshire Hathaway model
+provide bits of the elements that will be helpful to GE, but the
+transition from current GE to those models is beyond the capacity and
+technology of today’s financial market (we need another Michael Milken).
+A detour that may get GE there and fully unlock GE’s value seems to be
+breaking it up into a few baby-GEs. It’s an audacious thought that
+challenges several conventional wisdoms built around GE’s success to
+date, but in today’s changed environment, those words of wisdom are in
+need for new validation and interpretation anyway.&lt;/p&gt;
+&lt;p&gt;Does that make any sense to you … no?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 09 May 2006 23:05:00 -0700</pubDate><guid>tag:guizishanren.com,2006-05-09:posts/2006/05/break-up-GE-to-unlock-its-value/</guid><category></category></item></channel></rss>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>the Good the Bad and the Curious</title><link href="http://guizishanren.com/" rel="alternate"></link><link href="http://feeds.feedburner.com/feeds/tech.atom.xml" rel="self"></link><id>http://guizishanren.com/</id><updated>2011-07-31T13:41:00-07:00</updated><entry><title>Disable Spotlight</title><link href="http://guizishanren.com/posts/2011/07/How-to-disable-Spotlight-on-Mac/" rel="alternate"></link><updated>2011-07-31T13:41:00-07:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2011-07-31:posts/2011/07/How-to-disable-Spotlight-on-Mac/</id><summary type="html">&lt;p&gt;在Terminal窗口，用这个指令来disable有害无益的spotlight:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mdutil&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;off&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果要重新打开：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mdutil&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Apple"></category><category term=""></category></entry></feed>
