@@ -1,6 +1,6 @@
 body { padding-top: 60px; }
 div.article { padding-top: 20px; }
-div.article h2 { padding-bottom: 10px; }
+div.article h2 { padding-bottom: 10px;}
 
 div.highlight pre {
   background-color: #000000;
@@ -31,8 +31,12 @@ div.highlight pre {
 .social a[href*='jamendo.com']:before {content: url('./images/icons/jamendo.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='last.fm']:before, .social a[href*='lastfm.']:before {content: url('./images/icons/lastfm.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='linkedin.com']:before {content: url('./images/icons/linkedin.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='rss.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='rss']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='stackoverflow.com']:before {content: url('./images/icons/stackoverflow.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='careers.stackoverflow.com']:before {content: url('./images/icons/careers.stackoverflow.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='twitter.com']:before {content: url('./images/icons/twitter.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='weibo.com']:before {content: url('./images/icons/weibo.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='flickr.com']:before {content: url('./images/icons/flickr.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='tumblr.com']:before {content: url('./images/icons/tumblr.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='pinterest.com']:before {content: url('./images/icons/pinterest.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='quora.com']:before {content: url('./images/icons/quora.png'); margin-right: 2px; vertical-align: -3px;}

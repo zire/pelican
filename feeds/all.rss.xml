@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Mar 2014 00:00:00 -0700</lastBuildDate><item><title>About This Site</title><link>http://guizishanren.com/posts/2014/03/about-this-site/</link><description>&lt;p&gt;I'm in the process of migrating this site from the previous &lt;a href="http://wordpress.org/"&gt;wordpress&lt;/a&gt; structure to &lt;a href="http://pages.github.com/"&gt;Github Page&lt;/a&gt; using &lt;a href="http://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;, a &lt;a href="https://www.python.org/"&gt;Python&lt;/a&gt; static website generator. You might see some missing files, broken links, or just out-of-alignment here and there. That's because I'm still cleaning up the files from their xml format to streamline everything into strictly &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt; format. If you have been a reader of my site before, there is no new content created after Mar 21, 2014. What gives then? Not a lot for you, but a great deal to me. I will write an article about this transformation later.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Mar 2014 00:00:00 -0700</lastBuildDate><item><title>About</title><link>http://guizishanren.com/posts/2014/03/about/</link><description>&lt;p&gt;I'm in the process of migrating this site from the previous &lt;a href="http://wordpress.org/"&gt;wordpress&lt;/a&gt; structure to &lt;a href="http://pages.github.com/"&gt;Github Page&lt;/a&gt; using &lt;a href="http://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;, a &lt;a href="https://www.python.org/"&gt;Python&lt;/a&gt; static website generator. You might see some missing files, broken links, or just out-of-alignment here and there. That's because I'm still cleaning up the files from their xml format to streamline everything into strictly &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt; format. If you have been a reader of my site before, there is no new content created after Mar 21, 2014. What gives then? Not a lot for you, but a great deal to me. I will write an article about this transformation later.&lt;/p&gt;
 &lt;p&gt;If you find any error or any format that you think is less than perfect in any page, please feel free to leave a comment on that page or this page so that I can fix it right away. Thank you in advance.&lt;/p&gt;
 &lt;p&gt;This website is the publishing platform for all contents created by &lt;a href="www.linkedin.com/in/herbertyang‎"&gt;Herbert Yang&lt;/a&gt;, which includes:&lt;/p&gt;
 &lt;ul&gt;
@@ -13,7 +13,7 @@
 &lt;iframe width="640" height="480" src="//www.youtube.com/embed/JG62B_dHfDQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Reading this site takes a lot of patience and probably not a walk in the park. Thank you for stopping by.&lt;/p&gt;
-&lt;p&gt;Herbert&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 25 Mar 2014 00:00:00 -0700</pubDate><guid>tag:guizishanren.com,2014-03-25:posts/2014/03/about-this-site/</guid></item><item><title>Buzz Words from Stanford GSB BLAST Mail</title><link>http://guizishanren.com/posts/2014/03/buzz-words-stanford-gsb-blast-mail/</link><description>&lt;p&gt;This program aims to analyze the most common buzz words from Stanford
+&lt;p&gt;Herbert&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 25 Mar 2014 00:00:00 -0700</pubDate><guid>tag:guizishanren.com,2014-03-25:posts/2014/03/about/</guid></item><item><title>Buzz Words from Stanford GSB BLAST Mail</title><link>http://guizishanren.com/posts/2014/03/buzz-words-stanford-gsb-blast-mail/</link><description>&lt;p&gt;This program aims to analyze the most common buzz words from Stanford
 Graduate School of Business (GSB)'s BLAST mailing list, which is
 subscribed by all GSB students (MBA, MSx and PhD) and used heavily by
 the student community to broadcast news, seeking help, etc. The idea is
@@ -98,7 +98,7 @@ China Town in San Francisco&lt;/p&gt;
 &lt;p&gt;&lt;img src="../../../../images/SF-Chinatown-2-1024x1024.jpg", width="800px"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="../../../../images/SF-Chinatown-3-1024x1024.jpg", width="800px"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="../../../../images/SF-Chinatown-4-1024x1024.jpg", width="800px"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="../../../../images/SF-Chinatown-5-1024x1024.jpg", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 17 Dec 2013 00:25:00 -0800</pubDate><guid>tag:guizishanren.com,2013-12-17:posts/2013/12/chinatown-san-francisco/</guid><category></category></item><item><title>Photo#10 East Lake / 东湖</title><link>http://guizishanren.com/posts/2013/11/photo-series10-east-lake/</link><description>&lt;p&gt;East Lake is where my family usually went for sightseeing, picnic and hiking on weekends when I grew up in Wuhan, China. It's not as well-known as the world-famous "West Lake" in Hangzhou, China, but it's charming in its own right.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/SF-Chinatown-5-1024x1024.jpg", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 17 Dec 2013 00:25:00 -0800</pubDate><guid>tag:guizishanren.com,2013-12-17:posts/2013/12/chinatown-san-francisco/</guid><category></category></item><item><title>Photo#10 - East Lake 东湖</title><link>http://guizishanren.com/posts/2013/11/photo-series10-east-lake/</link><description>&lt;p&gt;East Lake is where my family usually went for sightseeing, picnic and hiking on weekends when I grew up in Wuhan, China. It's not as well-known as the world-famous "West Lake" in Hangzhou, China, but it's charming in its own right.&lt;/p&gt;
 &lt;p&gt;&lt;img src="../../../../images/east_lake_01.jpg" width="600px" alt="East Lake 1"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="../../../../images/east_lake_02.jpg" width="600px" alt="East Lake 2"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="../../../../images/east_lake_03.jpg" width="600px" alt="East Lake 3"&gt;&lt;/p&gt;
@@ -138,7 +138,7 @@ the time and opportunities slip through our fingers before we know it.&lt;/p&gt;
 &lt;p&gt;&lt;img src="../../../../images/Goals.png", width="800px" alt="Goals in Stanford"&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;em&gt;P&lt;/em&gt;artner&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;P&lt;/strong&gt;artner&lt;/p&gt;
 &lt;p&gt;Some of us are looking for partners, in business or in life. For
 business partners, spend more time with alumni, in study groups, social
 gatherings and pay attention to those who tend to take initiatives/run
@@ -149,7 +149,7 @@ partners, spend more time with MBAs starting from the Autumn Quarter.
 It's ok to date another Sloan, but it might get tricky.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;em&gt;F&lt;/em&gt;riend&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;F&lt;/strong&gt;riend&lt;/p&gt;
 &lt;p&gt;Some of us are looking for new friends, from new cultures, from new
 industries, from new interest areas. Regularly hang out in the Sloan
 Study Rooms ("Slounge") and make sure leave the door open, attend all
@@ -159,7 +159,7 @@ organize small-party dinners (six person is the ideal size). Running for
 social chairs will also help you make friends quickly.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;em&gt;I&lt;/em&gt;nspiration&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I&lt;/strong&gt;nspiration&lt;/p&gt;
 &lt;p&gt;Some of us are looking for inspirations that connect dots, bridge
 isolated domains of knowledge, expand our horizon, or provide that
 "eureka" moments. Attend &lt;a href="http://etl.stanford.edu/"&gt;Wednesday's ETL&lt;/a&gt; in
@@ -170,7 +170,7 @@ student discounts. Read the blog by &lt;a href="http://sten.tamkivi.com/"&gt;Ste
 &lt;a href="http://guizishanren.com/"&gt;me&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;em&gt;K&lt;/em&gt;nowledge&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;K&lt;/strong&gt;nowledge&lt;/p&gt;
 &lt;p&gt;Some of us are looking for knowledge, things that we have never been
 exposed to in prior jobs. Max out the cap level of 22 credits
 Autumn/Winter/Spring and audit as many classes as schedule allows. If
@@ -181,7 +181,7 @@ can never study hard enough and Stanford has enough interesting courses
 to keep you intellectually stimulated.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;em&gt;E&lt;/em&gt;xperience&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;E&lt;/strong&gt;xperience&lt;/p&gt;
 &lt;p&gt;Some of us are looking for the quintessential "Stanford" experience and
 try to experience as many actions as possible that Stanford can offer.
 Run for a class officer role - whatever it is, as long as it helps to
@@ -193,7 +193,7 @@ swimming. Join some student's clubs. Participate in a flash mob if
 someone in your class has the balls and guts to actually organize that.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;em&gt;R&lt;/em&gt;eputation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;R&lt;/strong&gt;eputation&lt;/p&gt;
 &lt;p&gt;Some of us are looking to establish a personal brand that people can
 remember us by. I think the importance of reputation cannot be
 overstated. However it seems to have been ignored by many. GSB
@@ -535,18 +535,18 @@ perseverance, and
 tenacity&lt;/a&gt;are
 the three most important attributes. Having passion definitely helps,
 but I don’t feel it’s a necessary condition of success.&lt;/p&gt;
-&lt;p&gt;So in 2007 I developed a &lt;strong&gt;SIMPLERK&lt;/strong&gt; method to help myself address
+&lt;p&gt;So in 2007 I developed a &lt;em&gt;SIMPLERK&lt;/em&gt; method to help myself address
 these questions. I found it useful in providing me with a consistent
 guiding principle when making major career decisions. The assessment on
 myself in 2007 has since withheld the test of time and is still valid
 today. Over the years I've applied the same method on many friends. I
 think most if not all my friends have found it useful to some extent as
-well. For some of them, &lt;strong&gt;SIMPLERK&lt;/strong&gt; also revealed something in them
+well. For some of them, &lt;em&gt;SIMPLERK&lt;/em&gt; also revealed something in them
 that they did not realize before, which came as a surprise with mixed
 feelings.&lt;/p&gt;
-&lt;p&gt;Here's how I use my SIMPLERK method to solve the puzzle, once and for
+&lt;p&gt;Here's how I use my &lt;em&gt;SIMPLERK&lt;/em&gt; method to solve the puzzle, once and for
 all:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1.  Assumptions:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;1.  Assumptions:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;When we are doing this evaluation, we can no longer change what we are, because we have already passed the formation years of our lives. What this analysis reveals, is what you are. Whether you like it or not, you'll have to live with it. There is no "right" or "wrong" driver. No driver is superior to others. Every driver is reasonable and legitimate.&lt;/p&gt;
@@ -581,7 +581,7 @@ all:&lt;/p&gt;
     second focus on something more platonic.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2.  Drivers: (SIMPLERK)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2.  Drivers: (SIMPLERK)&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;tability &lt;/p&gt;
@@ -714,7 +714,7 @@ code-breakers, inventors (Tesla), theoretical mathematicians, string
 theorists, and Stephen Wolfram.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;3.  Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;3.  Analysis&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;The use of SIMPLERK is very simple. After fully understanding the
@@ -761,7 +761,7 @@ theorists, and Stephen Wolfram.&lt;/p&gt;
     writing cannot do its justice in that regard, but it’s a start.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;4.  Synthesis&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;4.  Synthesis&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;For your reference, my main drivers, in descending order of
@@ -784,7 +784,7 @@ theorists, and Stephen Wolfram.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Everything written so far is just a prelude. The fun part of the
-conversation only comes when we start applying &lt;strong&gt;SIMPLERK&lt;/strong&gt; on ourselves
+conversation only comes when we start applying &lt;em&gt;SIMPLERK&lt;/em&gt; on ourselves
 and people around us, or figures we've heard about (say, Bill Gates or
 Mayor Bloomberg). You know where to find me.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 09 May 2013 02:59:00 -0700</pubDate><guid>tag:guizishanren.com,2013-05-09:posts/2013/05/drivers-of-your-life/</guid><category>career</category></item><item><title>A Day In A Sloan's Life</title><link>http://guizishanren.com/posts/2013/04/a-day-in-a-sloans-life/</link><description>&lt;p&gt;I have done a lot of presentations in my life, from participating in an
 English speech contest for high-school students broadcast live on
