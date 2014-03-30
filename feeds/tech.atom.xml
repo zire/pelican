@@ -40,7 +40,78 @@
 &lt;p&gt;在Gmail里发邮件时，在“发件人”一栏会看到一个菜单，里面有所有你可以“代发”的邮箱地址。选择合适的邮箱地址发送邮件即可。这样，当BBB@163.com收到你的回信时，他看到的是来自AAA@XXX.com的邮件，尽管你所有的操作都是在Gmail里完成的。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;好了，现在你可以完全隐藏在&lt;em&gt;AAA@gmail.com&lt;/em&gt;之后，完成&lt;em&gt;AAA@XXX.com&lt;/em&gt;的所有操作了（收发邮件）。&lt;/p&gt;</summary><category term="中文"></category></entry><entry><title>Disable Spotlight</title><link href="http://guizishanren.com/posts/2011/07/How-to-disable-Spotlight-on-Mac/" rel="alternate"></link><updated>2011-07-31T13:41:00-07:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2011-07-31:posts/2011/07/How-to-disable-Spotlight-on-Mac/</id><summary type="html">&lt;p&gt;在Terminal窗口，用这个指令来disable有害无益的spotlight:&lt;/p&gt;
+&lt;p&gt;好了，现在你可以完全隐藏在&lt;em&gt;AAA@gmail.com&lt;/em&gt;之后，完成&lt;em&gt;AAA@XXX.com&lt;/em&gt;的所有操作了（收发邮件）。&lt;/p&gt;</summary><category term="中文"></category></entry><entry><title>Instagram，摄影，和分享</title><link href="http://guizishanren.com/posts/2012/03/instagram-photography-and-sharing/" rel="alternate"></link><updated>2012-03-17T15:35:00-07:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2012-03-17:posts/2012/03/instagram-photography-and-sharing/</id><summary type="html">&lt;p&gt;最近在不停地给各路朋友介绍Instagram，讲得我口干舌燥。为提高效率，一次性在这里整理成文，便于分享和传播。感觉Instagram这个应用是一个我等待了十年的老朋友，我一直在寻找他，而他的影子一直模模糊糊，似是而非，几次抓住了衣服的边角发现其实不是的。现在，他倏然之间神一样的出现在我的面前。自苹果的应用上线以来，用过无数app，没有哪一个app（包括Draw
+Something）让我如此沉溺其中不能自拔。本来我还在考虑把用了7-8年的Nikon
+D-70升级一下，但在跟instagram耳鬓厮磨的过去两个月里发现，Instagram＋iPhone4s让绝对多数的单反相机（M8当然还是值得拥有的）和卡片机失去了存在的价值。&lt;/p&gt;
+&lt;p&gt;身边不少朋友其实都已经在Instagram上了，但大多数属于僵尸状态－这我完全可以理解。Instagram几乎可以算是我玩过的社交网络（如果我们仅仅从狭隘的社交网络去理解Instagram的话）里最难玩的一个了，积累粉丝（follower）非常缓慢。Instagram不同于新浪微博（我对新浪微博的建议是只要是华人就应该上，否则就跟这个时代的中国彻底脱节了，if
+he/she still cares。见前文：&lt;a href="../../../2011/05/how-i-learned-to-stop-worrying-and-love-the-weibo/"&gt;新浪微博入门2011版&lt;/a&gt;，并非适合每个人。我只能说，它太适合我了，简直就是为我量身定做的。如果你对我的了解超越CFO这个单词的话，不妨睁大你晶莹透亮的大眼睛/中眼睛/小眼睛，来更多地了解一下instagram。&lt;/p&gt;
+&lt;p&gt;&lt;iframe width="257" height="33" src="http://www.xiami.com/widget/0_1768954079/singlePlayer.swf" wmode="transparent"&gt;
+&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Instagram是一个iPhone上的分享照片的应用，是眼下最火爆的移动互联网应用，活跃用户有2700万－在推出Android版之前就能达到这种规模，实在是惊人的成就。Instagram的使用极其简单，从iTunes下载（是免费的），注册，拍照（或者从照片集里挑选现有的），用程序自带的滤镜加上效果，分享，然后等待其他的用户（称之为IGer）来称赞(Like)和评论(comment)。高级用户可以设置各种社交网络的分享，这样每张照片在分享到Instagram社区的同时也可以分享到Facebook,
+Twitter，新浪微博（Yes!），Flickr,
+Foursquare，Tumblr和Posterous。用户可以选择完全公开照片，也可以选择“隐私”模式，仅仅对自己的好友公开照片。你follow的人和follow你的人的列表都是公开的，别人也可以浏览，就跟微博/twitter一样。&lt;/p&gt;
+&lt;p&gt;Instagram上除了分享照片（中间项），另一个主要行为就是订阅（follow）其他IGer的照片流（左数＃1项），跟RSS和Twitter/微博的模式一样，对每张照片只有两个操作：赞（Like）和评论（comment）。在“notice”栏里可以看到三类系统消息：别人给你的赞，评论，或者新粉丝，还可以看到你follow的IGer称赞了哪些其他人的照片。在评论里可以用@其他用户（跟微博一样），还可以用hashtag#来添加关键词。Instagram跟其他SNS一个突出的区别，就是用户无法转发图片，这个产品设计的思路简单到近乎于固执和不近人情，但却自有道理，后面会有详述。&lt;/p&gt;
+&lt;p&gt;Instagram目前只有iPhone版－所有最新潮的应用刚推出来的时候一般都只有iPhone版，但据说很快就会推出Android版了。Instagram没有一个功能性的网站，整个社区只存在于移动互联网上。习惯用网页的朋友可以从其他第三方网站上浏览Instagram的照片（当然，一个真正的IGer是不屑于这么做的－在移动互联网的时代，web的概念已经过时），譬如instagrid，或者statigr.am等。Instagram的团队把所有注意力全部放在照片的分享上，充分开放了API，把建立网站这种费时费力的下游工作任由其他开发商去完成。基于Instagram
+API的手机应用和网站已经逐渐形成了一个完整的产业链，可以提供各种令人眼花缭乱的辅助性功能。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Why&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;手机上的应用已经这么多，干嘛还要装Instagram呢？从微观层面，有三个因素。&lt;/p&gt;
+&lt;p&gt;最主要的原因，在于它强大无匹的分享功能。上述列举的SNS分享设置囊括了眼下所有最具规模的平台级的社交网络（SNS），这是最吸引我的地方。过去十年，总是为照片在互联网上的归属地烦恼，今天是flickr，明天是picasaweb，今天这个被封了，明天那个也不稳定了，今天是facebook
+photo，明天是Google+。Instagram即时把照片同步到所有这些平台上，可谓一劳永逸。新浪微博的用户可以在我的微博相册里看到所有的照片，Facebook的用户可以在Timeline/Instagram
+Album里看到我所有的照片（把照片集的access定为公开），世界终于大同了。从我过去几个月的使用经历来看，Instagram跟这些平台的同步几乎完全即时，图片质量保留得非常好。此话听起来简单，要做到还真不容易，另外一个人气爆棚的应用Pinterest的iPhone客户端就始终不能做到即时，稳定的同步（关于罄竹难书的Pinterest，后面继续吐槽）。很多其他的应用无法做到跟境外被GFW封掉的网站即时同步，但Instagram的同步由服务器在后台完成，不在客户端完成，所以分享到这些被墙掉的境外网站毫无压力，不需要国内用户在手机上翻墙。&lt;/p&gt;
+&lt;p&gt;说到分享，必须得提一下instagram跟foursquare的妙不可言的同步。我是一个史诗级别的foursquare用户，在我的foursquare上几乎存有所有我认为值得保留的各个国家的餐饮娱乐场所－foursquare的商户数据库也真是够强大的，太齐全了。但从foursquare的客户端上check-in有个局限性，就是用户必须在商户的GPS地点附近，距离远了就属于off-the-grid，无法check-in。很多饭局上，只有拍照的时间，没有check-in的时间（check-in这件事，在很多人眼里还是比较2的）。这是foursquare的产品逻辑－先决定地点，再决定行为（check-in）。Instagram把这个逻辑反过来了，先决定照片（现在的智能手机拍的照片都默认包括GPS的地点信息），再根据照片内含的地点信息决定在什么地点check-in。所以，我现在通过拍摄照片=&gt;在instagram里分享照片就可以同时解决foursquare上check-in的问题，而且这个动作可以在离开了地点之后的任意时间点完成，方便多了。&lt;/p&gt;
+&lt;p&gt;喜爱instagram的另外一个重要原因（但不是主要）是它的滤镜，有大概17个滤镜可供选择，可以达到各种老式卡片机的效果。诚然，很多其他的app也可以提供各种滤镜，而且各有千秋，譬如Camera+,
+WeicoiPhone，Hipstamatic，Magic
+Hour等。对于最好的滤镜的追求是没有止境的，我觉得Instagram的滤镜组合足够好了，反正，这也并非instagram的独家特长，就算不用滤镜素颜上阵的照片也很多。&lt;/p&gt;
+&lt;p&gt;另外一个微观层面深层次的因素，则是instagram的社区和群体，以及这个群体所代表的一种生活态度。Instagram的主体用户是喜爱摄影，喜爱用自己的眼光和视角来观察和欣赏这个世界的人。开发者（创始人就是两个程序员）倾注了全部的精力来满足此类用户的需求。上面说到了，instagram里没有转发这个概念，所以，一张照片要想被传播，其实是不容易的，无法通过大家已经习惯的现有的SNS社区的惯例进行viral
+promotion（A喜欢B，B喜欢C，B转发C的照片，然后被A看到了，A也开始喜欢C）。在传统twitter/weibo的社区里，一个质量普通的信息点可以因为一个偶然相遇的节点（大号V用户）的转发而获得跟自身质量不成比例的影响力，这是此类社区吸引人的地方，也是它们的局限性－因为　信息影响力/信息质量　的比例严重失衡，而且信息点被转发后定义发生变化，成为一个新的信息点，失去了跟原始节点的联系，破坏了高质量信息点内容的完整性和归属性。在Instagram的世界里，杜绝了转发的概念后，所有的信息流最后都可以追溯到最原始的照片，所有的赞誉和评论里附加的内容，都集合在原始照片这个信息点，没有任何流失。这是对摄影者最大的慰藉和尊重，当然也为照片的传播竖立起不低的门槛。所以，一张照片要达到传世的影响，只有一条最根本的道路：be
+really good（下文会详述如何达到更多的用户）。&lt;/p&gt;
+&lt;p&gt;从宏观层面，instagram的横空出世，顺应了摄影技术的迅猛发展，回归了业余摄影的本质。对于一个普通用户而言，摄影的意义大约无外乎两个，记录和分享。我大概从十年前开始用数码相机拍照，周游列国时积累了很多照片集。基本上每次长途旅行回来都会拍下几百张照片，一张张地剪辑，修改，选出50张左右制作成一个精选集，然后添加caption，并且在caption上花样百出，有全部用摇滚歌名的，&lt;a href="https://picasaweb.google.com/115331596416003114882/HawaiiTheBigIsland?authuser=0&amp;amp;feat=directlink"&gt;有全部用金庸诗句的&lt;/a&gt;，&lt;a href="https://picasaweb.google.com/115331596416003114882/2006?authuser=0&amp;amp;authkey=Gv1sRgCKPa3MafzLr0Mg&amp;amp;feat=directlink"&gt;有全部用故事情节的&lt;/a&gt;，只为了引起更多观众的注意（我觉得大多数都没有注意到，甚憾），然后分享到照片平台上，一开始是flickr，后来是picasaweb，再后来是facebook，有时候caption不能顺利移植还得重新写一遍。。。最后，再群发邮件发给对此可能感兴趣的海内外朋友们。这个过程太繁琐了，最起码是一整个晚上四五个小时的时间（如果有灵感的话），即使对于我这样的熟练工也难以持续下去。我还算是在分享照片这方面尽量照顾到用户体验的人了，每次分享的专辑尽量不超过50张照片，而且每张照片主题尽量不重复，宁缺毋滥。看到很多朋友分享照片就是把不加剪辑的几百张原始照片扔到一个网络地址然后把链接发给大家－难道还真指望有人看么？有朋友愿意分享其实已经是不错的了，更大多数的单反相机用户是只闻打雷不见下雨，注意力主要在装备上（亚洲男性好像都好这一口，似乎手里不摆弄个狗头就不好意思跟人打招呼），照片还真没怎么见过。&lt;/p&gt;
+&lt;p&gt;不管对于深度用户还是轻度用户，传统的照片分享方式太麻烦了，那种单反相机－线下编辑－线上分享的路数在移动互联网把时间碎片化的时代已经越来越举步维艰了，以致于我们都快要失去了摄影的乐趣。我干嘛要拍照？因为我希望有人喜欢我的照片。如果别人看不到我的照片的话，这些令人头晕目眩的硬件器材指标，各种摄影技术行话，各种分享平台粉丝之间的口水大战，就都失去了意义。而Instagram就专心致志地解决了这个问题，可以让用户捕捉瞬间的心情和灵感，以最便捷的方式把自己眼中的世界即时分享给尽可能多的用户群。&lt;/p&gt;
+&lt;p&gt;分享的问题解决了，可照片的质量呢？鄙夷单反相机的IGers能拍出好的照片吗？在iPhone4s八百万像素和iOS设备Retina高清晰度显示屏的支持下，Instagram上的照片足够清晰，质量足够好。iPhone4s本身的相机智能水平已经很高了，在大多数情况下的自动调光和对焦都处理得不错。IGer可以把精力完全放在构图上，不需要担忧其他的技术细节，譬如white
+balance, contrast,
+lighting等。我一直不是一个技术流，我拍照以感觉为主，构图是我最在意的环节。我也许说不出来感光度和快门速度的细节，但我有自己观察这个世界的角度。曾经一度考虑过用RAW格式，但觉得太耗时间，而且说实话，现在iOS平台上图片处理软件太发达了，除了构图以外（这个也可以通过cropping来修正）的所有照片元素都可以被调整，真没必要在其他细节上花过多的时间。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;How&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;让照片获得关注有三种途径：1.　通过你的粉丝；2.　通过hashtag；3.　上热门榜/Popular
+Page。粉丝的前期积累就看个人RP了，当前Instagram上的中国人很少，大部分处于僵尸状态，即使在亚洲内比较也远不及日本和泰国的用户活跃。看那些欧美用户，动则一个十几岁乳臭未干的小家伙就是几百个粉丝，让我很不平衡。我勤勉耕耘了两个月都没有过百。。。目前最活跃的粉丝都不是我身边认识的朋友，都是以前不认识的IGers。通过hashtag，即#，来获取关注是非常必要的，对于粉丝很少的用户的照片关注度会产生质的飞跃。我一般是这样：在网上定期搜寻一下最热门的Instagram
+tag，把十几个对我的所有照片都适用的事先写好，放在iPhone的备忘录里，上传了照片之后马上在第一时间（动作一定要快）从备忘录里把这些tag粘贴到评论里。几乎是瞬间就会有like进来了，然后在一个小时内逐渐达到10-30条的规模，12个小时后老照片上的新增加like数量就很少了。Instagram里信息的衰变期很短，最热门的tag里的照片出现在首页的时间一般不超过一分钟，在这一分钟里会有大量的用户（几百万，甚至上千万）有可能看到你的照片，等这张照片被挤到第二页后它的潜在观众数量就下降了几个数量级。Instagram规定一张照片的tag不能超过30个。除了那一套很宽泛的标签外，我还会根据照片的主题贴上更加具体的标签，譬如#798。上热门榜是件让人纠结的事情，貌似极难。根据一些用户的反馈，如果在一分钟之内达到20多个的like，基本上肯定能上热门榜，一旦上了热门榜，潜在观众就变成了整个Instagram社区，而且会存在比较长的一段时间，一般会给照片带来几何级别的like增长，达到好几百甚至上千。&lt;/p&gt;
+&lt;p&gt;有几个比较好的摄影/图片工具值得推荐，跟Instagram在一起使用威力非常强大：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Squaready，把照片变成方形框，而且底板变成白色。Instagram的底板是白色，如果选用的照片是横幅的话，会在上下两端留下黑色的margin，影响效果；另外，Instagram本身只能接受横幅照片，不能接受竖幅照片。这些调整都可以在免费的Squaready完成。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Camera+，很多不同的滤镜，对Instagram现有的滤镜组合是非常好的补充，有些滤镜非常独特，效果惊艳，譬如So
+Emo和Overlay；界面极其方便，可以很便捷地搭配Scene和滤镜的组合，查看不同效果；有连拍和防抖功能，比iPhone自带的拍照功能强&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hipstamatic，独树一帜的怀旧相机镜头和相纸的搭配创造出非常有feel的照片，在Instagram之前是2010年The
+App of the Year by
+Apple（Instagram是2011年的获胜者），可以把拍的照片导出来，但不能对用非hipstamatic拍摄的照片进行编辑，略为遗憾。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Snapseed，iPhone上的Photo
+Shop，神器级别，要5-6美刀，但对于有追求的业余摄影爱好者来说绝对值得。界面方便，速度快捷，效果丰富而全面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Which&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;跟Instagram基本同期涌现出来的其他照片分享app还有以下几个，顺便也说一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Path 2，关注用户不能超过50。。。好吧，就因为这一点，足以打消我的任何兴趣。Path
+2是分享整个生活的，不光是摄影，虽然它的滤镜也很齐全。我总觉得在Facebook推出了Timeline之后不知道Path
+2还有什么存在的价值。它的界面展示非常有创意和视觉冲击力，但也仅此而已。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pinterest，从很多数字来看，Pinterest比Instagram还要火，用户数增长还要快，国内已经有三十多家山寨版了。可悲的是，它的iPhone客户端是我用过的最烂的客户端，没有之一。基本界面跟Instagram类似，但上传屡屡失败，屡屡发生重复上载的错误，用户界面信息从来都不能更新到实时状态。Pinterest可以转发，可以like，可以评论，照理说应该具备被Instagram更广阔的传播途径。但从我的测试结果来看，对于同样的照片，它并没展现出比Instagram更胜一筹的传播能力。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hipstamatic，从某种程度上Hipstamatic也是Instagram的竞争者，它也有自己的一个社区，但Instagram可以兼容Hipstamatic，而Hipstamatic不能兼容Instragram，所以，谁是主流选择也很明显。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最后，我的instagram
+ID是&lt;a href="http://instagram.com/zire"&gt;&lt;strong&gt;zire&lt;/strong&gt;&lt;/a&gt;，好歹你也看完了这么长的裹脚，应该加我了。&lt;/p&gt;</summary><category term="中文"></category></entry><entry><title>Disable Spotlight</title><link href="http://guizishanren.com/posts/2011/07/How-to-disable-Spotlight-on-Mac/" rel="alternate"></link><updated>2011-07-31T13:41:00-07:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2011-07-31:posts/2011/07/How-to-disable-Spotlight-on-Mac/</id><summary type="html">&lt;p&gt;在Terminal窗口，用这个指令来disable有害无益的spotlight:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mdutil&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;off&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
