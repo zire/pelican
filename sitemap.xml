@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/index.html</loc>
-<lastmod>2014-03-29T08:39:37-00:00</lastmod>
+<lastmod>2014-03-30T13:37:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2014-03-29T08:39:37-00:00</lastmod>
+<lastmod>2014-03-30T13:37:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2014-03-29T08:39:37-00:00</lastmod>
+<lastmod>2014-03-30T13:37:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2014-03-29T08:39:37-00:00</lastmod>
+<lastmod>2014-03-30T13:37:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -60,6 +60,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://guizishanren.com/posts/2014/02/receive-and-send-other-emails-through-Gmail/</loc>
+<lastmod>2014-02-03T03:26:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://guizishanren.com/posts/2013/12/cow-hollow-san-francisco/</loc>
 <lastmod>2013-12-20T20:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -88,8 +95,50 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://guizishanren.com/posts/2013/11/heres-looking-at-you/</loc>
+<lastmod>2013-11-14T20:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2013/11/fames/</loc>
+<lastmod>2013-11-07T20:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2013/10/waiting/</loc>
+<lastmod>2013-10-31T20:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2013/10/twilight-of-the-gods/</loc>
+<lastmod>2013-10-24T20:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2013/10/in-haste/</loc>
+<lastmod>2013-10-21T12:34:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://guizishanren.com/posts/2013/10/in-the-age-of-innocence/</loc>
 <lastmod>2013-10-17T12:34:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2013/10/stanford-dish-at-sunset/</loc>
+<lastmod>2013-10-14T12:34:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -298,6 +347,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://guizishanren.com/posts/2012/12/dancers-in-the-park/</loc>
+<lastmod>2012-12-25T10:48:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://guizishanren.com/posts/2012/12/application-to-dmedia/</loc>
 <lastmod>2012-12-20T02:48:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -347,6 +403,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://guizishanren.com/posts/2011/10/YY-jobs-10-scenes/</loc>
+<lastmod>2011-10-17T13:22:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2011/10/what-does-it-take-to-be-a-good-boss/</loc>
+<lastmod>2011-10-10T18:11:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://guizishanren.com/posts/2011/07/How-to-disable-Spotlight-on-Mac/</loc>
 <lastmod>2011-07-31T13:41:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -354,8 +424,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://guizishanren.com/posts/2011/05/how-i-learned-to-stop-worrying-and-love-the-weibo/</loc>
+<lastmod>2011-05-29T02:43:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2010/09/a-poem-on-mid-autumn-festival/</loc>
+<lastmod>2010-09-23T01:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2010/08/our-guess-for-yizhi-poem/</loc>
+<lastmod>2010-08-19T14:33:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://guizishanren.com/posts/2007/08/leaving-GE/</loc>
 <lastmod>2007-08-15T18:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2006/05/GNR-concert-in-Boston/</loc>
+<lastmod>2006-05-18T12:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -411,7 +509,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/category/tech</loc>
-<lastmod>2011-07-31T13:41:00-00:00</lastmod>
+<lastmod>2014-02-03T03:26:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -439,7 +537,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/tag/zhong-wen</loc>
-<lastmod>2011-10-21T15:47:00-00:00</lastmod>
+<lastmod>2014-02-03T03:26:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -466,13 +564,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/spillovers</loc>
-<lastmod>2013-07-04T12:34:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://guizishanren.com/tag/video</loc>
 <lastmod>2013-07-16T17:27:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -480,8 +571,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/apple</loc>
-<lastmod>2011-07-31T13:41:00-00:00</lastmod>
+<loc>http://guizishanren.com/tag/spillovers</loc>
+<lastmod>2013-07-04T12:34:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
