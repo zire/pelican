@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>the Good the Bad and the Curious</title><link href="http://guizishanren.com/" rel="alternate"></link><link href="http://feeds.feedburner.com/feeds/pages.atom.xml" rel="self"></link><id>http://guizishanren.com/</id><updated>2014-03-25T00:00:00-07:00</updated><entry><title>About</title><link href="http://guizishanren.com/posts/2014/03/about/" rel="alternate"></link><updated>2014-03-25T00:00:00-07:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2014-03-25:posts/2014/03/about/</id><summary type="html">&lt;p&gt;I'm in the process of migrating this site from the previous &lt;a href="http://wordpress.org/"&gt;wordpress&lt;/a&gt; structure to &lt;a href="http://pages.github.com/"&gt;Github Page&lt;/a&gt; using &lt;a href="http://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;, a &lt;a href="https://www.python.org/"&gt;Python&lt;/a&gt; static website generator. You might see some missing files, broken links, or just out-of-alignment here and there. That's because I'm still cleaning up the files from their xml format to streamline everything into strictly &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt; format. If you have been a reader of my site before, there is no new content created after Mar 21, 2014. What gives then? Not a lot for you, but a great deal to me. I will write an article about this transformation later.&lt;/p&gt;
-&lt;p&gt;If you find any error or any format that you think is less than perfect in any page, please feel free to leave a comment on that page or this page so that I can fix it right away. Thank you in advance.&lt;/p&gt;
+&lt;p&gt;For a previous reader to this blog, a few notes to you :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;please update your RSS feed to: &lt;a href="http://feeds.feedburner.com/GoodBadCurious"&gt;http://feeds.feedburner.com/GoodBadCurious&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;all my social media contacts (such as Twitter and Facebook) can be found at the bottom of any page&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;my long-running series "&lt;em&gt;Confession of a Stanford Sloan Fellow&lt;/em&gt;" (aka, COASSF) can be found at &lt;a href="../../../../tag/coassf/"&gt;this tag&lt;/a&gt; (click on the top right corner of any page). There are 60+ articles in the original series and there are still some articles that are yet to be transformed into Markdown format. Eventually all of them will pop up under this tag.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;if you are more interested in my photos than words (I don't blame you), you can find all my photo series under &lt;a href="../../../../category/photography/"&gt;category "Photography"&lt;/a&gt;. One of the main reasons for me to migrate out of Wordpress to Github Page/Pelican is to create a much more versatile publishing platform for my photos. In the meanwhile, I'm also going through a massive project to ditch iPhoto and re-organize all my 20,000 photos in Lightroom. More photos are coming under this category.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pelican-based theme is not as responsive to mobile device viewing as Wordpress universe. Though I have modified this vintage Twitter Bootstrap Pelican theme significantly, there is still a long way to go to make this site friendly on mobile device such as iPhone and iPad. I'll figure out how to make that work at some point.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;if you find any error (like broken link) or any format that you think is less than perfect in any page, please feel free to leave a comment on that page or this page so that I can fix it right away. Due to the nature of the migration, the URL structure/format of all the posts has changed and it'll take a while for Google's crawler to re-index the same articles with the revised URLs. You can help me speed up that process if you are bored at work. Thank you in advance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;going forward, a better way of staying updated with this site is probably to subscribe by email (see below box). RSS used to be hot but it feels like a dying beast. With the rise of mobile-responsive website design, RSS feed looks increasingly redundant (I still canon figure out how to use Flipboard efficiently) and seems a layer that many people can just live without.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
 &lt;p&gt;This website is the publishing platform for all contents created by &lt;a href="www.linkedin.com/in/herbertyang‎"&gt;Herbert Yang&lt;/a&gt;, which includes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;blog articles&lt;/li&gt;
@@ -9,8 +34,6 @@
 &lt;li&gt;slide presentations &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The domain name "guizishanren" is "&lt;em&gt;桂子山人&lt;/em&gt;" in Chinese, of which the literal translation will be "The Person from Mt. Sweet Olive". Mt. Sweet Olive in Wuhan, China is where I grew up in China. Wuhan is about 1.5 hour by flight to both Beijing and Shanghai, and is the largest city in Central China who almost became and definitely should have become the capital city of China in 1949. It was a tragedy afterwards.&lt;/p&gt;
-&lt;p&gt;The name of this site pays tribute to movie "&lt;a href="http://www.imdb.com/title/tt0060196/?ref_=nv_sr_2"&gt;The Good, the Bad, and the Ugly&lt;/a&gt;" by great &lt;a href="http://www.imdb.com/name/nm0001466/?ref_=tt_ov_dr"&gt;Sergio Leone&lt;/a&gt;, one of the greatest movies of all time. The soundtrack is just as epic and has become a frequent rip-off target by Quentin Tarantino ever since. Here's Metallica cover of the most famous song from the soundtrack, "&lt;em&gt;The Ecstasy of Gold&lt;/em&gt;"&lt;/p&gt;
-&lt;iframe width="640" height="480" src="//www.youtube.com/embed/JG62B_dHfDQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-
+&lt;p&gt;The name of this site pays tribute to movie "&lt;a href="http://www.imdb.com/title/tt0060196/?ref_=nv_sr_2"&gt;The Good, the Bad, and the Ugly&lt;/a&gt;" by great &lt;a href="http://www.imdb.com/name/nm0001466/?ref_=tt_ov_dr"&gt;Sergio Leone&lt;/a&gt;, one of the greatest movies of all time. The soundtrack is just as epic and has become a frequent rip-off target by Quentin Tarantino ever since. Here's Metallica cover of the most famous song from the soundtrack, "&lt;em&gt;The Ecstasy of Gold&lt;/em&gt;".&lt;/p&gt;
 &lt;p&gt;Reading this site takes a lot of patience and probably not a walk in the park. Thank you for stopping by.&lt;/p&gt;
-&lt;p&gt;Herbert&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;Herbert Yang&lt;/p&gt;</summary></entry></feed>
