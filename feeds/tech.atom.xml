@@ -58,7 +58,7 @@
 &lt;p&gt;除了读，还需要能通过AAA@XXX.com发邮件。这个步骤需要用户自己完成。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Gmail=&gt;Settings=&gt;Accounts=&gt;Send Mail As&lt;/p&gt;
+&lt;p&gt;Gmail=&amp;gt;Settings=&amp;gt;Accounts=&amp;gt;Send Mail As&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;点击“Add another email address you own”。&lt;/p&gt;
