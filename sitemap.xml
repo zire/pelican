@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/index.html</loc>
-<lastmod>2014-04-08T21:53:20-00:00</lastmod>
+<lastmod>2014-04-12T23:29:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2014-04-08T21:53:20-00:00</lastmod>
+<lastmod>2014-04-12T23:29:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2014-04-08T21:53:20-00:00</lastmod>
+<lastmod>2014-04-12T23:29:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2014-04-08T21:53:20-00:00</lastmod>
+<lastmod>2014-04-12T23:29:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -35,6 +35,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://guizishanren.com/pages/about.html</loc>
 <lastmod>2014-03-25T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2014/04/receive-and-send-other-emails-through-Gmail(eng)/</loc>
+<lastmod>2014-04-12T08:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/posts/2014/04/my-cooking-journal/</loc>
+<lastmod>2014-04-09T08:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -95,7 +109,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/posts/2014/02/receive-and-send-other-emails-through-Gmail/</loc>
+<loc>http://guizishanren.com/posts/2014/02/receive-and-send-other-emails-through-Gmail(chn)/</loc>
 <lastmod>2014-02-03T03:26:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -572,7 +586,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/category/amusement</loc>
-<lastmod>2013-04-28T12:36:00-00:00</lastmod>
+<lastmod>2014-04-09T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -614,7 +628,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/category/tech</loc>
-<lastmod>2014-02-03T03:26:00-00:00</lastmod>
+<lastmod>2014-04-12T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -635,14 +649,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/tag/</loc>
-<lastmod>2014-04-08T08:00:00-00:00</lastmod>
+<lastmod>2014-04-12T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tag/zhong-wen</loc>
-<lastmod>2014-02-03T03:26:00-00:00</lastmod>
+<lastmod>2014-04-09T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -691,7 +705,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/author/herbert-yang.html</loc>
-<lastmod>2014-04-08T08:00:00-00:00</lastmod>
+<lastmod>2014-04-12T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

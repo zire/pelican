@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/category/.tech.rss" rel="self"></atom:link><lastBuildDate>Mon, 03 Feb 2014 03:26:00 -0800</lastBuildDate><item><title>通过Gmail收发其他邮箱的邮件</title><link>http://guizishanren.com/posts/2014/02/receive-and-send-other-emails-through-Gmail/</link><description>&lt;p&gt;用Gmail来收发其他邮件有两个办法，一个是通过POP3，一个是通过Forward + Send Mail As。POP3速度比较慢，因为Gmail从POP3服务器上获取邮件有一定的时间间隔，有时长达一个小时，这种延迟在很多情况下是无法让人接受的。本文介绍的是一个用户如何通过Forward + Send Mail As（全面优越于POP3）来收发其他邮箱的邮件，有两个步骤：&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/category/.tech.rss" rel="self"></atom:link><lastBuildDate>Sat, 12 Apr 2014 08:00:00 -0700</lastBuildDate><item><title>Use Gmail to receive and send other emails</title><link>http://guizishanren.com/posts/2014/04/receive-and-send-other-emails-through-Gmail(eng)/</link><description>&lt;p&gt;Checking multiple mailboxes is a pain, but you can use Gmail to manage all of them through one single interface and one single login session. I have more than 10+ mailboxes from various institutions, companies and projects. I forward all of them to my personal gmail and also set up "Send Email As ... " in my gmail account so that I can receive and send other emails without ever leaving my gmail account and I never need to bother to login to other mailboxes. &lt;/p&gt;
+&lt;p&gt;Frankly, the act of login to multiple email accounts on a daily basis just doesn't make any sense to me. It's a pure waste of time and obviously extremely inefficient.&lt;/p&gt;
+&lt;p&gt;This article explains how to avoid that and consolidate all your emails in your Gmail account.&lt;/p&gt;
+&lt;p&gt;There are two ways to achieve this objective. One is to receive other email through POP3 protocol in Gmail; the other one is to forward other email to Gmail and then set up ""Send Mail as ... " in Gmail. &lt;em&gt;Do not use POP3&lt;/em&gt;. POP3's speed of email retrieval is much slower. It takes certain time interval for Gmail to connect to the POP3 server of the other email. Sometimes that can be as long as one hour. I have seen people writing Python scripts to try to fool Gmail server to speed up the retrieval speed as it cannot be adjusted by user. This kind of delay is unacceptable in many situations (it took me quite a while to figure this out after many frustrating moments). Then why does POP3 even exist? It has one very handy function - it can retrieve ALL the historical emails from the POP3 server from day one. Sometimes, this could be useful depending on what you need to do. &lt;/p&gt;
+&lt;p&gt;Here's a walk-through of how to set up forward + send mail as in Gmail:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Set up forwarding (to be competed by yourself or system Admin of the host server)&lt;/p&gt;
+&lt;p&gt;System admin (a role I have played often in my various projects) sets up "forwarder" in the control panel of the host email server (such as hostmonster.com), so that emails sent to &lt;em&gt;AAA@XXX.com&lt;/em&gt; will be forwarded to &lt;em&gt;AAA@gmail.com&lt;/em&gt; right away (with no delay). This is slightly different from the usual "forward" concept in emailing. For example, when your friend sends you an email to your AAA@XXX.com from his BBB@163.com, this email will appear directly (as a result of the above setup) in your AAA@gmail.com, showing sender as "BBB@163.com" and receiver as AAA@XXX.com. &lt;/p&gt;
+&lt;p&gt;Sometimes it doesn't take a system admin to do those. For example, you are the owner of AAA@XXX.com (which could be your @gsb.stanford.edu email for example). Then you just need to go into its settings to automatically forward all the emails to your AAA@gmail.com. Usually, to do this the system will ask the owner of AAA@gmail.com (ie. you) to approve this forwarding request to prevent spamming. Just follow the system's instructions to complete the forwarding setup.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set up sending (to be completed by yourself)&lt;/p&gt;
+&lt;p&gt;Besides receiving, you also want to be able to send email as AAA@XXX.com in your AAA@gmail.com login session/interface. You need to complete this step by yourself in Gmail.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Gmail=&amp;gt;Settings=&amp;gt;Accounts=&amp;gt;Send Mail As&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click “Add another email address you own”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Name, input a name you prefer to label this&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Email Address, input "AAA@XXX.com"&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mail to:Address, input "AAA@XXX.com"&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tick the box for "Treat as an alias"，then click Next Step&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the next window that pops up, click "Send Confirmation Email" button. Gmail will send an email to AAA@XXX.com for confirmation. If you have already completed the first step Forwarding, then you will receive this email right away in your Gmail account. It will contain a 6~8 digit confirmation code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Copy and paste the confirmation code into the window, click "Confirm (Verify)"&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now when you are sending emails in Gmail, in the "Send" field you will now see a list of all the email addresses you can choose from, including AAA@XXX.com. This list does not appear before, when the only "Send Mail As" option is your AAA@gmail.com. It does now.&lt;/p&gt;
+&lt;p&gt;When BBB@163.com receives your reply, he will see this email comes from AAA@XXX.com, even though you receive his original email and reply to him entirely within your AAA@gmail.com account. He doesn't even know the existence of your AAA@gmail.com. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That's it! Let me a comment if you run into any issues. &lt;/p&gt;
+&lt;p&gt;(The original Chinese version was written earlier in &lt;a href="http://guizishanren.com/posts/2014/02/receive-and-send-other-emails-through-Gmail/"&gt;this post&lt;/a&gt;)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sat, 12 Apr 2014 08:00:00 -0700</pubDate><guid>tag:guizishanren.com,2014-04-12:posts/2014/04/receive-and-send-other-emails-through-Gmail(eng)/</guid><category></category></item><item><title>通过Gmail收发其他邮箱的邮件</title><link>http://guizishanren.com/posts/2014/02/receive-and-send-other-emails-through-Gmail(chn)/</link><description>&lt;p&gt;用Gmail来收发其他邮件有两个办法，一个是通过POP3，一个是通过Forward + Send Mail As。POP3速度比较慢，因为Gmail从POP3服务器上获取邮件有一定的时间间隔，有时长达一个小时，这种延迟在很多情况下是无法让人接受的。本文介绍的是一个用户如何通过Forward + Send Mail As（全面优越于POP3）来收发其他邮箱的邮件，有两个步骤：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;由网管完成&lt;/p&gt;
@@ -40,7 +87,7 @@
 &lt;p&gt;在Gmail里发邮件时，在“发件人”一栏会看到一个菜单，里面有所有你可以“代发”的邮箱地址。选择合适的邮箱地址发送邮件即可。这样，当BBB@163.com收到你的回信时，他看到的是来自AAA@XXX.com的邮件，尽管你所有的操作都是在Gmail里完成的。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;好了，现在你可以完全隐藏在&lt;em&gt;AAA@gmail.com&lt;/em&gt;之后，完成&lt;em&gt;AAA@XXX.com&lt;/em&gt;的所有操作了（收发邮件）。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 03 Feb 2014 03:26:00 -0800</pubDate><guid>tag:guizishanren.com,2014-02-03:posts/2014/02/receive-and-send-other-emails-through-Gmail/</guid><category>中文</category></item><item><title>Instagram，摄影，和分享</title><link>http://guizishanren.com/posts/2012/03/instagram-photography-and-sharing/</link><description>&lt;p&gt;最近在不停地给各路朋友介绍Instagram，讲得我口干舌燥。为提高效率，一次性在这里整理成文，便于分享和传播。感觉Instagram这个应用是一个我等待了十年的老朋友，我一直在寻找他，而他的影子一直模模糊糊，似是而非，几次抓住了衣服的边角发现其实不是的。现在，他倏然之间神一样的出现在我的面前。自苹果的应用上线以来，用过无数app，没有哪一个app（包括Draw
+&lt;p&gt;好了，现在你可以完全隐藏在&lt;em&gt;AAA@gmail.com&lt;/em&gt;之后，完成&lt;em&gt;AAA@XXX.com&lt;/em&gt;的所有操作了（收发邮件）。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 03 Feb 2014 03:26:00 -0800</pubDate><guid>tag:guizishanren.com,2014-02-03:posts/2014/02/receive-and-send-other-emails-through-Gmail(chn)/</guid><category>中文</category></item><item><title>Instagram，摄影，和分享</title><link>http://guizishanren.com/posts/2012/03/instagram-photography-and-sharing/</link><description>&lt;p&gt;最近在不停地给各路朋友介绍Instagram，讲得我口干舌燥。为提高效率，一次性在这里整理成文，便于分享和传播。感觉Instagram这个应用是一个我等待了十年的老朋友，我一直在寻找他，而他的影子一直模模糊糊，似是而非，几次抓住了衣服的边角发现其实不是的。现在，他倏然之间神一样的出现在我的面前。自苹果的应用上线以来，用过无数app，没有哪一个app（包括Draw
 Something）让我如此沉溺其中不能自拔。本来我还在考虑把用了7-8年的Nikon
 D-70升级一下，但在跟instagram耳鬓厮磨的过去两个月里发现，Instagram＋iPhone4s让绝对多数的单反相机（M8当然还是值得拥有的）和卡片机失去了存在的价值。&lt;/p&gt;
 &lt;p&gt;身边不少朋友其实都已经在Instagram上了，但大多数属于僵尸状态－这我完全可以理解。Instagram几乎可以算是我玩过的社交网络（如果我们仅仅从狭隘的社交网络去理解Instagram的话）里最难玩的一个了，积累粉丝（follower）非常缓慢。Instagram不同于新浪微博（我对新浪微博的建议是只要是华人就应该上，否则就跟这个时代的中国彻底脱节了，if
