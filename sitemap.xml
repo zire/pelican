@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/index.html</loc>
-<lastmod>2014-05-24T15:04:27-00:00</lastmod>
+<lastmod>2014-05-24T16:24:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2014-05-24T15:04:27-00:00</lastmod>
+<lastmod>2014-05-24T16:24:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2014-05-24T15:04:27-00:00</lastmod>
+<lastmod>2014-05-24T16:24:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2014-05-24T15:04:27-00:00</lastmod>
+<lastmod>2014-05-24T16:24:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -39,8 +39,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/omaha-pilgrimage/</loc>
-<lastmod>2014-05-03T08:00:00-00:00</lastmod>
+<loc>http://guizishanren.com/2014-US-summer-tentpole-schedule/</loc>
+<lastmod>2014-05-24T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -258,6 +258,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/how-to-make-a-star/</loc>
 <lastmod>2013-06-05T17:01:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/2013-US-summer-tentpole-schedule/</loc>
+<lastmod>2013-06-02T14:06:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -670,14 +677,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/category/amusement</loc>
-<lastmod>2014-04-09T08:00:00-00:00</lastmod>
+<lastmod>2014-05-24T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/category/business</loc>
-<lastmod>2014-05-03T08:00:00-00:00</lastmod>
+<lastmod>2012-02-24T14:29:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -733,7 +740,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/tag/</loc>
-<lastmod>2014-05-03T08:00:00-00:00</lastmod>
+<lastmod>2014-05-24T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -789,7 +796,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/author/herbert-yang.html</loc>
-<lastmod>2014-05-03T08:00:00-00:00</lastmod>
+<lastmod>2014-05-24T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
