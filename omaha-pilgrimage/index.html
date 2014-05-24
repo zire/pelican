@@ -28,7 +28,7 @@
 
 <script>var _gaq=[['_setAccount','UA-714838-2'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 <script type="text/javascript">
-	var disqus_identifier = "receive-and-send-other-emails-through-Gmail(eng)/";
+	var disqus_identifier = "omaha-pilgrimage/";
 	(function() {
 		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 		dsq.src = 'http://goodbadcurious.disqus.com/embed.js';
@@ -47,12 +47,12 @@
 		  <ul class="nav">
 						<li><a href="../pages/about.html">About</a></li>
 					<li ><a href="../category/amusement">Amusement</a></li>
-					<li ><a href="../category/business">Business</a></li>
+					<li class="active"><a href="../category/business">Business</a></li>
 					<li ><a href="../category/journey">Journey</a></li>
 					<li ><a href="../category/pages">Pages</a></li>
 					<li ><a href="../category/photography">Photography</a></li>
 					<li ><a href="../category/stanford">Stanford</a></li>
-					<li class="active"><a href="../category/tech">Tech</a></li>
+					<li ><a href="../category/tech">Tech</a></li>
 					<li ><a href="../category/theory">Theory</a></li>
 					<li ><a href="../category/travel">Travel</a></li>
 			</ul>
@@ -64,57 +64,27 @@
 	<div class="container-fluid">
 	  <div class="content">
 	<div class='article'>
-		<div class="page-header"><h1>Use Gmail to receive and send other emails</h1></div>
-		<div class="well small">Permalink: <a class="more" href="../receive-and-send-other-emails-through-Gmail(eng)/">2014-04-12 08:00:00</a> in <a href="../category/tech">Tech</a>
+		<div class="page-header"><h1>Omaha Pilgrimage</h1></div>
+		<div class="well small">Permalink: <a class="more" href="../omaha-pilgrimage/">2014-05-03 08:00:00</a> in <a href="../category/business">Business</a>
 tags: <a href="../tag/"></a> </div>
-		<div><p>Checking multiple mailboxes is a pain, but you can use Gmail to manage all of them through one single interface and one single login session. I have more than 10+ mailboxes from various institutions, companies and projects. I forward all of them to my personal gmail and also set up "Send Email As ... " in my gmail account so that I can receive and send other emails without ever leaving my gmail account and I never need to bother to login to other mailboxes. </p>
-<p>Frankly, the act of login to multiple email accounts on a daily basis just doesn't make any sense to me. It's a pure waste of time and obviously extremely inefficient.</p>
-<p>This article explains how to avoid that and consolidate all your emails in your Gmail account.</p>
-<p>There are two ways to achieve this objective. One is to receive other email through POP3 protocol in Gmail; the other one is to forward other email to Gmail and then set up ""Send Mail as ... " in Gmail. <em>Do not use POP3</em>. POP3's speed of email retrieval is much slower. It takes certain time interval for Gmail to connect to the POP3 server of the other email. Sometimes that can be as long as one hour. I have seen people writing Python scripts to try to fool Gmail server to speed up the retrieval speed as it cannot be adjusted by user. This kind of delay is unacceptable in many situations (it took me quite a while to figure this out after many frustrating moments). Then why does POP3 even exist? It has one very handy function - it can retrieve ALL the historical emails from the POP3 server from day one. Sometimes, this could be useful depending on what you need to do. </p>
-<p>Here's a walk-through of how to set up forward + send mail as in Gmail:</p>
-<ol>
-<li>
-<p>Set up forwarding (to be competed by yourself or system Admin of the host server)</p>
-<p>System admin (a role I have played often in my various projects) sets up "forwarder" in the control panel of the host email server (such as hostmonster.com), so that emails sent to <em>AAA@XXX.com</em> will be forwarded to <em>AAA@gmail.com</em> right away (with no delay). This is slightly different from the usual "forward" concept in emailing. For example, when your friend sends you an email to your AAA@XXX.com from his BBB@163.com, this email will appear directly (as a result of the above setup) in your AAA@gmail.com, showing sender as "BBB@163.com" and receiver as AAA@XXX.com. </p>
-<p>Sometimes it doesn't take a system admin to do those. For example, you are the owner of AAA@XXX.com (which could be your @gsb.stanford.edu email for example). Then you just need to go into its settings to automatically forward all the emails to your AAA@gmail.com. Usually, to do this the system will ask the owner of AAA@gmail.com (ie. you) to approve this forwarding request to prevent spamming. Just follow the system's instructions to complete the forwarding setup.</p>
-</li>
-<li>
-<p>Set up sending (to be completed by yourself)</p>
-<p>Besides receiving, you also want to be able to send email as AAA@XXX.com in your AAA@gmail.com login session/interface. You need to complete this step by yourself in Gmail.</p>
-<ul>
-<li>
-<p>Gmail=&gt;Settings=&gt;Accounts=&gt;Send Mail As</p>
-</li>
-<li>
-<p>Click “Add another email address you own”</p>
-<ul>
-<li>
-<p>Name, input a name you prefer to label this</p>
-</li>
-<li>
-<p>Email Address, input "AAA@XXX.com"</p>
-</li>
-<li>
-<p>mail to:Address, input "AAA@XXX.com"</p>
-</li>
-<li>
-<p>Tick the box for "Treat as an alias"，then click Next Step</p>
-</li>
-</ul>
-</li>
-<li>
-<p>In the next window that pops up, click "Send Confirmation Email" button. Gmail will send an email to AAA@XXX.com for confirmation. If you have already completed the first step Forwarding, then you will receive this email right away in your Gmail account. It will contain a 6~8 digit confirmation code.</p>
-</li>
-<li>
-<p>Copy and paste the confirmation code into the window, click "Confirm (Verify)"</p>
-</li>
-</ul>
-<p>Now when you are sending emails in Gmail, in the "Send" field you will now see a list of all the email addresses you can choose from, including AAA@XXX.com. This list does not appear before, when the only "Send Mail As" option is your AAA@gmail.com. It does now.</p>
-<p>When BBB@163.com receives your reply, he will see this email comes from AAA@XXX.com, even though you receive his original email and reply to him entirely within your AAA@gmail.com account. He doesn't even know the existence of your AAA@gmail.com. </p>
-</li>
-</ol>
-<p>That's it! Let me a comment if you run into any issues. </p>
-<p>(The original Chinese version was written earlier in <a href="http://guizishanren.com/posts/2014/02/receive-and-send-other-emails-through-Gmail/">this post</a>)</p></div>
+		<div><p>Even though finance is clearly a wrong career choice for me, I have after all immersed myself in corporate finance and investment (occasionally, accounting) for  nearly twenty years. For a finance guy in his past life, reading Warren Buffett's annual letter to shareholders used to be a ritual. Interestingly, Berkshire Hathaway provides an intriguing contrast for another super conglomerate - General Electric. Some of their similarities were addressed in my earlier writing <a href="../../../break-up-GE-to-unlock-its-value/">"Break Up GE to Unlock Its Value" (2006)</a>. It's been my long-time dream to attend Berkshire Hathaway's world-renowned Annual Shareholders' General Meeting (AGM) in Omaha, Nebraska, to experience the legend live. Circa 2014, that dream is coming true with the courtesy of a Stanford friend.</p>
+<p><em>The Prelude</em></p>
+<p>Every Berkshire Hathaway ("BH") shareholder is entitled to four tickets/credentials for AGM (spouse + 2 kids presumably). This credential is the pass for AGM. For each shareholder, no matter how many BH shares he/she actually owns, he/she can only have four credentials. Given BH's share price, it's a rare privilege to get hold of such a credential.</p>
+<p>AGM takes place in <a href="https://www.google.com/maps/place/CenturyLink+Center+Omaha/@41.263831,-95.927996,17z/data=!3m1!4b1!4m2!3m1!1s0x87938fba1e4a10db:0xe896a8b5037ce4d0">Centurylink Center Omaha</a>. A huge (by Nebraska standard) sports stadium/convention center, it's right in the downtown center of Omaha.</p>
+<p>There are many ways to get into Omaha. Besides flying to Omaha's airport (OMA), one can also fly into the nearby Kansas City or Iowa state and drive to Omaha during the day. It takes about 1.5 hours to drive from Kansas City and much less time to drive from Iowa. Omaha is a small city in the middle of nowhere. BH's AGM is probably the biggest event for this tiny city every year and it will surely max out the city's capacity in every way. Booking flight early would be a good idea.</p>
+<p>Flying route determines accommodation plan. Omaha's local hotel leaves much to be desired. The number is limited and the price can get very pricy. I booked my flight and hotel about 5-6 weeks ago. AGM regulars usually make bookings for airfare, hotel and rental car six months in advance.</p>
+<p>AGM is a three-day event that starts on Friday and ends on Sunday. For most casual visitors, only attending Saturday event until 4pm should probably be enough (basically, the entire Q&amp;A section of Buffett and Munger). Activities on Friday, Saturday night, and Sunday are more like icing on the cake. They're nice add-ons but mostly just optional. </p>
+<p>As we all know, Buffett invests in a bunch of old-school traditional American businesses that are not exactly awe-inspiring at the first look. BH's AGM is a huge marketing promotion effort for all its portfolio companies. Attending BH's AGM is like going to a Chinese temple festival (庙会), buying all sorts of nice little items along the way, say your prayer to the buddha, and have a good time with friends.</p>
+<p><em>Act I</em></p>
+<p>We flew into Omaha on Friday afternoon. Greenfield greeted us the moment we drove out of Omaha Eppley Airfield. It was such a refreshing sight for our eyes that are used to the California golden color in early spring. The hotel was crappy as expected. With the rate at nearly $100, the room is just barely livable. </p>
+<p>Omaha is famous for its steak. All the well-known restaurants like Buffett's favorite <a href="http://www.yelp.com/biz/gorats-steak-house-omaha">Gorat</a> and <a href="http://www.yelp.com/biz/piccolo-petes-omaha-2">Piccolo Pete's</a> were fully booked for the entire weekend. We went to a nearby steakhouse <a href="http://www.yelp.com/biz/anthonys-steakhouse-omaha-2">Anthony's Steakhouse</a>. The meat was juicy, not bad.</p>
+<p>The holy grail of AGM is getting a seat as close to the stage as possible, for a clear glimpse of every facial expression of Buffett and Munger. Getting to the stadium early enough and finding a parking spot is the key. Over dinner, in the absence of more well-informed AGM regulars, we made a monumental decision to get to CenturyLink tomorrow by 730am (the event starts at 830am) instead of 7am. We figured that should give us sufficient leverage to achieve the objective. In retrospective, boy we were a little off, by like, two hours. Apparently most AGM regulars get to the stadium by 5am to get into the line, then dash to the center stage the moment the gate is open. We wish we had known better.</p>
+<p>Saturday morning, we drove to CenturyLink. By the time we arrived there at about 645am, it was already difficult to find a parking spot. Luckily we found parking at the next-door Hilton Omaha with a mere daily charge of $8. </p>
+<p>Rushing into the stadium, we realized all the seats at the ground and second floor were long gone. We had to speed-walk around the entire arena for half an hour to finally find a half-empty row with six consecutive seats at the upper-level deck. Whew! This is like a rock concert!</p>
+<p><a href="https://www.flickr.com/photos/gankyun/13937044988" title="Omaha AGM-3.jpg by herbertyang, on Flickr"><img src="https://farm8.staticflickr.com/7330/13937044988_442f9b02c3_z.jpg" width="640" height="640" alt="Omaha AGM-3.jpg"></a>"</p>
+<p><em>Act II</em></p>
+<p><em>Act III</em></p>
+<p><em>The End</em></p></div>
 		<div>
 			<h2>Subscribe</h2>
 			<!-- Begin MailChimp Signup Form -->
@@ -135,10 +105,9 @@ tags: <a href="../tag/"></a> </div>
 			<!--End mc_embed_signup-->
 		</div>
 		<div>
-         <a href="../my-cooking-journal/">Prev: >> 
-             杨记美食 </a>
+         <a href="../receive-and-send-other-emails-through-Gmail(eng)/">Prev: >> 
+             Use Gmail to receive and send other emails </a>
 		 <br>
-         <a href="../omaha-pilgrimage/">Next: >> Omaha Pilgrimage </a>
 		<br>
 		</div>
 		<div>
