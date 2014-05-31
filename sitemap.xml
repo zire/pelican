@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/index.html</loc>
-<lastmod>2014-05-30T12:22:30-00:00</lastmod>
+<lastmod>2014-05-31T01:06:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2014-05-30T12:22:30-00:00</lastmod>
+<lastmod>2014-05-31T01:06:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2014-05-30T12:22:30-00:00</lastmod>
+<lastmod>2014-05-31T01:06:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2014-05-30T12:22:30-00:00</lastmod>
+<lastmod>2014-05-31T01:06:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -35,6 +35,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://guizishanren.com/pages/about.html</loc>
 <lastmod>2014-03-25T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/herbert-guide-yosemite/</loc>
+<lastmod>2014-05-30T08:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -747,14 +754,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/category/travel</loc>
-<lastmod>2014-03-10T10:19:00-00:00</lastmod>
+<lastmod>2014-05-30T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tag/</loc>
-<lastmod>2014-05-24T08:00:00-00:00</lastmod>
+<lastmod>2014-05-30T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -810,7 +817,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/author/herbert-yang.html</loc>
-<lastmod>2014-05-25T08:00:00-00:00</lastmod>
+<lastmod>2014-05-30T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
