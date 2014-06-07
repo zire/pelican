@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/index.html</loc>
-<lastmod>2014-06-02T15:03:00-00:00</lastmod>
+<lastmod>2014-06-07T10:25:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2014-06-02T15:03:00-00:00</lastmod>
+<lastmod>2014-06-07T10:25:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2014-06-02T15:03:00-00:00</lastmod>
+<lastmod>2014-06-07T10:25:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2014-06-02T15:03:00-00:00</lastmod>
+<lastmod>2014-06-07T10:25:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -35,6 +35,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://guizishanren.com/pages/about.html</loc>
 <lastmod>2014-03-25T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/evolution-my-office-tool</loc>
+<lastmod>2014-06-07T08:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -733,7 +740,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/category/journey</loc>
-<lastmod>2014-06-02T08:00:00-00:00</lastmod>
+<lastmod>2014-06-07T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -775,7 +782,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/tag/</loc>
-<lastmod>2014-06-02T08:00:00-00:00</lastmod>
+<lastmod>2014-06-07T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -831,7 +838,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/author/herbert-yang.html</loc>
-<lastmod>2014-06-02T08:00:00-00:00</lastmod>
+<lastmod>2014-06-07T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
