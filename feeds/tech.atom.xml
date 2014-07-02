@@ -1,5 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>the Good the Bad and the Curious</title><link href="http://guizishanren.com/" rel="alternate"></link><link href="http://feeds.feedburner.com/feeds/tech.atom.xml" rel="self"></link><id>http://guizishanren.com/</id><updated>2014-05-25T08:00:00-07:00</updated><entry><title>微信群的改进</title><link href="http://guizishanren.com/how-wechat-group-can-be-better" rel="alternate"></link><updated>2014-05-25T08:00:00-07:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2014-05-25:how-wechat-group-can-be-better</id><summary type="html">&lt;p&gt;现在全球华人都在微信上，每个人每天都被自己社交圈里十几个活跃的微信群轮番轰炸。稍微大的微信群动辄上百人，当人数如此之多时，在群里的对话中要@人就变成很麻烦的一件事情，因为：&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>the Good the Bad and the Curious</title><link href="http://guizishanren.com/" rel="alternate"></link><link href="http://feeds.feedburner.com/feeds/tech.atom.xml" rel="self"></link><id>http://guizishanren.com/</id><updated>2014-07-02T08:00:00-07:00</updated><entry><title>A Dummy's Guide to Set Up Static Site with Github Page and Pelican</title><link href="http://guizishanren.com/guide-to-set-up-github-page-and-pelican" rel="alternate"></link><updated>2014-07-02T08:00:00-07:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2014-07-02:guide-to-set-up-github-page-and-pelican</id><summary type="html">&lt;p&gt;In early March I migrated &lt;a href="http://guizishanren.com"&gt;the Good, the Bad, and the Curious&lt;/a&gt; from the draconian Wordpress architecture to a much more elegant static site structure hosted on &lt;a href="https://pages.github.com/"&gt;Github Page&lt;/a&gt; using a &lt;a href="http://en.wikipedia.org/wiki/Web_template_system#Static_page_generators"&gt;static site generator&lt;/a&gt; &lt;a href="http://docs.getpelican.com/en/3.4.0/"&gt;Pelican&lt;/a&gt;. The original conversion was quite an involving effort of a series of trial-and-error because of the respective idiosyncrasies from Github Page itself, a fast-evolving Pelican, and legacy issues from Wordpress. &lt;/p&gt;
+&lt;p&gt;The second time is a charm. I managed to set up the second site within only a few hours last night. Because OC is a brand new site from scratch, I didn't have to deal with Wordpress anymore. This guide is for my own reference (in case I forget), as well as for anyone who might try to do the same - to create a new static contents site on Github Page with Python-friendly Pelican (you can also use &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt; if you're more familiar with Ruby). &lt;/p&gt;
+&lt;p&gt;This dummy's guide assumes the reader knows nothing and has nothing, with only a MacBook Air/Pro. Naturally it will not be useful for most people. If you are a programmer this is a walk in the park for you and you know how to do most of the steps from high-school. If you are not a programmer you probably won't be crazy enough to even give it a try - it's just too daunting a task for someone with no CS training.&lt;/p&gt;
+&lt;h1&gt;1. Install iTerm&lt;/h1&gt;
+&lt;p&gt;Download and install &lt;a href="http://www.iterm2.com/#/section/home"&gt;iTerm2&lt;/a&gt; to replace the default command-line tool Terminal from OSX. It's much more powerful and versatile than Terminal.&lt;/p&gt;
+&lt;p&gt;In iTerm2's preferences, go to Terminal=&amp;gt;Terminal Emulation, make sure Character Encoding is &lt;em&gt;Unicode (UTF-8)&lt;/em&gt; and Report Terminal Type is &lt;em&gt;xterm-256color&lt;/em&gt;. &lt;/p&gt;
+&lt;p&gt;iTerm will provide the command-line interface to execute all the shell commands that you will need to use for github and pelican. &lt;/p&gt;
+&lt;p&gt;Let's make a few adjustments on your shell environment:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt;
+&lt;span class="n"&gt;vi&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bashrc&lt;/span&gt;
+&lt;span class="cp"&gt;# press &amp;quot;i&amp;quot; to enter into edit mode&lt;/span&gt;
+&lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ls -G&amp;quot;&lt;/span&gt;
+&lt;span class="cp"&gt;# turn on color display in shell&lt;/span&gt;
+&lt;span class="n"&gt;PS1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;\&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;\$\&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="mi"&gt;37&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="cp"&gt;# change the format of your cursor prompt&lt;/span&gt;
+&lt;span class="cp"&gt;# press Esc key to switch into command mode&lt;/span&gt;
+&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;wq&lt;/span&gt;
+&lt;span class="cp"&gt;# save the change and exit the file&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;2. Install Python and git&lt;/h1&gt;
+&lt;p&gt;There are two primary static site generators for Github Page. If you're familiar with Ruby, Jekyll is recommended by Github team; if you're more familiar with Python, Pelican is the most popular choice. &lt;/p&gt;
+&lt;p&gt;Pelican is written in Python so you need to install Python first. Download the latest version of Python &lt;a href="https://www.python.org/download/"&gt;here&lt;/a&gt; first. &lt;/p&gt;
+&lt;p&gt;You can also manage your Github Page site without relying on any SSG (static site generator), but using a SSG will be much more productive. &lt;/p&gt;
+&lt;p&gt;Before starting with Github, you need to install Git, the most widely used version control system. Download and install from &lt;a href="http://git-scm.com/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;3. Sign up with Github&lt;/h1&gt;
+&lt;p&gt;Sign up an account with &lt;a href="https://github.com/"&gt;Github&lt;/a&gt;. It's free (thanks to &lt;a href="http://a16z.com"&gt;Andreessen Horowitz&lt;/a&gt;'s $100 million investment]). In recent years, Github has become the Linkedin for geeks/programmers/developers, and the world's largest hosting platform for computer codes.&lt;/p&gt;
+&lt;p&gt;In your Github page, go to Account Settings (top right corner), from the left-hand menu, go to SSH Keys. You need to link up your SSH key from the local machine to your github page so that you can push contents from local to github. Follow &lt;a href="https://help.github.com/articles/generating-ssh-keys"&gt;this guide&lt;/a&gt; to set it up:&lt;/p&gt;
+&lt;p&gt;Open iTerm, you should be at the root of your home directory. Type the following commands:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;
+&lt;span class="cp"&gt;# enter into a hidden directory that stores ssh information&lt;/span&gt;
+&lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;al&lt;/span&gt;
+&lt;span class="cp"&gt;# list the files in your .ssh directory&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;keygen&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;rsa&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;your_email@example.com&amp;quot;&lt;/span&gt;
+&lt;span class="cp"&gt;# create a new ssh key, using your email as a label&lt;/span&gt;
+&lt;span class="n"&gt;eval&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;agent&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;
+&lt;span class="cp"&gt;# start the ssh-agent in the background&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;
+&lt;span class="cp"&gt;# add the ssh info into a file id_rsa in directory .ssh&lt;/span&gt;
+&lt;span class="n"&gt;pbcopy&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pub&lt;/span&gt;
+&lt;span class="cp"&gt;# copy the contents of the id_rsa.pub file to your computer&amp;#39;s clipboard&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Following the rest of the steps as laid out in &lt;a href="https://help.github.com/articles/generating-ssh-keys"&gt;github's help&lt;/a&gt; to complete the "hand-shake" setup.&lt;/p&gt;
+&lt;h1&gt;4. Create a Github repo&lt;/h1&gt;
+&lt;p&gt;Next step (create the repository) is easy for pros but often confusing for dummies. The critical question is: where this folder of your website should be? This folder can be anywhere in your home directory on your local machine. I usually just create a folder right in the root of my home directory. Open your iTerm, then:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt;
+&lt;span class="cp"&gt;# enter into my home directory&lt;/span&gt;
+&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;myblog&lt;/span&gt;
+&lt;span class="cp"&gt;# create an empty directory called &amp;quot;myblog&amp;quot; &lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;myblog&lt;/span&gt;
+&lt;span class="cp"&gt;# enter into this blog folder. All subsequent commands will be carried out in this path&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;When the local folder is set up, go to your &lt;a href="https://github.com/new"&gt;github account&lt;/a&gt; to create a new repository (sort of the mirrored folder of your local one). Only check the box for "public". The name of this repo can be anything for your own benefit and doesn't need to be related to your website. I just named it "blog". &lt;/p&gt;
+&lt;p&gt;Once the repo is set up, you will see a set of commands on screen and you're ready for your first commit.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;myblog&lt;/span&gt;
+&lt;span class="cp"&gt;# make sure you are in the right path by entering into your blog folder&lt;/span&gt;
+&lt;span class="n"&gt;touch&lt;/span&gt; &lt;span class="n"&gt;README&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
+&lt;span class="cp"&gt;# create an empty file for the first git commit&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;README&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
+&lt;span class="cp"&gt;# add this file to the pipeline of your next git push&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;first commit&amp;quot;&lt;/span&gt;
+&lt;span class="cp"&gt;# exciting moment huh?&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/yourname/blog.git&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you've got a repo on your Github account. We need to turn this repo into a Github Page.&lt;/p&gt;
+&lt;h1&gt;5. Create a Github Page project site&lt;/h1&gt;
+&lt;p&gt;Go to &lt;a href="https://pages.github.com/"&gt;Github Page&lt;/a&gt; to create your project site. &lt;/p&gt;
+&lt;p&gt;When choosing between User/Organization Site and Project Site, I picked &lt;em&gt;Project Site&lt;/em&gt; to give myself more flexibility in the future. On your Github account, you can have multiple Project Sites, but only one User/Organization Site. &lt;/p&gt;
+&lt;p&gt;Next, choose &lt;em&gt;Start from scratch&lt;/em&gt; for your new project site. &lt;/p&gt;
+&lt;p&gt;Next, create a gh-pages branch. No need to dwell into the fine differences between "master" and "gh-pages branch" here. Just follow the below instructions if you want to get up running quickly. This step is only possible AFTER you have committed the first git push into your newly created Github repo. &lt;/p&gt;
+&lt;p&gt;Follow the on-screen guide to create a &lt;em&gt;gh-pages&lt;/em&gt; branch for your repo "blog" and make gh-pages the default branch for this repo. &lt;/p&gt;
+&lt;p&gt;Create your version of Hello World file as the on-screen guide suggests. &lt;/p&gt;
+&lt;p&gt;Voila, your Github Page project site is now up and running at &lt;a href="http://yourname.github.io/blog"&gt;http://yourname.github.io/blog&lt;/a&gt;. It'll take up to 10 minutes for the website to come alive at the first time. In the future, the changes are almost instantaneous. &lt;/p&gt;
+&lt;h1&gt;6. Get a domain name&lt;/h1&gt;
+&lt;p&gt;Go buy a domain name for your website. I use &lt;a href="http://www.godaddy.com/"&gt;GoDaddy&lt;/a&gt;. Buying and managing domain name is very much of a commodity business and there are many competing companies. Just pick one that is reputable and large enough, like godaddy.&lt;/p&gt;
+&lt;p&gt;No need to pay for any other "enhancements" other than the domain name itself. Start with a one or two-year subscription. You probably don't want to spend more than $30 for this step.&lt;/p&gt;
+&lt;h1&gt;7. Redirect domain name/URL to Github Page&lt;/h1&gt;
+&lt;p&gt;Another critical step: you want to host your website on github page using your preferred domain name, so that when people click "http://yourdomain.com", they will see the contents that are actually loaded/stored at "http://yourname.github.io/blog" (notice the io extension, not com). Basically, you need to redirect your newly bought domain name's URL to your github page. &lt;/p&gt;
+&lt;p&gt;Follow this &lt;a href="https://help.github.com/articles/adding-a-cname-file-to-your-repository"&gt;detailed instruction&lt;/a&gt;. Go to your Github Account's blog repo, create a CNAME file with only one line "&lt;em&gt;yourdomain.com&lt;/em&gt;". &lt;/p&gt;
+&lt;p&gt;If you have done this right, you should see "Your site is published at &lt;a href="http://yourdomain.com"&gt;http://yourdomain.com&lt;/a&gt;" in the settings section of your blog repo in about 10 minutes.&lt;/p&gt;
+&lt;p&gt;Now the really confusing step - configure your DNS settings. &lt;/p&gt;
+&lt;p&gt;Go to your godaddy account, launch the menu for domains, go to "DNS zone files" section. You will see several sections such as "A(Host)", "AAAA(IPv6 Host)", "CName(Alias)", "TXT(Text)", "SRV(Service)", "NS(Nameserver)". &lt;/p&gt;
+&lt;p&gt;Different domain sites have different interfaces, but usually you will see something like this under "&lt;em&gt;A(Host)&lt;/em&gt;":&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Host&lt;/th&gt;
+&lt;th&gt;Points to&lt;/th&gt;
+&lt;th&gt;TTL&lt;/th&gt;
+&lt;th&gt;Actions&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;xx.xx.xx.xx&lt;/td&gt;
+&lt;td&gt;1 hour&lt;/td&gt;
+&lt;td&gt;edit/delete&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Click on the Edit, change the default IP value "xx.xx.xx.xx" in "Points to" (or IP address) to "&lt;em&gt;199.27.79.133&lt;/em&gt;", Save so that the change will take effect.&lt;/p&gt;
+&lt;p&gt;This IP address 199.27.79.133 is the one used by Github Page's server. There are other IP addresses that can also be used. This one works for me.&lt;/p&gt;
+&lt;p&gt;It'll take another a few minutes for the domain registrar to update that information in the database. If done right, you should see the contents of your Hello World file from Step 6 if you click on "http://yourdomain.com". The handshake between your domain and your Github Page is complete.&lt;/p&gt;
+&lt;p&gt;Whew! ... we have barely scratched the surface so far ...&lt;/p&gt;
+&lt;h1&gt;8. Install Pelican and dependencies&lt;/h1&gt;
+&lt;p&gt;Download pip from &lt;a href="http://pip.readthedocs.org/en/latest/installing.html#install-pip"&gt;here&lt;/a&gt; into your blog home directory on local machine.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;myblog&lt;/span&gt;
+&lt;span class="cp"&gt;# enter into your local blog home directory&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="cp"&gt;# run the installation with administrator access. Enter your admin password when prompted&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Install &lt;a href="http://docs.getpelican.com/en/3.4.0/install.html"&gt;Pelican&lt;/a&gt; using pip:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt;
+&lt;span class="cp"&gt;# do this at your home directory&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;span class="cp"&gt;# install pelican with admin access&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Install Markdown using pip:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;Markdown&lt;/span&gt;
+&lt;span class="cp"&gt;# so that your system recognizes .md and .markdown files as Markdown files&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Install &lt;a href="https://github.com/davisp/ghp-import"&gt;ghp-import&lt;/a&gt; using pip:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;import&lt;/span&gt;
+&lt;span class="cp"&gt;# this add-on is to facilitate the git push for your Github Page Project Site as it&amp;#39;s a gh-pages branch, not the master branch as default&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;9. Kickstart your site with Pelican&lt;/h1&gt;
+&lt;p&gt;Finally, we can create a skeleton project now on the local machine with Pelican&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;myblog&lt;/span&gt;
+&lt;span class="cp"&gt;# make sure you are in the right path for your blog&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;quickstart&lt;/span&gt;
+&lt;span class="cp"&gt;# launch the installer for your project/blog site&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You'll next be prompted with 10+ lines of questions. It's quite a challenge for the first time to figure out how to answer them (that's why you might need this guide).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Where&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;create&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;[.]&lt;/span&gt;
+&lt;span class="cp"&gt;# just press Enter to use the default current path &amp;quot;~/myblog&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
+&lt;span class="cp"&gt;# enter &amp;quot;My Awesome Site&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Who&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;author&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
+&lt;span class="cp"&gt;# enter &amp;quot;Chuck Norris&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="n"&gt;language&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;en&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="cp"&gt;# press Enter to accept English&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;specify&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="n"&gt;prefix&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.,&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//example.com   (Y/n)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter Y&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="n"&gt;prefix&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;see&lt;/span&gt; &lt;span class="n"&gt;above&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;trailing&lt;/span&gt; &lt;span class="n"&gt;slash&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter http:&lt;/span&gt;&lt;span class="c1"&gt;//yourdomain.com&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;enable&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="n"&gt;pagination&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter Y&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;How&lt;/span&gt; &lt;span class="n"&gt;many&lt;/span&gt; &lt;span class="n"&gt;articles&lt;/span&gt; &lt;span class="n"&gt;per&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="cp"&gt;# enter 10&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;generate&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;Fabfile&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Makefile&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;automate&lt;/span&gt; &lt;span class="n"&gt;generation&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;publishing&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter Y&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;an&lt;/span&gt; &lt;span class="k"&gt;auto&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;reload&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;simpleHTTP&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;assist&lt;/span&gt; &lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="n"&gt;theme&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt; &lt;span class="n"&gt;development&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter Y&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;FTP&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter N&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;SSH&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter N&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;Dropbox&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter N&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;S3&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter N&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;Rackspace&lt;/span&gt; &lt;span class="n"&gt;Cloud&lt;/span&gt; &lt;span class="n"&gt;Files&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;# enter N&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here's the screenshot: &lt;a href="https://www.flickr.com/photos/gankyun/14556244811" title="pelican kickstart by herbertyang, on Flickr"&gt;&lt;img src="https://farm4.staticflickr.com/3836/14556244811_26106e81ca_z.jpg" width="800" alt="pelican kickstart"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For a more detailed explanation, read this up: &lt;a href="http://docs.getpelican.com/en/3.4.0/install.html"&gt;kickstart your pelican site&lt;/a&gt;. I believe all these choices can still be changed later in the settings file. So don't worry about making any bad choice now. &lt;/p&gt;
+&lt;h1&gt;10. Install an editor&lt;/h1&gt;
+&lt;p&gt;Now you will need to do some Python/CSS hacking/editing. There are a million choices out there and everyone is highly opinionated and philosophical about the choice of his/her editor. If you are a Mac user, consider the free &lt;a href="http://textwrangler.onfreedownload.com/?lp=adwords&amp;amp;tg=us&amp;amp;kw=Textwrangler%20free&amp;amp;mt=b&amp;amp;ad=33478422173&amp;amp;pl=&amp;amp;ds=s&amp;amp;os=mac&amp;amp;gclid=CjgKEAjw286dBRDmwbLi8KP71GQSJAAOk4sjuhKuIGJATMLadai0PoHsBjW-vjCKcf2r9sqsnBSzD_D_BwE"&gt;TextWrangler&lt;/a&gt; or the more advanced &lt;a href="http://www.sublimetext.com/"&gt;Sublime Text 2&lt;/a&gt;. I use Sublime Text 2 (its paid version is well worth the money). If you are a windows user, you should buy a Mac.&lt;/p&gt;
+&lt;p&gt;Picking a color theme for the editor can be one of the most monumental decisions in this process. Again there are more choices (all free) than you can choose from. I'll spare you from listening to my own story on this part.&lt;/p&gt;
+&lt;h1&gt;11. Adjust Pelican settings&lt;/h1&gt;
+&lt;p&gt;I spent a lot of time tinkering with the ~/myblog/&lt;em&gt;pelicanconf.py&lt;/em&gt; file. This file defines all the parameters and structure of your website and demands a lot of close attention to each detail. &lt;/p&gt;
+&lt;p&gt;You might want to start with a &lt;a href="http://docs.getpelican.com/en/3.4.0/settings.html#example-settings"&gt;default example&lt;/a&gt; and then customize that into your own version. A detailed walk-through of all the parameters in this configuration file is beyond the scope of this guide.&lt;/p&gt;
+&lt;p&gt;It's a Python file (with .py extension). You can use your editor (TextWrangler, Sublime Text, or any other) to open and edit this file. The color theme makes a big difference when you have to spend hours and hours reading each line.&lt;/p&gt;
+&lt;p&gt;You also need to do an important step (and no one mentions this anywhere) here: &lt;em&gt;move your CNAME file&lt;/em&gt; from the root directory as ~/myblog/CNAME to ~/myblog/output/CNAME. After restructuring your website using Pelican, you have changed the default directory (that is supposed to be mirrored on your Github Page project site) from ~/myblog to ~/myblog/output. The CNAME file has to reside in the root directory of your Github Page project site for the URL redirect to take effect. That's why this move is a must.&lt;/p&gt;
+&lt;h1&gt;12. Pick a Pelican theme and customize CSS&lt;/h1&gt;
+&lt;p&gt;Welcome to the real time-sucker, Pelican theme. It's a time-sucker because this is one of the main reasons we want to move away from cumbersome Wordpress to migrate to Github Page, so we want to make sure this is done right and perfect. With git-based Github Page and Pelican, we have total control of our contents and HOW these contents will be presented, instead of wasting time trying to navigate through millions of Wordpress plug-ins, that distract us from the pure joy of writing. &lt;/p&gt;
+&lt;p&gt;Download all the main Pelican themes from &lt;a href="https://github.com/getpelican/pelican-themes"&gt;this github repo&lt;/a&gt;. Download the zip file and unzip that into your ~/myblog directory. Change the name of the folder to "themes" to make easier reference.&lt;/p&gt;
+&lt;p&gt;You can change the theme pretty easily in pelicanconf.py. Open the configuration file in Sublime Text and enter this line:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;themes/bootstrap2&amp;quot;&lt;/span&gt;
+&lt;span class="cp"&gt;# save the file and this new theme will take effect immediately&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Say you have picked the famous Twitter Bootstrap2 theme, then this file (~/myblog/themes/bootstrap2/static/css/&lt;em&gt;bootstrap.min.css&lt;/em&gt;) will be your dear friend in the next two weeks as you ceaselessly try out various styling combinations. It can be quite exhausting. Most Pelican themes follow a similar file structure and there will be this one bad-bass monster CSS file in one of the folders. Everything about the presentation/look of your website will be spelled and defined here. Indulge yourself in the world of CSS. &lt;/p&gt;
+&lt;h1&gt;13. Organize contents&lt;/h1&gt;
+&lt;p&gt;A very, very philosophical question that will have profound impact on your website's SEO (Search Engine Optimization). Again you just have to try it to figure out the best path for yourself that suits your preferences. There are a few factors that are more important than others, because it'll take some laborious effort to undo/change these settings later on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;category or tags?&lt;/li&gt;
+&lt;li&gt;URL format/convention for your web site articles/pages&lt;/li&gt;
+&lt;li&gt;local folder structure within ~/myblog/content&lt;/li&gt;
+&lt;li&gt;naming convention for your markdown files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Think carefully at this step&lt;/em&gt;. Take a look at what others are doing. Everything else can be changed rather easily on the fly, except for the above few decisions. You can't avoid these questions anyway if you are a serious writer and want to invest time creating your own contents efficiently.&lt;/p&gt;
+&lt;h1&gt;14. Learn Markdown and download MOU&lt;/h1&gt;
+&lt;p&gt;You still need to learn Markdown language because all contents in this Github-Page/Pelican approach are created using Markdown. Markdown is a huge topic and represents one type of philosophy on its own. In short, if you're a serious writer, you should use Markdown to create your contents because it keeps you focused on writing itself and from worrying about format/presentation (which will be taken care of with the CSS file mentioned above).&lt;/p&gt;
+&lt;p&gt;Get started with Markdown from the famous &lt;a href="http://daringfireball.net/projects/markdown/"&gt;Daring Fireball&lt;/a&gt;. The syntax is very easy to pick up within half an hour. &lt;/p&gt;
+&lt;p&gt;Many familiar formats in HTML school are missing from Markdown, because they're meant to be. Don't complain. Just get used to it.&lt;/p&gt;
+&lt;p&gt;How to create a table in Markdown (not part of the core syntax from DF's original plan):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;heading&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;heading&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;heading&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;heading&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|----|----|----|----|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;rock&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will create a table in the HTML output. Make sure there are &lt;em&gt;4&lt;/em&gt; "-" in the second line otherwise the table won't work.&lt;/p&gt;
+&lt;p&gt;All markdown files will have an extension .markdown or .md. You can use any editor to edit them but &lt;a href="http://mouapp.com/"&gt;MOU&lt;/a&gt; is the most popular choice on OSX. MOU provides a split screen side-by-side with your contents so that you can see in real-time how your HTML page will look like. It also works very well with Chinese characters. If you don't want to be bothered with another software, Sublime Text is just fine.&lt;/p&gt;
+&lt;h1&gt;15. Create contents and publish&lt;/h1&gt;
+&lt;p&gt;At last, let there be an article. We've got all the ingredients ready.&lt;/p&gt;
+&lt;p&gt;Create a .md file in MOU. This markdown file should contain the following header information so that Pelican knows how to render the page:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;sensational&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;07&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;03&lt;/span&gt; &lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;fun&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="err"&gt;中文&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Tech&lt;/span&gt;
+&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Short&lt;/span&gt; &lt;span class="n"&gt;executive&lt;/span&gt; &lt;span class="n"&gt;summary&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;
+
+&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="kd"&gt;super&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Save this file into &lt;em&gt;~/myblog/content/&lt;/em&gt; folder. I store these header info in an Evernote post that I can copy and paste from pretty easily. &lt;/p&gt;
+&lt;p&gt;Run the test server on your local machine to see if things come out alright. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;myblog&lt;/span&gt;
+&lt;span class="cp"&gt;# the next two commands need to be excited at the root directory of the site&lt;/span&gt;
+&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="cp"&gt;# sort of &amp;quot;compiling&amp;quot; your website and render markdown files into HTML ones&lt;/span&gt;
+&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;devserver&lt;/span&gt;
+&lt;span class="cp"&gt;# use Python to launch a server at your local machine&amp;#39;s port 8000&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;develop_server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt;
+&lt;span class="cp"&gt;# stop the Python server, kill this process&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Open your browser, go to &lt;em&gt;&lt;a href="http://localhost:8000"&gt;http://localhost:8000&lt;/a&gt;&lt;/em&gt;. Hopefully you'll see a cool-looking website as you desire. If not, go back to &lt;em&gt;pelicanconf.py&lt;/em&gt; and the &lt;em&gt;CSS file&lt;/em&gt; to see what's gone wrong. These two are the single most important files of this entire process. &lt;/p&gt;
+&lt;p&gt;When you're happy with the test page, let's go live.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;myblog&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;message&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;
+&lt;span class="cp"&gt;# you can write whatever comment in &amp;quot;message&amp;quot; field that might help you distinguish this session from others&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;gh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Look at your &lt;a href="http://yourdomain.com"&gt;http://yourdomain.com&lt;/a&gt;. You should see exactly the same page from the Python test server, except it's now available on a public website. The process takes effect within seconds (it might take longer if you have many articles with many tags).&lt;/p&gt;
+&lt;p&gt;General comments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Try not to store too many images locally/on Github Page repo. Use flickr (1TB for free) as the central depository for all your image files and link your &lt;a href="http://flickr.com"&gt;flickr&lt;/a&gt; image in markdown files.&lt;/li&gt;
+&lt;li&gt;Back up your pelicanconf.py and CSS file constantly. You don't want to recreate them from scratch.&lt;/li&gt;
+&lt;li&gt;Github may or may not be blocked in China, depending on Beijing's weather day-to-day (literally). The same goes for any respectable social media website or any website (like Flickr) of any value outside of China, sadly. At the moment my website is not blocked in China yet. Long live Github!&lt;/li&gt;
+&lt;li&gt;Some Pelican themes are more mobile-responsive and some are not. So picking the right theme is important. Of course, if you're a CSS pro, you can create your own Pelican theme left and right (then you won't be reading this article). &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Enjoy your new website powered by Pelican and hosted by Github Page! It's a strenuous effort but a worthwhile one.&lt;/p&gt;</summary><category term=""></category></entry><entry><title>微信群的改进</title><link href="http://guizishanren.com/how-wechat-group-can-be-better" rel="alternate"></link><updated>2014-05-25T08:00:00-07:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2014-05-25:how-wechat-group-can-be-better</id><summary type="html">&lt;p&gt;现在全球华人都在微信上，每个人每天都被自己社交圈里十几个活跃的微信群轮番轰炸。稍微大的微信群动辄上百人，当人数如此之多时，在群里的对话中要@人就变成很麻烦的一件事情，因为：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;在iPhone屏幕上的一页里只能展示9个人名&lt;/p&gt;
