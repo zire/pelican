@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/category/.tech.rss" rel="self"></atom:link><lastBuildDate>Wed, 02 Jul 2014 08:00:00 -0700</lastBuildDate><item><title>A Dummy's Guide to Set Up Static Site with Github Page and Pelican</title><link>http://guizishanren.com/guide-to-set-up-github-page-and-pelican</link><description>&lt;p&gt;In early March I migrated &lt;a href="http://guizishanren.com"&gt;the Good, the Bad, and the Curious&lt;/a&gt; from the draconian Wordpress architecture to a much more elegant static site structure hosted on &lt;a href="https://pages.github.com/"&gt;Github Page&lt;/a&gt; using a &lt;a href="http://en.wikipedia.org/wiki/Web_template_system#Static_page_generators"&gt;static site generator&lt;/a&gt; &lt;a href="http://docs.getpelican.com/en/3.4.0/"&gt;Pelican&lt;/a&gt;. The original conversion was quite an involving effort of a series of trial-and-error because of the respective idiosyncrasies from Github Page itself, a fast-evolving Pelican, and legacy issues from Wordpress. &lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/category/.tech.rss" rel="self"></atom:link><lastBuildDate>Tue, 24 Feb 2015 08:00:00 -0800</lastBuildDate><item><title>How to Tell if You are a Tech Noob</title><link>http://guizishanren.com/how-to-tell-a-tech-noob</link><description>&lt;p&gt;The six habits of a highly likely technology noob:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Your have more than &lt;em&gt;ONE&lt;/em&gt; personal email addresses and your friends are always confused which one to use and spend countless hours verifying and re-verifying if you have received that missing email.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You use work email address for personal emails.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You still use XXX@yahoo.com for email (except if you're from Taiwan or Japan originally).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You have more than &lt;em&gt;TWO&lt;/em&gt; mobile numbers in one country and your friends are always confused which one to call you at and they often end up not calling you at all out of frustration and confusion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You have more than &lt;em&gt;ONE&lt;/em&gt; WeChat account. You forgot how to delete the first one and you keep your two WeChat accounts in the same chat group and confuse the hell out of everyone else.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You still don't have your personalized URL on Linkedin, so your Linkedin URL reads like an unrecognizable random character string.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;How many have you been hit on?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 24 Feb 2015 08:00:00 -0800</pubDate><guid>tag:guizishanren.com,2015-02-24:how-to-tell-a-tech-noob</guid><category></category></item><item><title>A Dummy's Guide to Set Up Static Site with Github Page and Pelican</title><link>http://guizishanren.com/guide-to-set-up-github-page-and-pelican</link><description>&lt;p&gt;In early March I migrated &lt;a href="http://guizishanren.com"&gt;the Good, the Bad, and the Curious&lt;/a&gt; from the draconian Wordpress architecture to a much more elegant static site structure hosted on &lt;a href="https://pages.github.com/"&gt;Github Page&lt;/a&gt; using a &lt;a href="http://en.wikipedia.org/wiki/Web_template_system#Static_page_generators"&gt;static site generator&lt;/a&gt; &lt;a href="http://docs.getpelican.com/en/3.4.0/"&gt;Pelican&lt;/a&gt;. The original conversion was quite an involving effort of a series of trial-and-error because of the respective idiosyncrasies from Github Page itself, a fast-evolving Pelican, and legacy issues from Wordpress. &lt;/p&gt;
 &lt;p&gt;The second time is a charm. I managed to set up the second site within only a few hours last night. Because OC is a brand new site from scratch, I didn't have to deal with Wordpress anymore. This guide is for my own reference (in case I forget), as well as for anyone who might try to do the same - to create a new static contents site on Github Page with Python-friendly Pelican (you can also use &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt; if you're more familiar with Ruby). &lt;/p&gt;
 &lt;p&gt;This dummy's guide assumes the reader knows nothing and has nothing, with only a MacBook Air/Pro. Naturally it will not be useful for most people. If you are a programmer this is a walk in the park for you and you know how to do most of the steps from high-school. If you are not a programmer you probably won't be crazy enough to even give it a try - it's just too daunting a task for someone with no CS training.&lt;/p&gt;
 &lt;h1&gt;1. Install iTerm&lt;/h1&gt;
