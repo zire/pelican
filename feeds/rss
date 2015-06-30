@@ -1,34 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/rss" rel="self"></atom:link><lastBuildDate>Sun, 28 Jun 2015 08:00:00 -0700</lastBuildDate><item><title>How to Manage Your Photos - Part 2</title><link>http://guizishanren.com/how-to-manage-photos-part-2</link><description>&lt;p&gt;Here are the settings I use for the official Flickr plug-in in Lightroom 4.1. Extraordinary care needs to be taken at this step. If not set up correctly, all the existing Flickr photos might need to be re-published and that might take a long long time.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/19251351056" title="lightroom 01 by herbertyang, on Flickr"&gt;&lt;img src="https://c1.staticflickr.com/1/354/19251351056_6da4fa5bc8_c.jpg" width="800" height="798" alt="lightroom 01"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Flickr Title
-- Set Flickr Title Using: &lt;em&gt;IPTC Title&lt;/em&gt;
-- If Empty, Use; &lt;em&gt;Filename&lt;/em&gt;
-- When Updating Photos: &lt;em&gt;Leave Existing Titles&lt;/em&gt;
-- note: Title should be set differently from filename. Filename is used to index photos in an album and give a unique identifier/handle to a photo. Title is used to give a more descriptive caption to a photo. Filename needs to be unique, while title can be anything. Caption is another item that often confuses and complicates this love triangle of filename-title-caption. I'll just leave caption blank.&lt;/p&gt;
-&lt;p&gt;Filename
-- uncheck everything
-- note: Renaming can be done in this Lightroom-to-Flickr as well, but I'd suggest doing file renaming within Lightroom, where you can have almost 100% control of what happens.&lt;/p&gt;
-&lt;p&gt;Video
-- uncheck everything
-- note: I keep videos separate from photos. All my videos get uploaded to youtube.&lt;/p&gt;
-&lt;p&gt;File Settings
-- Set Quality to: &lt;em&gt;100&lt;/em&gt;&lt;br /&gt;
-- note: The default is 60%. So make sure you change it to 100% to preserve the raw quality.&lt;/p&gt;
-&lt;p&gt;Image Sizing: uncheck everything&lt;/p&gt;
+&lt;p&gt;Flickr Title&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set Flickr Title Using: &lt;em&gt;IPTC Title&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;If Empty, Use; &lt;em&gt;Filename&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;When Updating Photos: &lt;em&gt;Leave Existing Titles&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;note: Title should be set differently from filename. Filename is used to index photos in an album and give a unique identifier/handle to a photo. Title is used to give a more descriptive caption to a photo. Filename needs to be unique, while title can be anything. Caption is another item that often confuses and complicates this love triangle of filename-title-caption. I'll just leave caption blank.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Filename&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;uncheck everything&lt;/li&gt;
+&lt;li&gt;note: Renaming can be done in this Lightroom-to-Flickr as well, but I'd suggest doing file renaming within Lightroom, where you can have almost 100% control of what happens.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Video&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;uncheck everything&lt;/li&gt;
+&lt;li&gt;note: I keep videos separate from photos. All my videos get uploaded to youtube.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;File Settings&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set Quality to: &lt;em&gt;100&lt;/em&gt;  &lt;/li&gt;
+&lt;li&gt;note: The default is 60%. So make sure you change it to 100% to preserve the raw quality.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Image Sizing&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;uncheck everything&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/19089834598" title="lightroom 02 by herbertyang, on Flickr"&gt;&lt;img src="https://c1.staticflickr.com/1/490/19089834598_4a9ea2e3a1_c.jpg" width="800" height="795" alt="lightroom 02"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Output Sharpening: uncheck everything  &lt;/p&gt;
-&lt;p&gt;Metadata
-- Choose: &lt;em&gt;All&lt;/em&gt;
-- uncheck everything else&lt;/p&gt;
-&lt;p&gt;Watermarking
-- uncheck all&lt;br /&gt;
-- note: If you're a professional stock photographer, you might need to adjust this setting to stamp a watermark on your photos. It's not necessary for photos about families and friends.&lt;/p&gt;
-&lt;p&gt;Privacy and Safety
-- Privacy: &lt;em&gt;Private&lt;/em&gt;
-- Safety: &lt;em&gt;Safe&lt;/em&gt;, check "Hide from public site areas"
-- Type: &lt;em&gt;Photo&lt;/em&gt;
-- note: It's critical to get this one right. You don't want to upload photos as public albums by default.  &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 28 Jun 2015 08:00:00 -0700</pubDate><guid>tag:guizishanren.com,2015-06-28:how-to-manage-photos-part-2</guid><category></category></item><item><title>How to Tell if You are a Tech Noob</title><link>http://guizishanren.com/how-to-tell-a-tech-noob</link><description>&lt;p&gt;The six habits of a highly likely technology noob:&lt;/p&gt;
+&lt;p&gt;Output Sharpening&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;uncheck everything  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Metadata&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose: &lt;em&gt;All&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;uncheck everything else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Watermarking&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;uncheck all  &lt;/li&gt;
+&lt;li&gt;note: If you're a professional stock photographer, you might need to adjust this setting to stamp a watermark on your photos. It's not necessary for photos about families and friends.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Privacy and Safety&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Privacy: &lt;em&gt;Private&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Safety: &lt;em&gt;Safe&lt;/em&gt;, check "Hide from public site areas"&lt;/li&gt;
+&lt;li&gt;Type: &lt;em&gt;Photo&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;note: It's critical to get this one right. You don't want to upload photos as public albums by default.  &lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 28 Jun 2015 08:00:00 -0700</pubDate><guid>tag:guizishanren.com,2015-06-28:how-to-manage-photos-part-2</guid><category></category></item><item><title>How to Tell if You are a Tech Noob</title><link>http://guizishanren.com/how-to-tell-a-tech-noob</link><description>&lt;p&gt;The six habits of a highly likely technology noob:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Your have more than &lt;em&gt;ONE&lt;/em&gt; personal email addresses and your friends are always confused which one to use and spend countless hours verifying and re-verifying if you have received that missing email.&lt;/p&gt;
