@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/index.html</loc>
-<lastmod>2015-06-29T22:04:46-00:00</lastmod>
+<lastmod>2015-06-29T22:21:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2015-06-29T22:04:46-00:00</lastmod>
+<lastmod>2015-06-29T22:21:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2015-06-29T22:04:46-00:00</lastmod>
+<lastmod>2015-06-29T22:21:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2015-06-29T22:04:46-00:00</lastmod>
+<lastmod>2015-06-29T22:21:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -41,13 +41,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/how-to-manage-photos-part-2</loc>
 <lastmod>2015-06-28T08:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/10-things-startup-founder-can-learn-from-jack-bauer-and-24</loc>
-<lastmod>2015-04-25T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -845,7 +838,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/category/business</loc>
-<lastmod>2015-04-25T08:00:00-00:00</lastmod>
+<lastmod>2014-11-04T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
