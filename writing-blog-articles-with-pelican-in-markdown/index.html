@@ -104,14 +104,27 @@ tags: <a href="../tag/"></a> </div>
 </pre></div>
 
 
-<p>Publish the post</p>
-<div class="highlight"><pre><span class="n">pelican</span> <span class="n">content</span> <span class="o">-</span><span class="n">o</span> <span class="n">output</span> <span class="o">-</span><span class="n">s</span> <span class="n">pelicanconf</span><span class="p">.</span><span class="n">py</span>
-<span class="n">ghp</span><span class="o">-</span><span class="n">import</span> <span class="o">-</span><span class="n">m</span> <span class="s">&quot;message&quot;</span> <span class="n">output</span>
-<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+<p>Generate the post</p>
+<p><code>pelican content -o output -s pelicanconf.py</code></p>
+<p>...and you'll see the below message:</p>
+<p><code>Done: Processed 114 articles and 1 pages in 3.55 seconds.</code></p>
+<p>Commit the change to the local repository</p>
+<p><code>ghp-import -m "message" output</code></p>
+<p><code>ghp-import</code> is equivalent to <code>git commit</code>. Write something meaningful in the commit message, like "another epic post today when everyone is slacking off".</p>
+<p>Push up the commit to Github Page</p>
+<p><code>git push origin gh-pages</code></p>
+<p>... and you'll see the below message:</p>
+<div class="highlight"><pre><span class="n">Counting</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span> <span class="n">done</span><span class="p">.</span>
+<span class="n">Delta</span> <span class="n">compression</span> <span class="n">using</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">4</span> <span class="n">threads</span><span class="p">.</span>
+<span class="n">Compressing</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">16</span><span class="o">/</span><span class="mi">16</span><span class="p">),</span> <span class="n">done</span><span class="p">.</span>
+<span class="n">Writing</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">53</span><span class="o">/</span><span class="mi">53</span><span class="p">),</span> <span class="mf">285.43</span> <span class="n">KiB</span> <span class="o">|</span> <span class="mi">0</span> <span class="n">bytes</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="p">.</span>
+<span class="n">Total</span> <span class="mi">53</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">47</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">39</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">33</span><span class="p">)</span>
+<span class="n">To</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/zire/blog.git</span>
+   <span class="n">c6c4e43</span><span class="p">.</span><span class="mf">.0e1</span><span class="n">d7b3</span>  <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="o">-&gt;</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
 </pre></div>
 
 
-<p><code>ghp-import</code> is equivalent to <code>git commit</code>. Write something meaningful in the commit message, like "another epic post today when everyone is slacking off" </p></div>
+<p>Voila! There you go!</p></div>
 		<div>    <!-- AddThis Button BEGIN -->
     <div class="addthis_toolbox addthis_default_style ">
     <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
