@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/category/.tech.rss" rel="self"></atom:link><lastBuildDate>Sun, 28 Jun 2015 08:00:00 -0700</lastBuildDate><item><title>How to Manage Your Photos - Part 2</title><link>http://guizishanren.com/how-to-manage-photos-part-2</link><description>&lt;p&gt;Here are the settings I use for the official Flickr plug-in in Lightroom 4.1. Extraordinary care needs to be taken at this step. If not set up correctly, all the existing Flickr photos might need to be re-published and that might take a long long time.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/category/.tech.rss" rel="self"></atom:link><lastBuildDate>Sun, 27 Dec 2015 08:00:00 -0800</lastBuildDate><item><title>Writing Blog Articles with Pelican in Markdown</title><link>http://guizishanren.com/writing-blog-articles-with-pelican-in-markdown</link><description>&lt;p&gt;After &lt;a href="http://guizishanren.com/guide-to-set-up-github-page-and-pelican"&gt;installing Pelican to generate your static single page blog site&lt;/a&gt;, I follow the below steps to write my blog articles.&lt;/p&gt;
+&lt;h1&gt;1. Learn Markdown language and pick an editor&lt;/h1&gt;
+&lt;p&gt;As of 2015, I almost write exclusively with Markdown language. For work on &lt;a href="http://linkqlo.com"&gt;Linkqlo&lt;/a&gt;, I write on issue trackers and wiki pages on our internal &lt;a href="https://gitlab.com/"&gt;Gitlab-based&lt;/a&gt; server. For my day-to-day journal, I write on &lt;a href="http://dayoneapp.com/"&gt;DayOne App&lt;/a&gt;. For personal blog &lt;a href="http://guizishanren.com"&gt;the Good, the Bad, and the Curious&lt;/a&gt;, it's in Markdown as well as it's hosted on &lt;a href="https://pages.github.com/"&gt;Github Page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If something cannot be written in Markdown, I probably will not write it. This is one of the several reasons I stopped using Evernote a long time ago. &lt;/p&gt;
+&lt;p&gt;Gitlab, Github, DayOne, and many other Markdown platforms all have their own flavored Markdown syntax. It could be confusing sometimes but &lt;a href="https://daringfireball.net/projects/markdown/"&gt;the basic syntax&lt;/a&gt; is always the same.&lt;/p&gt;
+&lt;p&gt;Picking a good editor is a monumental and very personal decision for someone who truly respects his/her own writing. I've been using &lt;a href="http://25.io/mou/"&gt;MOU version 0.8.7&lt;/a&gt; in the past few years. It's a fast editor with all the functions I need, like the trivial fun of switching color themes and a side-by-side live view window.&lt;/p&gt;
+&lt;h1&gt;2. Header format for blog articles&lt;/h1&gt;
+&lt;p&gt;Every Pelican-based post should start with the below header format so that it can be recognized by Pelican and generated properly.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;epic&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt; &lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Stanford&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;startup&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Tech&lt;/span&gt;
+&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;epic&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;article&lt;/span&gt;
+&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;short&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;feeds&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Title&lt;/strong&gt;, &lt;strong&gt;Date&lt;/strong&gt; and &lt;strong&gt;Slug&lt;/strong&gt; are must-haves. The rest are optional, which can be left blank if not needed. &lt;/p&gt;
+&lt;p&gt;A post can have multiple tags but only one category. Think carefully how you want to organize your contents. Category is kind of more permanent and should be considered as an integral part of the article, as it's supported almost universally. Tags are nice-to-haves and may not be supported fully everywhere. Slug forms the URL of the post, so it's important to have a proper one for SEO (search engine optimization) purpose. Summary is the short snippet that is displayed beneath the link when the post pops up on Google search result. By Pelican default setting it will be the first paragraph (up to certain character length) of the post, if it's left blank.  It is always better to include at least some summary so that it's more search engine friendly.&lt;/p&gt;
+&lt;h1&gt;3. Commands for publishing a post&lt;/h1&gt;
+&lt;p&gt;On command-line, enter into the path where the pelican folder is located&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;folder&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Run a local simulation before pushing up the changes to Github Page&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;devserver&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you can view the rendered pages on your local machine at http://localhost:8000/&lt;/p&gt;
+&lt;p&gt;Kill the simulation&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;develop_server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Publish the post&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;message&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;gh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;ghp-import&lt;/code&gt; is equivalent to &lt;code&gt;git commit&lt;/code&gt;. Write something meaningful in the commit message, like "another epic post today when everyone is slacking off" &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 27 Dec 2015 08:00:00 -0800</pubDate><guid>tag:guizishanren.com,2015-12-27:writing-blog-articles-with-pelican-in-markdown</guid><category></category></item><item><title>How to Manage Your Photos - Part 2</title><link>http://guizishanren.com/how-to-manage-photos-part-2</link><description>&lt;p&gt;Here are the settings I use for the official Flickr plug-in in Lightroom 4.1. Extraordinary care needs to be taken at this step. If not set up correctly, all the existing Flickr photos might need to be re-published and that might take a long long time.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/19251351056" title="lightroom 01 by herbertyang, on Flickr"&gt;&lt;img src="https://c1.staticflickr.com/1/354/19251351056_6da4fa5bc8_c.jpg" width="800" height="798" alt="lightroom 01"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Flickr Title&lt;/p&gt;
 &lt;ul&gt;
