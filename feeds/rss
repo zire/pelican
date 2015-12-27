@@ -37,14 +37,26 @@
 
 
 &lt;p&gt;Generate the post&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pelican content -o output -s pelicanconf.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;...and you'll see the below message:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Done: Processed 114 articles and 1 pages in 3.55 seconds.&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Done&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Processed&lt;/span&gt; &lt;span class="mi"&gt;114&lt;/span&gt; &lt;span class="n"&gt;articles&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;pages&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;3.55&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Commit the change to the local repository&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ghp-import -m "message" output&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;message&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;&lt;code&gt;ghp-import&lt;/code&gt; is equivalent to &lt;code&gt;git commit&lt;/code&gt;. Write something meaningful in the commit message, like "another epic post today when everyone is slacking off".&lt;/p&gt;
 &lt;p&gt;Push up the commit to Github Page&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git push origin gh-pages&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;gh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;... and you'll see the below message:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Counting&lt;/span&gt; &lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;53&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;done&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;span class="n"&gt;Delta&lt;/span&gt; &lt;span class="n"&gt;compression&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="n"&gt;threads&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
