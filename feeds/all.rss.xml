@@ -12,7 +12,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Check out the demo for various styles&lt;/p&gt;
-&lt;p&gt;This site has a good gallery: http://help.farbox.com/pygments.html&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://help.farbox.com/pygments.html"&gt;This site has a good gallery&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Generate a new pygments_XXX.css in &lt;code&gt;static/&lt;/code&gt; folder based on &lt;a href="http://docs.getpelican.com/en/3.6.3/faq.html"&gt;Pelican's instruction&lt;/a&gt;&lt;/p&gt;
