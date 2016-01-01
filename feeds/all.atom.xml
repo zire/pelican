@@ -2,13 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>the Good the Bad and the Curious</title><link href="http://guizishanren.com/" rel="alternate"></link><link href="http://feeds.feedburner.com/feeds/all.atom.xml" rel="self"></link><id>http://guizishanren.com/</id><updated>2016-01-01T08:00:00-08:00</updated><entry><title>How To Share Files and Photos Without Any Cloud Service</title><link href="http://guizishanren.com/share-files-and-photos-without-cloud" rel="alternate"></link><updated>2016-01-01T08:00:00-08:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2016-01-01:share-files-and-photos-without-cloud</id><summary type="html">&lt;p&gt;使用情景：用户A把自己电脑上的文件夹分享给用户B&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;用户A下载&lt;a href="https://www.getsync.com"&gt;BitTorrent Sync&lt;/a&gt;. BitTorrent Sync支持多个平台，Mac, Windows, iOs, Android，Windows Mobile和Kindle。作为简单的分享照片，使用它的免费版即可。&lt;/li&gt;
-&lt;li&gt;用户A安装好BitTorrent Sync后，打开软件，按左上角&lt;code&gt;Add Folder&lt;/code&gt;, 指定你想要分享的文件夹。添加后Status下显示&lt;code&gt;No peers&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;用户A选择这个文件夹，点击右方（Date Synced下）的分享按钮，出来一个Share的菜单。&lt;/li&gt;
+&lt;li&gt;用户A安装好BitTorrent Sync后，打开软件，按左上角&lt;code&gt;Add Folder&lt;/code&gt;, 指定你想要分享的文件夹。添加后Status下显示&lt;code&gt;No peers&lt;/code&gt;.
+&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/gankyun/23812898220/in/dateposted/" title="sync 01"&gt;&lt;img src="https://farm2.staticflickr.com/1594/23812898220_bf3bc4b0f6_c.jpg" width="800" height="300" alt="sync 01"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;用户A选择这个文件夹，点击右方（Date Synced下）的分享按钮，出来一个Share的菜单。
+&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/gankyun/24082471686/in/dateposted/" title="sync 02"&gt;&lt;img src="https://farm2.staticflickr.com/1503/24082471686_caf81459d3_z.jpg" width="631" height="529" alt="sync 02"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;用户A在Permission下指定这个文件夹对其他用户的分享权限，选择&lt;code&gt;Read Only&lt;/code&gt;，其他的都选择默认即可。&lt;/li&gt;
 &lt;li&gt;用户A选择把分享链接分享给其他朋友的方式，建议用&lt;code&gt;Copy&lt;/code&gt;，最简单直接。点击了Copy后，这个文件夹的分享链接就被粘贴到clipboard上了。把这个链接发给朋友。&lt;/li&gt;
 &lt;li&gt;用户B - 收到链接的朋友，也需要在自己的电脑上安装BitTorrent Sync&lt;/li&gt;
-&lt;li&gt;用户B把链接copy下来，打开BitTorrent Sync，点击右上角的设置（多摸狗血的UI），选择&lt;code&gt;Manual Connection&lt;/code&gt;，在接下来的窗口里粘贴链接，然后在本地电脑上选择文件夹的地址。&lt;/li&gt;
-&lt;li&gt;这个时候用户A会在自己的BitTorrent Sync里收到一个提示，说用户B在申请文件夹的共享权限，批准即可。&lt;/li&gt;
+&lt;li&gt;用户B把链接copy下来，打开BitTorrent Sync，点击右上角的设置（多摸狗血的UI），选择&lt;code&gt;Manual Connection&lt;/code&gt;，在接下来的窗口里粘贴链接，然后在本地电脑上选择文件夹的地址。
+&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/gankyun/23480319214/in/dateposted/" title="sync 03"&gt;&lt;img src="https://farm6.staticflickr.com/5704/23480319214_d5e1604a7e_z.jpg" width="640" height="220" alt="sync 03"&gt;&lt;/a&gt;
+&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/gankyun/23740751919/in/dateposted/" title="sync 04"&gt;&lt;img src="https://farm6.staticflickr.com/5824/23740751919_4aa5da3895_z.jpg" width="640" height="377" alt="sync 04"&gt;&lt;/a&gt;
+&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/gankyun/23812898640/in/dateposted/" title="sync 05"&gt;&lt;img src="https://farm2.staticflickr.com/1720/23812898640_8fb0af2d4c_z.jpg" width="640" height="411" alt="sync 05"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;这个时候用户A会在自己的BitTorrent Sync里收到一个提示，说用户B在申请文件夹的共享权限，批准即可。
+&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/gankyun/23481767723/in/dateposted/" title="sync 06"&gt;&lt;img src="https://farm6.staticflickr.com/5636/23481767723_8fb0af2d4c_z.jpg" width="640" height="167" alt="sync 06"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Voila! 现在这个文件夹的文件正在被BitTorrent Sync用p2p的方式（不通过任何云服务的上载）被快乐地从A的电脑下载到B的电脑中。&lt;/li&gt;
 &lt;/ol&gt;</summary><category term="中文"></category></entry><entry><title>Change Syntax Highlights with Pygments CSS for Pelican Site</title><link href="http://guizishanren.com/change-syntax-highlight-with-pygments-CSS-for-Pelican-blog" rel="alternate"></link><updated>2015-12-30T08:00:00-08:00</updated><author><name>Herbert Yang</name></author><id>tag:guizishanren.com,2015-12-30:change-syntax-highlight-with-pygments-CSS-for-Pelican-blog</id><summary type="html">&lt;p&gt;It's important to get the syntax highlight colors right. Here's my workflow to update that when I feel like a change.&lt;/p&gt;
 &lt;ol&gt;
