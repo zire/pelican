@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/index.html</loc>
-<lastmod>2016-02-04T18:57:55-00:00</lastmod>
+<lastmod>2016-02-04T19:14:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2016-02-04T18:57:55-00:00</lastmod>
+<lastmod>2016-02-04T19:14:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2016-02-04T18:57:55-00:00</lastmod>
+<lastmod>2016-02-04T19:14:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2016-02-04T18:57:55-00:00</lastmod>
+<lastmod>2016-02-04T19:14:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -769,6 +769,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/what-does-it-take-to-be-a-good-boss</loc>
 <lastmod>2011-10-10T18:11:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://guizishanren.com/journey-to-Spain-03-no-mans-land</loc>
+<lastmod>2011-09-29T07:33:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
