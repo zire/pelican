@@ -1,7 +1,6 @@
 .highlight { background-color: #333333 }
 .c { color: #008800; font-style: italic; background-color: #0f140f } /* Comment */
 .err { color: #ffffff } /* Error */
-.esc { color: #ffffff } /* Escape */
 .g { color: #ffffff } /* Generic */
 .k { color: #fb660a; font-weight: bold } /* Keyword */
 .l { color: #ffffff } /* Literal */
@@ -9,10 +8,8 @@
 .o { color: #ffffff } /* Operator */
 .x { color: #ffffff } /* Other */
 .p { color: #ffffff } /* Punctuation */
-.ch { color: #008800; font-style: italic; background-color: #0f140f } /* Comment.Hashbang */
 .cm { color: #008800; font-style: italic; background-color: #0f140f } /* Comment.Multiline */
 .cp { color: #ff0007; font-weight: bold; font-style: italic; background-color: #0f140f } /* Comment.Preproc */
-.cpf { color: #008800; font-style: italic; background-color: #0f140f } /* Comment.PreprocFile */
 .c1 { color: #008800; font-style: italic; background-color: #0f140f } /* Comment.Single */
 .cs { color: #008800; font-style: italic; background-color: #0f140f } /* Comment.Special */
 .gd { color: #ffffff } /* Generic.Deleted */
@@ -50,7 +47,6 @@
 .nv { color: #fb660a } /* Name.Variable */
 .ow { color: #ffffff } /* Operator.Word */
 .w { color: #888888 } /* Text.Whitespace */
-.mb { color: #0086f7; font-weight: bold } /* Literal.Number.Bin */
 .mf { color: #0086f7; font-weight: bold } /* Literal.Number.Float */
 .mh { color: #0086f7; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0086f7; font-weight: bold } /* Literal.Number.Integer */
