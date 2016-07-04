@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/index.html</loc>
-<lastmod>2016-07-03T23:49:13-00:00</lastmod>
+<lastmod>2016-07-04T00:08:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2016-07-03T23:49:13-00:00</lastmod>
+<lastmod>2016-07-04T00:08:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2016-07-03T23:49:13-00:00</lastmod>
+<lastmod>2016-07-04T00:08:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2016-07-03T23:49:13-00:00</lastmod>
+<lastmod>2016-07-04T00:08:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -473,7 +473,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/my-epic-blog-article</loc>
+<loc>http://guizishanren.com/once-upon-a-time-in-wuhan</loc>
 <lastmod>2013-05-19T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -1084,20 +1084,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/tag/shi-ge</loc>
 <lastmod>2015-12-20T08:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/tag/stanford</loc>
-<lastmod>2013-05-19T08:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/tag/startup</loc>
-<lastmod>2013-05-19T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
