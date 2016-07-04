@@ -689,11 +689,11 @@ it's worth noting that RAE reflects how I treat the course requirement,
 rather than what is officially required by the syllabus. The entire
 CIDRAE score is, therefore, highly idiosyncratic.&lt;/p&gt;
 &lt;p&gt;Denote:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;CID&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Sum&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;CID Index = Sum (C + I + D) / 3
 
-&lt;span class="n"&gt;RAE&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Sum&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+RAE Index = Sum (R + A + E) / 3
 
-&lt;span class="n"&gt;CIDRAE&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CID&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;RAE&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt;
+CIDRAE Index = CID Index / RAE Index
 &lt;/pre&gt;&lt;/div&gt;
 
 

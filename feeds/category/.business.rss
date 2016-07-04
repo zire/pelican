@@ -342,10 +342,10 @@ company to the search fund)&lt;/p&gt;
 &lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 24 Jan 2013 16:07:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-24:why-search-funds-make-sense</guid><category>coassf</category></item><item><title>COASSF#40 - Reflection Notes from S353 Jan 17 Fitness Anywhere Case</title><link>http://guizishanren.com/reflection-notes-from-s353-fitness-anywhere-case</link><description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Typical equity split after 1st round in the Valley:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;VC&lt;/span&gt;                          &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
-&lt;span class="n"&gt;Options&lt;/span&gt;                     &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
-&lt;span class="n"&gt;Founders&lt;/span&gt;                    &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
-&lt;span class="n"&gt;Total&lt;/span&gt;                       &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;VC                          50%
+Options                     30%
+Founders                    20%
+Total                       100%
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -358,15 +358,15 @@ company to the search fund)&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Typical equity split among founding team after 1st round in the Valley
 on average:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;CEO&lt;/span&gt;                         &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
-&lt;span class="n"&gt;VP&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Engineering&lt;/span&gt;           &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
-&lt;span class="n"&gt;VP&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Marketing&lt;/span&gt;             &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
-&lt;span class="n"&gt;VP&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Sale&lt;/span&gt;                  &lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
-&lt;span class="n"&gt;Controller&lt;/span&gt;                  &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
-&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;Engineer&lt;/span&gt;              &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;each&lt;/span&gt;
-&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;Engineer&lt;/span&gt;             &lt;span class="mf"&gt;0.3&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;each&lt;/span&gt;
-&lt;span class="n"&gt;Director&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Marketing&lt;/span&gt;       &lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
-&lt;span class="n"&gt;Product&lt;/span&gt; &lt;span class="n"&gt;Manager&lt;/span&gt;             &lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;CEO                         10%
+VP of Engineering           4%
+VP of Marketing             3%
+VP of Sale                  1.5%
+Controller                  1.0%
+1 ~ 5 Engineer              1.0% each
+5 ~ 10 Engineer             0.3% each
+Director of Marketing       0.5%
+Product Manager             0.2%
 &lt;/pre&gt;&lt;/div&gt;
 
 

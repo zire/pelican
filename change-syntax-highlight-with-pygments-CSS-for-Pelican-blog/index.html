@@ -88,9 +88,9 @@
 <ol>
 <li>
 <p>Find out which themes are already available from <a href="http://pygments.org/docs/styles/">pygments</a> </p>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">from</span> <span class="n">pygments</span><span class="p">.</span><span class="n">styles</span> <span class="n">import</span> <span class="n">STYLE_MAP</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">STYLE_MAP</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span>
-<span class="p">[</span><span class="err">&#39;</span><span class="n">monokai</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">manni</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">rrt</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">perldoc</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">borland</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">colorful</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="k">default</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">murphy</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">vs</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">trac</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">tango</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">fruity</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">autumn</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">bw</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">emacs</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">vim</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">pastie</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">friendly</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">native</span><span class="err">&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pygments.styles</span> <span class="kn">import</span> <span class="n">STYLE_MAP</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">STYLE_MAP</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="p">[</span><span class="s1">&#39;monokai&#39;</span><span class="p">,</span> <span class="s1">&#39;manni&#39;</span><span class="p">,</span> <span class="s1">&#39;rrt&#39;</span><span class="p">,</span> <span class="s1">&#39;perldoc&#39;</span><span class="p">,</span> <span class="s1">&#39;borland&#39;</span><span class="p">,</span> <span class="s1">&#39;colorful&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;murphy&#39;</span><span class="p">,</span> <span class="s1">&#39;vs&#39;</span><span class="p">,</span> <span class="s1">&#39;trac&#39;</span><span class="p">,</span> <span class="s1">&#39;tango&#39;</span><span class="p">,</span> <span class="s1">&#39;fruity&#39;</span><span class="p">,</span> <span class="s1">&#39;autumn&#39;</span><span class="p">,</span> <span class="s1">&#39;bw&#39;</span><span class="p">,</span> <span class="s1">&#39;emacs&#39;</span><span class="p">,</span> <span class="s1">&#39;vim&#39;</span><span class="p">,</span> <span class="s1">&#39;pastie&#39;</span><span class="p">,</span> <span class="s1">&#39;friendly&#39;</span><span class="p">,</span> <span class="s1">&#39;native&#39;</span><span class="p">]</span>
 </pre></div>
 
 
@@ -101,14 +101,14 @@
 </li>
 <li>
 <p>Generate a new pygments_XXX.css in <code>static/</code> folder based on <a href="http://docs.getpelican.com/en/3.6.3/faq.html">Pelican's instruction</a></p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">pygmentize</span> <span class="o">-</span><span class="n">S</span> <span class="n">vim</span> <span class="o">-</span><span class="n">f</span> <span class="n">html</span> <span class="o">-</span><span class="n">a</span> <span class="p">.</span><span class="n">highlight</span> <span class="o">&gt;</span> <span class="n">pygments_vim</span><span class="p">.</span><span class="n">css</span>
+<div class="highlight"><pre><span></span>$ pygmentize -S vim -f html -a .highlight &gt; pygments_vim.css
 </pre></div>
 
 
 </li>
 <li>
 <p>Replace the current pygments.css with the new one</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">cp</span> <span class="n">pygments_monokai</span><span class="p">.</span><span class="n">css</span> <span class="n">pygments</span><span class="p">.</span><span class="n">css</span>
+<div class="highlight"><pre><span></span>$ cp pygments_monokai.css pygments.css
 </pre></div>
 
 

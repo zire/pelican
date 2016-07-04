@@ -25,7 +25,7 @@ data quality will be considerably better in more recent update&lt;/p&gt;
 &lt;p&gt;Google archives Gmail messages in mbox format - one single large file.
 Python's mailbox.mbox library provides an effective way to extract
 contents from it.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_mbox2csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Python 1_mbox2csv.py
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -52,7 +52,7 @@ and is sorted by date.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Run the word frequency analysis&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;_wordcount&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Python 2_wordcount.py
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -996,61 +996,61 @@ the books. You just have to strike a balance.&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;here's my trades:&lt;/p&gt;
 &lt;p&gt;a. Amazon Trade-in List:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;Strategic&lt;/span&gt; &lt;span class="n"&gt;Management&lt;/span&gt;    
-    &lt;span class="n"&gt;ISBN13&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9780470009475&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ISBN10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mo"&gt;047000&lt;/span&gt;&lt;span class="mi"&gt;9470&lt;/span&gt;
-    &lt;span class="n"&gt;Expected&lt;/span&gt; &lt;span class="n"&gt;Amount&lt;/span&gt; &lt;span class="n"&gt;Per&lt;/span&gt; &lt;span class="n"&gt;Item&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;35.70&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    Strategic Management    
+    ISBN13: 9780470009475, ISBN10: 0470009470
+    Expected Amount Per Item: $35.70
 
-    &lt;span class="n"&gt;Microeconomics&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="n"&gt;th&lt;/span&gt; &lt;span class="n"&gt;Edition&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;Pearson&lt;/span&gt; &lt;span class="n"&gt;Series&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Economics&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="nl"&gt;ISBN13:&lt;/span&gt; &lt;span class="mi"&gt;9780131392632&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ISBN10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mo"&gt;01313&lt;/span&gt;&lt;span class="mi"&gt;92638&lt;/span&gt;
-    &lt;span class="n"&gt;Expected&lt;/span&gt; &lt;span class="n"&gt;Amount&lt;/span&gt; &lt;span class="n"&gt;Per&lt;/span&gt; &lt;span class="n"&gt;Item&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;97.51&lt;/span&gt;
+    Microeconomics (6th Edition) (The Pearson Series in Economics)
+    ISBN13: 9780131392632, ISBN10: 0131392638
+    Expected Amount Per Item: $97.51
 
-    &lt;span class="n"&gt;Business&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;Its&lt;/span&gt; &lt;span class="n"&gt;Environment&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="n"&gt;th&lt;/span&gt; &lt;span class="n"&gt;Edition&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ISBN&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9780136083924&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ISBN&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mo"&gt;01360&lt;/span&gt;&lt;span class="mi"&gt;83927&lt;/span&gt;
-    &lt;span class="n"&gt;Expected&lt;/span&gt; &lt;span class="n"&gt;Amount&lt;/span&gt; &lt;span class="n"&gt;Per&lt;/span&gt; &lt;span class="n"&gt;Item&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;12.25&lt;/span&gt;
+    Business and Its Environment (6th Edition)
+    ISBN-13: 9780136083924, ISBN-10: 0136083927
+    Expected Amount Per Item:   $12.25
 
-    &lt;span class="n"&gt;As&lt;/span&gt; &lt;span class="n"&gt;We&lt;/span&gt; &lt;span class="n"&gt;Speak&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;How&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;Make&lt;/span&gt; &lt;span class="n"&gt;Your&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;Have&lt;/span&gt; &lt;span class="n"&gt;It&lt;/span&gt; &lt;span class="n"&gt;Stick&lt;/span&gt;
-    &lt;span class="n"&gt;ISBN&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9781439153086&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ISBN&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1439153086&lt;/span&gt;
-    &lt;span class="n"&gt;Expected&lt;/span&gt; &lt;span class="n"&gt;Amount&lt;/span&gt; &lt;span class="n"&gt;Per&lt;/span&gt; &lt;span class="n"&gt;Item&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;1.00&lt;/span&gt;
+    As We Speak: How to Make Your Point and Have It Stick
+    ISBN-13: 9781439153086, ISBN-10: 1439153086
+    Expected Amount Per Item:   $1.00
 
-    &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;Modern&lt;/span&gt; &lt;span class="n"&gt;Firm&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Organizational&lt;/span&gt; &lt;span class="n"&gt;Design&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;Performance&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;Growth&lt;/span&gt;
-    &lt;span class="n"&gt;ISBN&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9780198293750&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ISBN&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mo"&gt;01&lt;/span&gt;&lt;span class="mi"&gt;98293755&lt;/span&gt;
-    &lt;span class="n"&gt;Expected&lt;/span&gt; &lt;span class="n"&gt;Amount&lt;/span&gt; &lt;span class="n"&gt;Per&lt;/span&gt; &lt;span class="n"&gt;Item&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;1.00&lt;/span&gt;
+    The Modern Firm: Organizational Design for Performance and Growth
+    ISBN-13: 9780198293750, ISBN-10: 0198293755
+    Expected Amount Per Item: $1.00
 
-    &lt;span class="n"&gt;Financial&lt;/span&gt; &lt;span class="n"&gt;Accounting&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;rd&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;third&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;Edition&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ISBN&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;9781934319604&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ISBN&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1934319600&lt;/span&gt;
-    &lt;span class="n"&gt;Expected&lt;/span&gt; &lt;span class="n"&gt;Amount&lt;/span&gt; &lt;span class="n"&gt;Per&lt;/span&gt; &lt;span class="n"&gt;Item&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;96.05&lt;/span&gt;
+    Financial Accounting (3rd (third) Edition)
+    ISBN-13: 9781934319604, ISBN-10: 1934319600
+    Expected Amount Per Item: $96.05
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Total Value from Amazon Trade-in: $243.51&lt;/p&gt;
 &lt;p&gt;b. Stanford Bookstore Cash For Books&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="nl"&gt;Title:&lt;/span&gt; &lt;span class="n"&gt;Complete&lt;/span&gt; &lt;span class="n"&gt;Business&lt;/span&gt; &lt;span class="n"&gt;Statistics&lt;/span&gt;
-    &lt;span class="nl"&gt;Edition:&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="n"&gt;th&lt;/span&gt;
-    &lt;span class="nl"&gt;Author:&lt;/span&gt; &lt;span class="n"&gt;ACZEL&lt;/span&gt;
-    &lt;span class="nl"&gt;Publisher:&lt;/span&gt; &lt;span class="n"&gt;WOHL&lt;/span&gt; &lt;span class="n"&gt;PUBLISHING&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;INC&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-    &lt;span class="nl"&gt;ISBN:&lt;/span&gt; &lt;span class="mi"&gt;9781935938187&lt;/span&gt;
-    &lt;span class="n"&gt;Unit&lt;/span&gt; &lt;span class="n"&gt;Price&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;20.00&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    Title: Complete Business Statistics
+    Edition: 8th
+    Author: ACZEL
+    Publisher: WOHL PUBLISHING, INC.
+    ISBN: 9781935938187
+    Unit Price: $20.00
 
-    &lt;span class="nl"&gt;Title:&lt;/span&gt; &lt;span class="n"&gt;Improv&lt;/span&gt; &lt;span class="n"&gt;Wisdom&lt;/span&gt;
-    &lt;span class="nl"&gt;Edition:&lt;/span&gt;
-    &lt;span class="nl"&gt;Author:&lt;/span&gt; &lt;span class="n"&gt;MADSON&lt;/span&gt;
-    &lt;span class="nl"&gt;Publisher:&lt;/span&gt; &lt;span class="n"&gt;CROWN&lt;/span&gt; &lt;span class="n"&gt;PUBLISHING&lt;/span&gt; &lt;span class="n"&gt;GROUP&lt;/span&gt;
-    &lt;span class="nl"&gt;ISBN:&lt;/span&gt; &lt;span class="mi"&gt;9781400081882&lt;/span&gt;
-    &lt;span class="n"&gt;Unit&lt;/span&gt; &lt;span class="n"&gt;Price&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;2.00&lt;/span&gt;
+    Title: Improv Wisdom
+    Edition:
+    Author: MADSON
+    Publisher: CROWN PUBLISHING GROUP
+    ISBN: 9781400081882
+    Unit Price: $2.00
 
-    &lt;span class="nl"&gt;Title:&lt;/span&gt; &lt;span class="n"&gt;Influence&lt;/span&gt;
-    &lt;span class="nl"&gt;Edition:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;th&lt;/span&gt;
-    &lt;span class="nl"&gt;Author:&lt;/span&gt; &lt;span class="n"&gt;CIALDINI&lt;/span&gt;
-    &lt;span class="nl"&gt;Publisher:&lt;/span&gt; &lt;span class="n"&gt;PRENTICE&lt;/span&gt; &lt;span class="n"&gt;HALL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;INC&lt;/span&gt;
-    &lt;span class="nl"&gt;ISBN:&lt;/span&gt; &lt;span class="mi"&gt;9780205609994&lt;/span&gt;
-    &lt;span class="n"&gt;Unit&lt;/span&gt; &lt;span class="n"&gt;Price&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;4.00&lt;/span&gt;
+    Title: Influence
+    Edition: 5th
+    Author: CIALDINI
+    Publisher: PRENTICE HALL, INC
+    ISBN: 9780205609994
+    Unit Price: $4.00
 
-    &lt;span class="nl"&gt;Title:&lt;/span&gt; &lt;span class="n"&gt;Redefining&lt;/span&gt; &lt;span class="n"&gt;Global&lt;/span&gt; &lt;span class="n"&gt;Strategy&lt;/span&gt;
-    &lt;span class="nl"&gt;Edition:&lt;/span&gt;
-    &lt;span class="nl"&gt;Author:&lt;/span&gt; &lt;span class="n"&gt;GHEMAWAT&lt;/span&gt;
-    &lt;span class="nl"&gt;Publisher:&lt;/span&gt; &lt;span class="n"&gt;HARVARD&lt;/span&gt; &lt;span class="n"&gt;BUSINESS&lt;/span&gt; &lt;span class="n"&gt;SCHOOL&lt;/span&gt;
-    &lt;span class="nl"&gt;ISBN:&lt;/span&gt; &lt;span class="mi"&gt;9781591398660&lt;/span&gt;
-    &lt;span class="n"&gt;Unit&lt;/span&gt; &lt;span class="n"&gt;Price&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mf"&gt;4.00&lt;/span&gt;
+    Title: Redefining Global Strategy
+    Edition:
+    Author: GHEMAWAT
+    Publisher: HARVARD BUSINESS SCHOOL
+    ISBN: 9781591398660
+    Unit Price: $4.00
 &lt;/pre&gt;&lt;/div&gt;
 
 
