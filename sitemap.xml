@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/index.html</loc>
-<lastmod>2016-07-04T00:08:57-00:00</lastmod>
+<lastmod>2016-10-24T23:35:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2016-07-04T00:08:57-00:00</lastmod>
+<lastmod>2016-10-24T23:35:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2016-07-04T00:08:57-00:00</lastmod>
+<lastmod>2016-10-24T23:35:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2016-07-04T00:08:57-00:00</lastmod>
+<lastmod>2016-10-24T23:35:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -60,22 +60,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/change-syntax-highlight-with-pygments-CSS-for-Pelican-blog</loc>
-<lastmod>2015-12-30T08:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://guizishanren.com/workflow-for-stock-photographer-with-lightroom-and-symbiostock</loc>
 <lastmod>2015-12-28T08:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/writing-blog-articles-with-pelican-in-markdown</loc>
-<lastmod>2015-12-27T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -146,13 +132,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/order-like-native-Chinese-in-Chinese-restaurant</loc>
 <lastmod>2014-07-03T08:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/guide-to-set-up-static-blog-site-on-github-page-and-pelican</loc>
-<lastmod>2014-07-02T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -284,13 +263,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/buzz-words-stanford-gsb-blast-mail</loc>
-<lastmod>2014-03-21T12:52:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://guizishanren.com/confession-stanford-sloan-fellow-summary</loc>
 <lastmod>2014-03-16T13:12:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -417,13 +389,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/april-orientation-performance-at-cemex-auditorium</loc>
-<lastmod>2013-07-04T12:34:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://guizishanren.com/course-evaluation-spring-Q</loc>
 <lastmod>2013-07-03T12:34:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -433,13 +398,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/course-evaluation-winter-q</loc>
 <lastmod>2013-07-01T12:34:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/swan-song-by-the-spillovers</loc>
-<lastmod>2013-06-27T10:33:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -461,13 +419,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/stay-full-stay-smart</loc>
 <lastmod>2013-05-28T00:19:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/rock-out-stanford-coho</loc>
-<lastmod>2013-05-25T10:22:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -592,13 +543,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/reflection-notes-from-s353-fitness-anywhere-case</loc>
-<lastmod>2013-01-17T23:41:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://guizishanren.com/reflection-notes-from-s353-jan-15</loc>
 <lastmod>2013-01-16T00:48:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -606,22 +550,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/sell-used-textbooks</loc>
-<lastmod>2013-01-04T12:34:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://guizishanren.com/fall-qtr-course-evaluation</loc>
 <lastmod>2013-01-03T23:45:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/rock-band-debut</loc>
-<lastmod>2013-01-03T11:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -692,13 +622,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/summer-quarter-course-evaluation</loc>
 <lastmod>2012-10-18T22:14:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/evaluate-course-with-CIDRAE</loc>
-<lastmod>2012-10-18T16:14:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -832,13 +755,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/journey-to-Spain-01-sleepless-night</loc>
 <lastmod>2011-09-26T06:18:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/How-to-disable-Spotlight-on-Mac</loc>
-<lastmod>2011-07-31T13:41:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1006,7 +922,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://guizishanren.com/category/stanford</loc>
-<lastmod>2014-03-21T12:52:00-00:00</lastmod>
+<lastmod>2014-03-16T13:12:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1033,22 +949,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/pelican</loc>
-<lastmod>2015-12-30T08:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://guizishanren.com/tag/lang-bo-pai</loc>
 <lastmod>2012-12-02T18:14:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/tag/markdown</loc>
-<lastmod>2015-12-27T08:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1061,8 +963,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/spillovers</loc>
-<lastmod>2013-07-04T12:34:00-00:00</lastmod>
+<loc>http://guizishanren.com/tag/theory</loc>
+<lastmod>2011-10-21T15:47:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1091,13 +993,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://guizishanren.com/tag/video</loc>
 <lastmod>2013-07-16T17:27:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://guizishanren.com/tag/theory</loc>
-<lastmod>2011-10-21T15:47:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
