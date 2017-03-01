@@ -1,0 +1,29 @@
+{
+  "name": "pelican",
+  "version": "0.0.0",
+  "description": "statis site generator for personal blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zire/blog.git"
+  },
+  "author": "Herbert Yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zire/blog/issues"
+  },
+  "homepage": "https://github.com/zire/blog",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-sass": "^2.3.2",
+    "jshint": "^2.9.2",
+    "gulp-jshint": "^2.0.1"
+  }
+}
