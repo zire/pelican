@@ -1,10 +1,10 @@
 .DS_Store
+*.pid
 content
-draft
-node_modules
-Makefile
-fabfile.py
+cache
+drafts
 images
+node_modules
 npm-debug.log
 output
 pelicanconf.pyc

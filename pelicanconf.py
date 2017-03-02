@@ -12,7 +12,7 @@ AUTHOR_EMAIL = 'guizishanren@qq.com'
 USE_FOLDER_AS_CATEGORY = True
 DEFAULT_CATEGORY = 'misc'
 DISPLAY_PAGES_ON_MENU = True
-SUMMARY_MAX_LENGTH = 100
+SUMMARY_MAX_LENGTH = 50
 ADDTHIS_PROFILE = 'ra-538a1ad51a39747d'
 
 # Settings from pure-single theme
@@ -68,12 +68,13 @@ RELATIVE_URLS = True
 
 # Formatting date
 DEFAULT_DATE_FORMAT = ('%Y %m %d %A')
+WITH_FUTURE_DATES = True
 
 # Formatting for urls
 DEFAULT_PAGINATION = 10
 
-#PAGE_URL = ('pages/{slug}.html')
-#PAGE_SAVE_AS = ('pages/{slug}.html')
+PAGE_URL = 'about/{slug}'
+PAGE_SAVE_AS = 'about/{slug}/index.html'
 
 # ARTICLE_URL = "posts/{date:%Y}/{date:%m}/{slug}/"
 ARTICLE_URL = "{slug}"
@@ -109,7 +110,8 @@ PLUGINS = ['sitemap','neighbors','gravatar']
 OUTPUT_PATH = 'output'
 PATH = 'content'
 STATIC_PATHS = ['images', 'GoodBadCurious',]
-PLUGIN_PATH = 'plugins'
+PLUGIN_PATHS = ['plugins']
+CACHE_PATH = 'cache'
 
 # Define sitemap parameters
 SITEMAP = {
@@ -125,3 +127,13 @@ SITEMAP = {
         'pages': 'monthly'
     }
 }
+
+MARKUP=('rst', 'md', 'markdown', 'html')
+
+LOAD_CONTENT_CACHE = True
+CHECK_MODIFIED_METHOD = 'mtime'
+
+DRAFT_URL = 'drafts/{slug}.html'
+DRAFT_SAVE_AS = 'drafts/{slug}.html'
+DRAFT_LANG_URL = 'drafts/{slug}-{lang}.html'
+DRAFT_LANG_SAVE_AS = 'drafts/{slug}-{lang}.html'
