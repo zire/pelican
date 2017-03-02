@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="the Good the Bad and the Curious, ">
+
+        <link rel="alternate"  href="https://feeds.feedburner.com/feeds/all.atom.xml" type="application/atom+xml" title="the Good the Bad and the Curious Full Atom Feed"/>
+        <link rel="alternate" href="https://feeds.feedburner.com/feeds/all.rss.xml" type="application/rss+xml" title="the Good the Bad and the Curious Full RSS Feed"/>
+        <link rel="alternate" href="https://feeds.feedburner.com/feeds/rss" type="application/rss+xml" title="the Good the Bad and the Curious RSS Feed"/>
+
+        <title>A Dummy's Guide to Set Up Static Blog Site with Github Page and Pelican // the Good the Bad and the Curious // </title>
+
+    <link href="https://guizishanren.com/images/favicon.ico" rel="icon">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../theme/css/pure.css">
+    <link rel="stylesheet" href="../theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('https://s3-us-west-2.amazonaws.com/guizishanren/img/shinjuku.jpg')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="https://s.gravatar.com/avatar/106add5208f1a57290ed1164a903de21?s=80">
+                            <h1 class="brand-main"><a href="..">the Good the Bad and the Curious</a></h1>
+                            <p class="tagline"></p>
+                                <p class="links"><a href="/categories.html">Categories</a></p>
+                                <p class="links"><a href="/tags.html">Tags</a></p>
+                                <p class="social">
+                                    <a href="https://twitter.com/herbertyang">
+                                        <i class="fa fa-twitter fa-3x"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/herbertyang">
+                                        <i class="fa fa-linkedin fa-3x"></i>
+                                    </a>
+                                    <a href="https://instagram.com/zire">
+                                        <i class="fa fa-instagram fa-3x"></i>
+                                    </a>
+                                    <a href="https://github.com/zire">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                    <a href="https://weibo.com/zire">
+                                        <i class="fa fa-weibo fa-3x"></i>
+                                    </a>
+                                    <a href="https://www.quora.com/Herbert-Yang">
+                                        <i class="fa fa-quora fa-3x"></i>
+                                    </a>
+                                    <a href="https://www.guizishanren.com/feeds/rss">
+                                        <i class="fa fa-rss fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>A Dummy's Guide to Set Up Static Blog Site with Github Page and Pelican</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="../tag/pelican">pelican</a>
+                        </p>
+                </header>
+            </section>
+            <p>In early March I migrated <a href="http://guizishanren.com">the Good, the Bad, and the Curious</a> from the draconian Wordpress architecture to a much more elegant static site structure hosted on <a href="https://pages.github.com/">Github Page</a> using a <a href="http://en.wikipedia.org/wiki/Web_template_system#Static_page_generators">static site generator</a> <a href="http://docs.getpelican.com/en/3.4.0/">Pelican</a>. The original conversion was quite an involving effort of a series of trial-and-error because of the respective idiosyncrasies from Github Page itself, a fast-evolving Pelican, and legacy issues from Wordpress. </p>
+<p>The second time is a charm. I managed to set up the second site within only a few hours last night. Because OC is a brand new site from scratch, I didn't have to deal with Wordpress anymore. This guide is for my own reference (in case I forget), as well as for anyone who might try to do the same - to create a new static contents site on Github Page with Python-friendly Pelican (you can also use <a href="https://github.com/jekyll/jekyll">Jekyll</a> if you're more familiar with Ruby). </p>
+<p>This dummy's guide assumes the reader knows nothing and has nothing, with only a MacBook Air/Pro. Naturally it will not be useful for most people. If you are a programmer this is a walk in the park for you and you know how to do most of the steps from high-school. If you are not a programmer you probably won't be crazy enough to even give it a try - it's just too daunting a task for someone with no CS training.</p>
+<h1>1. Install iTerm</h1>
+<p>Download and install <a href="http://www.iterm2.com/#/section/home">iTerm2</a> to replace the default command-line tool Terminal from OSX. It's much more powerful and versatile than Terminal.</p>
+<p>In iTerm2's preferences, go to Terminal=&gt;Terminal Emulation, make sure Character Encoding is <em>Unicode (UTF-8)</em> and Report Terminal Type is <em>xterm-256color</em>. </p>
+<p>iTerm will provide the command-line interface to execute all the shell commands that you will need to use for github and pelican. </p>
+<p>Let's make a few adjustments on your shell environment:</p>
+<div class="highlight"><pre><span></span>cd ~
+vi ~/.bashrc
+# press &quot;i&quot; to enter into edit mode
+alias ls=&quot;ls -G&quot;
+# turn on color display in shell
+PS1=&#39;\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]&#39;
+# change the format of your cursor prompt
+# press Esc key to switch into command mode
+:wq
+# save the change and exit the file
+</pre></div>
+
+
+<h1>2. Install Python and git</h1>
+<p>There are two primary static site generators for Github Page. If you're familiar with Ruby, Jekyll is recommended by Github team; if you're more familiar with Python, Pelican is the most popular choice. </p>
+<p>Pelican is written in Python so you need to install Python first. Download the latest version of Python <a href="https://www.python.org/download/">here</a> first. </p>
+<p>You can also manage your Github Page site without relying on any SSG (static site generator), but using a SSG will be much more productive. </p>
+<p>Before starting with Github, you need to install Git, the most widely used version control system. Download and install from <a href="http://git-scm.com/">here</a>.</p>
+<h1>3. Sign up with Github</h1>
+<p>Sign up an account with <a href="https://github.com/">Github</a>. It's free (thanks to <a href="http://a16z.com">Andreessen Horowitz</a>'s $100 million investment]). In recent years, Github has become the Linkedin for geeks/programmers/developers, and the world's largest hosting platform for computer codes.</p>
+<p>In your Github page, go to Account Settings (top right corner), from the left-hand menu, go to SSH Keys. You need to link up your SSH key from the local machine to your github page so that you can push contents from local to github. Follow <a href="https://help.github.com/articles/generating-ssh-keys">this guide</a> to set it up:</p>
+<p>Open iTerm, you should be at the root of your home directory. Type the following commands:</p>
+<div class="highlight"><pre><span></span>cd ~/.ssh
+# enter into a hidden directory that stores ssh information
+ls -al
+# list the files in your .ssh directory
+ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
+# create a new ssh key, using your email as a label
+eval `ssh-agent -s`
+# start the ssh-agent in the background
+ssh-add ~/.ssh/id_rsa
+# add the ssh info into a file id_rsa in directory .ssh
+pbcopy &lt; ~/.ssh/id_rsa.pub
+# copy the contents of the id_rsa.pub file to your computer&#39;s clipboard
+</pre></div>
+
+
+<p>Following the rest of the steps as laid out in <a href="https://help.github.com/articles/generating-ssh-keys">github's help</a> to complete the "hand-shake" setup.</p>
+<h1>4. Create a Github repo</h1>
+<p>Next step (create the repository) is easy for pros but often confusing for dummies. The critical question is: where this folder of your website should be? This folder can be anywhere in your home directory on your local machine. I usually just create a folder right in the root of my home directory. Open your iTerm, then:</p>
+<div class="highlight"><pre><span></span>cd ~
+# enter into my home directory
+mkdir myblog
+# create an empty directory called &quot;myblog&quot; 
+cd myblog
+# enter into this blog folder. All subsequent commands will be carried out in this path
+</pre></div>
+
+
+<p>When the local folder is set up, go to your <a href="https://github.com/new">github account</a> to create a new repository (sort of the mirrored folder of your local one). Only check the box for "public". The name of this repo can be anything for your own benefit and doesn't need to be related to your website. I just named it "blog". </p>
+<p>Once the repo is set up, you will see a set of commands on screen and you're ready for your first commit.</p>
+<div class="highlight"><pre><span></span>cd ~/myblog
+# make sure you are in the right path by entering into your blog folder
+touch README.md
+# create an empty file for the first git commit
+git add README.md
+# add this file to the pipeline of your next git push
+git commit -m &quot;first commit&quot;
+# exciting moment huh?
+git remote add origin https://github.com/yourname/blog.git
+git push -u origin master
+</pre></div>
+
+
+<p>Now you've got a repo on your Github account. We need to turn this repo into a Github Page.</p>
+<h1>5. Create a Github Page project site</h1>
+<p>Go to <a href="https://pages.github.com/">Github Page</a> to create your project site. </p>
+<p>When choosing between User/Organization Site and Project Site, I picked <em>Project Site</em> to give myself more flexibility in the future. On your Github account, you can have multiple Project Sites, but only one User/Organization Site. </p>
+<p>Next, choose <em>Start from scratch</em> for your new project site. </p>
+<p>Next, create a gh-pages branch. No need to dwell into the fine differences between "master" and "gh-pages branch" here. Just follow the below instructions if you want to get up running quickly. This step is only possible AFTER you have committed the first git push into your newly created Github repo. </p>
+<p>Follow the on-screen guide to create a <em>gh-pages</em> branch for your repo "blog" and make gh-pages the default branch for this repo. </p>
+<p>Create your version of Hello World file as the on-screen guide suggests. </p>
+<p>Voila, your Github Page project site is now up and running at <a href="http://yourname.github.io/blog">http://yourname.github.io/blog</a>. It'll take up to 10 minutes for the website to come alive at the first time. In the future, the changes are almost instantaneous. </p>
+<h1>6. Get a domain name</h1>
+<p>Go buy a domain name for your website. I use <a href="http://www.godaddy.com/">GoDaddy</a>. Buying and managing domain name is very much of a commodity business and there are many competing companies. Just pick one that is reputable and large enough, like godaddy.</p>
+<p>No need to pay for any other "enhancements" other than the domain name itself. Start with a one or two-year subscription. You probably don't want to spend more than $30 for this step.</p>
+<h1>7. Redirect domain name/URL to Github Page</h1>
+<p>Another critical step: you want to host your website on github page using your preferred domain name, so that when people click "http://yourdomain.com", they will see the contents that are actually loaded/stored at "http://yourname.github.io/blog" (notice the io extension, not com). Basically, you need to redirect your newly bought domain name's URL to your github page. </p>
+<p>Follow this <a href="https://help.github.com/articles/adding-a-cname-file-to-your-repository">detailed instruction</a>. Go to your Github Account's blog repo, create a CNAME file with only one line "<em>yourdomain.com</em>". </p>
+<p>If you have done this right, you should see "Your site is published at <a href="http://yourdomain.com">http://yourdomain.com</a>" in the settings section of your blog repo in about 10 minutes.</p>
+<p>Now the really confusing step - configure your DNS settings. </p>
+<p>Go to your godaddy account, launch the menu for domains, go to "DNS zone files" section. You will see several sections such as "A(Host)", "AAAA(IPv6 Host)", "CName(Alias)", "TXT(Text)", "SRV(Service)", "NS(Nameserver)". </p>
+<p>Different domain sites have different interfaces, but usually you will see something like this under "<em>A(Host)</em>":</p>
+<table>
+<thead>
+<tr>
+<th>Host</th>
+<th>Points to</th>
+<th>TTL</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@</td>
+<td>xx.xx.xx.xx</td>
+<td>1 hour</td>
+<td>edit/delete</td>
+</tr>
+</tbody>
+</table>
+<p>Click on the Edit, change the default IP value "xx.xx.xx.xx" in "Points to" (or IP address) to "<em>199.27.79.133</em>", Save so that the change will take effect.</p>
+<p>This IP address 199.27.79.133 is the one used by Github Page's server. There are other IP addresses that can also be used. This one works for me.</p>
+<p>It'll take another a few minutes for the domain registrar to update that information in the database. If done right, you should see the contents of your Hello World file from Step 6 if you click on "http://yourdomain.com". The handshake between your domain and your Github Page is complete.</p>
+<p>Whew! ... we have barely scratched the surface so far ...</p>
+<h1>8. Install Pelican and dependencies</h1>
+<p>Download pip from <a href="http://pip.readthedocs.org/en/latest/installing.html#install-pip">here</a> into your blog home directory on local machine.</p>
+<div class="highlight"><pre><span></span>cd ~/myblog
+# enter into your local blog home directory
+sudo python get-pip.py
+# run the installation with administrator access. Enter your admin password when prompted
+</pre></div>
+
+
+<p>Install <a href="http://docs.getpelican.com/en/3.4.0/install.html">Pelican</a> using pip:</p>
+<div class="highlight"><pre><span></span>cd ~
+# do this at your home directory
+sudo pip install pelican
+# install pelican with admin access
+</pre></div>
+
+
+<p>Install Markdown using pip:</p>
+<div class="highlight"><pre><span></span>sudo pip install Markdown
+# so that your system recognizes .md and .markdown files as Markdown files
+</pre></div>
+
+
+<p>Install <a href="https://github.com/davisp/ghp-import">ghp-import</a> using pip:</p>
+<div class="highlight"><pre><span></span>sudo pip install ghp-import
+# this add-on is to facilitate the git push for your Github Page Project Site as it&#39;s a gh-pages branch, not the master branch as default
+</pre></div>
+
+
+<h1>9. Kickstart your site with Pelican</h1>
+<p>Finally, we can create a skeleton project now on the local machine with Pelican</p>
+<div class="highlight"><pre><span></span>cd ~/myblog
+# make sure you are in the right path for your blog
+pelican-quickstart
+# launch the installer for your project/blog site
+</pre></div>
+
+
+<p>You'll next be prompted with 10+ lines of questions. It's quite a challenge for the first time to figure out how to answer them (that's why you might need this guide).</p>
+<div class="highlight"><pre><span></span>&gt; Where do you want to create your new web site? [.]
+# just press Enter to use the default current path &quot;~/myblog&quot;
+&gt; What will be the title of this web site?
+# enter &quot;My Awesome Site&quot;
+&gt; Who will be the author of this web site?
+# enter &quot;Chuck Norris&quot;
+&gt; What will be the default language of this web site? [en]
+# press Enter to accept English
+&gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n)
+# enter Y
+&gt; What is your URL prefix? (see above example; no trailing slash)
+# enter http://yourdomain.com
+&gt; Do you want to enable article pagination? (Y/n)
+# enter Y
+&gt; How many articles per page do you want? [10]
+# enter 10
+&gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)
+# enter Y
+&gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n)
+# enter Y
+&gt; Do you want to upload your website using FTP? (y/N)
+# enter N
+&gt; Do you want to upload your website using SSH? (y/N)
+# enter N
+&gt; Do you want to upload your website using Dropbox? (y/N)
+# enter N
+&gt; Do you want to upload your website using S3? (y/N)
+# enter N
+&gt; Do you want to upload your website using Rackspace Cloud Files? (y/N)
+# enter N
+</pre></div>
+
+
+<p>Here's the screenshot: <a href="https://www.flickr.com/photos/gankyun/14556244811" title="pelican kickstart by herbertyang, on Flickr"><img src="https://farm4.staticflickr.com/3836/14556244811_26106e81ca_z.jpg" width="800" alt="pelican kickstart"></a></p>
+<p>For a more detailed explanation, read this up: <a href="http://docs.getpelican.com/en/3.4.0/install.html">kickstart your pelican site</a>. I believe all these choices can still be changed later in the settings file. So don't worry about making any bad choice now. </p>
+<h1>10. Install an editor</h1>
+<p>Now you will need to do some Python/CSS hacking/editing. There are a million choices out there and everyone is highly opinionated and philosophical about the choice of his/her editor. If you are a Mac user, consider the free <a href="http://textwrangler.onfreedownload.com/?lp=adwords&amp;tg=us&amp;kw=Textwrangler%20free&amp;mt=b&amp;ad=33478422173&amp;pl=&amp;ds=s&amp;os=mac&amp;gclid=CjgKEAjw286dBRDmwbLi8KP71GQSJAAOk4sjuhKuIGJATMLadai0PoHsBjW-vjCKcf2r9sqsnBSzD_D_BwE">TextWrangler</a> or the more advanced <a href="http://www.sublimetext.com/">Sublime Text 2</a>. I use Sublime Text 2 (its paid version is well worth the money). If you are a windows user, you should buy a Mac.</p>
+<p>Picking a color theme for the editor can be one of the most monumental decisions in this process. Again there are more choices (all free) than you can choose from. I'll spare you from listening to my own story on this part.</p>
+<h1>11. Adjust Pelican settings</h1>
+<p>I spent a lot of time tinkering with the ~/myblog/<em>pelicanconf.py</em> file. This file defines all the parameters and structure of your website and demands a lot of close attention to each detail. </p>
+<p>You might want to start with a <a href="http://docs.getpelican.com/en/3.4.0/settings.html#example-settings">default example</a> and then customize that into your own version. A detailed walk-through of all the parameters in this configuration file is beyond the scope of this guide.</p>
+<p>It's a Python file (with .py extension). You can use your editor (TextWrangler, Sublime Text, or any other) to open and edit this file. The color theme makes a big difference when you have to spend hours and hours reading each line.</p>
+<p>You also need to do an important step (and no one mentions this anywhere) here: <em>move your CNAME file</em> from the root directory as ~/myblog/CNAME to ~/myblog/output/CNAME. After restructuring your website using Pelican, you have changed the default directory (that is supposed to be mirrored on your Github Page project site) from ~/myblog to ~/myblog/output. The CNAME file has to reside in the root directory of your Github Page project site for the URL redirect to take effect. That's why this move is a must.</p>
+<h1>12. Pick a Pelican theme and customize CSS</h1>
+<p>Welcome to the real time-sucker, Pelican theme. It's a time-sucker because this is one of the main reasons we want to move away from cumbersome Wordpress to migrate to Github Page, so we want to make sure this is done right and perfect. With git-based Github Page and Pelican, we have total control of our contents and HOW these contents will be presented, instead of wasting time trying to navigate through millions of Wordpress plug-ins, that distract us from the pure joy of writing. </p>
+<p>Download all the main Pelican themes from <a href="https://github.com/getpelican/pelican-themes">this github repo</a>. Download the zip file and unzip that into your ~/myblog directory. Change the name of the folder to "themes" to make easier reference.</p>
+<p>You can change the theme pretty easily in pelicanconf.py. Open the configuration file in Sublime Text and enter this line:</p>
+<div class="highlight"><pre><span></span>THEME = &quot;themes/bootstrap2&quot;
+# save the file and this new theme will take effect immediately
+</pre></div>
+
+
+<p>Say you have picked the famous Twitter Bootstrap2 theme, then this file (~/myblog/themes/bootstrap2/static/css/<em>bootstrap.min.css</em>) will be your dear friend in the next two weeks as you ceaselessly try out various styling combinations. It can be quite exhausting. Most Pelican themes follow a similar file structure and there will be this one bad-bass monster CSS file in one of the folders. Everything about the presentation/look of your website will be spelled and defined here. Indulge yourself in the world of CSS. </p>
+<h1>13. Organize contents</h1>
+<p>A very, very philosophical question that will have profound impact on your website's SEO (Search Engine Optimization). Again you just have to try it to figure out the best path for yourself that suits your preferences. There are a few factors that are more important than others, because it'll take some laborious effort to undo/change these settings later on:</p>
+<ul>
+<li>category or tags?</li>
+<li>URL format/convention for your web site articles/pages</li>
+<li>local folder structure within ~/myblog/content</li>
+<li>naming convention for your markdown files</li>
+</ul>
+<p><em>Think carefully at this step</em>. Take a look at what others are doing. Everything else can be changed rather easily on the fly, except for the above few decisions. You can't avoid these questions anyway if you are a serious writer and want to invest time creating your own contents efficiently.</p>
+<h1>14. Learn Markdown and download MOU</h1>
+<p>You still need to learn Markdown language because all contents in this Github-Page/Pelican approach are created using Markdown. Markdown is a huge topic and represents one type of philosophy on its own. In short, if you're a serious writer, you should use Markdown to create your contents because it keeps you focused on writing itself and from worrying about format/presentation (which will be taken care of with the CSS file mentioned above).</p>
+<p>Get started with Markdown from the famous <a href="http://daringfireball.net/projects/markdown/">Daring Fireball</a>. The syntax is very easy to pick up within half an hour. </p>
+<p>Many familiar formats in HTML school are missing from Markdown, because they're meant to be. Don't complain. Just get used to it.</p>
+<p>How to create a table in Markdown (not part of the core syntax from DF's original plan):</p>
+<div class="highlight"><pre><span></span>|heading 1|heading 2|heading 3|heading 4|
+|----|----|----|----|
+|hello|world|you|rock|
+</pre></div>
+
+
+<p>This will create a table in the HTML output. Make sure there are <em>4</em> "-" in the second line otherwise the table won't work.</p>
+<p>All markdown files will have an extension .markdown or .md. You can use any editor to edit them but <a href="http://mouapp.com/">MOU</a> is the most popular choice on OSX. MOU provides a split screen side-by-side with your contents so that you can see in real-time how your HTML page will look like. It also works very well with Chinese characters. If you don't want to be bothered with another software, Sublime Text is just fine.</p>
+<h1>15. Create contents and publish</h1>
+<p>At last, let there be an article. We've got all the ingredients ready.</p>
+<p>Create a .md file in MOU. This markdown file should contain the following header information so that Pelican knows how to render the page:</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">sensational</span> <span class="n">title</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">03</span> <span class="mi">08</span><span class="o">:</span><span class="mi">00</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">fun</span><span class="o">,</span> <span class="err">中文</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Tech</span>
+<span class="n">Slug</span><span class="o">:</span> <span class="n">my</span><span class="o">-</span><span class="kd">super</span><span class="o">-</span><span class="n">post</span>
+<span class="n">Summary</span><span class="o">:</span> <span class="n">Short</span> <span class="n">executive</span> <span class="n">summary</span> <span class="k">for</span> <span class="n">your</span> <span class="n">article</span>
+
+<span class="n">This</span> <span class="k">is</span> <span class="n">the</span> <span class="n">content</span> <span class="n">of</span> <span class="n">my</span> <span class="kd">super</span> <span class="n">blog</span> <span class="n">post</span><span class="o">.</span>
+</pre></div>
+
+
+<p>Save this file into <em>~/myblog/content/</em> folder. I store these header info in an Evernote post that I can copy and paste from pretty easily. </p>
+<p>Run the test server on your local machine to see if things come out alright. </p>
+<div class="highlight"><pre><span></span>cd ~/myblog
+# the next two commands need to be excited at the root directory of the site
+make html
+# sort of &quot;compiling&quot; your website and render markdown files into HTML ones
+make devserver
+# use Python to launch a server at your local machine&#39;s port 8000
+./develop_server.sh stop
+# stop the Python server, kill this process
+</pre></div>
+
+
+<p>Open your browser, go to <em><a href="http://localhost:8000">http://localhost:8000</a></em>. Hopefully you'll see a cool-looking website as you desire. If not, go back to <em>pelicanconf.py</em> and the <em>CSS file</em> to see what's gone wrong. These two are the single most important files of this entire process. </p>
+<p>When you're happy with the test page, let's go live.</p>
+<div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">myblog</span>
+<span class="n">pelican</span> <span class="n">content</span> <span class="o">-</span><span class="n">o</span> <span class="n">output</span> <span class="o">-</span><span class="n">s</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="n">py</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;message&quot;</span> <span class="n">output</span>
+<span class="c1"># you can write whatever comment in &quot;message&quot; field that might help you distinguish this session from others</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+
+
+<p>Look at your <a href="http://yourdomain.com">http://yourdomain.com</a>. You should see exactly the same page from the Python test server, except it's now available on a public website. The process takes effect within seconds (it might take longer if you have many articles with many tags).</p>
+<p>General comments:</p>
+<ul>
+<li>Try not to store too many images locally/on Github Page repo. Use flickr (1TB for free) as the central depository for all your image files and link your <a href="http://flickr.com">flickr</a> image in markdown files.</li>
+<li>Back up your pelicanconf.py and CSS file constantly. You don't want to recreate them from scratch.</li>
+<li>Github may or may not be blocked in China, depending on Beijing's weather day-to-day (literally). The same goes for any respectable social media website or any website (like Flickr) of any value outside of China, sadly. At the moment my website is not blocked in China yet. Long live Github!</li>
+<li>Some Pelican themes are more mobile-responsive and some are not. So picking the right theme is important. Of course, if you're a CSS pro, you can create your own Pelican theme left and right (then you won't be reading this article). </li>
+</ul>
+<p>Enjoy your new website powered by Pelican and hosted by Github Page! It's a strenuous effort but a worthwhile one.</p>
+            <a href="#" class="go-top">Go Top</a>
+    <div class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "goodbadcurious"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+<footer class="footer">
+    <p>&copy; Herbert Yang &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-714838-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+
+</body>
+</html>

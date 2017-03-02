@@ -9,15 +9,22 @@
         <link rel="alternate" href="https://feeds.feedburner.com/feeds/all.rss.xml" type="application/rss+xml" title="the Good the Bad and the Curious Full RSS Feed"/>
         <link rel="alternate" href="https://feeds.feedburner.com/feeds/rss" type="application/rss+xml" title="the Good the Bad and the Curious RSS Feed"/>
 
-        <title>Pages category // the Good the Bad and the Curious // </title>
+        <title>通过Gmail收发其他邮箱的邮件 // the Good the Bad and the Curious // </title>
 
     <link href="https://guizishanren.com/images/favicon.ico" rel="icon">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../theme/css/pure.css">
+    <link rel="stylesheet" href="../theme/css/pure.css">
+    <link rel="stylesheet" href="../theme/css/pygments.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
 </head>
 
 <body>
@@ -28,11 +35,10 @@
                     <header class="header">
                         <hgroup>
                             <img class="avatar" src="https://s.gravatar.com/avatar/106add5208f1a57290ed1164a903de21?s=80">
-                            <h1 class="brand-main"><a href="../..">the Good the Bad and the Curious</a></h1>
+                            <h1 class="brand-main"><a href="..">the Good the Bad and the Curious</a></h1>
                             <p class="tagline"></p>
                                 <p class="links"><a href="/categories.html">Categories</a></p>
                                 <p class="links"><a href="/tags.html">Tags</a></p>
-                                <p class="links"><a href="../../pages/about">About</a></p>
                                 <p class="social">
                                     <a href="https://twitter.com/herbertyang">
                                         <i class="fa fa-twitter fa-3x"></i>
@@ -63,35 +69,79 @@
         </div>
     <div class="pure-u">
         <div class="content">
-            <!-- A wrapper for all the blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">
-Posts in 'Pages'                </h1>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="../../about">About</a></h3>
-                            <p class="post-meta"><p>I'm in the process of migrating this site from the previous <a href="http://wordpress.org/">wordpress</a> structure to <a href="http://pages.github.com/">Github Page</a> using <a href="http://blog.getpelican.com/">Pelican</a>, a <a href="https://www.python.org/">Python</a> static website generator. You might see some missing files, broken links, or just out-of-alignment here and there. That's because I'm still cleaning up the files from their ...</p></p>
-                            <p class="post-meta">
-                                in <a href="../../category/pages">Pages</a> &middot; 2014 03 25 Tuesday
-                            </p>
-                        </header>
-                    </section>
-<div class="pagination-wrapper content-subhead">
-    <div class="pagination">
-        <div class="pagination-left">
-                &nbsp;
-        </div>
-        <span>Page 1 / 1</span>
-        <div class="pagination-right">
-        </div>
+            <section class="post">
+                <header class="post-header">
+                    <h1>通过Gmail收发其他邮箱的邮件</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="../tag/zhong-wen">中文</a>
+                        </p>
+                </header>
+            </section>
+            <p>用Gmail来收发其他邮件有两个办法，一个是通过POP3，一个是通过Forward + Send Mail As。POP3速度比较慢，因为Gmail从POP3服务器上获取邮件有一定的时间间隔，有时长达一个小时，这种延迟在很多情况下是无法让人接受的。本文介绍的是一个用户如何通过Forward + Send Mail As（全面优越于POP3）来收发其他邮箱的邮件，有两个步骤：</p>
+<ol>
+<li>
+<p>由网管完成</p>
+<p>网管在邮件服务器上设置forwarder，把发给<em>AAA@XXX.com</em>的邮件“转发”到<em>AAA@gmail.com</em>。这个“转发”跟通常邮件里的转发略有不同。譬如，你的邮件是AAA@XXX.com，你的朋友从BBB@163.com给你发了封邮件，这封邮件（因为网管的设置）直接出现（其实是“被拷贝”）在你的AAA@gmail.com邮箱里，发件人显示仍然是BBB@163.com，收件人仍然是AAA@XXX.com。</p>
+<p>也就是说，只要网管完成了上述设置，你什么都不需要做就可以在Gmail里看到寄给AAA@XXX.com的邮件了。当然，这位网管之所以能做到这一点，是因为他的管理权限就是@XXX.com的电子邮件系统。</p>
+</li>
+<li>
+<p>由用户完成</p>
+<p>除了读，还需要能通过AAA@XXX.com发邮件。这个步骤需要用户自己完成。</p>
+<ul>
+<li>
+<p>Gmail=&gt;Settings=&gt;Accounts=&gt;Send Mail As</p>
+</li>
+<li>
+<p>点击“Add another email address you own”。</p>
+<ul>
+<li>
+<p>Name可以随便填自己喜欢的名字</p>
+</li>
+<li>
+<p>Email Address里填写AAA@XXX.com</p>
+</li>
+<li>
+<p>mailto:Address里填写AAA@XXX.com</p>
+</li>
+<li>
+<p>在"Treat as an alias"前打勾，点击Next Step</p>
+</li>
+</ul>
+</li>
+<li>
+<p>在下一个窗口，点击“发送确认邮件”。Gmail会发封邮件给AAA@XXX.com，如果步骤1已经完成，你会在Gmail里收到这封邮件，内含6-8位的一个确认代码</p>
+</li>
+<li>
+<p>把邮件里的确认代码剪贴到下一个窗口，点击“确认”。</p>
+</li>
+</ul>
+<p>在Gmail里发邮件时，在“发件人”一栏会看到一个菜单，里面有所有你可以“代发”的邮箱地址。选择合适的邮箱地址发送邮件即可。这样，当BBB@163.com收到你的回信时，他看到的是来自AAA@XXX.com的邮件，尽管你所有的操作都是在Gmail里完成的。</p>
+</li>
+</ol>
+<p>好了，现在你可以完全隐藏在<em>AAA@gmail.com</em>之后，完成<em>AAA@XXX.com</em>的所有操作了（收发邮件）。</p>
+            <a href="#" class="go-top">Go Top</a>
+    <div class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "goodbadcurious"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
-</div><footer class="footer">
+<footer class="footer">
     <p>&copy; Herbert Yang &ndash;
         Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
         for <a href="http://blog.getpelican.com/">Pelican</a>
     </p>
-</footer>            </div>
-        </div>
+</footer>        </div>
     </div>
     </div>
     <script>

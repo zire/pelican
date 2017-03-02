@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="the Good the Bad and the Curious, ">
+
+        <link rel="alternate"  href="https://feeds.feedburner.com/feeds/all.atom.xml" type="application/atom+xml" title="the Good the Bad and the Curious Full Atom Feed"/>
+        <link rel="alternate" href="https://feeds.feedburner.com/feeds/all.rss.xml" type="application/rss+xml" title="the Good the Bad and the Curious Full RSS Feed"/>
+        <link rel="alternate" href="https://feeds.feedburner.com/feeds/rss" type="application/rss+xml" title="the Good the Bad and the Curious RSS Feed"/>
+
+        <title>Use Gmail to receive and send other emails // the Good the Bad and the Curious // </title>
+
+    <link href="https://guizishanren.com/images/favicon.ico" rel="icon">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../theme/css/pure.css">
+    <link rel="stylesheet" href="../theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('https://s3-us-west-2.amazonaws.com/guizishanren/img/shinjuku.jpg')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="https://s.gravatar.com/avatar/106add5208f1a57290ed1164a903de21?s=80">
+                            <h1 class="brand-main"><a href="..">the Good the Bad and the Curious</a></h1>
+                            <p class="tagline"></p>
+                                <p class="links"><a href="/categories.html">Categories</a></p>
+                                <p class="links"><a href="/tags.html">Tags</a></p>
+                                <p class="social">
+                                    <a href="https://twitter.com/herbertyang">
+                                        <i class="fa fa-twitter fa-3x"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/herbertyang">
+                                        <i class="fa fa-linkedin fa-3x"></i>
+                                    </a>
+                                    <a href="https://instagram.com/zire">
+                                        <i class="fa fa-instagram fa-3x"></i>
+                                    </a>
+                                    <a href="https://github.com/zire">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                    <a href="https://weibo.com/zire">
+                                        <i class="fa fa-weibo fa-3x"></i>
+                                    </a>
+                                    <a href="https://www.quora.com/Herbert-Yang">
+                                        <i class="fa fa-quora fa-3x"></i>
+                                    </a>
+                                    <a href="https://www.guizishanren.com/feeds/rss">
+                                        <i class="fa fa-rss fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Use Gmail to receive and send other emails</h1>
+                        <p class="post-meta">
+                            // under                         </p>
+                </header>
+            </section>
+            <p>Checking multiple mailboxes is a pain, but you can use Gmail to manage all of them through one single interface and one single login session. I have more than 10+ mailboxes from various institutions, companies and projects. I forward all of them to my personal gmail and also set up "Send Email As ... " in my gmail account so that I can receive and send other emails without ever leaving my gmail account and I never need to bother to login to other mailboxes. </p>
+<p>Frankly, the act of login to multiple email accounts on a daily basis just doesn't make any sense to me. It's a pure waste of time and obviously extremely inefficient.</p>
+<p>This article explains how to avoid that and consolidate all your emails in your Gmail account.</p>
+<p>There are two ways to achieve this objective. One is to receive other email through POP3 protocol in Gmail; the other one is to forward other email to Gmail and then set up ""Send Mail as ... " in Gmail. <em>Do not use POP3</em>. POP3's speed of email retrieval is much slower. It takes certain time interval for Gmail to connect to the POP3 server of the other email. Sometimes that can be as long as one hour. I have seen people writing Python scripts to try to fool Gmail server to speed up the retrieval speed as it cannot be adjusted by user. This kind of delay is unacceptable in many situations (it took me quite a while to figure this out after many frustrating moments). Then why does POP3 even exist? It has one very handy function - it can retrieve ALL the historical emails from the POP3 server from day one. Sometimes, this could be useful depending on what you need to do. </p>
+<p>Here's a walk-through of how to set up forward + send mail as in Gmail:</p>
+<ol>
+<li>
+<p>Set up forwarding (to be competed by yourself or system Admin of the host server)</p>
+<p>System admin (a role I have played often in my various projects) sets up "forwarder" in the control panel of the host email server (such as hostmonster.com), so that emails sent to <em>AAA@XXX.com</em> will be forwarded to <em>AAA@gmail.com</em> right away (with no delay). This is slightly different from the usual "forward" concept in emailing. For example, when your friend sends you an email to your AAA@XXX.com from his BBB@163.com, this email will appear directly (as a result of the above setup) in your AAA@gmail.com, showing sender as "BBB@163.com" and receiver as AAA@XXX.com. </p>
+<p>Sometimes it doesn't take a system admin to do those. For example, you are the owner of AAA@XXX.com (which could be your @gsb.stanford.edu email for example). Then you just need to go into its settings to automatically forward all the emails to your AAA@gmail.com. Usually, to do this the system will ask the owner of AAA@gmail.com (ie. you) to approve this forwarding request to prevent spamming. Just follow the system's instructions to complete the forwarding setup.</p>
+</li>
+<li>
+<p>Set up sending (to be completed by yourself)</p>
+<p>Besides receiving, you also want to be able to send email as AAA@XXX.com in your AAA@gmail.com login session/interface. You need to complete this step by yourself in Gmail.</p>
+<ul>
+<li>
+<p>Gmail=&gt;Settings=&gt;Accounts=&gt;Send Mail As</p>
+</li>
+<li>
+<p>Click “Add another email address you own”</p>
+<ul>
+<li>
+<p>Name, input a name you prefer to label this</p>
+</li>
+<li>
+<p>Email Address, input "AAA@XXX.com"</p>
+</li>
+<li>
+<p>mail to:Address, input "AAA@XXX.com"</p>
+</li>
+<li>
+<p>Tick the box for "Treat as an alias"，then click Next Step</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the next window that pops up, click "Send Confirmation Email" button. Gmail will send an email to AAA@XXX.com for confirmation. If you have already completed the first step Forwarding, then you will receive this email right away in your Gmail account. It will contain a 6~8 digit confirmation code.</p>
+</li>
+<li>
+<p>Copy and paste the confirmation code into the window, click "Confirm (Verify)"</p>
+</li>
+</ul>
+<p>Now when you are sending emails in Gmail, in the "Send" field you will now see a list of all the email addresses you can choose from, including AAA@XXX.com. This list does not appear before, when the only "Send Mail As" option is your AAA@gmail.com. It does now.</p>
+<p>When BBB@163.com receives your reply, he will see this email comes from AAA@XXX.com, even though you receive his original email and reply to him entirely within your AAA@gmail.com account. He doesn't even know the existence of your AAA@gmail.com. </p>
+</li>
+</ol>
+<p>That's it! Let me a comment if you run into any issues. </p>
+<p>(The original Chinese version was written earlier in <a href="http://guizishanren.com/posts/2014/02/receive-and-send-other-emails-through-Gmail/">this post</a>)</p>
+            <a href="#" class="go-top">Go Top</a>
+    <div class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "goodbadcurious"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+<footer class="footer">
+    <p>&copy; Herbert Yang &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-714838-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+
+</body>
+</html>

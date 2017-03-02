@@ -9,15 +9,22 @@
         <link rel="alternate" href="https://feeds.feedburner.com/feeds/all.rss.xml" type="application/rss+xml" title="the Good the Bad and the Curious Full RSS Feed"/>
         <link rel="alternate" href="https://feeds.feedburner.com/feeds/rss" type="application/rss+xml" title="the Good the Bad and the Curious RSS Feed"/>
 
-        <title>Pages category // the Good the Bad and the Curious // </title>
+        <title>微信群的改进 // the Good the Bad and the Curious // </title>
 
     <link href="https://guizishanren.com/images/favicon.ico" rel="icon">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../theme/css/pure.css">
+    <link rel="stylesheet" href="../theme/css/pure.css">
+    <link rel="stylesheet" href="../theme/css/pygments.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
 </head>
 
 <body>
@@ -28,11 +35,10 @@
                     <header class="header">
                         <hgroup>
                             <img class="avatar" src="https://s.gravatar.com/avatar/106add5208f1a57290ed1164a903de21?s=80">
-                            <h1 class="brand-main"><a href="../..">the Good the Bad and the Curious</a></h1>
+                            <h1 class="brand-main"><a href="..">the Good the Bad and the Curious</a></h1>
                             <p class="tagline"></p>
                                 <p class="links"><a href="/categories.html">Categories</a></p>
                                 <p class="links"><a href="/tags.html">Tags</a></p>
-                                <p class="links"><a href="../../pages/about">About</a></p>
                                 <p class="social">
                                     <a href="https://twitter.com/herbertyang">
                                         <i class="fa fa-twitter fa-3x"></i>
@@ -63,35 +69,63 @@
         </div>
     <div class="pure-u">
         <div class="content">
-            <!-- A wrapper for all the blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">
-Posts in 'Pages'                </h1>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="../../about">About</a></h3>
-                            <p class="post-meta"><p>I'm in the process of migrating this site from the previous <a href="http://wordpress.org/">wordpress</a> structure to <a href="http://pages.github.com/">Github Page</a> using <a href="http://blog.getpelican.com/">Pelican</a>, a <a href="https://www.python.org/">Python</a> static website generator. You might see some missing files, broken links, or just out-of-alignment here and there. That's because I'm still cleaning up the files from their ...</p></p>
-                            <p class="post-meta">
-                                in <a href="../../category/pages">Pages</a> &middot; 2014 03 25 Tuesday
-                            </p>
-                        </header>
-                    </section>
-<div class="pagination-wrapper content-subhead">
-    <div class="pagination">
-        <div class="pagination-left">
-                &nbsp;
-        </div>
-        <span>Page 1 / 1</span>
-        <div class="pagination-right">
-        </div>
+            <section class="post">
+                <header class="post-header">
+                    <h1>微信群的改进</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="../tag/zhong-wen">中文</a>
+                        </p>
+                </header>
+            </section>
+            <p>现在全球华人都在微信上，每个人每天都被自己社交圈里十几个活跃的微信群轮番轰炸。稍微大的微信群动辄上百人，当人数如此之多时，在群里的对话中要@人就变成很麻烦的一件事情，因为：</p>
+<ul>
+<li>
+<p>在iPhone屏幕上的一页里只能展示9个人名</p>
+</li>
+<li>
+<p>仍然有无数很二的人不知道把自己群里的名称改为真实人名</p>
+</li>
+<li>
+<p>最方便识别人名的方式其实是头像，但很多人经常性地把自己的头像变来变去</p>
+</li>
+</ul>
+<p>本来可以在微信对话里@其他人是一个很方便很强大的功能，但它的局限性也越来越明显，那怎么办呢？</p>
+<p>很简单，可以这样子：</p>
+<ul>
+<li>
+<p>在微信群里的对话中加了@，屏幕转移到微信里的人名录（9行）</p>
+</li>
+<li>
+<p><em>调整这个人名录的排序，使得在群里最近发言的人的名字在第一行，其次发言的人的名字在第二行，依次类推</em></p>
+</li>
+<li>
+<p>这么做背后的道理很明显，在大多数情况下，我们在微信群里觉得有必要@某某某，是因为某某某刚刚说过一句话，基本上就在当前屏幕里。虽然不排除你想@的某某某已经几百年没吭声了，但这种情况是少数。而且，把微信群的人名录的次序锁定本身没有任何便利 - 没有人记得几十号人的排名顺序，还不如把排序做成动态变化的数组。</p>
+</li>
+</ul>
+<p>微信显然是一个空前成功的产品，这是毫无疑问的。它的成功在我看来并不在产品的设计本身，而是在于整体产品的定位和布局。从实打实的产品设计，界面设计而言，微信的用户体验非常糟糕，从早期版本到现在，让人不明所以的地方层出不穷，比当年摩托罗拉的那个为人诟病的手机系统好不了多少（99-00年）。张小龙有过人之处，但看到世人皆对其产品设计理念顶礼膜拜，奉若神明，诚可笑也(is there anything there we haven't learned from Jobs yet?)。</p>
+            <a href="#" class="go-top">Go Top</a>
+    <div class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "goodbadcurious"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
-</div><footer class="footer">
+<footer class="footer">
     <p>&copy; Herbert Yang &ndash;
         Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
         for <a href="http://blog.getpelican.com/">Pelican</a>
     </p>
-</footer>            </div>
-        </div>
+</footer>        </div>
     </div>
     </div>
     <script>
