@@ -107,7 +107,7 @@
 &lt;p&gt;&lt;a href="http://help.farbox.com/pygments.html"&gt;This site has a good gallery&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Generate a new pygments_XXX.css in &lt;code&gt;static/&lt;/code&gt; folder based on &lt;a href="http://docs.getpelican.com/en/3.6.3/faq.html"&gt;Pelican's instruction&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Generate a new pygments_XXX.css in &lt;code&gt;static/css/&lt;/code&gt; folder under the specific theme directory, based on &lt;a href="http://docs.getpelican.com/en/3.6.3/faq.html"&gt;Pelican's instruction&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pygmentize -S vim -f html -a .highlight &amp;gt; pygments_vim.css
 &lt;/pre&gt;&lt;/div&gt;
 
