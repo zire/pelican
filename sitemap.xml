@@ -4,1002 +4,1100 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://guizishanren.com/index.html</loc>
-<lastmod>2016-10-24T23:35:28-00:00</lastmod>
+<loc>https://guizishanren.com/</loc>
+<lastmod>2017-03-02T11:04:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/archives.html</loc>
-<lastmod>2016-10-24T23:35:28-00:00</lastmod>
+<loc>https://guizishanren.com/archives.html</loc>
+<lastmod>2017-03-02T11:04:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/tags.html</loc>
-<lastmod>2016-10-24T23:35:28-00:00</lastmod>
+<loc>https://guizishanren.com/tags.html</loc>
+<lastmod>2017-03-02T11:04:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/categories.html</loc>
-<lastmod>2016-10-24T23:35:28-00:00</lastmod>
+<loc>https://guizishanren.com/categories.html</loc>
+<lastmod>2017-03-02T11:04:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/pages/about.html</loc>
-<lastmod>2014-03-25T00:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/pages/about.html</loc>
+<lastmod>2014-03-25T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/top-10-essential-items-for-newborn</loc>
-<lastmod>2016-06-17T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/top-10-essential-items-for-newborn</loc>
+<lastmod>2016-06-17T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/how-to-become-paid-user-of-163-yun-music</loc>
-<lastmod>2016-02-13T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/how-to-become-paid-user-of-163-yun-music</loc>
+<lastmod>2016-02-13T08:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/share-files-and-photos-without-cloud</loc>
-<lastmod>2016-01-01T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/share-files-and-photos-without-cloud</loc>
+<lastmod>2016-01-01T08:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/workflow-for-stock-photographer-with-lightroom-and-symbiostock</loc>
-<lastmod>2015-12-28T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/change-syntax-highlight-with-pygments-CSS-for-Pelican-blog</loc>
+<lastmod>2015-12-30T08:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/o-brother-where-art-thou</loc>
-<lastmod>2015-12-20T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/workflow-for-stock-photographer-with-lightroom-and-symbiostock</loc>
+<lastmod>2015-12-28T08:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/how-to-manage-photos-part-2</loc>
-<lastmod>2015-06-28T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/writing-blog-articles-with-pelican-in-markdown</loc>
+<lastmod>2015-12-27T08:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/how-to-tell-a-tech-noob</loc>
-<lastmod>2015-02-24T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/o-brother-where-art-thou</loc>
+<lastmod>2015-12-20T08:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/Oscar-Prediction-2015</loc>
-<lastmod>2015-02-22T15:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/how-to-manage-photos-part-2</loc>
+<lastmod>2015-06-28T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/bottles-and-glasses</loc>
-<lastmod>2014-11-22T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/how-to-tell-a-tech-noob</loc>
+<lastmod>2015-02-24T08:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/reid-hoffman-YC-startup-series</loc>
-<lastmod>2014-11-04T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/Oscar-Prediction-2015</loc>
+<lastmod>2015-02-22T15:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/Kabukicho</loc>
-<lastmod>2014-09-25T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/bottles-and-glasses</loc>
+<lastmod>2014-11-22T08:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/asian-movies-recommendations-for-american</loc>
-<lastmod>2014-08-03T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/reid-hoffman-YC-startup-series</loc>
+<lastmod>2014-11-04T08:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/chinese-restaurants-around-Stanford-University</loc>
-<lastmod>2014-07-13T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/Kabukicho</loc>
+<lastmod>2014-09-25T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/order-like-native-Chinese-in-Chinese-restaurant</loc>
-<lastmod>2014-07-03T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/asian-movies-recommendations-for-american</loc>
+<lastmod>2014-08-03T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/gathering-in-palo-alto</loc>
-<lastmod>2014-06-22T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/chinese-restaurants-around-Stanford-University</loc>
+<lastmod>2014-07-13T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/flying-punk</loc>
-<lastmod>2014-06-21T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/order-like-native-Chinese-in-Chinese-restaurant</loc>
+<lastmod>2014-07-03T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/sawyer-camp-trail</loc>
-<lastmod>2014-06-15T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/guide-to-set-up-static-blog-site-on-github-page-and-pelican</loc>
+<lastmod>2014-07-02T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/about-chen-ou-startup-past</loc>
-<lastmod>2014-06-12T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/gathering-in-palo-alto</loc>
+<lastmod>2014-06-22T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/evolution-my-office-tool</loc>
-<lastmod>2014-06-07T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/flying-punk</loc>
+<lastmod>2014-06-21T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/first-bay-to-breakers-run</loc>
-<lastmod>2014-06-02T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/sawyer-camp-trail</loc>
+<lastmod>2014-06-15T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/info-discovery-of-travel</loc>
-<lastmod>2014-05-31T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/about-chen-ou-startup-past</loc>
+<lastmod>2014-06-12T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/herbert-guide-yosemite</loc>
-<lastmod>2014-05-30T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/evolution-my-office-tool</loc>
+<lastmod>2014-06-07T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/how-wechat-group-can-be-better</loc>
-<lastmod>2014-05-25T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/first-bay-to-breakers-run</loc>
+<lastmod>2014-06-02T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/2014-US-summer-tentpole-schedule</loc>
-<lastmod>2014-05-24T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/info-discovery-of-travel</loc>
+<lastmod>2014-05-31T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/receive-and-send-other-emails-through-Gmail(eng)</loc>
-<lastmod>2014-04-12T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/herbert-guide-yosemite</loc>
+<lastmod>2014-05-30T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/my-cooking-journal</loc>
-<lastmod>2014-04-09T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/how-wechat-group-can-be-better</loc>
+<lastmod>2014-05-25T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/blue-is-the-warmest-color</loc>
-<lastmod>2014-04-08T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/2014-US-summer-tentpole-schedule</loc>
+<lastmod>2014-05-24T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/lives-under-the-sea-continued</loc>
-<lastmod>2014-04-07T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/receive-and-send-other-emails-through-Gmail(eng)</loc>
+<lastmod>2014-04-12T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/lives-under-the-sea</loc>
-<lastmod>2014-04-06T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/my-cooking-journal</loc>
+<lastmod>2014-04-09T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/deyoung-museum-spring</loc>
-<lastmod>2014-04-03T15:17:00-00:00</lastmod>
+<loc>https://guizishanren.com/blue-is-the-warmest-color</loc>
+<lastmod>2014-04-08T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/japanese-tea-garden-cherry</loc>
-<lastmod>2014-04-02T11:58:00-00:00</lastmod>
+<loc>https://guizishanren.com/lives-under-the-sea-continued</loc>
+<lastmod>2014-04-07T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/about</loc>
-<lastmod>2014-03-25T00:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/lives-under-the-sea</loc>
+<lastmod>2014-04-06T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/confession-stanford-sloan-fellow-summary</loc>
-<lastmod>2014-03-16T13:12:00-00:00</lastmod>
+<loc>https://guizishanren.com/deyoung-museum-spring</loc>
+<lastmod>2014-04-03T15:17:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/hiking-joseph-d-grant-county-park-east-bay</loc>
-<lastmod>2014-03-10T10:19:00-00:00</lastmod>
+<loc>https://guizishanren.com/japanese-tea-garden-cherry</loc>
+<lastmod>2014-04-02T11:58:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/receive-and-send-other-emails-through-Gmail(chn)</loc>
-<lastmod>2014-02-03T03:26:00-00:00</lastmod>
+<loc>https://guizishanren.com/about</loc>
+<lastmod>2014-03-25T00:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/cow-hollow-san-francisco</loc>
-<lastmod>2013-12-20T20:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/buzz-words-stanford-gsb-blast-mail</loc>
+<lastmod>2014-03-21T12:52:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/chinatown-san-francisco</loc>
-<lastmod>2013-12-17T00:25:00-00:00</lastmod>
+<loc>https://guizishanren.com/confession-stanford-sloan-fellow-summary</loc>
+<lastmod>2014-03-16T13:12:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/vanishing-line</loc>
-<lastmod>2013-11-28T20:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/hiking-joseph-d-grant-county-park-east-bay</loc>
+<lastmod>2014-03-10T10:19:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/photo-series10-east-lake</loc>
-<lastmod>2013-11-21T20:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/receive-and-send-other-emails-through-Gmail(chn)</loc>
+<lastmod>2014-02-03T03:26:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/heres-looking-at-you</loc>
-<lastmod>2013-11-14T20:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/cow-hollow-san-francisco</loc>
+<lastmod>2013-12-20T20:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/fames</loc>
-<lastmod>2013-11-07T20:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/chinatown-san-francisco</loc>
+<lastmod>2013-12-17T00:25:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/waiting</loc>
-<lastmod>2013-10-31T20:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/vanishing-line</loc>
+<lastmod>2013-11-28T20:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/twilight-of-the-gods</loc>
-<lastmod>2013-10-24T20:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/photo-series10-east-lake</loc>
+<lastmod>2013-11-21T20:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/in-haste</loc>
-<lastmod>2013-10-21T12:34:00-00:00</lastmod>
+<loc>https://guizishanren.com/heres-looking-at-you</loc>
+<lastmod>2013-11-14T20:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/in-the-age-of-innocence</loc>
-<lastmod>2013-10-17T12:34:00-00:00</lastmod>
+<loc>https://guizishanren.com/fames</loc>
+<lastmod>2013-11-07T20:00:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/stanford-dish-at-sunset</loc>
-<lastmod>2013-10-14T12:34:00-00:00</lastmod>
+<loc>https://guizishanren.com/waiting</loc>
+<lastmod>2013-10-31T20:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/photo-series03-tribute-to-masters</loc>
-<lastmod>2013-10-11T12:34:00-00:00</lastmod>
+<loc>https://guizishanren.com/twilight-of-the-gods</loc>
+<lastmod>2013-10-24T20:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/night-out-guide-in-beijing</loc>
-<lastmod>2013-07-31T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/in-haste</loc>
+<lastmod>2013-10-21T12:34:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/Herbert-GCBC-Talk</loc>
-<lastmod>2013-07-16T17:27:00-00:00</lastmod>
+<loc>https://guizishanren.com/in-the-age-of-innocence</loc>
+<lastmod>2013-10-17T12:34:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/goals-in-stanford</loc>
-<lastmod>2013-07-05T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/stanford-dish-at-sunset</loc>
+<lastmod>2013-10-14T12:34:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/course-evaluation-spring-Q</loc>
-<lastmod>2013-07-03T12:34:00-00:00</lastmod>
+<loc>https://guizishanren.com/photo-series03-tribute-to-masters</loc>
+<lastmod>2013-10-11T12:34:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/course-evaluation-winter-q</loc>
-<lastmod>2013-07-01T12:34:00-00:00</lastmod>
+<loc>https://guizishanren.com/night-out-guide-in-beijing</loc>
+<lastmod>2013-07-31T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/how-to-make-a-star</loc>
-<lastmod>2013-06-05T17:01:00-00:00</lastmod>
+<loc>https://guizishanren.com/Herbert-GCBC-Talk</loc>
+<lastmod>2013-07-16T17:27:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/2013-US-summer-tentpole-schedule</loc>
-<lastmod>2013-06-02T14:06:00-00:00</lastmod>
+<loc>https://guizishanren.com/goals-in-stanford</loc>
+<lastmod>2013-07-05T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/stay-full-stay-smart</loc>
-<lastmod>2013-05-28T00:19:00-00:00</lastmod>
+<loc>https://guizishanren.com/april-orientation-performance-at-cemex-auditorium</loc>
+<lastmod>2013-07-04T12:34:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/once-upon-a-time-in-wuhan</loc>
-<lastmod>2013-05-19T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/course-evaluation-spring-Q</loc>
+<lastmod>2013-07-03T12:34:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/redesign-business-model-of-animation-films</loc>
-<lastmod>2013-05-13T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/course-evaluation-winter-q</loc>
+<lastmod>2013-07-01T12:34:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/drivers-of-your-life</loc>
-<lastmod>2013-05-09T02:59:00-00:00</lastmod>
+<loc>https://guizishanren.com/swan-song-by-the-spillovers</loc>
+<lastmod>2013-06-27T10:33:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/a-day-in-a-sloans-life</loc>
-<lastmod>2013-04-28T12:36:00-00:00</lastmod>
+<loc>https://guizishanren.com/how-to-make-a-star</loc>
+<lastmod>2013-06-05T17:01:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/10-things-to-do-before-coming-to-stanford-sloan-master-program</loc>
-<lastmod>2013-03-18T22:12:00-00:00</lastmod>
+<loc>https://guizishanren.com/2013-US-summer-tentpole-schedule</loc>
+<lastmod>2013-06-02T14:06:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/stanford-business-magazine-quote</loc>
-<lastmod>2013-03-17T14:03:00-00:00</lastmod>
+<loc>https://guizishanren.com/stay-full-stay-smart</loc>
+<lastmod>2013-05-28T00:19:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/an-entrepreneurs-manifesto-POOOUA-model</loc>
-<lastmod>2013-03-14T14:48:00-00:00</lastmod>
+<loc>https://guizishanren.com/rock-out-stanford-coho</loc>
+<lastmod>2013-05-25T10:22:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/key-to-startup-success</loc>
-<lastmod>2013-03-12T15:59:00-00:00</lastmod>
+<loc>https://guizishanren.com/once-upon-a-time-in-wuhan</loc>
+<lastmod>2013-05-19T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/chinese-new-year-party</loc>
-<lastmod>2013-03-11T11:32:00-00:00</lastmod>
+<loc>https://guizishanren.com/redesign-business-model-of-animation-films</loc>
+<lastmod>2013-05-13T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/my-yearbook-message-for-Stanford-Sloan</loc>
-<lastmod>2013-03-10T17:29:00-00:00</lastmod>
+<loc>https://guizishanren.com/drivers-of-your-life</loc>
+<lastmod>2013-05-09T02:59:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/sloan-fellow-life-cycle-how-to-make-the-most-out-of-it</loc>
-<lastmod>2013-03-04T20:36:00-00:00</lastmod>
+<loc>https://guizishanren.com/a-day-in-a-sloans-life</loc>
+<lastmod>2013-04-28T12:36:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/comparison-S353-and-G566-in-GSB</loc>
-<lastmod>2013-02-28T15:20:00-00:00</lastmod>
+<loc>https://guizishanren.com/10-things-to-do-before-coming-to-stanford-sloan-master-program</loc>
+<lastmod>2013-03-18T22:12:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/should-you-do-stanfords-famous-startup-courses</loc>
-<lastmod>2013-02-19T16:48:00-00:00</lastmod>
+<loc>https://guizishanren.com/stanford-business-magazine-quote</loc>
+<lastmod>2013-03-17T14:03:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/must-play-list-for-chinese-new-year-party</loc>
-<lastmod>2013-02-10T00:24:00-00:00</lastmod>
+<loc>https://guizishanren.com/an-entrepreneurs-manifesto-POOOUA-model</loc>
+<lastmod>2013-03-14T14:48:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/where-is-stanford-sloan-fellow</loc>
-<lastmod>2013-01-31T09:31:00-00:00</lastmod>
+<loc>https://guizishanren.com/key-to-startup-success</loc>
+<lastmod>2013-03-12T15:59:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/15-things-to-know-in-strategizing-your-course-portfolio</loc>
-<lastmod>2013-01-26T21:22:00-00:00</lastmod>
+<loc>https://guizishanren.com/chinese-new-year-party</loc>
+<lastmod>2013-03-11T11:32:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/why-search-funds-make-sense</loc>
-<lastmod>2013-01-24T16:07:00-00:00</lastmod>
+<loc>https://guizishanren.com/my-yearbook-message-for-Stanford-Sloan</loc>
+<lastmod>2013-03-10T17:29:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/reflection-notes-from-s353-jan-15</loc>
-<lastmod>2013-01-16T00:48:00-00:00</lastmod>
+<loc>https://guizishanren.com/sloan-fellow-life-cycle-how-to-make-the-most-out-of-it</loc>
+<lastmod>2013-03-04T20:36:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/fall-qtr-course-evaluation</loc>
-<lastmod>2013-01-03T23:45:00-00:00</lastmod>
+<loc>https://guizishanren.com/comparison-S353-and-G566-in-GSB</loc>
+<lastmod>2013-02-28T15:20:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/dancers-in-the-park</loc>
-<lastmod>2012-12-25T10:48:00-00:00</lastmod>
+<loc>https://guizishanren.com/should-you-do-stanfords-famous-startup-courses</loc>
+<lastmod>2013-02-19T16:48:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/my-bbl</loc>
-<lastmod>2012-12-22T19:20:00-00:00</lastmod>
+<loc>https://guizishanren.com/must-play-list-for-chinese-new-year-party</loc>
+<lastmod>2013-02-10T00:24:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/application-to-dmedia</loc>
-<lastmod>2012-12-20T02:48:00-00:00</lastmod>
+<loc>https://guizishanren.com/where-is-stanford-sloan-fellow</loc>
+<lastmod>2013-01-31T09:31:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/a-new-business-card</loc>
-<lastmod>2012-12-10T01:13:00-00:00</lastmod>
+<loc>https://guizishanren.com/15-things-to-know-in-strategizing-your-course-portfolio</loc>
+<lastmod>2013-01-26T21:22:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/group-announcement-from-weibo</loc>
-<lastmod>2012-12-02T18:14:00-00:00</lastmod>
+<loc>https://guizishanren.com/why-search-funds-make-sense</loc>
+<lastmod>2013-01-24T16:07:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/gangnam-style-goes-to-stanford-ncaa-half-time-show</loc>
-<lastmod>2012-11-19T12:33:00-00:00</lastmod>
+<loc>https://guizishanren.com/reflection-notes-from-s353-fitness-anywhere-case</loc>
+<lastmod>2013-01-17T23:41:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/from-gsb-reporter</loc>
-<lastmod>2012-11-12T17:55:00-00:00</lastmod>
+<loc>https://guizishanren.com/reflection-notes-from-s353-jan-15</loc>
+<lastmod>2013-01-16T00:48:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/dummys-guide-to-business-plan</loc>
-<lastmod>2012-10-31T17:16:00-00:00</lastmod>
+<loc>https://guizishanren.com/sell-used-textbooks</loc>
+<lastmod>2013-01-04T12:34:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/view-from-california</loc>
-<lastmod>2012-10-31T10:01:00-00:00</lastmod>
+<loc>https://guizishanren.com/fall-qtr-course-evaluation</loc>
+<lastmod>2013-01-03T23:45:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/summer-quarter-course-evaluation</loc>
-<lastmod>2012-10-18T22:14:00-00:00</lastmod>
+<loc>https://guizishanren.com/rock-band-debut</loc>
+<lastmod>2013-01-03T11:08:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/dance-of-my-life</loc>
-<lastmod>2012-10-15T14:35:00-00:00</lastmod>
+<loc>https://guizishanren.com/dancers-in-the-park</loc>
+<lastmod>2012-12-25T10:48:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/10-reflections-of-a-cfo</loc>
-<lastmod>2012-10-04T23:43:00-00:00</lastmod>
+<loc>https://guizishanren.com/my-bbl</loc>
+<lastmod>2012-12-22T19:20:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/why-here-why-now-why-again</loc>
-<lastmod>2012-09-27T23:33:00-00:00</lastmod>
+<loc>https://guizishanren.com/application-to-dmedia</loc>
+<lastmod>2012-12-20T02:48:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/Stanford-mba-vs-stanford-sloan-fellow</loc>
-<lastmod>2012-09-06T20:30:00-00:00</lastmod>
+<loc>https://guizishanren.com/a-new-business-card</loc>
+<lastmod>2012-12-10T01:13:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/live-stanford-life-to-the-fullest</loc>
-<lastmod>2012-08-28T14:44:00-00:00</lastmod>
+<loc>https://guizishanren.com/group-announcement-from-weibo</loc>
+<lastmod>2012-12-02T18:14:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/chair-analysis</loc>
-<lastmod>2012-08-27T18:20:00-00:00</lastmod>
+<loc>https://guizishanren.com/gangnam-style-goes-to-stanford-ncaa-half-time-show</loc>
+<lastmod>2012-11-19T12:33:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/survival-guide-for-the-first-three-days</loc>
-<lastmod>2012-06-29T22:10:00-00:00</lastmod>
+<loc>https://guizishanren.com/from-gsb-reporter</loc>
+<lastmod>2012-11-12T17:55:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/poem-leaving-Beijing</loc>
-<lastmod>2012-05-22T16:16:00-00:00</lastmod>
+<loc>https://guizishanren.com/dummys-guide-to-business-plan</loc>
+<lastmod>2012-10-31T17:16:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/instagram-photography-and-sharing</loc>
-<lastmod>2012-03-17T15:35:00-00:00</lastmod>
+<loc>https://guizishanren.com/view-from-california</loc>
+<lastmod>2012-10-31T10:01:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/can-you-as-a-cfo-survive-the-journey-of-leading-a-pre-ipo-company-to-ipo</loc>
-<lastmod>2012-02-24T14:29:00-00:00</lastmod>
+<loc>https://guizishanren.com/summer-quarter-course-evaluation</loc>
+<lastmod>2012-10-18T22:14:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/career-choice-consideration</loc>
-<lastmod>2011-10-21T15:47:00-00:00</lastmod>
+<loc>https://guizishanren.com/evaluate-course-with-CIDRAE</loc>
+<lastmod>2012-10-18T16:14:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/YY-jobs-10-scenes</loc>
-<lastmod>2011-10-17T13:22:00-00:00</lastmod>
+<loc>https://guizishanren.com/dance-of-my-life</loc>
+<lastmod>2012-10-15T14:35:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/journey-to-Spain-05-romance-in-rain</loc>
-<lastmod>2011-10-11T08:38:00-00:00</lastmod>
+<loc>https://guizishanren.com/10-reflections-of-a-cfo</loc>
+<lastmod>2012-10-04T23:43:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/what-does-it-take-to-be-a-good-boss</loc>
-<lastmod>2011-10-10T18:11:00-00:00</lastmod>
+<loc>https://guizishanren.com/why-here-why-now-why-again</loc>
+<lastmod>2012-09-27T23:33:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/journey-to-Spain-06-foodie-guide</loc>
-<lastmod>2011-09-30T06:55:00-00:00</lastmod>
+<loc>https://guizishanren.com/Stanford-mba-vs-stanford-sloan-fellow</loc>
+<lastmod>2012-09-06T20:30:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/journey-to-Spain-03-no-mans-land</loc>
-<lastmod>2011-09-29T07:33:00-00:00</lastmod>
+<loc>https://guizishanren.com/live-stanford-life-to-the-fullest</loc>
+<lastmod>2012-08-28T14:44:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/journey-to-Spain-04-photography-location-sagrada-familia</loc>
-<lastmod>2011-09-28T08:34:00-00:00</lastmod>
+<loc>https://guizishanren.com/chair-analysis</loc>
+<lastmod>2012-08-27T18:20:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/journey-to-Spain-02-breaking-dawn</loc>
-<lastmod>2011-09-28T07:15:00-00:00</lastmod>
+<loc>https://guizishanren.com/survival-guide-for-the-first-three-days</loc>
+<lastmod>2012-06-29T22:10:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/journey-to-Spain-01-sleepless-night</loc>
-<lastmod>2011-09-26T06:18:00-00:00</lastmod>
+<loc>https://guizishanren.com/poem-leaving-Beijing</loc>
+<lastmod>2012-05-22T16:16:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/poem-freak</loc>
-<lastmod>2011-07-27T00:47:00-00:00</lastmod>
+<loc>https://guizishanren.com/instagram-photography-and-sharing</loc>
+<lastmod>2012-03-17T15:35:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/sina-weibo-introduction</loc>
-<lastmod>2011-05-29T02:43:00-00:00</lastmod>
+<loc>https://guizishanren.com/can-you-as-a-cfo-survive-the-journey-of-leading-a-pre-ipo-company-to-ipo</loc>
+<lastmod>2012-02-24T14:29:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/poem-find</loc>
-<lastmod>2011-03-05T17:44:00-00:00</lastmod>
+<loc>https://guizishanren.com/career-choice-consideration</loc>
+<lastmod>2011-10-21T15:47:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/a-party-of-singers</loc>
-<lastmod>2010-12-26T17:03:00-00:00</lastmod>
+<loc>https://guizishanren.com/YY-jobs-10-scenes</loc>
+<lastmod>2011-10-17T13:22:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/lets-forget-on-weibo</loc>
-<lastmod>2010-09-30T12:41:00-00:00</lastmod>
+<loc>https://guizishanren.com/journey-to-Spain-05-romance-in-rain</loc>
+<lastmod>2011-10-11T08:38:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/a-poem-on-mid-autumn-festival</loc>
-<lastmod>2010-09-23T01:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/what-does-it-take-to-be-a-good-boss</loc>
+<lastmod>2011-10-10T18:11:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/our-guess-for-yizhi-poem</loc>
-<lastmod>2010-08-19T14:33:00-00:00</lastmod>
+<loc>https://guizishanren.com/journey-to-Spain-06-foodie-guide</loc>
+<lastmod>2011-09-30T06:55:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/real-meaning-of-English</loc>
-<lastmod>2010-06-29T01:53:00-00:00</lastmod>
+<loc>https://guizishanren.com/journey-to-Spain-03-no-mans-land</loc>
+<lastmod>2011-09-29T07:33:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/poem-lijiang</loc>
-<lastmod>2010-03-13T04:04:00-00:00</lastmod>
+<loc>https://guizishanren.com/journey-to-Spain-04-photography-location-sagrada-familia</loc>
+<lastmod>2011-09-28T08:34:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/seven-levels-of-singers-in-KTV</loc>
-<lastmod>2010-03-09T23:02:00-00:00</lastmod>
+<loc>https://guizishanren.com/journey-to-Spain-02-breaking-dawn</loc>
+<lastmod>2011-09-28T07:15:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/Herbert-Guide-Hawaii-The-Big-Island</loc>
-<lastmod>2009-09-01T08:20:00-00:00</lastmod>
+<loc>https://guizishanren.com/journey-to-Spain-01-sleepless-night</loc>
+<lastmod>2011-09-26T06:18:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/poem-beijing</loc>
-<lastmod>2009-01-25T02:31:00-00:00</lastmod>
+<loc>https://guizishanren.com/How-to-disable-Spotlight-on-Mac</loc>
+<lastmod>2011-07-31T13:41:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/leaving-GE</loc>
-<lastmod>2007-08-15T18:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/poem-freak</loc>
+<lastmod>2011-07-27T00:47:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/unofficial-apple-consumer-strategy-one-pager</loc>
-<lastmod>2006-05-18T12:06:00-00:00</lastmod>
+<loc>https://guizishanren.com/sina-weibo-introduction</loc>
+<lastmod>2011-05-29T02:43:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/GNR-concert-in-Boston</loc>
-<lastmod>2006-05-18T12:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/poem-find</loc>
+<lastmod>2011-03-05T17:44:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/four-heavenly-kings-of-hollywood</loc>
-<lastmod>2006-05-18T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/a-party-of-singers</loc>
+<lastmod>2010-12-26T17:03:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/break-up-GE-to-unlock-its-value</loc>
-<lastmod>2006-05-09T23:05:00-00:00</lastmod>
+<loc>https://guizishanren.com/lets-forget-on-weibo</loc>
+<lastmod>2010-09-30T12:41:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/category/amusement</loc>
-<lastmod>2015-02-22T15:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/a-poem-on-mid-autumn-festival</loc>
+<lastmod>2010-09-23T01:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/category/business</loc>
-<lastmod>2014-11-04T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/our-guess-for-yizhi-poem</loc>
+<lastmod>2010-08-19T14:33:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/category/framework</loc>
-<lastmod>2014-07-03T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/real-meaning-of-English</loc>
+<lastmod>2010-06-29T01:53:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/category/journey</loc>
-<lastmod>2016-06-17T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/poem-lijiang</loc>
+<lastmod>2010-03-13T04:04:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/category/pages</loc>
-<lastmod>2014-03-25T00:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/seven-levels-of-singers-in-KTV</loc>
+<lastmod>2010-03-09T23:02:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/category/photography</loc>
-<lastmod>2015-12-28T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/Herbert-Guide-Hawaii-The-Big-Island</loc>
+<lastmod>2009-09-01T08:20:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/category/stanford</loc>
-<lastmod>2014-03-16T13:12:00-00:00</lastmod>
+<loc>https://guizishanren.com/poem-beijing</loc>
+<lastmod>2009-01-25T02:31:00-08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/category/tech</loc>
-<lastmod>2016-02-13T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/leaving-GE</loc>
+<lastmod>2007-08-15T18:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/category/travel</loc>
-<lastmod>2014-07-13T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/unofficial-apple-consumer-strategy-one-pager</loc>
+<lastmod>2006-05-18T12:06:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/</loc>
-<lastmod>2016-06-17T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/GNR-concert-in-Boston</loc>
+<lastmod>2006-05-18T12:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/lang-bo-pai</loc>
-<lastmod>2012-12-02T18:14:00-00:00</lastmod>
+<loc>https://guizishanren.com/four-heavenly-kings-of-hollywood</loc>
+<lastmod>2006-05-18T08:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/zhong-wen</loc>
-<lastmod>2016-02-13T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/break-up-GE-to-unlock-its-value</loc>
+<lastmod>2006-05-09T23:05:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/theory</loc>
-<lastmod>2011-10-21T15:47:00-00:00</lastmod>
+<loc>https://guizishanren.com/category/amusement</loc>
+<lastmod>2015-02-22T15:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/coassf</loc>
-<lastmod>2014-03-16T13:12:00-00:00</lastmod>
+<loc>https://guizishanren.com/category/business</loc>
+<lastmod>2014-11-04T08:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/career</loc>
-<lastmod>2013-05-09T02:59:00-00:00</lastmod>
+<loc>https://guizishanren.com/category/framework</loc>
+<lastmod>2014-07-03T08:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/shi-ge</loc>
-<lastmod>2015-12-20T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/category/journey</loc>
+<lastmod>2016-06-17T08:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/tag/video</loc>
-<lastmod>2013-07-16T17:27:00-00:00</lastmod>
+<loc>https://guizishanren.com/category/pages</loc>
+<lastmod>2014-03-25T00:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://guizishanren.com/author/herbert-yang.html</loc>
-<lastmod>2016-06-17T08:00:00-00:00</lastmod>
+<loc>https://guizishanren.com/category/photography</loc>
+<lastmod>2015-12-28T08:00:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/category/stanford</loc>
+<lastmod>2014-03-21T12:52:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/category/tech</loc>
+<lastmod>2016-02-13T08:00:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/category/travel</loc>
+<lastmod>2014-07-13T08:00:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/pelican</loc>
+<lastmod>2015-12-30T08:00:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/markdown</loc>
+<lastmod>2015-12-27T08:00:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/zhong-wen</loc>
+<lastmod>2016-02-13T08:00:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/spillovers</loc>
+<lastmod>2013-07-04T12:34:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/coassf</loc>
+<lastmod>2014-03-16T13:12:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/career</loc>
+<lastmod>2013-05-09T02:59:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/shi-ge</loc>
+<lastmod>2015-12-20T08:00:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/video</loc>
+<lastmod>2013-07-16T17:27:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/lang-bo-yi-pai</loc>
+<lastmod>2012-12-02T18:14:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/tag/theory</loc>
+<lastmod>2011-10-21T15:47:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://guizishanren.com/author/herbert-yang.html</loc>
+<lastmod>2016-06-17T08:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

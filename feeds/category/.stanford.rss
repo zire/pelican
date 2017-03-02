@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>http://guizishanren.com/</link><description></description><atom:link href="http://feeds.feedburner.com/feeds/category/.stanford.rss" rel="self"></atom:link><lastBuildDate>Sun, 16 Mar 2014 13:12:00 -0700</lastBuildDate><item><title>Confession of a Stanford Sloan Fellow, A Summary</title><link>http://guizishanren.com/confession-stanford-sloan-fellow-summary</link><description>&lt;p&gt;This series ran for 62 episodes, taking notes and reflections during my
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>https://guizishanren.com/</link><description></description><atom:link href="https://feeds.feedburner.com/feeds/category/.stanford.rss" rel="self"></atom:link><lastBuildDate>Fri, 21 Mar 2014 12:52:00 -0700</lastBuildDate><item><title>Buzz Words from Stanford GSB BLAST Mail</title><link>https://guizishanren.com/buzz-words-stanford-gsb-blast-mail</link><description>&lt;p&gt;This program aims to analyze the most common buzz words from Stanford
+Graduate School of Business (GSB)'s BLAST mailing list, which is
+subscribed by all GSB students (MBA, MSx and PhD) and used heavily by
+the student community to broadcast news, seeking help, etc. The idea is
+similar to Google Keyword Trend, except that it's applied to a very
+specific environment and audience.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/buzzGSB.png" alt="Buzz Word from Stanford GSB" width="800px"&gt;&lt;/p&gt;
+&lt;p&gt;The program is written in Python 2.7.5 and &lt;a href="https://github.com/zire/buzzInStanfordGSB"&gt;the source code is on Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Download all the BLAST emails&lt;/p&gt;
+&lt;p&gt;Fortunately Google provides a very handy Datatool to download emails
+with specific labels. It's available from the Account Settings page.
+This archive has emails from 2012 (I recovered them from Trash), 2013,
+and 2014. Emails in 2012 and 2013 were not preserved universally and
+consistently so they will not be part of this analysis. Emails in 2014
+are of better quality though I'm sure I've missed/deleted some BLAST
+messages already. Going forward I will keep all the BLAST emails and the
+data quality will be considerably better in more recent update&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Extract emails and dates from the email archive&lt;/p&gt;
+&lt;p&gt;Google archives Gmail messages in mbox format - one single large file.
+Python's mailbox.mbox library provides an effective way to extract
+contents from it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Python 1_mbox2csv.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There are three steps that need to be performed here:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;figure out where is the email body with get_payload()&lt;/p&gt;
+&lt;p&gt;It turns out that all the BLAST emails are of multipart (so get_payload() will return a list, not a string). The email body is hidden in the first part of the first part in a message from mbox (quite nested).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;clean up the date field&lt;/p&gt;
+&lt;p&gt;The raw date field needs clean-up. It's not in the standard ISO format
+and the day field is not zero-paddled. Datetime.strptime is used to deal
+with it. Eventually a raw date like "5 Nov 2013" is converted into
+"20131105" (YYYYMMDD) for easy sorting in the next step.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sort data by date&lt;/p&gt;
+&lt;p&gt;Self-explanatory. After this program is run, a cleaned up email archive
+will be created in csv format with only date and email body information,
+and is sorted by date.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the word frequency analysis&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Python 2_wordcount.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After all the maneuvers to get the data into the right format, the real
+crunching on word frequency is quite easy relatively speaking. The true
+magic that embodies both science and art is the exception list of words
+to ignore (words_to_ignore). A lot of time was spent to grow this list
+so that all the un-informational words are filtered out such as "when",
+"where", "to".. etc. There are A LOT of those.&lt;/p&gt;
+&lt;p&gt;It's only after filtering out those exception words, the real buzzwords
+for Stanford GSB will float to the surface, as you can see from above.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Do they reveal something useful? Maybe, but I'm not sure. Maybe I just
+need to continue to tinker with the exception word list to make more
+sense out of it.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Fri, 21 Mar 2014 12:52:00 -0700</pubDate><guid>tag:guizishanren.com,2014-03-21:buzz-words-stanford-gsb-blast-mail</guid></item><item><title>Confession of a Stanford Sloan Fellow, A Summary</title><link>https://guizishanren.com/confession-stanford-sloan-fellow-summary</link><description>&lt;p&gt;This series ran for 62 episodes, taking notes and reflections during my
 12 months in Stanford Graduate School of Business' Master of Science for
 Experienced Leaders (MSx, aka, Sloan Fellow) program. The original
 episodes were scattered around in my blog, together with photo series,
@@ -78,14 +147,14 @@ Mail&lt;/p&gt;
 &lt;p&gt;&lt;a href="../goals-in-stanford/"&gt;61_What Do You Want to Get in Stanford_PFIKER Model&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="../Herbert-GCBC-Talk/"&gt;62_GCBC Talk Herbert Introduction&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="../a-day-in-a-sloans-life/"&gt;A Day In A Sloan’s
-Life&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 16 Mar 2014 13:12:00 -0700</pubDate><guid>tag:guizishanren.com,2014-03-16:confession-stanford-sloan-fellow-summary</guid><category>coassf</category></item><item><title>COASSF#59 - Course Evaluation_Spring Q</title><link>http://guizishanren.com/course-evaluation-spring-Q</link><description>&lt;p&gt;....continued from &lt;a href="http://guizishanren.com/?p=2433"&gt;Course Evaluation_Winter
+Life&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 16 Mar 2014 13:12:00 -0700</pubDate><guid>tag:guizishanren.com,2014-03-16:confession-stanford-sloan-fellow-summary</guid><category>coassf</category></item><item><title>COASSF#59 - Course Evaluation_Spring Q</title><link>https://guizishanren.com/course-evaluation-spring-Q</link><description>&lt;p&gt;....continued from &lt;a href="http://guizishanren.com/?p=2433"&gt;Course Evaluation_Winter
 Q&lt;/a&gt; ...&lt;/p&gt;
 &lt;p&gt;This is the last one in this CIDRAE Evaluation Series.&lt;/p&gt;
-&lt;p&gt;&lt;img src="../../../../images/CIDRAE_Spring.png" width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 03 Jul 2013 12:34:00 -0700</pubDate><guid>tag:guizishanren.com,2013-07-03:course-evaluation-spring-Q</guid><category>coassf</category></item><item><title>COASSF#58 - Course Evaluation_Winter Q</title><link>http://guizishanren.com/course-evaluation-winter-q</link><description>&lt;p&gt;... continued from &lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_37_fall-qtr-course-final-evaluation/"&gt;Course Evaluation_Fall
+&lt;p&gt;&lt;img src="../../../../images/CIDRAE_Spring.png" width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 03 Jul 2013 12:34:00 -0700</pubDate><guid>tag:guizishanren.com,2013-07-03:course-evaluation-spring-Q</guid><category>coassf</category></item><item><title>COASSF#58 - Course Evaluation_Winter Q</title><link>https://guizishanren.com/course-evaluation-winter-q</link><description>&lt;p&gt;... continued from &lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_37_fall-qtr-course-final-evaluation/"&gt;Course Evaluation_Fall
 Q&lt;/a&gt;
 ...&lt;/p&gt;
 &lt;p&gt;A bit overdue, from Winter Q, which seems like a distant past.&lt;/p&gt;
-&lt;p&gt;&lt;img src="../../../../images/CIDRAE_Winter.png", width="800px", alt="Winter Qtr Course Evaluation"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 01 Jul 2013 12:34:00 -0700</pubDate><guid>tag:guizishanren.com,2013-07-01:course-evaluation-winter-q</guid><category>coassf</category></item><item><title>COASSF#53 - 10 Things To Do Before Coming to Stanford Sloan Master Program</title><link>http://guizishanren.com/10-things-to-do-before-coming-to-stanford-sloan-master-program</link><description>&lt;p&gt;In descending order of importance,&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/CIDRAE_Winter.png", width="800px", alt="Winter Qtr Course Evaluation"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 01 Jul 2013 12:34:00 -0700</pubDate><guid>tag:guizishanren.com,2013-07-01:course-evaluation-winter-q</guid><category>coassf</category></item><item><title>COASSF#53 - 10 Things To Do Before Coming to Stanford Sloan Master Program</title><link>https://guizishanren.com/10-things-to-do-before-coming-to-stanford-sloan-master-program</link><description>&lt;p&gt;In descending order of importance,&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Complete your &lt;a href="http://www.linkedin.com/in/herbertyang"&gt;Linkedin
@@ -311,7 +380,7 @@ Q&lt;/a&gt;
 Days&lt;/a&gt;,
 the first article in this running series of &lt;a href="../../../../tag/coassf"&gt;Confession of a Stanford
 Sloan Fellow (aka,
-COASSF)&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 18 Mar 2013 22:12:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-18:10-things-to-do-before-coming-to-stanford-sloan-master-program</guid><category>coassf</category></item><item><title>COASSF#52 - Stanford Business Magazine Quote</title><link>http://guizishanren.com/stanford-business-magazine-quote</link><description>&lt;p&gt;It was a very pleasant surprise when I read the back page of 2013 Spring
+COASSF)&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 18 Mar 2013 22:12:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-18:10-things-to-do-before-coming-to-stanford-sloan-master-program</guid><category>coassf</category></item><item><title>COASSF#52 - Stanford Business Magazine Quote</title><link>https://guizishanren.com/stanford-business-magazine-quote</link><description>&lt;p&gt;It was a very pleasant surprise when I read the back page of 2013 Spring
 Issue of &lt;a href="http://www.gsb.stanford.edu/news/bmag"&gt;Stanford Business
 Magazine&lt;/a&gt;. Surprise #1, this was
 actually a very accurate quote from me, though I have no idea how the
@@ -321,7 +390,7 @@ touch there.&lt;/p&gt;
 &lt;p&gt;To the mysterious friend out there who tipped this off to the magazine
 staff, thank you!&lt;/p&gt;
 &lt;p&gt;&lt;img src="../../../../images/Stanford-Magazine-01.jpg", width="800px"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="../../../../images/Stanford-Magazine-02.jpg", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 17 Mar 2013 14:03:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-17:stanford-business-magazine-quote</guid><category>coassf</category></item><item><title>COASSF#48 - My Yearbook Message</title><link>http://guizishanren.com/my-yearbook-message-for-Stanford-Sloan</link><description>&lt;p&gt;One of the benefits of sitting right next to my Sloan-mate Nicki Carter, who is co-leading an admirable and spirited effort of publishing Yearbook of Sloan Class of 2013,  is that I can rest assured to receive regular reminder about my yearbook message status for no less than ... four times a week. After leading Nicki's "Hall of Shame" for many weeks in a row, I decided to redeem  myself in front of Nicki and get it over with. For someone with a petty education background prior to Stanford, I actually don't think I've ever written a yearbook message before. So I did a bit of research to see what this whole yearbook message thing is about in US, and I've arrived at the following takeaways:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/Stanford-Magazine-02.jpg", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 17 Mar 2013 14:03:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-17:stanford-business-magazine-quote</guid><category>coassf</category></item><item><title>COASSF#48 - My Yearbook Message</title><link>https://guizishanren.com/my-yearbook-message-for-Stanford-Sloan</link><description>&lt;p&gt;One of the benefits of sitting right next to my Sloan-mate Nicki Carter, who is co-leading an admirable and spirited effort of publishing Yearbook of Sloan Class of 2013,  is that I can rest assured to receive regular reminder about my yearbook message status for no less than ... four times a week. After leading Nicki's "Hall of Shame" for many weeks in a row, I decided to redeem  myself in front of Nicki and get it over with. For someone with a petty education background prior to Stanford, I actually don't think I've ever written a yearbook message before. So I did a bit of research to see what this whole yearbook message thing is about in US, and I've arrived at the following takeaways:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;writing the yearbook message could be quite an effort, especially if&lt;/li&gt;
 &lt;li&gt;you want to stand out and leave something others can remember you by&lt;/li&gt;
@@ -342,7 +411,7 @@ staff, thank you!&lt;/p&gt;
 &lt;p&gt;"Estonia and Sweden, Join hands, join hands together, We're friends forever' - &lt;em&gt;Lake Tahoe Ski Trip #1&lt;/em&gt;, Jan 19, 2013&lt;/p&gt;
 &lt;p&gt;"Story leads to discovery; discovery leads to enlightenment; enlightenment leads to happiness" - &lt;em&gt;Chinese New Year Party&lt;/em&gt;, Feb 08, 2013&lt;/p&gt;
 &lt;p&gt;"Is this the real life? Is this just fantasy? Caught in a landslide. No escape from reality. Open your eyes. Look up to the skies and see." - &lt;em&gt;Lake Tahoe Ski Trip #2&lt;/em&gt;, Feb 16, 2013&lt;/p&gt;
-&lt;p&gt;“Though you might be hiding away from the madding crowd in Hotel California listening to the Wind of Change, The Spillovers will Twist and Shout, and play With or Without You. After all, It's My Life and I Hate Myself For Loving You. As long as you Smell Like a Teen Spirit, I Wish You Were Here and I Don't Want To Miss A Thing by letting go the last chance of amusing you before you go on the epic East Coast Trip. Don't Cry... this is not Touchy Feely. This is from The Spillovers. Out.”  &lt;em&gt;The Spillovers Curtain Call&lt;/em&gt;, Mar 21, 2013&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 10 Mar 2013 17:29:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-10:my-yearbook-message-for-Stanford-Sloan</guid><category>coassf</category></item><item><title>COASSF#47 - Sloan Fellow Life Cycle &amp; How To Make The Most Out Of It</title><link>http://guizishanren.com/sloan-fellow-life-cycle-how-to-make-the-most-out-of-it</link><description>&lt;p&gt;Before we know, 8 months have flown by and now we're 4 months away from
+&lt;p&gt;“Though you might be hiding away from the madding crowd in Hotel California listening to the Wind of Change, The Spillovers will Twist and Shout, and play With or Without You. After all, It's My Life and I Hate Myself For Loving You. As long as you Smell Like a Teen Spirit, I Wish You Were Here and I Don't Want To Miss A Thing by letting go the last chance of amusing you before you go on the epic East Coast Trip. Don't Cry... this is not Touchy Feely. This is from The Spillovers. Out.”  &lt;em&gt;The Spillovers Curtain Call&lt;/em&gt;, Mar 21, 2013&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sun, 10 Mar 2013 17:29:00 -0700</pubDate><guid>tag:guizishanren.com,2013-03-10:my-yearbook-message-for-Stanford-Sloan</guid><category>coassf</category></item><item><title>COASSF#47 - Sloan Fellow Life Cycle &amp; How To Make The Most Out Of It</title><link>https://guizishanren.com/sloan-fellow-life-cycle-how-to-make-the-most-out-of-it</link><description>&lt;p&gt;Before we know, 8 months have flown by and now we're 4 months away from
 graduation. All good things will come to an end, and our wonderful
 journey at Sloan Fellow Program in Stanford GSB is of no exception. The
 question is: how can we make the most out of this 12-month period?&lt;/p&gt;
@@ -420,12 +489,12 @@ substantial.&lt;/p&gt;
 &lt;p&gt;So, given all the forces in the universe that are pushing us into
 various directions, it seems that Fall Quarter is the "&lt;em&gt;sweet spot&lt;/em&gt;" where
 Sloans still have considerable desire to social and are able to afford
-the time. Carpe diem!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 04 Mar 2013 20:36:00 -0800</pubDate><guid>tag:guizishanren.com,2013-03-04:sloan-fellow-life-cycle-how-to-make-the-most-out-of-it</guid><category>coassf</category></item><item><title>COASSF#46 - Comparison of S353 (Formation of New Venture) and G566 (Real-Life Ethics)</title><link>http://guizishanren.com/comparison-S353-and-G566-in-GSB</link><description>&lt;p&gt;G566 Real-Life Ethics was my &lt;a href="../../../2013/01/fall-qtr-course-evaluation/"&gt;most favorite class in the Fall
+the time. Carpe diem!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 04 Mar 2013 20:36:00 -0800</pubDate><guid>tag:guizishanren.com,2013-03-04:sloan-fellow-life-cycle-how-to-make-the-most-out-of-it</guid><category>coassf</category></item><item><title>COASSF#46 - Comparison of S353 (Formation of New Venture) and G566 (Real-Life Ethics)</title><link>https://guizishanren.com/comparison-S353-and-G566-in-GSB</link><description>&lt;p&gt;G566 Real-Life Ethics was my &lt;a href="../../../2013/01/fall-qtr-course-evaluation/"&gt;most favorite class in the Fall
 Quarter&lt;/a&gt;
 and S353 is my most favorite class in the current Winter Quarter. They
 share a lot of similarities, but resonate with me at very different
 levels. Here's a detailed breakdown of comparison between them:&lt;/p&gt;
-&lt;p&gt;&lt;img src="../../../../images/G566vsS353_All.png", alt="Compare S353 and G566", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 28 Feb 2013 15:20:00 -0800</pubDate><guid>tag:guizishanren.com,2013-02-28:comparison-S353-and-G566-in-GSB</guid><category>coassf</category></item><item><title>COASSF#45 - Should You Do Stanford's Famous Startup Courses?</title><link>http://guizishanren.com/should-you-do-stanfords-famous-startup-courses</link><description>&lt;p&gt;As my prior article "&lt;a href="../15-things-to-know-in-strategizing-your-course-portfolio/"&gt;15 Things to Know in Strategizing Your Stanford
+&lt;p&gt;&lt;img src="../../../../images/G566vsS353_All.png", alt="Compare S353 and G566", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 28 Feb 2013 15:20:00 -0800</pubDate><guid>tag:guizishanren.com,2013-02-28:comparison-S353-and-G566-in-GSB</guid><category>coassf</category></item><item><title>COASSF#45 - Should You Do Stanford's Famous Startup Courses?</title><link>https://guizishanren.com/should-you-do-stanfords-famous-startup-courses</link><description>&lt;p&gt;As my prior article "&lt;a href="../15-things-to-know-in-strategizing-your-course-portfolio/"&gt;15 Things to Know in Strategizing Your Stanford
 Courses&lt;/a&gt;"
 mentioned, doing one of those startup-themed courses (E245, S321) feels
 almost like a rite of passage for many Stanford MBA/Sloans. So, should
@@ -433,11 +502,11 @@ you just go and do it?&lt;/p&gt;
 &lt;p&gt;It depends. Here's the decision tree I'd recommend. If you need more
 insight, contact me in private. I don't pass isolated judgement on any
 GSB course in public.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/14612386414" title="Startup-Course-Enrollment by herbertyang, on Flickr"&gt;&lt;img src="https://farm3.staticflickr.com/2900/14612386414_5e235a9144_b.jpg" width="640"  alt="Startup-Course-Enrollment"&gt;&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 19 Feb 2013 16:48:00 -0800</pubDate><guid>tag:guizishanren.com,2013-02-19:should-you-do-stanfords-famous-startup-courses</guid><category>coassf</category></item><item><title>COASSF#43 - Where Is Stanford Sloan Fellow?</title><link>http://guizishanren.com/where-is-stanford-sloan-fellow</link><description>&lt;p&gt;At this historical moment, as we are turning the page for a new chapter
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/14612386414" title="Startup-Course-Enrollment by herbertyang, on Flickr"&gt;&lt;img src="https://farm3.staticflickr.com/2900/14612386414_5e235a9144_b.jpg" width="640"  alt="Startup-Course-Enrollment"&gt;&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 19 Feb 2013 16:48:00 -0800</pubDate><guid>tag:guizishanren.com,2013-02-19:should-you-do-stanfords-famous-startup-courses</guid><category>coassf</category></item><item><title>COASSF#43 - Where Is Stanford Sloan Fellow?</title><link>https://guizishanren.com/where-is-stanford-sloan-fellow</link><description>&lt;p&gt;At this historical moment, as we are turning the page for a new chapter
 for the Stanford Sloan Fellow program, it's important to remind
 ourselves where we stand in the universe. For people in similar career
 stage as me, this is the best program in the world, bar none.&lt;/p&gt;
-&lt;p&gt;&lt;img src="../../../../images/Where-is-Sloan.png", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 31 Jan 2013 09:31:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-31:where-is-stanford-sloan-fellow</guid><category>coassf</category></item><item><title>COASSF#42 - 15 Things to Know in Strategizing Your Sloan Courses</title><link>http://guizishanren.com/15-things-to-know-in-strategizing-your-course-portfolio</link><description>&lt;p&gt;In the first week of the third quarter of my 12-month Sloan academic
+&lt;p&gt;&lt;img src="../../../../images/Where-is-Sloan.png", width="800px"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 31 Jan 2013 09:31:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-31:where-is-stanford-sloan-fellow</guid><category>coassf</category></item><item><title>COASSF#42 - 15 Things to Know in Strategizing Your Sloan Courses</title><link>https://guizishanren.com/15-things-to-know-in-strategizing-your-course-portfolio</link><description>&lt;p&gt;In the first week of the third quarter of my 12-month Sloan academic
 year, I find myself spending at least 2-3 hours every day this week in a
 perpetual (often futile ) attempt to optimize my courses for this
 quarter. The exhaustive and reiterative process has been very tiring,
@@ -782,7 +851,7 @@ Wednesday might screw up all such schedules and make you very unpopular
 in general.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Voila!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sat, 26 Jan 2013 21:22:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-26:15-things-to-know-in-strategizing-your-course-portfolio</guid><category>coassf</category></item><item><title>COASSF#39 - Reflection Notes from S353 Jan 15</title><link>http://guizishanren.com/reflection-notes-from-s353-jan-15</link><description>&lt;p&gt;Reflected from today's S353 Entrepreneurship: Formation of New Business,
+&lt;p&gt;Voila!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Sat, 26 Jan 2013 21:22:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-26:15-things-to-know-in-strategizing-your-course-portfolio</guid><category>coassf</category></item><item><title>COASSF#39 - Reflection Notes from S353 Jan 15</title><link>https://guizishanren.com/reflection-notes-from-s353-jan-15</link><description>&lt;p&gt;Reflected from today's S353 Entrepreneurship: Formation of New Business,
 Case SHED:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -880,7 +949,116 @@ Case SHED:&lt;/p&gt;
     dedication, it's not that hard to catch up on the knowledge and
     experience. It's not easy, but can be done.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 16 Jan 2013 00:48:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-16:reflection-notes-from-s353-jan-15</guid><category>coassf</category></item><item><title>COASSF#37 - Fall Quarter Course Final Evaluation</title><link>http://guizishanren.com/fall-qtr-course-evaluation</link><description>&lt;p&gt;My final evaluation for the Fall Quarter courses, following the CIDRAE
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 16 Jan 2013 00:48:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-16:reflection-notes-from-s353-jan-15</guid><category>coassf</category></item><item><title>COASSF#38 - Sell Used Textbooks</title><link>https://guizishanren.com/sell-used-textbooks</link><description>&lt;p&gt;I paused for a while to mull over whether I should sell all my textbooks
+from the summer and the fall quarter, or I should keep any individual
+textbook. After pondering for 0.01 second, I decided to sell them all.&lt;/p&gt;
+&lt;p&gt;There are three ways to sell those used textbooks for cash: A) sell to
+Stanford Bookstore for cash right away; B) trade in on Amazon.com for
+Amazon gift card; C) Follow what I just did.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Sell to Stanford Bookstore&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.bkstr.com/webapp/wcs/stores/servlet/BuybackMaterialsView?catalogId=10001&amp;amp;schoolStoreId=10161"&gt;search the ISBN&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;bring the books to Stanford Bookstore and get cash on the spot&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Trade in on Amazon.com&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;search the ISBN at this
+&lt;a href="http://www.amazon.com/Trade-In/b/ref=sv_b_0?ie=UTF8&amp;amp;node=2242532011"&gt;Amazon's Trade-in Store&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;follow the website's instructions, print out the
+shipping label, and ship out the books by the required date&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;receive an Amazon gift card&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Arbitrage between Stanford Bookstore and Amazon&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Stanford Bookstore offers cash right away, but mostly at discounted
+prices. For some books Amazon offers substantially higher prices (such
+as Microeconomics and Financial Accounting), but you get an Amazon gift
+card instead of cash, and Amazon may impose more strict conditions on
+the books. You just have to strike a balance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;here's my trades:&lt;/p&gt;
+&lt;p&gt;a. Amazon Trade-in List:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    Strategic Management    
+    ISBN13: 9780470009475, ISBN10: 0470009470
+    Expected Amount Per Item: $35.70
+
+    Microeconomics (6th Edition) (The Pearson Series in Economics)
+    ISBN13: 9780131392632, ISBN10: 0131392638
+    Expected Amount Per Item: $97.51
+
+    Business and Its Environment (6th Edition)
+    ISBN-13: 9780136083924, ISBN-10: 0136083927
+    Expected Amount Per Item:   $12.25
+
+    As We Speak: How to Make Your Point and Have It Stick
+    ISBN-13: 9781439153086, ISBN-10: 1439153086
+    Expected Amount Per Item:   $1.00
+
+    The Modern Firm: Organizational Design for Performance and Growth
+    ISBN-13: 9780198293750, ISBN-10: 0198293755
+    Expected Amount Per Item: $1.00
+
+    Financial Accounting (3rd (third) Edition)
+    ISBN-13: 9781934319604, ISBN-10: 1934319600
+    Expected Amount Per Item: $96.05
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Total Value from Amazon Trade-in: $243.51&lt;/p&gt;
+&lt;p&gt;b. Stanford Bookstore Cash For Books&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    Title: Complete Business Statistics
+    Edition: 8th
+    Author: ACZEL
+    Publisher: WOHL PUBLISHING, INC.
+    ISBN: 9781935938187
+    Unit Price: $20.00
+
+    Title: Improv Wisdom
+    Edition:
+    Author: MADSON
+    Publisher: CROWN PUBLISHING GROUP
+    ISBN: 9781400081882
+    Unit Price: $2.00
+
+    Title: Influence
+    Edition: 5th
+    Author: CIALDINI
+    Publisher: PRENTICE HALL, INC
+    ISBN: 9780205609994
+    Unit Price: $4.00
+
+    Title: Redefining Global Strategy
+    Edition:
+    Author: GHEMAWAT
+    Publisher: HARVARD BUSINESS SCHOOL
+    ISBN: 9781591398660
+    Unit Price: $4.00
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Total Value from Stanford Bookstore Trade-in: $30.00&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Fri, 04 Jan 2013 12:34:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-04:sell-used-textbooks</guid><category>coassf</category></item><item><title>COASSF#37 - Fall Quarter Course Final Evaluation</title><link>https://guizishanren.com/fall-qtr-course-evaluation</link><description>&lt;p&gt;My final evaluation for the Fall Quarter courses, following the CIDRAE
 framework I developed in the summer. It's a somewhat scientific approach
 to validate my favorite courses: Real-life Ethics, Election 2012,
 Political Communication, Organization Behavior, and Generative
@@ -905,7 +1083,7 @@ read &lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_
 | - to compare to the interim evaluation of my Fall Quarter courses,
 please read
 &lt;a href="http://guizishanren.com/confession-of-a-stanford-sloan-fellow_26_fall-quarter-course-evaluation-interim/"&gt;here&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="CIDRAE Score for Fall Qtr" src="../../../../images/CIDRAE_Fall-Qtr.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 03 Jan 2013 23:45:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-03:fall-qtr-course-evaluation</guid><category>coassf</category></item><item><title>COASSF#34 - Application to dMedia</title><link>http://guizishanren.com/application-to-dmedia</link><description>&lt;p&gt;&lt;a href="http://dschool.stanford.edu/dmedia/"&gt;dMedia&lt;/a&gt; is a course from d.school
+&lt;p&gt;&lt;img alt="CIDRAE Score for Fall Qtr" src="../../../../images/CIDRAE_Fall-Qtr.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 03 Jan 2013 23:45:00 -0800</pubDate><guid>tag:guizishanren.com,2013-01-03:fall-qtr-course-evaluation</guid><category>coassf</category></item><item><title>COASSF#34 - Application to dMedia</title><link>https://guizishanren.com/application-to-dmedia</link><description>&lt;p&gt;&lt;a href="http://dschool.stanford.edu/dmedia/"&gt;dMedia&lt;/a&gt; is a course from d.school
 of Stanford in the coming Winter Quarter. As most other design-themed
 courses from Stanford's trendy Design School, it has a
 somewhat idiosyncratic application, in which I need to do this:&lt;/p&gt;
@@ -963,7 +1141,7 @@ meaningful contribution to the dmedia class.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;With that, I hope I have convinced you that I will be a valuable
-addition to your class. Thank you.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 20 Dec 2012 02:48:00 -0800</pubDate><guid>tag:guizishanren.com,2012-12-20:application-to-dmedia</guid><category>coassf</category></item><item><title>COASSF#32 - GSB Reporter - Bubbles &amp; Flash Mob</title><link>http://guizishanren.com/from-gsb-reporter</link><description>&lt;p&gt;The Stanford Business Reporter is Stanford Business School's quarterly
+addition to your class. Thank you.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 20 Dec 2012 02:48:00 -0800</pubDate><guid>tag:guizishanren.com,2012-12-20:application-to-dmedia</guid><category>coassf</category></item><item><title>COASSF#32 - GSB Reporter - Bubbles &amp; Flash Mob</title><link>https://guizishanren.com/from-gsb-reporter</link><description>&lt;p&gt;The Stanford Business Reporter is Stanford Business School's quarterly
 newspaper. It has no online presence and is distributed for free around
 GSB's Knight Management Center. In this issue, our Sloan Class of 2013
 contributed two articles, &lt;a href="http://sten.tamkivi.com/"&gt;Sten&lt;/a&gt;'s "The
@@ -1081,7 +1259,7 @@ every one gave the absolute best individual dance performance ever. The
 power of our vision unleashed the most hidden potential from us and
 inspired us to deliver at the clutch moment when it mattered the most.
 That's what A-players always do, and that's what Sloans do.&lt;/p&gt;
-&lt;p&gt;My Sloan fellows, it's been an honor to dance with you.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 12 Nov 2012 17:55:00 -0800</pubDate><guid>tag:guizishanren.com,2012-11-12:from-gsb-reporter</guid><category>coassf</category></item><item><title>COASSF#30 - View from California</title><link>http://guizishanren.com/view-from-california</link><description>&lt;p&gt;Tonight's speakers for &lt;a href="https://continuingstudies.stanford.edu/courses/course.php?cid=20121_POL+51"&gt;Election 2012&lt;/a&gt; talk "The View from California":&lt;/p&gt;
+&lt;p&gt;My Sloan fellows, it's been an honor to dance with you.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Mon, 12 Nov 2012 17:55:00 -0800</pubDate><guid>tag:guizishanren.com,2012-11-12:from-gsb-reporter</guid><category>coassf</category></item><item><title>COASSF#30 - View from California</title><link>https://guizishanren.com/view-from-california</link><description>&lt;p&gt;Tonight's speakers for &lt;a href="https://continuingstudies.stanford.edu/courses/course.php?cid=20121_POL+51"&gt;Election 2012&lt;/a&gt; talk "The View from California":&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.stanford.edu/dept/president/biography/"&gt;Stanford University President John Hennessy&lt;/a&gt;, &lt;a href="http://eshoo.house.gov"&gt;Congresswoman Anna Eshoo (D-CA)&lt;/a&gt;, and Accel Partners' &lt;a href="http://www.accel.com/global/people/specialty/1/Theresia_Gouw"&gt;Theresia Gouw Ranzetta&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://farm8.staticflickr.com/7458/13607755643_9e5567020f_c.jpg" width="800" height="305" alt="election"&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1132,8 +1310,8 @@ Process&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
     times.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Wonderful talk. There were many topics I just couldn't fully digest yet.
-Wish I had known more.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 31 Oct 2012 10:01:00 -0700</pubDate><guid>tag:guizishanren.com,2012-10-31:view-from-california</guid><category>coassf</category></item><item><title>COASSF#25 - Summer Quarter Course Evaluation</title><link>http://guizishanren.com/summer-quarter-course-evaluation</link><description>&lt;p&gt;... continued from the explanation of &lt;a href="../../../2012/10/evaluate-course-with-CIDRAE/"&gt;CIDRAE Framework&lt;/a&gt;, here is the evaluation for the courses I took in the summer quarter of Stanford 2012-2013 in the Sloan Program.&lt;/p&gt;
-&lt;p&gt;&lt;img src="../../../../images/summer-Q.png" width="800px" alt="Summer Quarter Score"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 18 Oct 2012 22:14:00 -0700</pubDate><guid>tag:guizishanren.com,2012-10-18:summer-quarter-course-evaluation</guid><category>coassf</category></item><item><title>COASSF#09 - Stanford MBA vs Stanford Sloan Fellow (MSx)</title><link>http://guizishanren.com/Stanford-mba-vs-stanford-sloan-fellow</link><description>&lt;p&gt;destination before turning page over to the next chapter.&lt;/p&gt;
+Wish I had known more.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 31 Oct 2012 10:01:00 -0700</pubDate><guid>tag:guizishanren.com,2012-10-31:view-from-california</guid><category>coassf</category></item><item><title>COASSF#25 - Summer Quarter Course Evaluation</title><link>https://guizishanren.com/summer-quarter-course-evaluation</link><description>&lt;p&gt;... continued from the explanation of &lt;a href="../../../2012/10/evaluate-course-with-CIDRAE/"&gt;CIDRAE Framework&lt;/a&gt;, here is the evaluation for the courses I took in the summer quarter of Stanford 2012-2013 in the Sloan Program.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/summer-Q.png" width="800px" alt="Summer Quarter Score"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 18 Oct 2012 22:14:00 -0700</pubDate><guid>tag:guizishanren.com,2012-10-18:summer-quarter-course-evaluation</guid><category>coassf</category></item><item><title>COASSF#09 - Stanford MBA vs Stanford Sloan Fellow (MSx)</title><link>https://guizishanren.com/Stanford-mba-vs-stanford-sloan-fellow</link><description>&lt;p&gt;destination before turning page over to the next chapter.&lt;/p&gt;
 &lt;p&gt;Sloan Fellow (aka "MSx" since 2013) is a very unique program. It's in a league of its own with practically no other benchmark in this business. It's not an MBA, neither an EMBA. It's a 12-month residence program that grants you a Master of Science (in management) degree. Its tuition fee is the same as the two-year MBA program, and its academic rigor is much, much higher than any other EMBA or executive training program. For experienced professionals around my age group, Stanford's Sloan Fellow Program is the best and ideal destination before turning page over to the next chapter.&lt;/p&gt;
 &lt;p&gt;A comparison between Stanford MBA and Stanford Sloan Fellow.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://farm8.staticflickr.com/7621/17122152746_7167a4149e_c.jpg" width="800" height="623" alt="MBAvsSloan"&gt;&lt;/p&gt;
@@ -1147,7 +1325,7 @@ Wish I had known more.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.
 Sloan would not pay too much attention to grades (unless he/she is
 sponsored with specific grade requirement) because ... you really should not worry about grades as a sloan. Sloans pursue grades to the extend that the result satisfies his/her own ego and thirst for knowledge.  We know that given our age, it's highly unlikely we'll ever come back to a university classroom. So we soak up knowledge as much as we can.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Source of Pressure&lt;/em&gt;: For MBAs, it's about landing sexy jobs of the moment that
-every other smart ass in the class wants to get. For the self-funded Sloans, the pressure comes mainly from the anxiety of taking startup ideas off the ground and seeking suitable partners. 12 months is a transition period and it goes by really fast. For sponsored Sloans, they're all elite A-players from their sponsoring governments/companies, and their futures are already carefully planned. It might just turn out to be a year-long vacation for them.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 06 Sep 2012 20:30:00 -0700</pubDate><guid>tag:guizishanren.com,2012-09-06:Stanford-mba-vs-stanford-sloan-fellow</guid><category>coassf</category></item><item><title>COASSF#01 - Survival Guide for the First Three Days</title><link>http://guizishanren.com/survival-guide-for-the-first-three-days</link><description>&lt;p&gt;For all the incoming Sloan Fellows of 2012-2013, the following items are
+every other smart ass in the class wants to get. For the self-funded Sloans, the pressure comes mainly from the anxiety of taking startup ideas off the ground and seeking suitable partners. 12 months is a transition period and it goes by really fast. For sponsored Sloans, they're all elite A-players from their sponsoring governments/companies, and their futures are already carefully planned. It might just turn out to be a year-long vacation for them.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 06 Sep 2012 20:30:00 -0700</pubDate><guid>tag:guizishanren.com,2012-09-06:Stanford-mba-vs-stanford-sloan-fellow</guid><category>coassf</category></item><item><title>COASSF#01 - Survival Guide for the First Three Days</title><link>https://guizishanren.com/survival-guide-for-the-first-three-days</link><description>&lt;p&gt;For all the incoming Sloan Fellows of 2012-2013, the following items are
 listed in descending order of pressing urgency.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
