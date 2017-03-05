@@ -80,12 +80,12 @@
                 </header>
             </section>
             <p>After <a href="http://guizishanren.com/guide-to-set-up-github-page-and-pelican">installing Pelican to generate your static single page blog site</a>, I follow the below steps to write my blog articles.</p>
-<h1>1. Learn Markdown language and pick an editor</h1>
+<h2>Learn Markdown language with an editor</h2>
 <p>As of 2015, I almost write exclusively with Markdown language. For work on <a href="http://linkqlo.com">Linkqlo</a>, I write on issue trackers and wiki pages on our internal <a href="https://gitlab.com/">Gitlab-based</a> server. For my day-to-day journal, I write on <a href="http://dayoneapp.com/">DayOne App</a>. For personal blog <a href="http://guizishanren.com">the Good, the Bad, and the Curious</a>, it's in Markdown as well as it's hosted on <a href="https://pages.github.com/">Github Page</a>.</p>
 <p>If something cannot be written in Markdown, I probably will not write it. This is one of the several reasons I stopped using Evernote a long time ago. </p>
 <p>Gitlab, Github, DayOne, and many other Markdown platforms all have their own flavored Markdown syntax. It could be confusing sometimes but <a href="https://daringfireball.net/projects/markdown/">the basic syntax</a> is always the same.</p>
 <p>Picking a good editor is a monumental and very personal decision for someone who truly respects his/her own writing. I've been using <a href="http://25.io/mou/">MOU version 0.8.7</a> in the past few years. It's a fast editor with all the functions I need, like the trivial fun of switching color themes and a side-by-side live view window.</p>
-<h1>2. Header format for blog articles</h1>
+<h2>Header format for blog articles</h2>
 <p>Every Pelican-based post should start with the below header format so that it can be recognized by Pelican and generated properly.</p>
 <div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">epic</span> <span class="n">blog</span> <span class="n">article</span>
 <span class="n">Date</span><span class="o">:</span> <span class="mi">2015</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">25</span> <span class="mi">08</span><span class="o">:</span><span class="mi">00</span>
@@ -98,25 +98,21 @@
 
 <p><strong>Title</strong>, <strong>Date</strong> and <strong>Slug</strong> are must-haves. The rest are optional, which can be left blank if not needed. </p>
 <p>A post can have multiple tags but only one category. Think carefully how you want to organize your contents. Category is kind of more permanent and should be considered as an integral part of the article, as it's supported almost universally. Tags are nice-to-haves and may not be supported fully everywhere. Slug forms the URL of the post, so it's important to have a proper one for SEO (search engine optimization) purpose. Summary is the short snippet that is displayed beneath the link when the post pops up on Google search result. By Pelican default setting it will be the first paragraph (up to certain character length) of the post, if it's left blank.  It is always better to include at least some summary so that it's more search engine friendly.</p>
-<h1>3. Commands for publishing a post</h1>
+<h2>Commands for publishing a post</h2>
 <p>On command-line, enter into the path where the pelican folder is located</p>
 <div class="highlight"><pre><span></span>cd ~/path-to-your-blog-folder/pelican
 </pre></div>
 
 
-<p>Run a local simulation before pushing up the changes to Github Page</p>
+<p>Run a local simulation with Python 2.7 before pushing up the changes to Github Page</p>
 <div class="highlight"><pre><span></span>make html
-make devserver
+cd output/
+python -m SimpleHTTPServer
 </pre></div>
 
 
-<p>Now you can view the rendered pages on your local machine at http://localhost:8000/</p>
-<p>Kill the simulation</p>
-<div class="highlight"><pre><span></span>./develop_server.sh stop
-</pre></div>
-
-
-<p>Generate the post</p>
+<p>Now you can view the rendered pages on your local machine at <a href="http://localhost:8000">http://localhost:8000</a></p>
+<p>Generate the post (in the root Pelican directory)</p>
 <div class="highlight"><pre><span></span>pelican content -o output -s pelicanconf.py
 </pre></div>
 
