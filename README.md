@@ -11,5 +11,4 @@ My personal blog **[the Good, the Bad, and the Curious](https://guizishanren.com
 
 I don't use the Github Page under my Github username [zire.github.io](https://github.com/zire/zire.github.io) and would rather save that for other purposes. I created a [public repo **"blog"**](https://github.com/zire/blog)  to store the blog files. In its **Settings**, it's connected to `http://guizishanren.com`. Unfortunately HTTPS is not available as I have configured a custom domain and [Github doesn't support that](https://help.github.com/articles/securing-your-github-pages-site-with-https).
 
-In this repo "blog", there are two branches, `master` and `gh-pages`. `gh-pages` is the required branch that serves the rendered html articles for the blog
-
+In this repo "blog", there are two branches, `master` and `gh-pages`. `gh-pages` is the required branch that serves the rendered html articles for the blog.
