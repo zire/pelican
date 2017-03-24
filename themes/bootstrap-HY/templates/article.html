@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block indextitle %}{% endblock %}
+{% block content %}
+	<div class='article'>
+		<div class="page-header"><h1>{{ article.title }}</h1></div>
+		<div class="well small">{% include "metadata.html" %}</div>
+		<div>{{ article.content }}</div>
+		<div>{% include "addthis.html" %}</div>
+		<div>
+			<h2>Subscribe</h2>
+			<!-- Begin MailChimp Signup Form -->
+			<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+			<style type="text/css">
+				#mc_embed_signup{background:##f5f5f5; clear:left; font:12px Helvetica,Arial,sans-serif; }
+				/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+				   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+			</style>
+			<div id="mc_embed_signup">
+			<form action="http://guizishanren.us8.list-manage.com/subscribe/post?u=b14e7ac73bb21c118a0191800&amp;id=b144b5b816" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Like this article? Enter your email address here" required style="width:300px;">
+			    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			    <div style="position: absolute; left: -5000px;"><input type="text" name="b_b14e7ac73bb21c118a0191800_b144b5b816" value=""></div>
+				<div class="clear"><input type="submit" value="Subscribe to this Blog" name="subscribe" id="mc-embedded-subscribe" class="button" style="width:300px;"></div>
+			</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
+		<div>
+		{% if article.prev_article %}
+         <a href="{{ SITEURL }}/{{ article.prev_article.url}}">Prev: >> 
+             {{ article.prev_article.title }} </a>
+		 {% endif %}
+		 <br>
+		 {% if article.next_article %}
+         <a href="{{ SITEURL }}/{{ article.next_article.url}}">Next: >> {{ article.next_article.title }} </a>
+		 {% endif %}
+		<br>
+		</div>
+		<div>
+		 	<h2>Comments</h2>
+			{% if DISQUS_SITENAME %}<div id="disqus_thread"></div>{% endif %}
+			{% if FACEBOOK_APPID %}<div class="fb-comments" data-href="{{ FQ_SITEURL }}/{{ article.url }}" data-num-posts="10" data-width="760"></div>{% endif %}
+		</div>
+	</div>	
+{% endblock %}

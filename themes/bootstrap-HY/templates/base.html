@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>{% block windowtitle %}{{ SITENAME }}{% endblock %}</title>
+	<meta name="description" content="">
+	<meta name="author" content="{{ AUTHOR }}">
+	<!-- this one is for verification with weibo.com -->
+	<meta property="wb:webmaster" content="e4fa6fd6e93c5abb" />
+	<!-- this one is for verification with pinterest.com -->
+	<meta name="p:domain_verify" content="2c9faf5e7eadeb56ff7032a8be9c1631"/>
+	<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="{{ SITEURL }}/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400' rel='stylesheet' type='text/css'>
+	<link href="{{ SITEURL }}/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
+	<link href="{{ SITEURL }}/theme/pygments.css" rel="stylesheet">
+
+    <!-- Feeds -->
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+
+	{% include "analytics.html" %}
+	{% include "disqus.html" %}
+
+	<meta name="google-site-verification" content="0qEfpj13rjOQ2YIVPi0AqT6l4SeDznatbbFd8uKisQU" />
+</head>
+<body>
+	{% include "facebook.html" %}
+	<!--{% include "github.html" %} -->
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="{{ SITEURL }}/">{{ SITENAME }}</a>
+		  <ul class="nav">
+				{% for title, link in MENUITEMS %}
+					<li><a href="{{ link }}">{{ title }}</a></li>
+				{% endfor %}
+				{% if DISPLAY_PAGES_ON_MENU %}
+					{% for page in PAGES %}
+						<li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+					{% endfor %}
+				{% endif %}
+				{% for cat, null in categories %}
+					<li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+				{% endfor %}
+			</ul>
+			<p class="pull-right"><a href="{{ SITEURL }}/archives.html">[archives]</a> <a href="{{ SITEURL }}/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	  <div class="content">
+			{% block content %}{% endblock %}
+		<footer>
+	  	  	&copy; 2016 {{ AUTHOR }}
+		    <div style="display:inline;" class="social">
+			{% for name, link in SOCIAL %}
+			<a href="{{ link }} " title="{{ name }}"> </a>
+			{% endfor %}
+		    </div>
+		
+			<!--Define feedburner box
+			<a href="http://feeds.feedburner.com/GoodBadCurious"><img style="display:inline;float:right;" src="http://feeds.feedburner.com/~fc/GoodBadCurious?bg=#f5f5f5&amp;fg=f0e7d5&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
+			End Feedburner-->
+			<p style="text-align:center;font-size:13px;margin-top:18px;">
+			Hosted on <a href="http://pages.github.com">Github Page</a>
+			Written in <a href="https://daringfireball.net/projects/markdown/">Markdown</a>
+			Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
+			</p>
+		</footer>
+	  </div>
+	</div>
+</body>
+</html>
