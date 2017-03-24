@@ -73,8 +73,8 @@ WITH_FUTURE_DATES = True
 # Formatting for urls
 DEFAULT_PAGINATION = 10
 
-PAGE_URL = 'about/{slug}'
-PAGE_SAVE_AS = 'about/{slug}/index.html'
+PAGE_URL = "{slug}"
+PAGE_SAVE_AS = "{slug}/index.html"
 
 # ARTICLE_URL = "posts/{date:%Y}/{date:%m}/{slug}/"
 ARTICLE_URL = "{slug}"
