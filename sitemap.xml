@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://guizishanren.com/</loc>
-<lastmod>2017-03-23T23:12:24-00:00</lastmod>
+<lastmod>2017-03-23T23:16:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://guizishanren.com/archives.html</loc>
-<lastmod>2017-03-23T23:12:24-00:00</lastmod>
+<lastmod>2017-03-23T23:16:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://guizishanren.com/tags.html</loc>
-<lastmod>2017-03-23T23:12:24-00:00</lastmod>
+<lastmod>2017-03-23T23:16:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://guizishanren.com/categories.html</loc>
-<lastmod>2017-03-23T23:12:24-00:00</lastmod>
+<lastmod>2017-03-23T23:16:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -42,13 +42,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>https://guizishanren.com/page/sign-up</loc>
 <lastmod>2017-03-23T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://guizishanren.com/sign-up</loc>
-<lastmod>2017-03-23T00:00:00-07:00</lastmod>
-<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -307,13 +300,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://guizishanren.com/japanese-tea-garden-cherry</loc>
 <lastmod>2014-04-02T11:58:00-07:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://guizishanren.com/about</loc>
-<lastmod>2014-03-25T00:00:00-07:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1033,13 +1019,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://guizishanren.com/category/pages</loc>
-<lastmod>2017-03-23T00:00:00-07:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://guizishanren.com/category/photography</loc>
 <lastmod>2015-12-28T08:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
@@ -1139,7 +1118,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://guizishanren.com/author/herbert-yang.html</loc>
-<lastmod>2017-03-23T00:00:00-07:53</lastmod>
+<lastmod>2017-03-07T08:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

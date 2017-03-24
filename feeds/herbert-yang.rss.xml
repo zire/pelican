@@ -1,27 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>https://guizishanren.com/</link><description></description><atom:link href="https://feeds.feedburner.com/feeds/herbert-yang.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 23 Mar 2017 00:00:00 -0700</lastBuildDate><item><title>Sign Up</title><link>https://guizishanren.com/sign-up</link><description>&lt;p&gt;If you find this blog interesting, you can sign up to my mailing list by filling your email below. New blog articles will be delivered to your email inbox when they're published.&lt;/p&gt;
-&lt;p&gt;Thank you!&lt;/p&gt;
-&lt;!-- Begin MailChimp Signup Form --&gt;
-
-&lt;p&gt;&lt;link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css"&gt;
-&lt;style type="text/css"&gt;
-    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-    /&lt;em&gt; Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. &lt;/em&gt;/
-&lt;/style&gt;
-&lt;div id="mc_embed_signup"&gt;
-&lt;form action="//guizishanren.us8.list-manage.com/subscribe/post?u=b14e7ac73bb21c118a0191800&amp;amp;id=b144b5b816" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate&gt;
-&lt;div id="mc_embed_signup_scroll"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required&gt;&lt;/p&gt;
-&lt;div style="position: absolute; left: -5000px;" aria-hidden="true"&gt;&lt;input type="text" name="b_b14e7ac73bb21c118a0191800_b144b5b816" tabindex="-1" value=""&gt;&lt;/div&gt;
-
-&lt;div class="clear"&gt;&lt;input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;&lt;/form&gt;
-&lt;/div&gt;&lt;/p&gt;
-&lt;!--End mc_embed_signup--&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Thu, 23 Mar 2017 00:00:00 -0700</pubDate><guid>tag:guizishanren.com,2017-03-23:sign-up</guid></item><item><title>排骨煨汤 (Pork Ribs Soup)</title><link>https://guizishanren.com/pork-ribs-soup</link><description>&lt;p&gt;湖北人爱喝汤，小时候在家里几乎无汤不成席。武汉北面东西湖的莲藕特别粉嫩，很适合煨汤，跟排骨是绝配。排骨藕汤是最销魂的一道湖北菜，是湖北妈妈召唤海外儿女的超级大招。对湖北人来说，家的味道就是排骨煨汤的味道。可惜在美国从大华超市，Trader Joe's, Whole Foods, 到Mitsuwa都找不到这样的藕。爸爸灵机一动，计上心来，用白萝卜替代莲藕，效果惊艳。2016年旧金山湾区的冬天寒风凛冽，阴雨连绵，我们就窝在家里喝了整整一个冬天的排骨煨汤。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>the Good the Bad and the Curious</title><link>https://guizishanren.com/</link><description></description><atom:link href="https://feeds.feedburner.com/feeds/herbert-yang.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 07 Mar 2017 08:00:00 -0800</lastBuildDate><item><title>排骨煨汤 (Pork Ribs Soup)</title><link>https://guizishanren.com/pork-ribs-soup</link><description>&lt;p&gt;湖北人爱喝汤，小时候在家里几乎无汤不成席。武汉北面东西湖的莲藕特别粉嫩，很适合煨汤，跟排骨是绝配。排骨藕汤是最销魂的一道湖北菜，是湖北妈妈召唤海外儿女的超级大招。对湖北人来说，家的味道就是排骨煨汤的味道。可惜在美国从大华超市，Trader Joe's, Whole Foods, 到Mitsuwa都找不到这样的藕。爸爸灵机一动，计上心来，用白萝卜替代莲藕，效果惊艳。2016年旧金山湾区的冬天寒风凛冽，阴雨连绵，我们就窝在家里喝了整整一个冬天的排骨煨汤。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://s3-us-west-2.amazonaws.com/guizishanren/img/porkribssoup.JPG" width="800" /&gt;&lt;/p&gt;
 &lt;h2&gt;食材&lt;/h2&gt;
 &lt;ul&gt;
@@ -1551,43 +1529,7 @@ make devserver
 &lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/13586784503" title="teagarden-4.jpg by herbertyang, on Flickr"&gt;&lt;img src="https://farm8.staticflickr.com/7372/13586784503_a303d05085_c.jpg" width="800" height="600" alt="teagarden-4.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/13587122834" title="teagarden-5.jpg by herbertyang, on Flickr"&gt;&lt;img src="https://farm3.staticflickr.com/2857/13587122834_d4d3417b4d_c.jpg" width="800" height="600" alt="teagarden-5.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/13586745615" title="teagarden-6.jpg by herbertyang, on Flickr"&gt;&lt;img src="https://farm3.staticflickr.com/2847/13586745615_d1710cafd5_c.jpg" width="800" height="600" alt="teagarden-6.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/13587133024" title="teagarden-7.jpg by herbertyang, on Flickr"&gt;&lt;img src="https://farm4.staticflickr.com/3723/13587133024_ba06b9fe95_c.jpg" width="800" height="600" alt="teagarden-7.jpg"&gt;&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 02 Apr 2014 11:58:00 -0700</pubDate><guid>tag:guizishanren.com,2014-04-02:japanese-tea-garden-cherry</guid></item><item><title>About</title><link>https://guizishanren.com/about</link><description>&lt;p&gt;I'm in the process of migrating this site from the previous &lt;a href="http://wordpress.org/"&gt;wordpress&lt;/a&gt; structure to &lt;a href="http://pages.github.com/"&gt;Github Page&lt;/a&gt; using &lt;a href="http://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;, a &lt;a href="https://www.python.org/"&gt;Python&lt;/a&gt; static website generator. You might see some missing files, broken links, or just out-of-alignment here and there. That's because I'm still cleaning up the files from their xml format to streamline everything into strictly &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt; format. If you have been a reader of my site before, there is no new content created after Mar 21, 2014. What gives then? Not a lot for you, but a great deal to me. I will write an article about this transformation later.&lt;/p&gt;
-&lt;p&gt;For a previous reader to this blog, a few notes to you :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;please update your RSS feed to: &lt;a href="http://feeds.feedburner.com/GoodBadCurious"&gt;http://feeds.feedburner.com/GoodBadCurious&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;all my social media contacts (such as Twitter and Facebook) can be found at the bottom of any page&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;my long-running series "&lt;em&gt;Confession of a Stanford Sloan Fellow&lt;/em&gt;" (aka, COASSF) can be found at &lt;a href="../../../../tag/coassf/"&gt;this tag&lt;/a&gt; (click on the top right corner of any page). There are 60+ articles in the original series and there are still some articles that are yet to be transformed into Markdown format. Eventually all of them will pop up under this tag.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;if you are more interested in my photos than words (I don't blame you), you can find all my photo series under &lt;a href="../../../../category/photography/"&gt;category "Photography"&lt;/a&gt;. One of the main reasons for me to migrate out of Wordpress to Github Page/Pelican is to create a much more versatile publishing platform for my photos. In the meanwhile, I'm also going through a massive project to ditch iPhoto and re-organize all my 20,000 photos in Lightroom. More photos are coming under this category.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Pelican-based theme is not as responsive to mobile device viewing as Wordpress universe. Though I have modified this vintage Twitter Bootstrap Pelican theme significantly, there is still a long way to go to make this site friendly on mobile device such as iPhone and iPad. I'll figure out how to make that work at some point.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;if you find any error (like broken link) or any format that you think is less than perfect in any page, please feel free to leave a comment on that page or this page so that I can fix it right away. Due to the nature of the migration, the URL structure/format of all the posts has changed and it'll take a while for Google's crawler to re-index the same articles with the revised URLs. You can help me speed up that process if you are bored at work. Thank you in advance.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;going forward, a better way of staying updated with this site is probably to subscribe by email (see below box). RSS used to be hot but it feels like a dying beast. With the rise of mobile-responsive website design, RSS feed looks increasingly redundant (I still canon figure out how to use Flipboard efficiently) and seems a layer that many people can just live without.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;This website is the publishing platform for all contents created by &lt;a href="www.linkedin.com/in/herbertyang‎"&gt;Herbert Yang&lt;/a&gt;, which includes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;blog articles&lt;/li&gt;
-&lt;li&gt;photo galleries&lt;/li&gt;
-&lt;li&gt;performance videos&lt;/li&gt;
-&lt;li&gt;slide presentations &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The domain name "guizishanren" is "&lt;em&gt;桂子山人&lt;/em&gt;" in Chinese, of which the literal translation will be "The Person from Mt. Sweet Olive". Mt. Sweet Olive in Wuhan, China is where I grew up in China. Wuhan is about 1.5 hour by flight to both Beijing and Shanghai, and is the largest city in Central China who almost became and definitely should have become the capital city of China in 1949. It was a tragedy afterwards.&lt;/p&gt;
-&lt;p&gt;The name of this site pays tribute to movie "&lt;a href="http://www.imdb.com/title/tt0060196/?ref_=nv_sr_2"&gt;The Good, the Bad, and the Ugly&lt;/a&gt;" by great &lt;a href="http://www.imdb.com/name/nm0001466/?ref_=tt_ov_dr"&gt;Sergio Leone&lt;/a&gt;, one of the greatest movies of all time. The soundtrack is just as epic and has become a frequent rip-off target by Quentin Tarantino ever since. Here's Metallica cover of the most famous song from the soundtrack, "&lt;a href="http://youtu.be/wV0wPBYDQ6Y"&gt;The Ecstasy of Gold&lt;/a&gt;".&lt;/p&gt;
-&lt;p&gt;Reading this site takes a lot of patience and probably not a walk in the park. Thank you for stopping by.&lt;/p&gt;
-&lt;p&gt;Herbert Yang&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Tue, 25 Mar 2014 00:00:00 -0700</pubDate><guid>tag:guizishanren.com,2014-03-25:about</guid></item><item><title>Buzz Words from Stanford GSB BLAST Mail</title><link>https://guizishanren.com/buzz-words-stanford-gsb-blast-mail</link><description>&lt;p&gt;This program aims to analyze the most common buzz words from Stanford
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/gankyun/13587133024" title="teagarden-7.jpg by herbertyang, on Flickr"&gt;&lt;img src="https://farm4.staticflickr.com/3723/13587133024_ba06b9fe95_c.jpg" width="800" height="600" alt="teagarden-7.jpg"&gt;&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Herbert Yang</dc:creator><pubDate>Wed, 02 Apr 2014 11:58:00 -0700</pubDate><guid>tag:guizishanren.com,2014-04-02:japanese-tea-garden-cherry</guid></item><item><title>Buzz Words from Stanford GSB BLAST Mail</title><link>https://guizishanren.com/buzz-words-stanford-gsb-blast-mail</link><description>&lt;p&gt;This program aims to analyze the most common buzz words from Stanford
 Graduate School of Business (GSB)'s BLAST mailing list, which is
 subscribed by all GSB students (MBA, MSx and PhD) and used heavily by
 the student community to broadcast news, seeking help, etc. The idea is
