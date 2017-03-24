@@ -56,11 +56,11 @@ SOCIAL = (
           ('linkedin', 'https://www.linkedin.com/in/herbertyang'),
           ('instagram', 'https://instagram.com/zire'),
           ('github', 'https://github.com/zire'),
-          ('weibo', 'https://weibo.com/zire'),
+ #         ('weibo', 'https://weibo.com/zire'),
  #         ('flickr','https://www.flickr.com/photos/gankyun/'),
  #         ('tumblr','https://zynphendale.tumblr.com'),
  #         ('pinterest','https://www.pinterest.com/zire'),
-          ('quora', 'https://www.quora.com/Herbert-Yang'),
+ #         ('quora', 'https://www.quora.com/Herbert-Yang'),
           ('rss','https://www.guizishanren.com/feeds/rss'))
 
 # Uncomment following line if you want document-relative URLs when developing
