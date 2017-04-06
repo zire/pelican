@@ -109,7 +109,7 @@ PLUGINS = ['sitemap','neighbors','gravatar']
 # Specify important paths
 OUTPUT_PATH = 'output'
 PATH = 'content'
-STATIC_PATHS = ['images', 'GoodBadCurious',]
+STATIC_PATHS = ['images']
 PLUGIN_PATHS = ['plugins']
 CACHE_PATH = 'cache'
 
