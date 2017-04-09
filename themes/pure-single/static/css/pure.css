@@ -31,6 +31,12 @@ pre {
     box-shadow: 2px 2px 2px #888;
 }
 
+code {
+  color: #c7254e;
+  background: #f9f2f4;
+  border-radius: 3px;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
