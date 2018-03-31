@@ -8,7 +8,7 @@ SITENAME = u'the Good the Bad and the Curious'
 SITEURL = 'https://guizishanren.com'
 DISQUS_SITENAME = 'goodbadcurious'
 GOOGLE_ANALYTICS = 'UA-714838-2'
-AUTHOR_EMAIL = 'guizishanren@qq.com'
+AUTHOR_EMAIL = 'webmaster@inturious.com'
 USE_FOLDER_AS_CATEGORY = True
 DEFAULT_CATEGORY = 'misc'
 DISPLAY_PAGES_ON_MENU = True
@@ -102,7 +102,6 @@ YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
 NEWEST_FIRST_ARCHIVES = False
 
 # Specify theme & plug-ins
-# THEME = "themes/bootstrap-HY"
 THEME = "themes/pure-single"
 PLUGINS = ['sitemap','neighbors','gravatar']
 
