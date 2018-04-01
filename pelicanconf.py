@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Herbert Yang'
 SITENAME = u'the Good the Bad and the Curious'
 SITEURL = 'https://guizishanren.com'
-DISQUS_SITENAME = 'goodbadcurious'
+# DISQUS_SITENAME = 'goodbadcurious'
 GOOGLE_ANALYTICS = 'UA-714838-2'
 AUTHOR_EMAIL = 'webmaster@inturious.com'
 USE_FOLDER_AS_CATEGORY = True
