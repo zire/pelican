@@ -17,11 +17,11 @@ ADDTHIS_PROFILE = 'ra-538a1ad51a39747d'
 
 # Settings from pure-single theme
 
-COVER_IMG_URL = 'https://s3-us-west-2.amazonaws.com/guizishanren/img/shinjuku.jpg'
+COVER_IMG_URL = SITEURL + '/static/img/bg001_shinjuku.jpg'
 
-PROFILE_IMG_URL = 'https://s.gravatar.com/avatar/106add5208f1a57290ed1164a903de21?s=80'
+PROFILE_IMG_URL = SITEURL + '/static/img/profile001_yang.jpeg'
 
-FAVICON_URL = SITEURL + '/images/favicon.ico'
+FAVICON_URL = SITEURL + '/static/img/favicon.ico'
 
 MENUITEMS = (
     ('Categories', '/categories.html'),
