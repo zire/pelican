@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block head_js %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script src="{{ SITEURL }}/static/js/jquery.fitvids.min.js"></script>
     <script>
         $(document).ready(function(){
             $(".content").fitVids();
@@ -38,7 +38,7 @@
             <a href="#" class="go-top">Go Top</a>
 
             <!-- Begin MailChimp Signup Form -->
-            <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+            <link href="{{ SITEURL }}/static/css/slim-10_7.css" rel="stylesheet" type="text/css">
             <style type="text/css">
             	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
             	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
