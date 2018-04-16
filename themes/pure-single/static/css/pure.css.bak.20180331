@@ -172,7 +172,7 @@ code {
     max-width: 1000px;
     font-size: 110%;
     line-height: 1.45;
-    color: #333333;
+    color: #333332;
 }
 
 .post {
