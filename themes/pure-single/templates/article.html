@@ -37,10 +37,17 @@
             {{ article.content }}
             <a href="#" class="go-top">Go Top</a>
 
+            <hr>
+            <p>
+              If you enjoy reading articles like this, a small donation in ETH will go a long way to make sure I spend enough time working on this. My Ethereum address:
+              <strong>0xae56b1f221a48f3dbbaaea110b049d5c1aba6efe</strong>.
+            <p>
+
+            <hr>
             <!-- Begin MailChimp Signup Form -->
             <link href="{{ SITEURL }}/static/css/slim-10_7.css" rel="stylesheet" type="text/css">
             <style type="text/css">
-            	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+            	#mc_embed_signup{background:#fff; clear:left; font:14px}
             	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
             	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
             </style>
@@ -57,7 +64,7 @@
             </div>
 
             <!--End mc_embed_signup-->
-
+            <hr>
             <ul>
             {% if article.prev_article %}
                 <li style="list-style-type: none;">
