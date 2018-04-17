@@ -65,24 +65,19 @@
 
             <!--End mc_embed_signup-->
             <hr>
-            <ul>
             {% if article.prev_article %}
-                <li style="list-style-type: none;">
-                    <<
-                    <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
-                        {{ article.prev_article.title }}
-                    </a>
-                </li>
+              <<
+              <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
+                  {{ article.prev_article.title }}
+              </a>
             {% endif %}
+            <br />
             {% if article.next_article %}
-                <li style="list-style-type: none;">
-                    >>
-                    <a href="{{ SITEURL }}/{{ article.next_article.url}}">
-                        {{ article.next_article.title }}
-                    </a>
-                </li>
+              >>
+              <a href="{{ SITEURL }}/{{ article.next_article.url}}">
+                  {{ article.next_article.title }}
+              </a>
             {% endif %}
-            </ul>
 
             {% include 'disqus.html' %}
             {% include 'footer.html' %}
